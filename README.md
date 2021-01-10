@@ -1,6 +1,6 @@
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
-[![stats](https://github-readme-stats.vercel.app/api?username=acoppes&show_icons=true&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
+[![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 
 <!--
