@@ -1,5 +1,9 @@
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
+I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) in [Iron Marines](https://www.ironhidegames.com/Games/iron-marines) team as Lead Programmer, but previously worked in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) games too. 
+
+Big fan of git and Github, using it in different projects since it was released I believe, here are my stats which I am super proud of:
+
 [![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
 
