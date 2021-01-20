@@ -2,6 +2,8 @@ Hi there 👋, I am a professional Game Programmer and Computer Science Engineer
 
 I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) in [Iron Marines](https://www.ironhidegames.com/Games/iron-marines) team as Lead Programmer, but previously worked in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) games too. 
 
+Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using Java, LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot and we end up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
+
 Big fan of git and Github, using it in different projects since it was released I believe, here are my stats which I am super proud of:
 
 [![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
