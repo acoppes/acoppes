@@ -1,6 +1,6 @@
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
-I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) in [Iron Marines](https://www.ironhidegames.com/Games/iron-marines) team as Lead Programmer, but previously worked in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) games too. 
+I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) in [Iron Marines](https://www.ironhidegames.com/Games/iron-marines) team as Lead Game Engineer, but previously worked in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) games too. 
 
 Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using Java, LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot and we end up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
 
