@@ -1,3 +1,4 @@
+<div align="center">
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
 I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) on an "Unannounced Project" as Lead Game Engineer, but previously worked on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
@@ -10,6 +11,10 @@ Big fan of git and Github, using it in different projects since it was released 
 
 [![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
 
+### Profile Visit Count   
+![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=acoppes.acoppes)
+
+</div>
 
 <!--
 **acoppes/acoppes** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
