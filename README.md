@@ -1,4 +1,3 @@
-<div align="center">
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
 I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) on an "Unannounced Project" as Lead Game Engineer, but previously worked on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
@@ -7,9 +6,15 @@ Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](http
 
 I have some personal open source projects like a [selection history plugin for Unity](https://github.com/acoppes/unity-history-window), among others, and also some shared projects as well, like all the stuff we did at Gemserk. I also helped with bug fixes pr in some other projects like LibGDX (a long time ago).
 
+---
+
 Big fan of git and Github, using it in different projects since it was released I believe, here are my stats which I am super proud of:
 
+<div align="center">
+
 [![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
+
+![my top-langs used](https://github-readme-stats.vercel.app/api/top-langs?username=acoppes&show_icons=true&locale=en&layout=compact&langs_count=10&theme=dark)     
 
 ### Profile Visit Count   
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=acoppes.acoppes)
