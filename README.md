@@ -14,7 +14,7 @@ Some of my development best practices:
 * Test driven development
 * Pair programming
 
-I love game dev jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website. Here are some examples:
+I love game jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website. Here are some examples:
 
 <div align="center">
 <a href="https://arielsan.itch.io/orbital-wars"> 
