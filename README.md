@@ -1,4 +1,4 @@
-Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
+Hi there 👋, I am a professional Game Dev Engineer with passion about game development and programming.
 
 Some of my core values:
 
@@ -14,13 +14,27 @@ Some of my development best practices:
 * Test driven development
 * Pair programming
 
+I love game dev jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website. Here are some examples:
+
+<div align="center">
+<a href="https://arielsan.itch.io/orbital-wars"> 
+    <img src="images/jams_screenshot_02.gif" width="160" />
+</a>
+<a href="https://arielsan.itch.io/neko-sama"> 
+    <img src="images/jams_screenshot_01.gif" width="160" />
+</a>
+<a href="https://arielsan.itch.io/seedcity-chasers"> 
+    <img src="images/jams_screenshot_03.gif" width="160" />
+</a>
+</div>
+
 I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineer on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
 
 <div align="center">
- <img src="images/screenshots_krf.jpg" width="320" />
- <img src="images/screenshots_kro.jpg" width="320" />
- <img src="images/screenshots_im1.jpg" width="320" />
- <img src="images/screenshots_im2.jpg" width="320" />
+ <img src="images/screenshots_krf.jpg" width="350" />
+ <img src="images/screenshots_kro.jpg" width="350" />
+ <img src="images/screenshots_im1.jpg" width="350" />
+ <img src="images/screenshots_im2.jpg" width="350" />
 </div>
 
 Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using and collaborating with open source projects like LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot. We ended up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
