@@ -14,7 +14,7 @@ Some of my development best practices:
 * Test driven development
 * Pair programming
 
-I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineeron [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
+I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineer on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
 
 <div align="center">
  <img src="images/screenshots_krf.jpg" width="320" />
