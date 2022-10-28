@@ -1,4 +1,6 @@
-Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.Some of my core values:
+Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
+
+Some of my core values:
 
 * Collaboration, teamwork and growing together.
 * Psychological safety by treating others and being treated as pairs.
