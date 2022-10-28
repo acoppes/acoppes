@@ -1,10 +1,10 @@
 Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
 
-I currently work at [Ironhide Game Studio](https://www.ironhidegames.com/) on an "Unannounced Project" as Lead Game Engineer, but previously worked on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
+I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineeron [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
 
-Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using Java, LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot and we end up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
+Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using and collaborating with open source projects like LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot. We ended up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
 
-I have some personal open source projects like a [selection history plugin for Unity](https://github.com/acoppes/unity-history-window), among others, and also some shared projects as well, like all the stuff we did at Gemserk. I also helped with bug fixes pr in some other projects like LibGDX (a long time ago).
+I have some personal open source projects too like a [selection history plugin for Unity](https://github.com/acoppes/unity-history-window).
 
 ---
 
