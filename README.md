@@ -1,4 +1,16 @@
-Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.
+Hi there 👋, I am a professional Game Programmer and Computer Science Engineer since 2010 but I was passionate about game development all my life.Some of my core values:
+
+* Collaboration, teamwork and growing together.
+* Psychological safety by treating others and being treated as pairs.
+* Continuous improvement and empowerment by listening to each other and removing waste.
+* Generate trust by being transparent and having good communication skills.
+* I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best product value from them. 
+
+Some of my development best practices:
+
+* Continuous delivery
+* Test driven development
+* Pair programming
 
 I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineeron [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
 
