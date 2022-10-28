@@ -25,6 +25,10 @@ I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game 
 
 Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using and collaborating with open source projects like LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot. We ended up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
 
+<div align="center">
+ <img src="images/screenshots_clash.png" width="420" />
+ </div>
+
 I have some personal open source projects too like a [selection history plugin for Unity](https://github.com/acoppes/unity-history-window).
 
 ---
