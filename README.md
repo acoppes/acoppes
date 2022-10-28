@@ -26,6 +26,9 @@ I love game dev jams, I have games at [itch.io](https://arielsan.itch.io/) and a
 <a href="https://arielsan.itch.io/seedcity-chasers"> 
     <img src="images/jams_screenshot_03.gif" width="160" />
 </a>
+
+<br/>
+
 <a href="https://gemserk.itch.io/bankinbacon" target="_blank">
  <img src="images/jams_screenshots_04.png" alt="Watch the video" width="320" />
 </a>
