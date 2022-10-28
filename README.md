@@ -38,10 +38,10 @@ I love game dev jams, I have games at [itch.io](https://arielsan.itch.io/) and a
 I worked at [Ironhide Game Studio](https://www.ironhidegames.com/) as Lead Game Engineer on [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion), [Iron Marines](https://www.ironhidegames.com/Games/iron-marines), and as Programmer in some of the [Kingdom Rush](https://www.ironhidegames.com/Games/kingdom-rush-frontiers) game series too. 
 
 <div align="center">
- <img src="images/screenshots_krf.jpg" width="350" />
- <img src="images/screenshots_kro.jpg" width="350" />
- <img src="images/screenshots_im1.jpg" width="350" />
- <img src="images/screenshots_im2.jpg" width="350" />
+ <a href="https://www.ironhidegames.com/Games/kingdom-rush-frontiers"> <img src="images/screenshots_krf.jpg" width="350" /> </a>
+ <a href="https://www.ironhidegames.com/Games/kingdom-rush-origins"><img src="images/screenshots_kro.jpg" width="350" /></a>
+ <a href="https://www.ironhidegames.com/Games/iron-marines"><img src="images/screenshots_im1.jpg" width="350" /></a>
+ <a href="https://www.ironhidegames.com/Games/ironmarinesinvasion"><img src="images/screenshots_im2.jpg" width="350" /></a>
 </div>
 
 Previously, I worked at [Gemserk](https://github.com/gemserk) with [rgarat](https://github.com/rgarat) where we created lots of game prototypes using and collaborating with open source projects like LWJGL and [LibGDX](https://github.com/libgdx/libgdx) (among others) and learned a lot. We ended up porting [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices. 
