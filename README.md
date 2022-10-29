@@ -16,15 +16,17 @@ Some of my development best practices:
 
 I love game jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website.
 
+Here are some examples:
+
 <div align="center">
 <a href="https://arielsan.itch.io/orbital-wars"> 
-    <img src="images/jams_screenshot_02.gif" width="160" />
+    <img src="images/jams_screenshot_02.gif" width="320" />
 </a>
 <a href="https://arielsan.itch.io/neko-sama"> 
-    <img src="images/jams_screenshot_01.gif" width="160" />
+    <img src="images/jams_screenshot_01.gif" width="320" />
 </a>
 <a href="https://arielsan.itch.io/seedcity-chasers"> 
-    <img src="images/jams_screenshot_03.gif" width="160" />
+    <img src="images/jams_screenshot_03.gif" width="320" />
 </a>
 
 <br/>
