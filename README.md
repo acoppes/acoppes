@@ -6,13 +6,13 @@ Some of my core values:
 * Psychological safety by treating others and being treated as pairs and by generating space to talk.
 * Continuous improvement and empowerment by listening to each other and removing waste.
 * Generate trust by being transparent and having good communication skills.
-* I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best product value from them. 
+* I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best value from them. 
 
-Some of my development best practices:
+I believe in [Agile](http://agilemanifesto.org/), some of my favorite development best practices:
 
 * Continuous delivery
 * Test driven development
-* Pair programming
+* Pair programming (in game dev, I prefere the name Pair working in something, could be a programmer or an artist or whatever)
 
 I love game jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website.
 
