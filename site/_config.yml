@@ -29,6 +29,8 @@ github_username:  acoppes
 linkedin_username: acoppes
 youtube_username: arielcoppes
 
+dev_blog: https://blog.gemserk.com
+
 # Build settings
 theme: minima
 plugins:
