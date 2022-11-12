@@ -4,3 +4,7 @@
 
 layout: home
 ---
+
+Hi there! I am a professional Game Developer and Engineer with passion for games and programming.
+
+Work in progress
