@@ -21,11 +21,13 @@
 title: Ariel Coppes
 email: contact@arielcoppes.dev
 description: >- # this means to ignore newlines until "baseurl:"
-  Ariel Coppes
+  This is Ariel Coppes's personal website with information about his work.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arielcoppes.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: arielsan
 github_username:  acoppes
+linkedin_username: acoppes
+youtube_username: arielcoppes
 
 # Build settings
 theme: minima
