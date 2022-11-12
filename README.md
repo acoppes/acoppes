@@ -12,7 +12,7 @@ I believe in [Agile](http://agilemanifesto.org/), some of my favorite developmen
 
 * Continuous delivery
 * Test driven development
-* Pair programming (in game dev, I prefere the name Pair working in something, could be a programmer or an artist or whatever)
+* Pair programming (in game dev, I prefer the name Pair working in something, could be a programmer or an artist or whatever)
 
 I love game jams, I have games at [itch.io](https://arielsan.itch.io/) and at [gemserk](https://blog.gemserk.com/games/) website.
 
