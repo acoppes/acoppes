@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Experience
+title: Work
 permalink: /experience/
 ---
 
-**This is a work in progress**
+**[in progress]**
 
 The idea here is to share a bit of specific experience of thing I did in diffferent projects, things I am proud of.
 

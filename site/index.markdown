@@ -10,7 +10,7 @@ image:
   
 ---
 
-**This is a work in progress**
+**[Work in progress]**
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 

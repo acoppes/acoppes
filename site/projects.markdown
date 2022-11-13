@@ -9,6 +9,10 @@ The idea of this page is to highlight some of the projects I've worked on, stuff
 * Could explain a bit each game, one liner.
  -->
 
+**[Work in progress]**
+
+This page shows some of my most recent and/or important projects I've worked on.
+
 Find my open source projects and tools and other collaborations at my personal <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><span class="username">Github</span></a> page. For example, I have a plugin for Unity, released to [openupm](https://openupm.com/), to store and show the user's selection history, check it [here](https://github.com/acoppes/unity-history-window).
 
 My development blog is hosted at <a href="{{site.dev_blog}}">Gemserk</a>.

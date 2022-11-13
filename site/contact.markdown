@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-**This is a work in progress**
+**[Work in progress]**
 
 Right now I am open for game development consultancy and to solve specific problems like workflow and tools improvements. I am not looking for a full time job at the moment.
 
