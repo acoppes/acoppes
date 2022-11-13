@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Work
-permalink: /experience/
+permalink: /work/
 ---
 
 **[in progress]**

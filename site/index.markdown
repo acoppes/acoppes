@@ -16,11 +16,15 @@ image:
 
 Game Developer and Engineer with passion for games and programming and more than 13 years of professional experience.
 
-Some of my core values:
+[TODO] Share more about me here, who am I and what I do or something like that, before core value statements.
+
+You can check more about my work [here](/work), and if you want to see some of the projects I worked on, check [here](/projects), and if you want to contact me about anything, check [here](/contact).
+
+I believe this is important:
 
 * Collaboration, teamwork and growing together.
-* Psychological safety by treating others and being treated as peers and by generating space to talk.
-* Continuous improvement and empowerment by listening to each other and removing waste.
+* Psychological safety by treating others and being treated as peers.
+* Continuous improvement and empowerment.
 * Generate trust by being Transparent and having good Communication skills.
 
 <!-- 
