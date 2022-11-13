@@ -22,6 +22,12 @@ title: Ariel Coppes [Game Developer]
 email: contact@arielcoppes.dev
 description: >- # this means to ignore newlines until "baseurl:"
   This is Ariel Coppes's personal website with information about his work.
+
+image:
+  path: /images/personal_photo.jpg
+  height: 100
+  width: 100
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://arielcoppes.dev" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: arielsan

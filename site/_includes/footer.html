@@ -6,8 +6,11 @@
   
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
+        <div align="center"><img src="{{site.image.path}}" width="120" height="120"/></div>
         <ul class="contact-list">
-          <li class="p-name">
+          <li></li>
+          <!--li class="p-name">
+            
             {%- if site.author -%}
               {{ site.author | escape }}
             {%- else -%}
@@ -15,8 +18,10 @@
             {%- endif -%}
             </li>
             {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            <li></li>
             {%- endif -%}
+          -->
+          
         </ul>
       </div>
 
@@ -24,8 +29,10 @@
         {%- include social.html -%}
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      <div class="footer-col footer-col-2">
+        Contact me at: <br/> 
+        <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        <!--p>{{- site.description | escape -}}</p-->
       </div>
     </div>
 
