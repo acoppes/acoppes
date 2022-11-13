@@ -8,15 +8,24 @@ layout: home
 
 **This is a work in progress**
 
+<!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
+
 Game Developer and Engineer with passion for games and programming and more than 13 years of professional experience.
 
 Some of my core values:
 
 * Collaboration, teamwork and growing together.
-* Psychological safety by treating others and being treated as pairs and by generating space to talk.
+* Psychological safety by treating others and being treated as peers and by generating space to talk.
 * Continuous improvement and empowerment by listening to each other and removing waste.
-* Generate trust by being transparent and having good communication skills.
-* I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best value from them. 
+* Generate trust by being Transparent and having good Communication skills.
+
+<!-- 
+My skills
+
+* Focus
+* Analytic
+* Hard work
+-->
 
 I believe in [Agile](http://agilemanifesto.org/), some of my favorite development best practices:
 

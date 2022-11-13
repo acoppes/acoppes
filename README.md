@@ -3,7 +3,7 @@ Hi there 👋, I am a professional Game Dev Engineer with passion about game dev
 Some of my core values:
 
 * Collaboration, teamwork and growing together.
-* Psychological safety by treating others and being treated as pairs and by generating space to talk.
+* Psychological safety by treating others and being treated as peers and by generating space to talk.
 * Continuous improvement and empowerment by listening to each other and removing waste.
 * Generate trust by being transparent and having good communication skills.
 * I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best value from them. 
