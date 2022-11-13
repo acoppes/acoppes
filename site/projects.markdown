@@ -9,7 +9,7 @@ The idea of this page is to highlight some of the projects I've worked on, stuff
 * Could explain a bit each game, one liner.
  -->
 
-Find my open source projects and tools and other collaborations at my personal <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><span class="username">Github</span></a> page. For example, I have a plugin for Unity, released to [openupm](https://openupm.com/), to store and show the user's selection history, check it [here](https://github.com/acoppes/unity-history-window)
+Find my open source projects and tools and other collaborations at my personal <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><span class="username">Github</span></a> page. For example, I have a plugin for Unity, released to [openupm](https://openupm.com/), to store and show the user's selection history, check it [here](https://github.com/acoppes/unity-history-window).
 
 My development blog is hosted at <a href="{{site.dev_blog}}">Gemserk</a>.
 
@@ -27,4 +27,4 @@ These are the projects I worked on while working at [Ironhide Game Studio](https
 * [Iron Marines](https://www.ironhidegames.com/Games/iron-marines)
 * [Iron Marines Invasion](https://www.ironhidegames.com/Games/ironmarinesinvasion)
 
-At Gemserk, we did the port of [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices (Android and iOS)
+At Gemserk, we did the port of [Clash of the Olympians](https://www.ironhidegames.com/Games/clash-of-the-olympians) to mobile devices (Android and iOS).

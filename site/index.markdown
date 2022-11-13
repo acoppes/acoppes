@@ -3,7 +3,11 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-
+image:
+  path: /images/personal_photo.jpg
+  height: 100
+  width: 100
+  
 ---
 
 **This is a work in progress**
