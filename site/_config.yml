@@ -36,6 +36,10 @@ profile_photo: /images/personal_photo.jpg
 dev_blog: https://blog.gemserk.com
 show_excerpts: true
 
+mastodon:
+  - username: arielsan
+    instance: mastodon.gamedev.place
+
 # Build settings
 theme: minima
 plugins:
