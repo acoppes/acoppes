@@ -16,7 +16,7 @@ image:
 
 Game Developer and Engineer with passion for games and programming and more than 13 years of professional experience.
 
-[TODO] Share more about me here, who am I and what I do or something like that, before core value statements.
+[TODO] Share more about me here, who I am and what I do or something like that, before core value statements.
 
 You can check more about my work [here](/work), and if you want to see some of the projects I worked on, check [here](/projects), and if you want to contact me about anything, check [here](/contact).
 

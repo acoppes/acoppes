@@ -3,9 +3,11 @@ layout: default
 ---
 <article class="post">
 
+  {%- if page.title -%}
   <header class="post-header">
     <div class="post-title">{{ page.title | escape }}</div>
   </header>
+  {%- endif -%}
 
   <div class="post-content">
     {{ content }}

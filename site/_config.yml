@@ -34,6 +34,7 @@ itchio_url: https://arielsan.itch.io/
 profile_photo: /images/personal_photo.jpg
 
 dev_blog: https://blog.gemserk.com
+show_excerpts: true
 
 # Build settings
 theme: minima
