@@ -13,6 +13,14 @@ gemserk_posts:
     title: Using Unity Prefabs and GameObjects only to store data.
     excerpt: We share how GameObjects and Prefabs can be used for data storage, like ScriptableObjects, but with extra features like componentization, hierarchy, prefab variants, and more.
     date: 2020-05-26
+  - url: https://blog.gemserk.com/2018/08/27/implementing-fog-of-war-for-rts-games-in-unity-1-2/
+    title: Implementing Fog of War for RTS games in Unity 1/2
+    excerpt: Explains our first approach to Fog of War when making Iron Marines. 
+    date: 2018-08-27
+  - url: https://blog.gemserk.com/2018/11/20/implementing-fog-of-war-for-rts-games-in-unity-2-2/
+    title: Implementing Fog of War for RTS games in Unity 2/2
+    excerpt: Explains our second approach to Fog of War for Iron Marines Invasion, now with different heights and blocking objects too. 
+    date: 2018-08-27
   - url: https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/
     title: Playing with Starcraft 2 Editor to understand how a good RTS is made
     excerpt: Explains how we created in Unity a GameObject system for Iron Marines inspired in Starcraft 2 Editor to make levels logic with events, conditions and actions. 
