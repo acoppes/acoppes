@@ -15,7 +15,7 @@ gemserk_posts:
     date: 2020-05-26
   - url: https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/
     title: Playing with Starcraft 2 Editor to understand how a good RTS is made
-    excerpt: Explains how we created a GameObject system for Iron Marines inspired in Starcraft2 Editor to make levels logic with events, conditions and actions. 
+    excerpt: Explains how we created in Unity a GameObject system for Iron Marines inspired in Starcraft 2 Editor to make levels logic with events, conditions and actions. 
     date: 2017-03-27
 ---
 
@@ -34,7 +34,7 @@ Previously, I posted my development blog entries at <a href="{{site.dev_blog}}">
       <span class="post-meta">{{ post.date | date: date_format }}</span>
       <h3>
         <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
+          {{ post.title | escape }} [Gemserk]
         </a>
       </h3>
       {%- if site.show_excerpts -%}
@@ -42,14 +42,6 @@ Previously, I posted my development blog entries at <a href="{{site.dev_blog}}">
       {%- endif -%}
     </li>
     {%- endfor -%}
-
-    <li>
-        <h3>
-        <a class="post-link" href="https://blog.gemserk.com/archives">
-          More posts at Gemserk development blog
-        </a>
-      </h3>
-    </li>
   </ul>
 
   {%- endif -%}
