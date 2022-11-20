@@ -27,11 +27,7 @@ gemserk_posts:
     date: 2017-03-27
 ---
 
-**[Work in progress]**
-
-[Idea] The idea of this page is to start adding some peronal blog posts about stuff, not sure yet if only development stuff or anything.
-
-Previously, I posted my development blog entries at <a href="{{site.dev_blog}}">Gemserk</a>.
+<!-- [Idea] The idea of this page is to start adding some peronal blog posts about stuff, not sure yet if only development stuff or anything. -->
 
 {%- if page.gemserk_posts.size > 0 -%}
   <!-- h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2-->
@@ -53,3 +49,5 @@ Previously, I posted my development blog entries at <a href="{{site.dev_blog}}">
   </ul>
 
   {%- endif -%}
+  
+If you want, you can reed more of my previous development blog entries at <a href="{{site.dev_blog}}">Gemserk</a>.
