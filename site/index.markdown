@@ -50,3 +50,5 @@ I believe in [Agile](http://agilemanifesto.org/), some of my favorite developmen
 * Continuous delivery
 * Test driven development
 * Pair programming (in game dev, I prefer the name Pair working in something, could be a programmer or an artist or whatever)
+
+<a rel="me" href="https://mastodon.gamedev.place/@arielsan"></a>
