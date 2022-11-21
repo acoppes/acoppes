@@ -14,7 +14,7 @@ image:
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 
-[TODO] Share more about me here, who I am and what I do or something like that, before core value statements.
+[TODO] Share more about me here, who I am and what I do or something like that.
 
 Game Developer and Software Engineer with passion for games and programming and more than 13 years of professional experience.
 
