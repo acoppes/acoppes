@@ -16,9 +16,9 @@ image:
 
 [TODO] Share more about me here, who I am and what I do or something like that.
 
-Game Developer and Software Engineer with passion for games and programming and more than 13 years of professional experience.
+I'm a 38 years old Game Developer and Software Engineer with passion for games and programming and 13 years of professional experience in game development.
 
-I've started playing games when I was really young (around five years old) and I immediately knew I wanted to make games for a living. I enjoy playing all kind of games but I fell in love with the RTS genre with Dune 2 and Warcraft when I was ten years old.  
+I've started playing games when I was really young and I immediately knew I wanted to make games. I really enjoy playing all kind of games, I tried to think in a favorite genre but as I remember, I played lots of different genre games during my life.  
 
 I have a good long term vision for games and I think from the beginning how games scale and since I am an engineer I love to improve workflow by making tools and automating tasks to increase development speed.
 
@@ -35,7 +35,7 @@ When working in teams I believe in:
 * Collaboration, teamwork and growing together.
 * Psychological safety by treating others and being treated as peers.
 * Continuous improvement and empowerment.
-* Generate trust by being Transparent and having good Communication skills.
+* Generate trust by being Transparent and through good Communication.
 
 <!-- 
 My skills
@@ -45,7 +45,7 @@ My skills
 * Hard work
 -->
 
-I believe in [Agile](http://agilemanifesto.org/), some of my favorite development best practices:
+I really like the [Agile](http://agilemanifesto.org/) principles too and some of my favorite development best practices are:
 
 * Continuous delivery
 * Test driven development
