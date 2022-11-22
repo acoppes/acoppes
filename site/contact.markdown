@@ -4,17 +4,13 @@ title: Contact
 permalink: /contact/
 ---
 
-<!--
-  Idea: you can contact me about blah..
+Want to work together?
 
-  For example: right now I am doing my own games, you can contact me if you want to publish them or want a partnership, etc.
-  Or if you are a small/middle company you can contact me for consultancy for example for scaling the engine, the team, etc.
-  Or you can hire me to develop or improve some workflow, tools. 
+Well, right now I am trying to do my own games but that doesn't say we can't work together. You can contact me to publish one of my games if you want :) or to make a partnership.
 
-  I am not looking for a full time job a the moment.
- -->
+I also can help with small studios by giving advice and/or help with processes and tools improvement when scaling up games and teams or even to code specific technical solutions.
 
-Right now I am open for any kind of job related to game development, from consultancy to solving specific problems like workflow and tools improvements but I am not looking for a full time job at the moment.
+What I am sure though is that I am not looking for a full time job at the moment.
 
 Just send me an email to <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> or through my social networks:
 
