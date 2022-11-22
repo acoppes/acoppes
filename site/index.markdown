@@ -10,27 +10,23 @@ image:
   
 ---
 
-**[Work in progress]**
-
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 
-[TODO] Share more about me here, who I am and what I do or something like that.
+I'm a 38 years old Game Developer and Software Engineer with passion for games and programming and 13 years of experience in game development + 3.5 years in software.
 
-I'm a 38 years old Game Developer and Software Engineer with passion for games and programming and 13 years of professional experience in game development.
+I've started playing games when I was really young and immediately knew I wanted to make games. I really enjoy playing all kind of games, I tried to think in a favorite genre but as far as I remember I played lots of different genres during my life and enjoyed practically all of them.  
 
-I've started playing games when I was really young and I immediately knew I wanted to make games. I really enjoy playing all kind of games, I tried to think in a favorite genre but as I remember, I played lots of different genre games during my life.  
+Even though my main focus is making games, I enjoy a lot making them scale up by improving workflows, tools and processes of teams to increase development speed and simplify making bigger games with smalls teams. I suppose that is the engineering part of me taking control of my self.
 
-I have a good long term vision for games and I think from the beginning how games scale and since I am an engineer I love to improve workflow by making tools and automating tasks to increase development speed.
+Site map:
 
-More about me:
-
-* Want to contact me about anything work related? check the [Contact](/contact) page.
-* Check the [Projects](/projects) page to see some of the projects I worked on. 
-* At [Blog](/blog) page you can see some development blog posts I did over the years at [Gemserk](https://blog.gemserk.com), and hope to add new blog posts in the future.
+* Want to work together? check the [Contact](/contact) page to decide how to contact me.
+* Check out the [Projects](/projects) I worked on to see what I do. 
+* If you want more detail, you can check out the [Blog](/blog) page to see some development blog posts I did over the years at [Gemserk](https://blog.gemserk.com) website.
 
 <!-- * And at the [Work](/work) page I will share specific things I did while working at different projects. -->
 
-When working in teams I believe in:
+So after the years working on different teams, with different people, in different contexts and on different projects, I know that I consider the following values important and kinda defines how I want to work from now on:
 
 * Collaboration, teamwork and growing together.
 * Psychological safety by treating others and being treated as peers.
@@ -45,10 +41,12 @@ My skills
 * Hard work
 -->
 
-I really like the [Agile](http://agilemanifesto.org/) principles too and some of my favorite development best practices are:
+I really like the [Agile](http://agilemanifesto.org/) principles too and some of my favorite development practices are:
 
 * Continuous delivery
 * Test driven development
 * Pair programming (in game dev, I prefer the name Pair working in something, could be a programmer or an artist or whatever)
+
+This website is a Work in Progress, I hope to continue adding information and improving it.
 
 <a rel="me" href="https://mastodon.gamedev.place/@arielsan"></a>
