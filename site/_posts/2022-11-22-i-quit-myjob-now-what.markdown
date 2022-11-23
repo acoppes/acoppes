@@ -7,7 +7,7 @@ excerpt: Want to share a bit of my status right now and my current plan for the 
 
 Leaving the company I worked on the last ten years of my life was a really hard decision to make but at the same time I feel it was the right one. Ironhide was growing too fast and too much and even though I don't disagree with that vision of big company I didn't want that for me. I still love the people and every game we did there and wish for them to keep making awesome games that I will totally play. I will always be a fan.
 
-I still don't know for sure what I'm going to do next. I didn't have a plan before leaving like another job offering nor a part time project and I know it wasn't a smart move.  
+I still don't know for sure what I'm going to do next. I didn't have a plan before leaving like another job offering nor a part time project.  
 
 My plan for now is to practice and learn a lot about different games I don't have experience while making small prototypes and experimenting with gameplay at the same time.  
 
