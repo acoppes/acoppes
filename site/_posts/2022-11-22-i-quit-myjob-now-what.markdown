@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "I quit my job at Ironhide Game Studio after ten years, now what?"
-date:   2022-11-20 00:08:30 -0300
+date:   2022-11-22 00:08:30 -0300
 excerpt: Want to share a bit of my status right now and my current plan for the future now that I left my work after almost ten years.  
 ---
 
