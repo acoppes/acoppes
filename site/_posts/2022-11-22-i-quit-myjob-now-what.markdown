@@ -22,6 +22,6 @@ Right now I am prototyping a Beat'em up of Ninjas (Naruto-like) with my friend [
 
 While practicing and learning, I hope to find something interesting that I would want to continue developing, maybe try to get some funding and then publish. 
 
-For now I am running on savings and I will try to do some freelance work or consultancy focusing on game development. Also, my awesome wife is supporting me in this journey both in a psychological and financial way.
+For now I am running on savings and I will try to do some freelance work or consulting focusing on game development. Also, my awesome wife is supporting me in this journey both in a psychological and financial way.
 
 Wish me luck.
