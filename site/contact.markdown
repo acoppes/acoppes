@@ -12,7 +12,7 @@ I also can help with small studios by giving advice and/or help with processes a
 
 What I am sure though is that I am not looking for a full time job at the moment.
 
-Just send me an email to <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> or through my social networks:
+Just send me an email to <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> or contact me via:
 
 <ul class="social-media-list">
 
