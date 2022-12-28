@@ -7,8 +7,8 @@ excerpt: I am using states to create abilities for the actionrpg beatemup protot
 
 I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (which changed a lot visually since I started) I am working on, for example a charged dash attack.
 
-<div style="text-align:center;margin-bottom:10px">
-<video width="640" height="360" controls>
+<div class="post-video">
+<video width="320" controls autoplay>
   <source src="/assets/ability_chargedashattack1.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
@@ -137,8 +137,8 @@ In this case, it uses a state named `ChargeAttack` triggered when `attack` butto
 
 Enjoy two more ability videos:
 
-<div style="text-align:center;margin-bottom:10px">
-<video width="640" height="360" controls>
+<div class="post-video">
+<video width="320" controls>
   <source src="/assets/ability_flyingbomb1.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video>
@@ -146,8 +146,8 @@ Enjoy two more ability videos:
 Flying bomb attack: it jumps and flies for some time while firing poop projectiles to the ground.
 </div>
 
-<div style="text-align:center;margin-bottom:10px">
-<video width="640" height="360" controls>
+<div class="post-video">
+<video width="320" controls>
   <source src="/assets/special_rangesstorm_3.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
