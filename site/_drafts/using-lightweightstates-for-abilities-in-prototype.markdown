@@ -7,11 +7,13 @@ excerpt: I share how I am using lightweight states to create abilities for the p
 
 I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (which changed a lot visually since I started) I am working, for example a charged dash attack.
 
-<div style="text-align:center">
+<div style="text-align:center;margin-bottom:10px">
 <video width="640" height="360" controls>
   <source src="/assets/ability_chargedashattack1.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
+<br/>
+Charged dash attack: it charges a special attack after pressing attack button for a while (cancellable if released before time), and unleashes a directional dash attack on button release.
 </div>
 
 To make these abilities, I am using lightweight state machines consisting in states identified by a string that can run in parallel or sequence depending on how you want to use it but it doesn't force one state at a time by design.
@@ -133,29 +135,29 @@ OnUpdate(float dt) {
 
 In this case, it uses a state named `ChargeAttack` triggered when `attack` button is pressed and it also uses sub states for each part of the ability.
 
-<!--
-**Flying Bomb Attack**
+Enjoy two more ability videos:
 
-<div style="text-align:center">
+<div style="text-align:center;margin-bottom:10px">
 <video width="640" height="360" controls>
   <source src="/assets/ability_flyingbomb1.mp4" type="video/mp4">
    Your browser does not support the video tag.
-</video> 
+</video>
+<br/>
+Flying bomb attack: it jumps and flies for some time while firing poop projectiles to the ground.
 </div>
 
-**Range Attack Storm (passive)**
-
-<div style="text-align:center">
+<div style="text-align:center;margin-bottom:10px">
 <video width="640" height="360" controls>
   <source src="/assets/special_rangesstorm_3.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
+<br/>
+Range attack storm (passive): a small delay after activation, it fires two storm of projectiles in all directions. This one could work as a temporary power up or even as a modifier, like Diablo 2 special enemies with auras and stuff but same mechanics.
 </div>
--->
 
 ### Conclusion
 
-Some things I want to improve is to start defining this states in a more declarative way, like "during this state, player cant move" or "during this state, gravity is disabled". 
+Some things I want to improve is to start defining the states in a declarative way like "during this state, player cant move" or "during this state, gravity is disabled" which helps to be more data driven and game designer friendly. 
 
 Then, I want to incorporate the sub state concept to the engine itself, right now it is just another state running in parallel and I have to remove them manually on exit parent state.
 
