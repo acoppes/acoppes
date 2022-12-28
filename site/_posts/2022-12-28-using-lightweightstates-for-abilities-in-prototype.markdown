@@ -2,7 +2,7 @@
 layout: post
 title:  "Using lightweight states to create unit abilities for my prototype"
 date:   2022-12-28 00:08:30 -0300
-excerpt: I share how I am using lightweight states to create abilities for the prototype beatemup/actionrpg I am making right now. 
+excerpt: I am using lightweight states to create abilities for the actionrpg beatemup prototype I am working on and I share a bit of pseudocode to explain how. 
 ---
 
 I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (which changed a lot visually since I started) I am working, for example a charged dash attack.
