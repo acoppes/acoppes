@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Using lightweight states to create unit abilities for my prototype"
+title:  "Using states to create unit abilities for my prototype"
 date:   2022-12-28 00:08:30 -0300
-excerpt: I am using lightweight states to create abilities for the actionrpg beatemup prototype I am working on and I share a bit of pseudocode to explain how. 
+excerpt: I am using states to create abilities for the actionrpg beatemup prototype I am working on and I share a bit of pseudocode to explain how. 
 ---
 
-I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (which changed a lot visually since I started) I am working, for example a charged dash attack.
+I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (which changed a lot visually since I started) I am working on, for example a charged dash attack.
 
 <div style="text-align:center;margin-bottom:10px">
 <video width="640" height="360" controls>
@@ -16,7 +16,7 @@ I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/
 Charged dash attack: it charges a special attack after pressing attack button for a while (cancellable if released before time), and unleashes a directional dash attack on button release.
 </div>
 
-To make these abilities, I am using lightweight state machines consisting in states identified by a string that can run in parallel or sequence depending on how you want to use it but it doesn't force one state at a time by design.
+To make these abilities, I have a set of states (identified by a string) that can run in parallel or sequence depending on how you want to use it but it doesn't force one state at a time by design. By themselves, the states do nothing at all but controllers can check those states and do logic based on that. States also store the time they are active.
 
 The API is something like this, it has an `EnterState(stateName)`, `ExitState(stateName)` and `HasState(stateName)` methods and provides a way to react with callbacks to enter and exit events. Entering the same state twice just resets its timer.
 
@@ -72,9 +72,9 @@ OnExit(string state) {
 
 OnUpdate(float dt) {
 
-  if (states.InState("ChargeAttack")) {
+  if (states.HasState("ChargeAttack")) {
 
-    if (states.InState("ChargeAttack.Charging")) {
+    if (states.HasState("ChargeAttack.Charging")) {
 
       if (stateTime > chargeTime) {
         states.EnterState("ChargeAttack.AttackReady");
@@ -91,7 +91,7 @@ OnUpdate(float dt) {
       return;
     }
 
-    if (states.InState("ChargeAttack.AttackReady")) {
+    if (states.HasState("ChargeAttack.AttackReady")) {
 
       if (!control.attack.isPressed) {
         states.ExitState("ChargeAttack.AttackReady");
@@ -102,7 +102,7 @@ OnUpdate(float dt) {
       return;
     }
 
-    if (states.InState("ChargeAttack.Attack")) {
+    if (states.HasState("ChargeAttack.Attack")) {
 
       targets = FindAttackTargets();
       performDamage(targets);
