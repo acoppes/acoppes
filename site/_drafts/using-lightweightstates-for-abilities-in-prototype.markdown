@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using lightweight states to create unit abilities for my prototype"
-date:   2022-12-14 00:08:30 -0300
+date:   2022-12-28 00:08:30 -0300
 excerpt: I share how I am using lightweight states to create abilities for the prototype beatemup/actionrpg I am making right now. 
 ---
 
@@ -131,7 +131,7 @@ OnUpdate(float dt) {
 
 ```
 
-In this case, it uses a state named `ChargeAttack` triggered when `attack` is pressed and it also uses sub states for each part of the ability.
+In this case, it uses a state named `ChargeAttack` triggered when `attack` button is pressed and it also uses sub states for each part of the ability.
 
 <!--
 **Flying Bomb Attack**
