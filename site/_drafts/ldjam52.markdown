@@ -37,11 +37,19 @@ I don't know the correct solution for a Mini Map, never had to do something befo
     <a href="/assets/ldjam52-minimap-camera.png"><img src="/assets/ldjam52-minimap-camera.png" /></a>
 </div>
 
-In order to control what to render, I created a game object with a colored Quad inside all the elements of the game I wanted to be shown in the map and set them in special layer named Scanner, that is set in the  Culling Mask of the Mini Map camera. I added those objects to the Harvester, the Sand Worm and each of the Spice instances and I normally had to scale them up in order to increase their importance in the map. 
+In order to control what to render, I created a GameObject with a colored Quad inside all the elements of the game I wanted to be shown in the map and set them in special layer named Scanner, that is set in the  Culling Mask of the Mini Map camera. I added those objects to the Harvester, the Sand Worm and each of the Spice instances and I normally had to scale them up in order to increase their importance in the map. 
 
 <div class="post-image">
     <a href="/assets/ldjam52-minimap-icons.png"><img src="/assets/ldjam52-minimap-icons.png" /></a>
 </div>
+
+And finally, to render that in the screen, I used a UI Raw Image with the render texture set and configured the size I wanted to show it.
+
+<div class="post-image">
+    <a href="/assets/ldjam52-minimap-ui.png"><img src="/assets/ldjam52-minimap-ui.png" /></a>
+</div>
+
+Even if it wasn't a horrible approach, there are probably better ways to render that Mini Map texture with more control of what to show without having to create tons of GameObjects, but it was a great approach for the jam in my opinion.
 
 ### The Sandworm
 
@@ -57,7 +65,7 @@ Sometimes people ask me which language and/or technologies I used to make a game
 
 ## Conclusion
 
-The game hasn't everything I wanted when I was developing but given that I started late by one day and I have two kids, and we are on holydays, I am really really happy with the results and what the new knowledge. 
+For a game I created in two days (I started one day late) and maybe in a total of 12 hours, I am quite happy with the results and all the generated knowledge. I had some doubts at first since I knew I wasn't going to spend the first day and I was going to work some sparse time (I am a father of two) but now I know I want to repeat it. 
 
 By the way, if you liked the post and the game, [follow me on twitter](https://twitter.com/arielsan) and [share](https://twitter.com/arielsan/status/1612526561181196297
 ), and also play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699).
