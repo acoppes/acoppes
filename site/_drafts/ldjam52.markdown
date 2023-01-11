@@ -9,6 +9,7 @@ I pushed myself to make a 3d game for [Ludum Dare 52](https://ldjam.com/events/l
 
 <div class="post-image">
     <img src="/assets/ldjam52-travel_01.gif" />
+    <span>The Harvester exploring the sands of Arrakis</span>
 </div>
 
 When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with much love. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, the most important unit in the game, and you had to forget everything else to save it. 
@@ -19,9 +20,12 @@ At first I wasn’t sure if I wanted to give the player the power of the Shai-hu
 
 Basically, in the game you control a Harvester and have to harvest spice, at some point a Sand Worm tries to eat you and you have to escape and repeat until a target spice is reached or until you get eaten.
 
-### Terrain
+### The Dunes
 
-The first thing I wanted to achieve was the sensation of Arrakis’ dunes (hence its other name Dune). For that I decided to use Unity’s terrain tool.
+The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something I liked.
+
+
+
 
 ### The Harvester
 
@@ -51,17 +55,41 @@ And finally, to render that in the screen, I used a UI Raw Image with the render
 
 Even if it wasn't a horrible approach, there are probably better ways to render that Mini Map texture with more control of what to show without having to create tons of GameObjects, but it was a great approach for the jam in my opinion.
 
-### The Sandworm
+### The Sand Worm
 
-__TODO: share about the idea with the sandworm, how I created the model using probuilder and the animation__
+The main thing I wanted to achieve with the Sand Worm was the moment it eats your Harvester and the first thing that came to my mind was an image of different rings of teeth rotating at different speed and that was my focus. So basically the worm will travel hidden in the dunes but shown in the Mini Map so you can react, and it will came out to eat you when below the harvester.
+
+<div class="post-image">
+    <img src="/assets/ldjam52-sandworm-attack.gif" />
+    <span>Sand Worm attack sequence</span>
+</div>
+
+To create the model I used ProBuilder tool. For the body I used a Pipe modified to make the mouth a bit bigger and then a set of Cones for the teeth. 
+
+<div class="post-image">
+    <a href="/assets/ldjam52-sandworm-01.png"><img src="/assets/ldjam52-sandworm-01.png" /></a>
+    <span>The Game Object used for the Sand Worm.</span>
+</div>
+
+<div class="post-image">
+    <a href="/assets/ldjam52-sandworm-02.png"><img src="/assets/ldjam52-sandworm-02.png" /></a>
+    <span>Each element of the Sand Worm.</span>
+</div>
+
+For the teeth rotation I just used a script that rotates the euler angles given a speed and the delta time and I configured different speeds for each ring.
+
+Finally, for the eat sequence, I used two different Cinemachine Virtual Camera that are switched back and forward.
 
 ### What I used to make the game
 
 Sometimes people ask me which language and/or technologies I used to make a game, and I though not so frequent I share an extensive list, here it is:
 
 * Unity and C#
+  - Terrain Tool
 * URP (Universal Render Pipeline)
 * Post processinig effects like bloom, vignete, etc.
+* Probuilder
+* Cinemachine
 
 ## Conclusion
 
