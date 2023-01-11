@@ -48,7 +48,15 @@ There were different things I wanted to try but had no time, one of them was to 
 
 Another thing I tested a bit was grass painting, I wanted in my head to spawn the Spice like it was grass on the ground but orange, I felt it like was going to be a great idea but couldn't get it to look how I wanted and also I didn't know how to remove it after harvesting so I decided to avoid that. 
 
-So in the end I just created a Game Object with an orange quad for the Spice grain and spawned hundreds of them in each location :grimacing: .
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/ldjam52-harvester-grass.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Using the grass terrain tool to show the Spice in the sand.</span>
+</div>
+
+So in the end I just created a Game Object with an orange quad for the Spice grain and spawned hundreds of them in each location :grimacing:, not so cool.
 
 <div class="post-image">
     <a href="/assets/ldjam52-terrain-02.png"><img src="/assets/ldjam52-terrain-02.png" /></a>
@@ -60,7 +68,16 @@ Anyways, in the end I just did the basics with the terrain.
 
 ### The Harvester
 
-This is the main character of the game, controlled by the player, the Harvester must harvest Spice while surviving the Sand Worm attacks. I started by creating a cube and started moving it using the CharacterController component  
+This is the main character of the game, controlled by the player, the Harvester must harvest Spice while surviving the Sand Worm attacks. 
+
+I started by creating a cube and started moving it using the CharacterController component which I never used before and to see what happened. The first issue I had was that it is meant to be used without a Rigid Body (or at least not having them acting at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix was easy, just remove the Rigid Body, I didn't need physics for now.
+
+So I just calculated the desired motion given the input and apply it multiplied the speed to the controller. The next problem I had was to 
+
+Wheels
+
+ * Issue with terrain positioning
+ * Harvester rotation
 
 __TODO: share about the controller, and how I did the model rotation given the wheels projected on the terrain__
 
@@ -123,6 +140,7 @@ Sometimes people ask me which language and/or technologies I used to make a game
 * Post processinig effects like bloom, vignete, etc.
 * Probuilder
 * Cinemachine
+* New Input System
 
 ## Conclusion
 
@@ -131,5 +149,5 @@ For a game I created in two days (I started one day late) and maybe in a total o
 One thing I realized was that I wanted to reuse code and tools I have in the game I am making but it wasn't easy, I ended up copying some code. I confirmed that I need to start moving my code to public and shared projects in some way to have it easy to use when starting new projects, for jams or for other prototypes. For example, I wanted to use the [MyBox package](https://github.com/Deadcows/MyBox.git) and it was just adding the git url to the Package Manager.  
 
 By the way, if you liked the post and the game, [follow me on twitter](https://twitter.com/arielsan) and [share](https://twitter.com/arielsan/status/1612526561181196297
-), and also play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699).
+), and also play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). And if you want to take a look at the code, the game is open source [at my Github](https://github.com/acoppes/ldjam52).
 
