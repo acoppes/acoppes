@@ -175,7 +175,7 @@ Sometimes people ask me which language and/or technologies I used to make a game
 
 ## Conclusion
 
-For a game I created in two days (I started one day late) and maybe in a total of 12 hours, I am quite happy with the results and all the generated knowledge. I had some doubts at first since I knew I had one day less and the other days I was going to have a lot of interruptions (I am a father of two and we are on holydays) but now I know I want to repeat it. 
+For a game I created in two days (I started one day late) and maybe in a total of 12 hours, I am quite happy with the results and all the generated knowledge. I had some doubts at first since I knew I had one day less and the other days I was going to have interruptions (I am a father of two and we are on holydays) but now I know I want to repeat it. 
 
 One thing I realized was that I wanted to reuse code and tools from other projects and it wasn't easy, I ended up manually copying some code. I just confirmed that I need to start moving more of my code to decoupled projects I could easily reuse when working on new projects, jams or prototypes. For example, to use [MyBox package](https://github.com/Deadcows/MyBox.git) I just added the git url to the Package Manager and voilá, I need more of that.  
 
