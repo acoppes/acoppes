@@ -53,6 +53,22 @@ feed:
 
 google_analytics: G-VL02PZQC7L
 
+collections:
+  drafts: 
+    output: true
+    permalink: /:collection/:name/
+
+defaults:
+  - scope:
+      #path: ""
+      type: drafts
+    values:
+      comments: false
+      share: false
+      related: false
+      sitemap: false  #To hide from sitemap.xml
+      noindex: true   #To hide from robots and crawlers    
+      
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
