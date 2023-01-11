@@ -44,6 +44,7 @@ mastodon:
 theme: minima
 plugins:
   - jekyll-feed
+  - jemoji
 
 timezone: America/Montevideo
 
