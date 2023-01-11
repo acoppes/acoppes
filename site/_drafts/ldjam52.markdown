@@ -127,18 +127,20 @@ And finally, to render that in the screen, I used a UI Raw Image with the Render
     <a href="/assets/ldjam52-minimap-ui.png"><img src="/assets/ldjam52-minimap-ui.png" /></a>
 </div>
 
-Even if it wasn't a horrible approach, there are probably better ways to render that Mini Map texture with more control of what to show without having to create tons of GameObjects, but it was a great approach for the jam in my opinion.
+Even if it wasn't a horrible approach, there are probably better ways to render that Mini Map texture with more control of what to show without having to create tons of GameObjects, but it was a great approach for the jam.
 
 ### The Sand Worm
 
-The main thing I wanted to achieve with the Sand Worm was the moment it eats your Harvester and the first thing that came to my mind was an image of different rings of teeth rotating at different speed and that was my focus. So basically the worm will travel hidden in the dunes but shown in the Mini Map so you can react, and it will came out to eat you when below the harvester.
+The main thing I wanted to achieve with the Sand Worm was the moment it eats your Harvester. The first thing that came to my mind was an image of different rings of teeth rotating at different speed (don't know if it was from the movie) and that was my focus. So basically the worm will travel hidden in the dunes, visible in the Mini Map, and it will came out when it si below the harvester.
 
 <div class="post-image">
     <img src="/assets/ldjam52-sandworm-attack.gif" />
     <span>Sand Worm attack sequence</span>
 </div>
 
-To create the model I used ProBuilder tool. For the body I used a Pipe modified to make the mouth a bit bigger and then a set of Cones for the teeth. 
+To create the model I used the ProBuilder tool. 
+
+For the body I used a Pipe modified to make the mouth a bit bigger and then a set of Cones for the teeth. 
 
 <div class="post-image">
     <a href="/assets/ldjam52-sandworm-01.png"><img src="/assets/ldjam52-sandworm-01.png" /></a>
@@ -150,28 +152,35 @@ To create the model I used ProBuilder tool. For the body I used a Pipe modified 
     <span>Each element of the Sand Worm.</span>
 </div>
 
-For the teeth rotation I just used a script that rotates the euler angles given a speed and the delta time and I configured different speeds for each ring.
+For the teeth rotation I just used a script that rotates the euler angles given a speed and the delta time and I configured different speeds for each ring, and put that in the parent GameObject of the group of teeth.
 
 Finally, for the devour sequence, I used a Cinemachine Virtual Camera that is turned on during the sequence and turned off after (if the Harvester is still alive).
 
-### What I used to make the game
+### Tools and technologies used
 
-Sometimes people ask me which language and/or technologies I used to make a game, and I though not so frequent I share an extensive list, here it is:
+Sometimes people ask me which language and/or technologies I used to make a game and I realized I normally forget to share that. So, here is a summary:
 
-* Unity and C#
+* Unity Engine
   - Terrain Tool
-* URP (Universal Render Pipeline)
-* Post processinig effects like bloom, vignete, etc.
-* Probuilder
-* Cinemachine
-* New Input System
+  - URP (Universal Render Pipeline) with Post Processing effects like ToneMapping, Bloom and Vignette.
+  - Probuilder to build shapes
+  - Cinemachine to make the camera follow the character and also for the devour sequence.
+  - CharacterController and New Input System to control the character
+  - Plugins
+    - MyBox
+    - Leantween
+    - Vertx for better physics debugging
+* C# language with Rider IDE
+* Screen2Gif, Floom and OBS to record videos and gifs.
 
 ## Conclusion
 
 For a game I created in two days (I started one day late) and maybe in a total of 12 hours, I am quite happy with the results and all the generated knowledge. I had some doubts at first since I knew I wasn't going to spend the first day and I was going to work some sparse time (I am a father of two) but now I know I want to repeat it. 
 
-One thing I realized was that I wanted to reuse code and tools I have in the game I am making but it wasn't easy, I ended up copying some code. I confirmed that I need to start moving my code to public and shared projects in some way to have it easy to use when starting new projects, for jams or for other prototypes. For example, I wanted to use the [MyBox package](https://github.com/Deadcows/MyBox.git) and it was just adding the git url to the Package Manager.  
+One thing I realized was that I wanted to reuse code and tools from other projects and it wasn't easy, I ended up manually copying some code. I just confirmed that I need to start moving more of my code to decoupled projects I could easily reuse when working on new projects, jams or prototypes. For example, to use [MyBox package](https://github.com/Deadcows/MyBox.git) I just added the git url to the Package Manager and voilá, I need more of that.  
 
-By the way, if you liked the post and the game, [follow me on twitter](https://twitter.com/arielsan) and [share](https://twitter.com/arielsan/status/1612526561181196297
-), and also play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). And if you want to take a look at the code, the game is open source [at my Github](https://github.com/acoppes/ldjam52).
+If you liked the blog post, [follow me on twitter](https://twitter.com/arielsan) and [share it](https://twitter.com/arielsan/status/1612526561181196297
+), that will be much appreciated. 
+
+Also, you can play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). If you want to take a look at the code, the game is [open source](https://github.com/acoppes/ldjam52).
 
