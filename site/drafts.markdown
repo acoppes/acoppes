@@ -1,6 +1,6 @@
 ---
 layout:       page
-title:        Drafts
+title:        
 permalink:    /drafts/
 meta_robots:  noindex
 ---
