@@ -20,6 +20,22 @@ At first I wasn’t sure if I wanted to give the player the power of the Shai-hu
 
 Basically, in the game you control a Harvester and have to harvest spice, at some point a Sand Worm tries to eat you and you have to escape and repeat until a target spice is reached or until you get eaten.
 
+### General
+
+When starting new projects I like to create different scenes, initially with visual mockup of what I want ot attack next and later with different test cases that allow me to implement the feature. For example, when starting working on how the wheels project to the terrain (more on that later) I created a scene named WheelTerrainPositioning and inside it I have multiple root folders with different test cases.
+
+<div class="post-image">
+    <a href="/assets/ldjam52-mockup-scenes.png"><img src="/assets/ldjam52-mockup-scenes.png" /></a>
+     <span>The list of scenes I have in the game, most of them to develop specific feature.</span>
+</div>
+
+<div class="post-image">
+    <a href="/assets/ldjam52-mockup-scenes-02.png"><img src="/assets/ldjam52-mockup-scenes-02.png" /></a>
+     <span>The root objects for each test case inside the development scene.</span>
+</div>
+
+This is something I do for a long time and I really like to attack each feature in isolation, even though I have to improve root object naming.
+
 ### The Dunes
 
 The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something I liked. This was a pretty direct step, I just used the Raise or Lower terrain with default brushes and created what I wanted, and just modified a bit the Material to get a decent sand color.
@@ -43,6 +59,8 @@ Another thing I wanted to try but had no time was to spawn the Spice using diffe
 Anyways, in the end I just did the basics with the terrain.
 
 ### The Harvester
+
+This is the main character of the game, controlled by the player, the Harvester must harvest Spice while surviving the Sand Worm attacks. I started by creating a cube and started moving it using the CharacterController component  
 
 __TODO: share about the controller, and how I did the model rotation given the wheels projected on the terrain__
 
@@ -109,6 +127,8 @@ Sometimes people ask me which language and/or technologies I used to make a game
 ## Conclusion
 
 For a game I created in two days (I started one day late) and maybe in a total of 12 hours, I am quite happy with the results and all the generated knowledge. I had some doubts at first since I knew I wasn't going to spend the first day and I was going to work some sparse time (I am a father of two) but now I know I want to repeat it. 
+
+One thing I realized was that I wanted to reuse code and tools I have in the game I am making but it wasn't easy, I ended up copying some code. I confirmed that I need to start moving my code to public and shared projects in some way to have it easy to use when starting new projects, for jams or for other prototypes. For example, I wanted to use the [MyBox package](https://github.com/Deadcows/MyBox.git) and it was just adding the git url to the Package Manager.  
 
 By the way, if you liked the post and the game, [follow me on twitter](https://twitter.com/arielsan) and [share](https://twitter.com/arielsan/status/1612526561181196297
 ), and also play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699).
