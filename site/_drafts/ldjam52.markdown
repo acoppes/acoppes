@@ -68,18 +68,31 @@ Anyways, in the end I just did the basics with the terrain.
 
 ### The Harvester
 
-This is the main character of the game, controlled by the player, the Harvester must harvest Spice while surviving the Sand Worm attacks. 
+Controlled by the player, the Harvester is the main character of this game and it must harvest Spice while surviving the Sand Worm attacks. 
 
-I started by creating a cube and started moving it using the CharacterController component which I never used before and to see what happened. The first issue I had was that it is meant to be used without a Rigid Body (or at least not having them acting at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix was easy, just remove the Rigid Body, I didn't need physics for now.
+I started by creating a cube and started moving it using the CharacterController component, which I never used before, and to see what happened. The first issue I had was that it was competing with RigidBody physics and I didn't know they aren't meant to be use together (at least not at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix for that was to remove the RigidBody.
 
-So I just calculated the desired motion given the input and apply it multiplied the speed to the controller. The next problem I had was to 
+To move, I calculated the desired motion given the input and a configurable speed and then applied to the CharacterController. The next problem I had was that it doesn't calculate gravity by default, so the vehicle started to fly after moving over a slope. The quick fix for that is to include gravity in the motion vector when calling Move() method to the CharacterController. 
 
-Wheels
+The next thing I did was to add "wheels" (some rotated cylinders). After playing with it a bit I wanted the wheels be over the terrain all the time. In order to implement that I just used Physics RayCast against objects in the Terrain layer to detect the terrain position and then apply it to the wheel. That worked but using physics with terrains has an issue for terrain temporary excluded from the physics simulation (probably to improve performance), wasn't the case of the wheels but I used the same logic for other stuff and it failed. The fix for that is to use the proper SampleHeight() API instead of using physics, which always work and probably faster. However, I had other normal Game Objects marked as Terrain so ended up making a solution mix.
 
- * Issue with terrain positioning
- * Harvester rotation
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/ldjam52-harvester-wheel-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Project the wheel over the terrain using SampleHeight().</span>
+</div>
 
-__TODO: share about the controller, and how I did the model rotation given the wheels projected on the terrain__
+After having that, I wanted the harvester to incline based on the wheel axis, so if moving uphill it will look up and the camera will consider that. In order to do that I calculated the normal of the vector difference between the front and back wheel axis and then applied that to the object.
+
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/ldjam52-harvester-wheel-02.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Calculating normal based on front and back axis.</span>
+</div>
 
 ### The Mini Map
 
