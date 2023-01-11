@@ -22,10 +22,25 @@ Basically, in the game you control a Harvester and have to harvest spice, at som
 
 ### The Dunes
 
-The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something I liked.
+The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something I liked. This was a pretty direct step, I just used the Raise or Lower terrain with default brushes and created what I wanted, and just modified a bit the Material to get a decent sand color.
 
+<div class="post-image">
+    <a href="/assets/ldjam52-terrain-01.png"><img src="/assets/ldjam52-terrain-01.png" /></a>
+</div>
 
+There were different things I wanted to try but had no time, one of them was to create the terrain using height maps and to randomize that in different runs so you have to discover different Spice locations. 
 
+Another thing I tested a bit was grass painting, I wanted in my head to spawn the Spice like it was grass on the ground but orange, I felt it like was going to be a great idea but couldn't get it to look how I wanted and also I didn't know how to remove it after harvesting so I decided to avoid that. 
+
+So in the end I just created a Game Object with an orange quad for the Spice grain and spawned hundreds of them in each location :grimacing: .
+
+<div class="post-image">
+    <a href="/assets/ldjam52-terrain-02.png"><img src="/assets/ldjam52-terrain-02.png" /></a>
+</div>
+
+Another thing I wanted to try but had no time was to spawn the Spice using different shapes and also based on the Terrain height so, mixed with creating different height maps and spawning based on that will give nice looking Spice locations (at least in my head were looking nice).
+
+Anyways, in the end I just did the basics with the terrain.
 
 ### The Harvester
 
@@ -78,7 +93,7 @@ To create the model I used ProBuilder tool. For the body I used a Pipe modified 
 
 For the teeth rotation I just used a script that rotates the euler angles given a speed and the delta time and I configured different speeds for each ring.
 
-Finally, for the eat sequence, I used two different Cinemachine Virtual Camera that are switched back and forward.
+Finally, for the devour sequence, I used a Cinemachine Virtual Camera that is turned on during the sequence and turned off after (if the Harvester is still alive).
 
 ### What I used to make the game
 
