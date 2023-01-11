@@ -2,27 +2,31 @@
 layout: post
 title:  "How I created my game for the Ludum Dare 52"
 date:   2023-01-10 00:08:30 -0300
-excerpt: I pushed myself to make a 3d game for Ludum Dare 52 last weekend and felt like a beginner during the process but it felt really good and I learned new things. I am super happy with that. In this blog post I will share the experience and some of the technical details of the solution. 
+excerpt: I pushed myself to make a 3d game for Ludum Dare 52 last weekend and felt it felt really good and I had the opportunity to learn new things in the process. In this blog post I will share the experience and some of the technical details of the solution. 
 ---
 
-I pushed myself to make a 3d game for [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/$319699) last weekend and felt like a beginner during the process but it felt really good and I learned new things. I am super happy with that. In this blog post I will share the experience and some of the technical details of the solution. 
+Last weekend I joined [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/$319699) and decided to push myself out of my comfort zone by making a 3d game with technologies I had no experience with. Even though I felt a bit lost at the beginning, I managed to make a game and had the opportunity to learn some new things at the same time and it makes me really happy. 
+
+In this blog post I will share how I experienced the jam and some of the technical details of the game I made. 
 
 <div class="post-image">
     <img src="/assets/ldjam52-travel_01.gif" />
-    <span>The Harvester exploring the sands of Arrakis</span>
+    <span>Exploring the dunes of Arrakis.</span>
 </div>
 
-When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with much love. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, the most important unit in the game, and you had to forget everything else to save it. 
+When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with fondness. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, one of the most important unit of the game, and you had to manage to save it. 
 
-After thinking a bit about the theme and about Dune, I decided to create a game around that feeling. 
+I decided to create a game around that feeling. 
 
-At first I wasn’t sure if I wanted to give the player the power of the Shai-hulud and the game was going to be about hunting harvesters or the other way around, you are the harvester escaping the god. I decided to go for the second just because the game was more clear in my mind.
+At first I wasn’t sure if I wanted to give the player the power of the Shai-Hulud and the game was going to be about hunting units or the other way around, you are the harvester escaping the Sand God. I decided to go for the second just because the game was more clear in my mind and more related with the feeling I wanted to give to the player.
 
-Basically, in the game you control a Harvester and have to harvest spice, at some point a Sand Worm tries to eat you and you have to escape and repeat until a target spice is reached or until you get eaten.
+Basically, in the game you control a Harvester and have to harvest Spice, at some point a Sand Worm tries to eat you and you have to escape and repeat until you harvest enough spice or until you get eaten.
 
 ### General
 
-When starting new projects I like to create different scenes, initially with visual mockup of what I want ot attack next and later with different test cases that allow me to implement the feature. For example, when starting working on how the wheels project to the terrain (more on that later) I created a scene named WheelTerrainPositioning and inside it I have multiple root folders with different test cases.
+One thing I like in all my projects is to create different scenes to work on new things in isolation and start small each time. Initially the scene contains a visual mockup of what I want to create or implement and and later I start adding different test cases that allow me to complete what I want. These test cases are normally root objects that I enable or disable in order to work on an specific thing.
+
+For example, when starting working on how the wheels projection on the terrain (more on that later) I created a scene named WheelTerrainPositioning.
 
 <div class="post-image">
     <a href="/assets/ldjam52-mockup-scenes.png"><img src="/assets/ldjam52-mockup-scenes.png" /></a>
@@ -34,19 +38,21 @@ When starting new projects I like to create different scenes, initially with vis
      <span>The root objects for each test case inside the development scene.</span>
 </div>
 
-This is something I do for a long time and I really like to attack each feature in isolation, even though I have to improve root object naming.
+This is something I do for a long time now and I really like it to attack each feature in isolation first. I have to admit that I need to improve root objects naming.
 
 ### The Dunes
 
-The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something I liked. This was a pretty direct step, I just used the Raise or Lower terrain with default brushes and created what I wanted, and just modified a bit the Material to get a decent sand color.
+The first thing I wanted to achieve was the sensation of Arrakis’ dunes and for that I decided to use Unity’s terrain tool which I never used before and I quickly managed to have something that I liked. This was a pretty direct step, I just used the Raise or Lower terrain with default brushes and created what I wanted, and just modified a bit the Material to get a decent sand feeling.
 
 <div class="post-image">
     <a href="/assets/ldjam52-terrain-01.png"><img src="/assets/ldjam52-terrain-01.png" /></a>
 </div>
 
-There were different things I wanted to try but had no time, one of them was to create the terrain using height maps and to randomize that in different runs so you have to discover different Spice locations. 
+There were different things I wanted to try but had no time, one of them was to create the terrain using height maps and to randomize that each time you start the game and also to use that information for the Spice locations. 
 
-Another thing I tested a bit was grass painting, I wanted in my head to spawn the Spice like it was grass on the ground but orange, I felt it like was going to be a great idea but couldn't get it to look how I wanted and also I didn't know how to remove it after harvesting so I decided to avoid that. 
+Another thing that I tested a bit was the terrain grass, I wanted in my head to spawn the Spice like it was grass on the ground but with orange tones (like Spice). I felt it like was going to be a great idea but couldn't get it to look how I wanted at first and also I didn't know how to remove it after harvesting so I decided to avoid that. 
+
+While writing the blog post I tried again and managed to make it look how I wanted, still don't know how to remove it from terrain though (now I want to investigate that). 
 
 <div class="post-image">
 <video width="480" height="270" controls>
@@ -56,25 +62,26 @@ Another thing I tested a bit was grass painting, I wanted in my head to spawn th
 <span>Using the grass terrain tool to show the Spice in the sand.</span>
 </div>
 
-So in the end I just created a Game Object with an orange quad for the Spice grain and spawned hundreds of them in each location :grimacing:, not so cool.
+In the end I just created a Game Object with an orange quad for each Spice grain and spawned hundreds of them in each location :grimacing:. It doesn't look so cool but anyways.
 
 <div class="post-image">
     <a href="/assets/ldjam52-terrain-02.png"><img src="/assets/ldjam52-terrain-02.png" /></a>
 </div>
 
-Another thing I wanted to try but had no time was to spawn the Spice using different shapes and also based on the Terrain height so, mixed with creating different height maps and spawning based on that will give nice looking Spice locations (at least in my head were looking nice).
-
-Anyways, in the end I just did the basics with the terrain.
+Another thing I wanted to try but had no time was to spawn the Spice using different shapes and also based on the Terrain height so, mixed with creating different height maps and spawning based on that will give nice looking Spice locations (at least in my head were looking nice). 
 
 ### The Harvester
 
-Controlled by the player, the Harvester is the main character of this game and it must harvest Spice while surviving the Sand Worm attacks. 
+Controlled by the player, the Harvester is the main character of the game and it must harvest Spice while surviving the Sand Worm attacks. 
 
-I started by creating a cube and started moving it using the CharacterController component, which I never used before, and to see what happened. The first issue I had was that it was competing with RigidBody physics and I didn't know they aren't meant to be use together (at least not at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix for that was to remove the RigidBody.
+I started by creating a cube and moving it using the CharacterController component, which I never used before, and to see what happened. The first issue I had was that it was competing with RigidBody physics and I didn't remember they aren't meant to be use together (at least not at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix for that was to remove the RigidBody.
 
-To move, I calculated the desired motion given the input and a configurable speed and then applied to the CharacterController. The next problem I had was that it doesn't calculate gravity by default, so the vehicle started to fly after moving over a slope. The quick fix for that is to include gravity in the motion vector when calling Move() method to the CharacterController. 
+To move, I calculated the desired motion given the input and a configurable speed and then applied to the CharacterController. The next problem I had was that it doesn't apply gravity by default, so the vehicle started to fly after moving over a slope. The quick fix for that is to include gravity in the motion vector when calling the Move() method. It does consider collisions with the ground so your character doesn't fall.
 
-The next thing I did was to add "wheels" (some rotated cylinders). After playing with it a bit I wanted the wheels be over the terrain all the time. In order to implement that I just used Physics RayCast against objects in the Terrain layer to detect the terrain position and then apply it to the wheel. That worked but using physics with terrains has an issue for terrain temporary excluded from the physics simulation (probably to improve performance), wasn't the case of the wheels but I used the same logic for other stuff and it failed. The fix for that is to use the proper SampleHeight() API instead of using physics, which always work and probably faster. However, I had other normal Game Objects marked as Terrain so ended up making a solution mix.
+The next thing I did was to add "wheels" (just some rotated black cylinders). After playing with it a bit I wanted the wheels to be over the terrain, otherwise they were floating most of the time. 
+
+In order to implement that, I used Physics RayCast against objects in the Terrain layer to detect the ideal position and then apply it to the Wheel transform. That worked fine for the Wheels but when using physics with terrain patches temporary culled or disabled (probably to improve performance) doesn't detect collisions, so for spawning Spice grains in far away locations it doesn't work. The fix for that is to use 
+SampleHeight() instead of using physics, which always work and it's probably faster. I ended up making a solution mix since I also want to detect positions based on Game Objects in the Terrain layer too and for that I needed physics.
 
 <div class="post-image">
 <video width="480" height="270" controls>
@@ -84,7 +91,7 @@ The next thing I did was to add "wheels" (some rotated cylinders). After playing
 <span>Project the wheel over the terrain using SampleHeight().</span>
 </div>
 
-After having that, I wanted the harvester to incline based on the wheel axis, so if moving uphill it will look up and the camera will consider that. In order to do that I calculated the normal of the vector difference between the front and back wheel axis and then applied that to the object.
+After having that, I wanted the harvester to incline based on the wheel axis, so if moving uphill it will look up and the camera will consider that. In order to do that I calculated the normal of the vector difference between the front and back wheel axis and then rotated the vehicle in its X axis using that value.
 
 <div class="post-image">
 <video width="480" height="270" controls>
@@ -94,23 +101,27 @@ After having that, I wanted the harvester to incline based on the wheel axis, so
 <span>Calculating normal based on front and back axis.</span>
 </div>
 
+Finally, for the wheels traces I used a Line Renderer that spawns points based on the current wheel position and only after moving a minimum distance from the last spawned position. 
+
 ### The Mini Map
 
-To create a game in 2-3 days, you have to make a lot of shortcuts and hacks, and the Mini Map has a lot of those.
+To create a game in two days, you have to take a lot of shortcuts and make a lot of hacks, and the Mini Map is an example of that.
 
-I don't know the correct solution for a Mini Map, never had to do something before, my approach in this case was to create a secondary camera that follows the Harvester far from above and to render it to a render texture, to later show that render texture in the UI.
+I don't know the proper solution for a Mini Map since I never had to do something like that before. My approach in this case was to create a secondary camera that follows the Harvester far from above and to render it to a RenderTexture and show that texture in the UI.
 
 <div class="post-image">
     <a href="/assets/ldjam52-minimap-camera.png"><img src="/assets/ldjam52-minimap-camera.png" /></a>
 </div>
 
-In order to control what to render, I created a GameObject with a colored Quad inside all the elements of the game I wanted to be shown in the map and set them in special layer named Scanner, that is set in the  Culling Mask of the Mini Map camera. I added those objects to the Harvester, the Sand Worm and each of the Spice instances and I normally had to scale them up in order to increase their importance in the map. 
+In order to control what to render, I created a GameObject with a colored Quad inside all the elements of the game I wanted to be shown in the map and set them in special layer named Scanner. 
+
+Both the Scanner and and the Terrain layers are configured in the Mini Map camera Culling Mask. So, I added those GameObjects to the Harvester, the Sand Worm and each of the Spice grains (yeah...) so the player can see all that information in the map. I had to scale them up in order to see them in the map since I moved the camera far far away to see more. 
 
 <div class="post-image">
     <a href="/assets/ldjam52-minimap-icons.png"><img src="/assets/ldjam52-minimap-icons.png" /></a>
 </div>
 
-And finally, to render that in the screen, I used a UI Raw Image with the render texture set and configured the size I wanted to show it.
+And finally, to render that in the screen, I used a UI Raw Image with the RenderTexture set and configured the size I wanted to show it.
 
 <div class="post-image">
     <a href="/assets/ldjam52-minimap-ui.png"><img src="/assets/ldjam52-minimap-ui.png" /></a>
