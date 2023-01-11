@@ -10,6 +10,7 @@ meta_robots:  noindex
 <div class="posts">
   {% assign sorted = site.drafts | sort: 'date' | reverse %}
   {% for draft in sorted %}
+  {%- if draft.hide == null or draft.hide == false -%}
     <div class="post py2">
       <p class="post-meta h5">{{ draft.date | date: site.date_format }}</p>
       <a href="{{site.baseurl}}{{ draft.url }}" class="post-link"><h3 class="post-title">{{ draft.title }}</h3></a>
@@ -21,5 +22,6 @@ meta_robots:  noindex
         </span>
       {% endif %}
     </div>
+  {%- endif -%}
   {% endfor %}
 </div>
