@@ -21,6 +21,9 @@ meta_robots:  noindex
           {% endfor %}
         </span>
       {% endif %}
+      {%- if site.show_excerpts -%}
+        {{ draft.excerpt }}
+      {%- endif -%}
     </div>
   {%- endif -%}
   {% endfor %}
