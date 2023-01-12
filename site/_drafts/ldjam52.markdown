@@ -14,7 +14,7 @@ In this blog post I will share how I experienced the jam and some of the technic
     <span>Exploring the dunes of Arrakis.</span>
 </div>
 
-When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with fondness. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, one of the most important unit of the game, and you had to manage to save it. 
+When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with fondness. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, one of the most important units of the game, and you had to manage to save it. 
 
 I decided to create a game around that feeling. 
 
