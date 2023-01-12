@@ -3,6 +3,7 @@ layout: post
 title:  "I quit my job at Ironhide Game Studio after ten years, now what?"
 date:   2022-11-22 00:08:30 -0300
 excerpt: Want to share a bit of my status right now and my current plan for the future now that I left my work after almost ten years.  
+author: Ariel Coppes
 ---
 
 Leaving the company I worked on the last ten years of my life was a really hard decision to make but at the same time I feel it was the right one. Ironhide was growing too fast and too much and even though I don't disagree with that vision of big company I didn't want that for me. I still love the people and every game we did there and wish for them to keep making awesome games that I will totally play. I will always be a fan.

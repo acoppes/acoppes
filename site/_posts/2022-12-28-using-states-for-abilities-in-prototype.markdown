@@ -3,6 +3,7 @@ layout: post
 title:  "Using states to create unit abilities for my prototype"
 date:   2022-12-28 00:08:30 -0300
 excerpt: I am using states to create abilities for the actionrpg beatemup prototype I am working on and I share a bit of pseudocode to explain how. 
+author: Ariel Coppes
 ---
 
 I am testing different abilities for the [prototype]({{ site.baseurl }}/2022/11/22/i-quit-myjob-now-what.html) (visuals changed a lot since I started) I am working on, here is an example of one of them:
