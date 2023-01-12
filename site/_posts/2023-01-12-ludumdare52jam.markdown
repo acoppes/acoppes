@@ -1,8 +1,14 @@
 ---
 layout: post
 title:  "How I created my game for the Ludum Dare 52"
-date:   2023-01-10 00:08:30 -0300
+date:   2023-01-12 00:08:00 -0300
 excerpt: I pushed myself to make a 3d game for Ludum Dare 52 last weekend and felt it felt really good and I had the opportunity to learn new things in the process. In this blog post I will share the experience and some of the technical details of the solution. 
+author: Ariel Coppes
+tags:
+  - ludumdare
+  - unity
+  - howto
+  - dune
 ---
 
 Last weekend I joined [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/$319699) and decided to push myself out of my comfort zone by making a 3d game with technologies I had no experience with. Even though I felt a bit lost at the beginning, I managed to make a game and had the opportunity to learn some new things at the same time and it makes me really happy. 
