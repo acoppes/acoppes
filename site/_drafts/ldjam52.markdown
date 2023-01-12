@@ -14,19 +14,19 @@ In this blog post I will share how I experienced the jam and some of the technic
     <span>Exploring the dunes of Arrakis.</span>
 </div>
 
-When I first read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot that game when I was young and I remember it with fondness. One of the first things I recall was the feeling of anxiety when the Sand Worm was coming to get your harvester, one of the most important units of the game, and you had to manage to save it. 
+When I read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot of that game when I was young and I remember it with fondness. One of the things I recall is the feeling of anxiety when the Sand Worm was coming to get your harvester and you had to manage to save it while fighting in other fronts. 
 
 I decided to create a game around that feeling. 
 
-At first I wasn’t sure if I wanted to give the player the power of the Shai-Hulud and the game was going to be about hunting units or the other way around, you are the harvester escaping the Sand God. I decided to go for the second just because the game was more clear in my mind and more related with the feeling I wanted to give to the player.
+Have to admit thought that at first I wasn’t sure if I wanted to give the player the power of the Shai-Hulud and the game was going to be about hunting units or the other way around, you are the Harvester escaping the Sand Worm. I decided to go for the second just because the game was more clear in my mind and more related with the feeling I wanted to give to the player.
 
-Basically, in the game you control a Harvester and have to harvest Spice, at some point a Sand Worm tries to eat you and you have to escape and repeat until you harvest enough spice or until you get eaten.
+Basically, in the game you control a Harvester and have to harvest Spice, at some point a Sand Worm tries to eat you and you have to escape and repeat that cycle until you harvest enough spice or until you get eaten.
 
 ### General
 
 One thing I like in all my projects is to create different scenes to work on new things in isolation and start small each time. Initially the scene contains a visual mockup of what I want to create or implement and and later I start adding different test cases that allow me to complete what I want. These test cases are normally root objects that I enable or disable in order to work on an specific thing.
 
-For example, when starting working on how the wheels projection on the terrain (more on that later) I created a scene named WheelTerrainPositioning.
+For example, when starting working on how the wheels projection on the terrain (more on that later) I created a scene named WheelTerrainPositioning and inside it there are multiple root objects with the test cases.
 
 <div class="post-image">
     <a href="/assets/ldjam52-mockup-scenes.png"><img src="/assets/ldjam52-mockup-scenes.png" /></a>
@@ -38,7 +38,7 @@ For example, when starting working on how the wheels projection on the terrain (
      <span>The root objects for each test case inside the development scene.</span>
 </div>
 
-This is something I do for a long time now and I really like it to attack each feature in isolation first. I have to admit that I need to improve root objects naming.
+This is something I do for a long time now and I really like it to attack each feature in isolation and then integrate it with the rest of the game. I have to admit that I need to improve root objects naming, when it is clear it is an automatic test, I use something like `ExpectedBehaviour_When_Something`, but when I am not sure, I just put whatever.
 
 ### The Dunes
 
@@ -52,7 +52,7 @@ There were different things I wanted to try but had no time, one of them was to 
 
 Another thing that I tested a bit was the terrain grass, I wanted in my head to spawn the Spice like it was grass on the ground but with orange tones (like Spice). I felt it like was going to be a great idea but couldn't get it to look how I wanted at first and also I didn't know how to remove it after harvesting so I decided to avoid that. 
 
-While writing the blog post I tried again and managed to make it look how I wanted, still don't know how to remove it from terrain though (now I want to investigate that). 
+UPDATE: While writing the blog post I tried again and managed to make it look how I wanted, still don't know how to remove it from terrain though (now I want to investigate that). 
 
 <div class="post-image">
 <video width="480" height="270" controls>
@@ -60,6 +60,16 @@ While writing the blog post I tried again and managed to make it look how I want
    Your browser does not support the video tag.
 </video> 
 <span>Using the grass terrain tool to show the Spice in the sand.</span>
+</div>
+
+UPDATE: I managed to modify terrain grass in runtime while writing the blog post modifying the detail layer of the terrain (can write more detail if someone interested).
+
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/ldjam52-harvester-harvestnew.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Modifying the terrain grass in runtime to give an idea of harvesting spice.</span>
 </div>
 
 In the end I just created a Game Object with an orange quad for each Spice grain and spawned hundreds of them in each location :grimacing:. It doesn't look so cool but anyways.
@@ -74,7 +84,7 @@ Another thing I wanted to try but had no time was to spawn the Spice using diffe
 
 Controlled by the player, the Harvester is the main character of the game and it must harvest Spice while surviving the Sand Worm attacks. 
 
-I started by creating a cube and moving it using the CharacterController component, which I never used before, and to see what happened. The first issue I had was that it was competing with RigidBody physics and I didn't remember they aren't meant to be use together (at least not at the same time), so when I tried to move the Vehicle it started rolling and couldn't control it. The fix for that was to remove the RigidBody.
+I started by creating a cube and moving it using the CharacterController component, which I never used before, and to see what happened. The first issue I had was that it was competing with RigidBody physics and I didn't remember they aren't meant to be use together, so when I tried to move the Vehicle it started rolling and couldn't control it. To fix that I removed the RigidBody.
 
 To move, I calculated the desired motion given the input and a configurable speed and then applied to the CharacterController. The next problem I had was that it doesn't apply gravity by default, so the vehicle started to fly after moving over a slope. The quick fix for that is to include gravity in the motion vector when calling the Move() method. It does consider collisions with the ground so your character doesn't fall.
 
@@ -99,6 +109,7 @@ After having that, I wanted the harvester to incline based on the wheel axis, so
    Your browser does not support the video tag.
 </video> 
 <span>Calculating normal based on front and back axis.</span>
+<span>Note: I released the game with this turned of by mistake :facepalm:</span>
 </div>
 
 Finally, for the wheels traces I used a Line Renderer that spawns points based on the current wheel position and only after moving a minimum distance from the last spawned position. 
@@ -115,7 +126,7 @@ I don't know the proper solution for a Mini Map since I never had to do somethin
 
 In order to control what to render, I created a GameObject with a colored Quad inside all the elements of the game I wanted to be shown in the map and set them in special layer named Scanner. 
 
-Both the Scanner and and the Terrain layers are configured in the Mini Map camera Culling Mask. So, I added those GameObjects to the Harvester, the Sand Worm and each of the Spice grains (yeah...) so the player can see all that information in the map. I had to scale them up in order to see them in the map since I moved the camera far far away to see more. 
+Both the Scanner and and the Terrain layers are configured in the Mini Map camera Culling Mask. So, I added those GameObjects to the Harvester, the Sand Worm and each of the Spice grains :see_no_evil: so the player can see all that information in the map. I had to scale them up in order to see them in the map since I moved the camera far far away to see more. 
 
 <div class="post-image">
     <a href="/assets/ldjam52-minimap-icons.png"><img src="/assets/ldjam52-minimap-icons.png" /></a>
@@ -182,5 +193,5 @@ One thing I realized was that I wanted to reuse code and tools from other projec
 If you liked the blog post, [follow me on twitter](https://twitter.com/arielsan) and [share it](https://twitter.com/arielsan/status/1612526561181196297
 ), that will be much appreciated. 
 
-Also, you can play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). If you want to take a look at the code, the game is [open source](https://github.com/acoppes/ldjam52).
+Also, you can play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). If you want to take a look at the code, the game is [open source](https://github.com/acoppes/ldjam52/tree/release-for-ldjam52).
 
