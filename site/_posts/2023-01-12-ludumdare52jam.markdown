@@ -188,7 +188,7 @@ Sometimes people ask me which language and/or technologies I used to make a game
     - Leantween
     - Vertx for better physics debugging
 * C# language with Rider IDE
-* Screen2Gif, Floom and OBS to record videos and gifs.
+* Screen2Gif, [Floom](https://cokeandcode.com/floom/) and OBS to record videos and gifs.
 
 ## Conclusion
 
