@@ -21,7 +21,7 @@ Even though my main focus is making games, I enjoy a lot scaling them up by impr
 Site map:
 
 * Want to work together? check the [Contact](/contact) page to decide how to contact me.
-* Check out the [Projects](/projects) I worked on to see what I do. 
+* Check out the [Projects](/projects) I worked on to see what I do, also the [Game Jams](/jams) I've participated. 
 * If you want more detail, you can check out the [Blog](/blog) page to see some development blog posts I did over the years at [Gemserk](https://blog.gemserk.com) website.
 
 <!-- * And at the [Work](/work) page I will share specific things I did while working at different projects. -->
