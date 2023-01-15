@@ -11,7 +11,7 @@ tags:
   - dune
 ---
 
-Last weekend I joined [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/$319699) and decided to push myself out of my comfort zone by making a 3d game with technologies I had no experience with. Even though I felt a bit lost at the beginning, I managed to make a game and had the opportunity to learn some new things at the same time and it makes me really happy. 
+Last weekend I joined [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/spice-must-flow) and decided to push myself out of my comfort zone by making a 3d game with technologies I had no experience with. Even though I felt a bit lost at the beginning, I managed to make a game and had the opportunity to learn some new things at the same time and it makes me really happy. 
 
 In this blog post I will share how I experienced the jam and some of the technical details of the game I made. 
 
@@ -199,5 +199,5 @@ One thing I realized was that I wanted to reuse code and tools from other projec
 If you liked the blog post, [follow me on twitter](https://twitter.com/arielsan) and [share it](https://twitter.com/arielsan/status/1612526561181196297
 ), that will be much appreciated. 
 
-Also, you can play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/$319699). If you want to take a look at the code, the game is [open source](https://github.com/acoppes/ldjam52/tree/release-for-ldjam52).
+Also, you can play the game at my [ichio page](https://arielsan.itch.io/spice-must-flow) or in the [Ludum Dare's Entry](https://ldjam.com/events/ludum-dare/52/spice-must-flow). If you want to take a look at the code, the game is [open source](https://github.com/acoppes/ldjam52/tree/release-for-ldjam52).
 
