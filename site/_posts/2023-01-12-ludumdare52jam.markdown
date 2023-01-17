@@ -15,9 +15,8 @@ Last weekend I joined [Ludum Dare 52](https://ldjam.com/events/ludum-dare/52/spi
 
 In this blog post I will share how I experienced the jam and some of the technical details of the game I made. 
 
-<div class="post-image">
-    <img src="/assets/ldjam52-travel_01.gif" />
-    <span>Exploring the dunes of Arrakis.</span>
+<div align="center">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Working on a Dune reference game for <a href="https://twitter.com/hashtag/ludumdare52?src=hash&amp;ref_src=twsrc%5Etfw">#ludumdare52</a> <a href="https://twitter.com/hashtag/ld52?src=hash&amp;ref_src=twsrc%5Etfw">#ld52</a> <a href="https://twitter.com/hashtag/LudumDare?src=hash&amp;ref_src=twsrc%5Etfw">#LudumDare</a> the idea is to harvest Spice while trying to escape from the Shai Hulud, I will not make it in time for the compo but hope to reach the <a href="https://twitter.com/hashtag/ldjam?src=hash&amp;ref_src=twsrc%5Etfw">#ldjam</a> at least. <a href="https://t.co/fRICP6BM8H">pic.twitter.com/fRICP6BM8H</a></p>&mdash; Ariel Coppes Pereyra (@arielsan) <a href="https://twitter.com/arielsan/status/1612127888102555649?ref_src=twsrc%5Etfw">January 8, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
 
 When I read the jam’s theme, **"Harvest"**, the first thing that came to my mind was Dune 2, the 1992 PC game. I played a lot of that game when I was young and I remember it with fondness. One of the things I recall is the feeling of anxiety when the Sand Worm was coming to get your harvester and you had to manage to save it while fighting in other fronts. 
