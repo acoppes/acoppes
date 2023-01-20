@@ -31,11 +31,6 @@ projects:
 
 ---
 
-<!-- 
-The idea of this page is to highlight some of the projects I've worked on, stuff that I am proud to show
-* Could explain a bit each game, one liner.
- -->
-
 This page shows some of the games I made for game jams like Ludum Dare, Global Game Jam and also Gameboy Jam.
 
 You can check my latest game jams entries at my <a href="{{site.itchio_url}}">itch.io</a> page (and <a href="https://blog.gemserk.com/games/">Gemserk</a> for the old ones).
