@@ -3,6 +3,11 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Stranded: Planet Survivor"
+    url: https://arielsan.itch.io/stranded-planet-survivor
+    image: /images/jams_survivor-screenshot-01.gif
+    description: Left alone on unknown planet, explore and repair your ship to return home.
+    jam: one week personal jam
   - name: Spice Must Flow
     url: https://arielsan.itch.io/spice-must-flow
     image: /images/jams_screenshots_05.gif
