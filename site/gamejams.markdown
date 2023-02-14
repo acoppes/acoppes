@@ -3,6 +3,11 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Hunter Games"
+    url: https://arielsan.itch.io/huntersgame
+    image: /images/jams_huntersgame-screenshot-01.gif
+    description: Be the best hunter and win the competition in order to save your tribe. 
+    jam: one week personal jam
   - name: "Stranded: Planet Survivor"
     url: https://arielsan.itch.io/stranded-planet-survivor
     image: /images/jams_survivor-screenshot-01.gif
