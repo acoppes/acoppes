@@ -7,6 +7,10 @@ projects:
     url: https://github.com/acoppes/unity-history-window
     image: /images/tools-selection-history.gif
     description: Editor window plugin for Unity with a selection history and other features. 
+  - name: Unity package Git pusher
+    url: https://github.com/acoppes/unity-upm-gitpackagepusher
+    image: /images/tools-upm-gitpusher.png
+    description: Given a folder with the unity package layout, this Unity plugin will allow you to automatically push a version of it to Github and create specific branches and tags with only its contents in order to use it later as a upm dependency for another Unity project.
   - name: GameObject Paint Tool
     url: https://github.com/acoppes/unity-gameobject-brush
     image: /images/tools-gameobject-brush.gif
