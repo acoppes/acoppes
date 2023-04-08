@@ -47,7 +47,4 @@ I really like the [Agile](http://agilemanifesto.org/) principles too and some of
 * Test driven development
 * Pair programming (in game dev, I prefer the name Pair working in something, could be a programmer or an artist or whatever)
 
-This website is a Work in Progress, I hope to continue adding information and improving it. 
-  * One idea is to have a page dedicated to share specific problem solving I did for the projects I worked on, for example: _for Iron Marines Invasion we improved the import asset workflow by creating a tool inside Unity to automatically detect what to re import and how_.
-
 <a rel="me" href="https://mastodon.gamedev.place/@arielsan"></a>
