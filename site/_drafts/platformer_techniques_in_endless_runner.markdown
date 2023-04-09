@@ -154,11 +154,51 @@ I also changed to not enter falling state during that time either which previous
 
 ### Catch Missed Jumps
 
-ANIMATED VIDEO SHOWING COLLIDER AND ADJUST IN SLOWMO
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-catchmissed-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With the feature disabled the character almost reach the platform but fails.</span>
+</div>
 
 For this one what I do is, in the moment the character collides with a wall I check if the collider can be relocated over the ground considering a max distance from the contacts between the character and the wall. If there is an space, then I relocate the character instantly and put a particle over to hide a bit the jump. 
 
-SOME CODE
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-catchmissed-02.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Now with the feature on, the character is adjusted to continue running over the platform.</span>
+</div>
+
+```csharp
+ if (foundContact && controllerEntity.stateController.CanInterrupt(world, entity, this))
+{
+  var distanceToGround = topContactPoint.point.y - controllerEntity.position.value.y;
+  
+  if (distanceToGround < adjustThreshold)
+  {
+    // I move it a bit to the right here
+    climbPosition = topContactPoint.point + direction.ToVector2() * 0.1f;
+
+    // this is just debug
+    D.raw(new Shape.Ray2D(topContactPoint.point, topContactPoint.normal), Color.green);
+    
+    // and here I check a bit up to avoid colliding with the ground when checking.
+    var collider = DrawPhysics2D.OverlapCapsule(climbPosition + capsuleCollider.offset + new Vector2(0, 0.1f), capsuleCollider.size,
+        CapsuleDirection2D.Vertical, 0, LayerMask.GetMask("StaticObstacle"));
+
+    // we found an empty space over the platform
+    if (collider == null)
+    {
+        EnterClimb(world, entity);
+    }
+  }
+}
+```
+
+There is a thing I want to improve here is to not stop the character when it collides but right now I am reacting one frame later to the collision so the velocity is 0 in x for one or more frames and it feels a bit strange when playing the game. 
 
 ### Bonus track: Interpolation
 
@@ -170,6 +210,7 @@ What I do here is to add some interpolation between render frames using previous
 
 SOME CODE SHOWING P = PREVIOUS * 1 + CURRENT * 1 - t';
 
-### References
+### Links
 
 - [Platforming Tips and Tricks](http://www.davetech.co.uk/gamedevplatformer)
+- [Vertx.Debugging](https://github.com/vertxxyz/Vertx.Debugging)
