@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Applying tricks from Platformer games applied to an Endless Runner to improve Player's experience"
+title:  "Mechanics and tricks from Platformers applied to Endless Runners to improve experience"
 date:   2023-04-08 00:08:30 -0300
-excerpt: "There are multiple tricks like Jump Buffering that can be applied in endless runners as well, I want to share here what am I doing for the game I am working on and how."  
+excerpt: "There are multiple mechanics and tricks like Jump Buffering that can be applied in endless runners as well, I want to share here what am I doing for the game I am working on and how."  
 author: Ariel Coppes
 tags:
   - techniques
@@ -80,7 +80,6 @@ if (jumpPressed && jumpComponent.currentJump < jumpComponent.totalJumps)
     // this clears the buffer to not process again
     control.ConsumeBuffer();
     EnterJumping(world, entity);  
-    return;
 }
 ```
 
@@ -128,6 +127,48 @@ There is also an air jump delay here, it is a small delay to avoid jumping and j
 ANIMATED GIF FOR THIS AIR DELAY?
 
 One drawback of this technique is that allows a higher jump by letting the player jump before touching ground but feels super responsive and I completely prefer that for this game. I tried also projecting the position to the ground 
+
+### Coyote Time
+
+ANIMATED VIDEO TO SHOW THIS IN MY GAME
+
+To implement this one I store the time since ground contact was lost and compare that with a max valid time when jump action was pressed to consider a valid jump or not. I added something like this to the previous jump code.
+
+```csharp
+var canJump = true;
+
+if (jumpComponent.coyoteTime > 0)
+{
+  // timeSinceGroundContact is always 0 while in contact with ground
+  canJump = gravityComponent.timeSinceGroundContact < jumpComponent.coyoteTime;
+}
+
+if (canJump)
+{
+  control.ConsumeBuffer();
+  EnterJumping(world, entity);
+}
+```
+
+I also changed to not enter falling state during that time either which previously entered automatically when ground contact was lost.
+
+### Catch Missed Jumps
+
+ANIMATED VIDEO SHOWING COLLIDER AND ADJUST IN SLOWMO
+
+For this one what I do is, in the moment the character collides with a wall I check if the collider can be relocated over the ground considering a max distance from the contacts between the character and the wall. If there is an space, then I relocate the character instantly and put a particle over to hide a bit the jump. 
+
+SOME CODE
+
+### Bonus track: Interpolation
+
+ANIMATED VIDEO SHOWING INTERPOLATION ON COLLIDE OR NORMALLY, TURN ON AND TURN OFF/COMPARE
+
+I am using physics for this game, processed in the fixed time step so when game is running fast or when the character is relocated quickly (catch missed jump), then location jumps between frames start to be noticeable by the player.
+
+What I do here is to add some interpolation between render frames using previous and current position to improve a bit the feeling.
+
+SOME CODE SHOWING P = PREVIOUS * 1 + CURRENT * 1 - t';
 
 ### References
 
