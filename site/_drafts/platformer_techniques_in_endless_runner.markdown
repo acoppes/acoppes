@@ -12,9 +12,17 @@ tags:
 
 {{page.excerpt}}
 
-GAME GIF
+<div class="post-image">
+<video width="630" height="350" controls>
+  <source src="/assets/endlessrunner-gameplay-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Gameplay video to show how the game looks right now and some of the techniques.</span>
+</div>
 
 ### Introduction
+
+Endless Runners are a sub genre of Platformers, so it makes sense some of the techniques used to improve player's experience might work as well but not all of them and some might need some adjustment. 
 
 This [page](http://www.davetech.co.uk/gamedevplatformer) shows a great example of general mechanics and tricks used to improve player's experience in platformer games. These are the ones I am using:
 
@@ -31,7 +39,7 @@ This [page](http://www.davetech.co.uk/gamedevplatformer) shows a great example o
   <source src="/assets/endlessrunner-earlyfall-01.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
-<span>With the feature disabled the character almost reach the platform but fails.</span>
+<span>Different jumps by releasing the jump action at different times.</span>
 </div>
 
 All the movement in the game is processed by one controller with multiple [states](2022/12/28/using-states-for-abilities-in-prototype.html). In the case of jumping, the logic is something like this:
@@ -72,11 +80,25 @@ Here I consider different things. One of them that I force the jump to be active
 
 ### Jump Buffering
 
-ANIMATED GIF WITH THE OTHER TECHNIQUE DISABLED AND WITH BIG INPUT BUFFER TO SHOW EXAMPLE
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-jumpbuffer-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With no input buffering the player presses and releases the jump action before ground contact but the character doesn't jump.</span>
+</div>
 
 When developing the [beatemup prototype](https://arielsan.itch.io/beatemup) I created an Input Buffer to process all the player actions including combos. It ended up being super useful for all the other mini games I worked on, including the endless runner game. What I do is I just decide when to read from the buffer or when to read directly from the control actions depending on what I want case by case.
 
-So, to start a jump, I check the general input buffer to see if there is a jump there, so when the other conditions met, for example being over ground, and there are no other just in time actions, then I start a jump. The code is something like this:
+So, to start a jump, I check the general input buffer to see if there is a jump there, so when the other conditions met, for example being over ground, and there are no other just in time actions, then I start a jump.
+
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-jumpbuffer-02.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With input buffer I can check if the jump or other actions were pressed and process it after touching the ground.</span>
+</div>
 
 ```csharp
 var jumpPressed = control.HasBufferedAction(control.button1);
