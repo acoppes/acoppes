@@ -166,33 +166,40 @@ The game has air jumps, what I do here is to reset the air jump count if I detec
 
 There is also an air jump delay here, it is a small delay to avoid jumping and jumping again in the next frame which didn't look well and it wasn't so useful, it felt like a bug. But, since it checks from the buffer, it starts the air jump as soon as it can and the player might not notice the delay.
 
-ANIMATED GIF FOR THIS AIR DELAY?
-
 One drawback of this technique is that allows a higher jump by letting the player jump before touching ground but feels super responsive and I completely prefer that for this game. I tried also projecting the position to the ground 
 
 ### Coyote Time
 
-ANIMATED VIDEO TO SHOW THIS IN MY GAME
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-coyotetime-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With no coyote time enabled.</span>
+</div>
 
 To implement this one I store the time since ground contact was lost and compare that with a max valid time when jump action was pressed to consider a valid jump or not. I added something like this to the previous jump code.
 
 ```csharp
-var canJump = true;
-
-if (jumpComponent.coyoteTime > 0)
-{
-  // timeSinceGroundContact is always 0 while in contact with ground
-  canJump = gravityComponent.timeSinceGroundContact < jumpComponent.coyoteTime;
-}
-
-if (canJump)
+// timeSinceGroundContact is always 0 while in contact with ground
+if (timeSinceGroundContact < jumpComponent.coyoteTime)
 {
   control.ConsumeBuffer();
   EnterJumping(world, entity);
 }
 ```
 
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-coyotetime-02.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With coyote time enabled.</span>
+</div>
+
 I also changed to not enter falling state during that time either which previously entered automatically when ground contact was lost.
+
+However, I recently added an optional feature (currently enabled) of not losing the first jump on falling from platforms which feels better for endless runners. With this feature enabled there is no value of using coyote time.
 
 ### Catch Missed Jumps
 
@@ -241,16 +248,6 @@ For this one what I do is, in the moment the character collides with a wall I ch
 ```
 
 There is a thing I want to improve here is to not stop the character when it collides but right now I am reacting one frame later to the collision so the velocity is 0 in x for one or more frames and it feels a bit strange when playing the game. 
-
-### Bonus track: Interpolation
-
-ANIMATED VIDEO SHOWING INTERPOLATION ON COLLIDE OR NORMALLY, TURN ON AND TURN OFF/COMPARE
-
-I am using physics for this game, processed in the fixed time step so when game is running fast or when the character is relocated quickly (catch missed jump), then location jumps between frames start to be noticeable by the player.
-
-What I do here is to add some interpolation between render frames using previous and current position to improve a bit the feeling.
-
-SOME CODE SHOWING P = PREVIOUS * 1 + CURRENT * 1 - t';
 
 ### Links
 
