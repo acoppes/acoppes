@@ -113,9 +113,23 @@ if (jumpPressed && jumpComponent.currentJump < jumpComponent.totalJumps)
 
 ### Predict Ground Collision
 
-ANIMATED GIF SHOWING THE OVERLAP COLLIDER CHECK
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-predict-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>No input buffer and no prediction.</span>
+</div>
 
 This technique kinda overlap with the previous one. The ideas is to check for the ground to be near when the character is falling and the player presses the jump action, if there is ground near, then resets the jump count and performs a jump from where the character is right now.
+
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-predict-02.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>No input buffer but ground prediction enabled, and distance a bit exaggerated for the video.</span>
+</div>
 
 ```csharp
 if (control.HasBufferedAction(control.button1) && jumpComponent.airJumpDelay.IsReady)
