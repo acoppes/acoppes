@@ -26,7 +26,13 @@ This [page](http://www.davetech.co.uk/gamedevplatformer) shows a great example o
 
 ### Early fall
 
-ANIMATED GIF WITH DIFFERENT JUMPS (small, bigger, etc)
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/endlessrunner-earlyfall-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>With the feature disabled the character almost reach the platform but fails.</span>
+</div>
 
 All the movement in the game is processed by one controller with multiple [states](2022/12/28/using-states-for-abilities-in-prototype.html). In the case of jumping, the logic is something like this:
 
