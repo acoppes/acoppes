@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mechanics and tricks from Platformers applied to Endless Runners to improve experience"
-date:   2023-04-08 00:08:30 -0300
+date:   2023-04-09 00:08:30 -0300
 excerpt: "There are multiple mechanics and tricks like Jump Buffering that can be applied in endless runners as well, I want to share here what am I doing for the game I am working on and how."  
 author: Ariel Coppes
 tags:
@@ -123,6 +123,8 @@ if (jumpPressed && jumpComponent.currentJump < jumpComponent.totalJumps)
 
 This technique kinda overlap with the previous one. The ideas is to check for the ground to be near when the character is falling and the player presses the jump action, if there is ground near, then resets the jump count and performs a jump from where the character is right now.
 
+Why using both? because this one works well only when there is ground below, the input buffer works well after performing dash or when you are almost over a platform. 
+
 <div class="post-image">
 <video width="400" height="300" controls>
   <source src="/assets/endlessrunner-predict-02.mp4" type="video/mp4">
@@ -166,7 +168,7 @@ The game has air jumps, what I do here is to reset the air jump count if I detec
 
 There is also an air jump delay here, it is a small delay to avoid jumping and jumping again in the next frame which didn't look well and it wasn't so useful, it felt like a bug. But, since it checks from the buffer, it starts the air jump as soon as it can and the player might not notice the delay.
 
-One drawback of this technique is that allows a higher jump by letting the player jump before touching ground but feels super responsive and I completely prefer that for this game. I tried also projecting the position to the ground 
+One drawback of this technique is that allows a higher jump by letting the player jump before touching ground but feels super responsive and I completely prefer that for this game.
 
 ### Coyote Time
 
