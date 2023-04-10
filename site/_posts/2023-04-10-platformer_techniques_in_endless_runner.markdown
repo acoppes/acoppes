@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mechanics and tricks from Platformers applied to Endless Runners to improve experience"
-# date:   2023-04-10 00:10:15 -0300
+date:   2023-04-10 00:10:15 -0300
 excerpt: "There are multiple mechanics and tricks from Platformer games that can be applied in Endless Runners as well. I want to share here what am I doing for the game I am working on and how."  
 author: Ariel Coppes
 tags:
