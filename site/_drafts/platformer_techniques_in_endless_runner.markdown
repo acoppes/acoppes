@@ -13,7 +13,7 @@ tags:
 {{page.excerpt}}
 
 <div class="post-image">
-<video width="630" height="350" controls>
+<video width="100%" controls>
   <source src="/assets/endlessrunner-gameplay-01.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
@@ -258,7 +258,7 @@ One thing to improve is to not stop the character when it collides with the wall
 The game started as a Platformer and then mutated to be an Endless Runner, that is why I implemented some features (like climb walls) that then lost value and were removed. Here is a video of the game before switching genres.
 
 <div class="post-image">
-<video width="630" height="350" controls>
+<video width="100%" controls>
   <source src="/assets/endlessrunner-platformer-01.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
