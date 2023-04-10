@@ -8,6 +8,10 @@ tags:
   - techniques
   - howto
   - gameplay
+image:
+  path: /assets/endlessrunner-screenshot-01.png
+  width: 320
+  height: 180
 ---
 
 {{page.excerpt}}
