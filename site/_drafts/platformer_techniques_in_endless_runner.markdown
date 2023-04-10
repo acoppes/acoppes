@@ -20,6 +20,8 @@ tags:
 <span>Gameplay video of the Endless Runner game I am developing.</span>
 </div>
 
+Even though it is a WIP, you can [PLAY IT HERE](https://arielsan.itch.io/platformergame).
+
 ### Introduction
 
 Since Endless Runners are a sub genre of Platformers it makes sense that some of the techniques used to improve player's experience might work as well. However, not all of them work and some might need some adjustments before using them. 
