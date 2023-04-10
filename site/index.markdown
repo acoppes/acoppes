@@ -3,11 +3,6 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-image:
-  path: /images/personal_photo.jpg
-  height: 100
-  width: 100
-  
 ---
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->

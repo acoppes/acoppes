@@ -68,6 +68,13 @@ defaults:
       related: false
       sitemap: false  #To hide from sitemap.xml
       noindex: true   #To hide from robots and crawlers    
+  - scope:
+      path: ""
+    values:
+      image:
+        path: /images/personal_photo.jpg
+        height: 100
+        width: 100
       
 # Exclude from processing.
 # The following items will not be processed, by default.
