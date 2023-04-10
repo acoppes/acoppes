@@ -8,6 +8,10 @@ tags:
   - techniques
   - howto
   - gameplay
+image:
+  path: /images/personal_photo.jpg
+  height: 100
+  width: 100
 ---
 
 {{page.excerpt}}
