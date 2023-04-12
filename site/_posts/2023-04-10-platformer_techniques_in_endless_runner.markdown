@@ -32,11 +32,11 @@ Since Endless Runners are a sub genre of Platformers it makes sense that some of
 
 David Strachan summarizes the most common used mechanics and tricks in his blog post [Platforming Tips and Tricks](http://www.davetech.co.uk/gamedevplatformer). Considering mechanics' names used there, these are the ones I've implemented:
 
-* **Early Fall**: Player descends as soon as jump button is let go ending jump early.
-* **Jump Buffering**: When the character is already in the air pressing jump moments before touching the ground will trigger jump as soon as they land. 
-* **Predict Ground Collision**: When the character is already in the air pressing jump and there is a platform near and below, it can jump as it is already on the ground (this one is mine, not listed in the reference).
-* **Coyote Time**: Jump still triggered a few frames after running off a ledge.
-* **Catch Missed Jumps**: If a player doesn’t quite make a jump either lift them up a few pixels or change the collision mask so their feet don’t hit the wall. 
+* [**Early Fall**](#early-fall): Player descends as soon as jump button is let go ending jump early.
+* [**Jump Buffering**](#jump-buffering): When the character is already in the air pressing jump moments before touching the ground will trigger jump as soon as they land. 
+* [**Predict Ground Collision**](#predict-ground-collision): When the character is already in the air pressing jump and there is a platform near and below, it can jump as it is already on the ground (this one is mine, not listed in the reference).
+* [**Coyote Time**](#coyote-time): Jump still triggered a few frames after running off a ledge.
+* [**Catch Missed Jumps**](#catch-missed-jumps): If a player doesn’t quite make a jump either lift them up a few pixels or change the collision mask so their feet don’t hit the wall. 
 
 ### Early fall
 
