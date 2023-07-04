@@ -1,4 +1,4 @@
-Hi there 👋, I am a professional Game Dev Engineer with passion about game development and programming.
+Hi there 👋, I am a professional Game Dev Engineer with passion about game development and programming. Here is my [personal site](https://arielcoppes.dev/).
 
 Some of my core values:
 
