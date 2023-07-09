@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Changing my mindset to make games using Entity Component System frameworks"
+title:  "Changing my mindset to make games in Unity using Entity Component System frameworks"
 # date:   2022-11-22 00:08:30 -0300
 excerpt:  When using an ECS, what data goes in which Component, what logic goes in which System, when using a Scripting framework, what logic goes in scripts, etc, this blogpost tries to cover, with real examples, my experience with these decisions over the years of using different ECS frameworks in different games. 
 author: Ariel Coppes
@@ -19,9 +19,27 @@ In ECS, An Entity, which is just an identifier, can have one or more Components,
 
 For me, ECS is both a different programming paradigm (you have to change how you solve things) and a way to structure the code in order to achieve big performance improvements, different frameworks might go deeper in this aspect but all share the basics. 
 
+To understand the examples, I first have to tell you that I use a scripting framework similar to the one we used at Gemserk, so I can have specific logic in those Scripts. Scripts allow having both readonly data (like initial configuration) and mutable data but the second is discouraged, I normally try to move that data to Components. 
+
+_Note: should I explain in detail my solution here?_
+
 # Where to put the data
 
+The quick answer is to put it in a Component, but should it be only one or distributed in multiple Components? Should it be in a Blackboard? should it be in a Script? 
+
+Well, obviously it depends, but some things I learn in the past is, some times this is progressive, you discover the best place to put data over time, it is not always easy to decide but most of the time is easy to decide the first step. My take here is to try to make the overall solution as refactorable as possible in order to change for the better over time.
+
+* if it is readonly data
+ - could be a const in code
+ - could be in a script in order to configure it in editor
+
+Having that said, here are some examples:
+
+EXAMPLES
+
 # Where to process the logic
+
+The quick answer is to put it in a System, but should it be only one or distributed in multiple Systems? should it be in a Script or in multiple Scripts? 
 
 # Tips to decide
 
@@ -52,3 +70,18 @@ Some times what logic should be in a System and what logic should be in a Script
 [^1]: When we used LibGDX and Artemis at Gemserk we created our [scripting system](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/), it felt like oviously necessary to customize logic.
 
 [^2]: Yes, I tried Unity ECS multiple times during development, it wasn't ready for what I wanted and it was hard to explain to new developers at Ironhide, that is why I decided to avoid it.
+
+IM examples
+
+* formations stared as logic in component and scripts, moved to systems
+* show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
+
+Tips
+
+* if it is a super transversal feature, like walking, might be in a system
+* if it is super specific feature like one entity doing something in specific level, then script
+* if you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
+* some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better
+
+# Conclusions
+
