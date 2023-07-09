@@ -29,6 +29,12 @@ THINKG A BETTER GAME EXAMPLE
 
 However, there are cases where you need specific logic that only one entity at a specific time of the game should do. In those cases I like to use some kind of scripting solution[^1], similar to MonoBehaviours, things that only run for one entity.
 
+Scripting
+- reuse controller instances
+- data stored in entities through components or through blackboard component
+- real examples from the game
+- the examples from the endless/platformer blogpost are in controllers/scripts
+
 [^1]: When we used LibGDX and Artemis at Gemserk we created our [scripting system](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/), it felt like oviously necessary to customize logic.
 
 Some times what logic should be in a System and what logic should be in a Script is not so obvious, and that is something I want to talk about in this blog post. .
