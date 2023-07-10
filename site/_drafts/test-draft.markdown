@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Changing my mindset to make games using an Entity Component System approach"
+title:  "Design decisions when building a game using an Entity Component System"
 # date:   2022-11-22 00:08:30 -0300
-excerpt:  When using an ECS, what data goes in which Component, what logic goes in which System, when using a Scripting framework, what logic goes in scripts, etc, this blogpost tries to cover, with real examples, my experience with these decisions over the years of using different ECS frameworks in different games. 
+excerpt:  When using ECS, which data goes in which Component and why?, which logic goes in which System?, in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions for different games. 
 author: Ariel Coppes
 tags:
   - personal
@@ -15,9 +15,7 @@ tags:
 
 My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/) at that time to make games and to make the port of Clash of the Olympians. Over the years I used different ECS frameworks for different games and I even developerd my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. Now, I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity) for my current games.
 
-In ECS, An Entity, which is just an identifier, can have zero or more Components, holding the data. Systems have the logic to process entities with a set of Components in order to transform the data from one state to another. Here is a great [source of information](https://github.com/SanderMertens/ecs-faq) about ECS.
-
-If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) in order to use ECS properly. 
+I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) about ECS as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) in maximize ECS value. 
 
 For me, ECS is both a different programming paradigm (you have to change how you solve things) and a way to structure the code in order to achieve big performance improvements, different frameworks might go deeper in this aspect but all share the basics. 
 
