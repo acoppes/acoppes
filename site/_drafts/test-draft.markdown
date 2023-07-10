@@ -2,7 +2,7 @@
 layout: post
 title:  "Design decisions when building games using ECS"
 # date:   2022-11-22 00:08:30 -0300
-excerpt:  When using ECS (Entity Component System), which data goes in which Component and why?, which logic goes in which System?, in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions for different games. 
+excerpt:  When using ECS (Entity Component System), how to decide which data goes in which Component and why?, which logic goes in which System?, and in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions making different games. 
 author: Ariel Coppes
 tags:
   - personal
@@ -13,24 +13,23 @@ tags:
 
 # Background
 
-My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/) at that time and we even made the port for mobile devices of Clash of the Olympians using it. Over the years I used different ECS solutions and I even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. Nowadays, I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity) for my games.
+My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time and we used it to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and I even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. Nowadays, I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity) for my games.
 
-I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. 
+I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. I also recommend this GDC talk about [Overwatch's ECS](https://youtu.be/zrIY0eIyqmI?t=102).
 
 Even though Systems implement the logic, they depend directly on which components the entity has and their data. This means the behaviour of the application in ECS is mostly data driven: adding or removing a component or changing its data will change which systems execute and what they do. 
 
-For me, ECS is a programming paradigm and a way to structure the code in order to achieve big performance improvements (different solutions might go deeper in this aspect). 
+To understand the examples of this blog post, I first have to tell you that I use a scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and readonly and mutable data but the second is discouraged by moving that data into Components.
 
-To understand the examples of this blog post, I first have to tell you that I use a scripting framework similar to the [one we used at Gemserk]((https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)), so I can have specific logic in Scripts that runs only for some entities. Scripts can have readonly and mutable data but the second is discouraged (move that data to Components is recommended). 
+**Where to put the data?** By definition, we know that it should be in a Component but, should it be in only one or distributed into multiple Components? Inside the Component, should it be a field or should it be in a Blackboard/Dictionary? 
 
-**Where to put data?** The quick answer for ECS is to put it in a Component. But, should it be in only one or distributed in multiple Components? Inside the Component, should it be a field or should it be in a Blackboard/Dictionary? 
+**Where to process the logic?** By definition, we know it should be in a System, but should it be in only one or distributed into multiple Systems? should it be in a Script or in multiple Scripts? should I put logic in Components even though I am not supposed to?
 
-**Where to process the logic?** The quick answer is to put it in a System, but should it be only one or distributed in multiple Systems? should it be in a Script or in multiple Scripts? should I put logic in Components even though I am not supposed to?
+It obviously depends but one thing I learned is that you might discover the best place over time. A good thing though is that it is normally easy to decide good first location and change it later. 
 
-Obviously, it depends. But, one thing I learned is that you might discover the best place over time. It is not always easy to decide the best place in the first try but most of the time is easy to decide a first location. 
+_Note: even though it is against the idea of ECS to have logic in components, some times it comes super handy to have helper logic in there in the form of properties, methods or even extension methods._
 
-But having said that, I will share some examples inspired in my experience.
-
+Having said that, I will share some examples inspired in my experience.
 # Distributing data in multiple components
 
 In a platformer game, the main character walks over platforms and can jump from platform to platform. For this game, we could have just a CharacterComponent with data like movement horizontal speed over platforms and air, jump speed and initial impulse when jumping, etc:
@@ -103,8 +102,6 @@ foreach (e in set(PlatformerComponent p, PhysicsComponent ph, MovementComponent 
  
 In my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
 
-### Tips to decide data separation
-
 
 
 * TODO: The Abilities/Targetings special case (having list of data in one component to simulate having multiple components of one type)
@@ -140,33 +137,28 @@ Scripting
 
 Some times what logic should be in a System and what logic should be in a Script is not so obvious, and that is something I want to talk about in this blog post. .
 
-[^1]: Yes, I tried Unity ECS multiple times during development, it wasn't ready for what I wanted and it was hard to explain to new developers at Ironhide, that is why I decided to avoid it.
-
-[^2]: When we used LibGDX and Artemis at Gemserk we created our [scripting system](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/), it felt like oviously necessary to customize logic.
-
 # My process when I don't know the best place for code or logic
 
 // TODO: explain this more in detail and maybe with examples.
 
 * I start with scritps both data and logic, then I want to read the data in somewhere else, so I move the data to components, then I want to reuse the logic, I move part of the logic to systems.
 
+In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do.
+
 # Examples
 
 * In IMI we had the formation as a class, SquadComponent had a Formation class and there we performed all the logic to locate units from a squad in a position. It worked but we had some issues... We later moved it to FormationComponent and moved the members's position calculation to a system.
 
-IM examples
-
-* formations stared as logic in component and scripts, moved to systems
-* show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
-
-Tips
-
-* if it is a super transversal feature, like walking, might be in a system
-* if it is super specific feature like one entity doing something in specific level, then script
-* if you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
-* some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better
+* In IMI, show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
 
 # Conclusions
+
+My tips to decide where to put the data and logic:
+
+* If it is a super transversal feature, like walking, might be in a system
+* If it is super specific feature like one entity doing something in specific level, then logic could be in a script and the data in a blackboard.
+* If you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
+* some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better.
 
 My most important advice for you is to try to make your solution as refactorable as possible in order to support improving it over time, step by step. How? well, first by exercising code refactor (and in that process, identify places to make refactoring easier), using a good IDE like Rider and making tools to help you. 
 
@@ -175,3 +167,8 @@ By working using the ECS paradigm, there are also code smells and best practices
 * Separate data in different Components to achieve clarity, reusability, separation of concerns.
 * Separate logic in different systems, ir order to reduce coupling, improve parallelism and make the code more modular and also to control logic order.
 
+Notes
+
+[^1]: I first tried used Unity ECS but it wasn't ready at that time.
+
+[^2]: We created our own [scripting system](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/) since it felt like obviously necessary to have logic that runs outside systems.
