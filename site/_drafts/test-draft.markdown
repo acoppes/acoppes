@@ -102,6 +102,8 @@ foreach (e in set(PlatformerComponent p, PhysicsComponent ph, MovementComponent 
  
 In my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
 
+# Data too separated, might join in one component
+
 # Collection of data of the same type
 
 * TODO: The Abilities/Targetings special case (having list of data in one component to simulate having multiple components of one type) multiple Scripts? 
@@ -161,7 +163,7 @@ public class System {
 }
 ```
 
-We have a system with some logic, like the jumping logic which detects input and applies a force and we need to run new logic in the middle of that, before appliying the force. One way to approach this is to make the original system more complex and run the new logic there but there is an issue, what happens if it needs new data, for example:
+We have a system with some logic, like the jumping logic which detects input and applies a force and we need to run new logic in the middle of that, before applying the force. One way to approach this is to make the original system more complex and add the new logic there, for example:
 
 ```csharp
 public class System {
@@ -175,7 +177,13 @@ public class System {
 }
 ```
 
-Even though it doesn't look back, there is an issue, now entities without ComponentC are not being updated while they previously were. If we know all of those entities have all the components might not be an issue, for now, but it normally becomes an issue at some point. To improve that we can separate in 3 systems.
+Even though it doesn't look bad, there is an issue. If you noticed, we now need to access the new data from ComponentC so now entities without that component are not being updated while they previously were. 
+
+If we know all of those entities have all the components then it might not be an issue, at least not for now, but it normally becomes an issue at some point. 
+
+Another option could've been to add more data to ComponentA and ComponentB but it is also an issue if for example is not related to those components.
+
+To improve that we can separate in 3 systems, like this:
 
 ```csharp
 foreach (e in set(ComponentA, ComponentB)) {
@@ -191,11 +199,11 @@ foreach (e in set(ComponentA, ComponentB)) {
 }
 ```
 
-We might even discover we only need ComponentA and ComponentC for the new logic, so we can improve it further. 
+We might even discover we only need ComponentA and ComponentC for the new logic, so we can improve it further by removing ComponentB dependency. 
 
-By separating we now can be sure the new logic runs in the middle but also depends only on the minimum number of components in each logic. 
+By separating we now can be sure the new logic runs in the middle and that also depends only on the minimum number of components in each logic.
 
-* Example system, now I need to do something in the middle but with other components, one way is to add it there.
+_Tip: Try to depend in the minimum number of Components to make the code cleaner, easier to read and maintain but also to make it more reusable_
 
 There is a common case where you need to run some logic after other 
 
