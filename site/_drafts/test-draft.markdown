@@ -19,7 +19,7 @@ I assume you already know about ECS but here is a great [source of information](
 
 Even though Systems implement the logic, they depend directly on which components the entity has and their data. This means the behaviour of the application in ECS is mostly data driven: adding or removing a component or changing its data will change which systems execute and what they do. 
 
-To understand the examples of this blog post, I first have to tell you that I use a scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and readonly and mutable data but the second is discouraged by moving that data into Components.
+To understand the examples of this blog post, I first have to tell you that I use a scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and readonly and mutable data but the second is discouraged by moving that data into Components. 
 
 **Where to put the data?** By definition, we know that it should be in a Component but, should it be in only one or distributed into multiple Components? Inside the Component, should it be a field or should it be in a Blackboard/Dictionary? 
 
@@ -30,7 +30,7 @@ It obviously depends but one thing I learned is that you might discover the best
 _Note: even though it is against the idea of ECS to have logic in components, some times it comes super handy to have helper logic in there in the form of properties, methods or even extension methods._
 
 Having said that, I will share some examples inspired in my experience.
-# Distributing data in multiple components
+# Too much data in only a component
 
 In a platformer game, the main character walks over platforms and can jump from platform to platform. For this game, we could have just a CharacterComponent with data like movement horizontal speed over platforms and air, jump speed and initial impulse when jumping, etc:
 
@@ -42,7 +42,6 @@ struct CharacterComponent {
   bool jumping;
   float jumpSpeed;
   float jumpInitialImpulse;
-  AnimationCurve jumpCurve;
   // others related with the character
 }
 ```
@@ -66,7 +65,7 @@ That solution isn't wrong, those values need in some way to work together, you c
 * System is doing multiple logic together (maybe with lots of ifs), and that logic probably acting on part of the data, and other logic on the other part. 
 * I can't easily reuse only part of the data (and logic). I might want to have something that can be over platforms and fall, but can't Jump, so I want to use only part of the data. I could always use a bool like `jumpEnabled` for example, to say the unit has no jump, but that means it is processed anyway by systems to compare and do nothing. It is better to not have that Component if not used.
 
-_Note: A common pattern for separating data is when there are prefixes like jumpSpeed, jumpImpulse, jumpCurve, etc. This happens a lot in OOP too, and in there it is common to extract a class with all that data (and related logic). Here the pattern is to extract a component and separate systems._
+_Note: The first code smell is common in OOP too and one way to attack it is to extract a class. In ECS a good practice is to extract a component and separate systems._
 
 We could separate in different Components, for example:
 
@@ -75,17 +74,18 @@ struct CharacterComponent {
   // others related with the character
 }
 
+// Indicates something can be placed over platforms
 struct PlatformerComponent {
   bool inContactWithPlatform;
   float speedOnGround;
   float speedOnAir;
 }
 
+// Indicats something can jump
 struct JumpComponent {
   float speed;
   bool jumping;
-  float initialImpulse;
-  AnimationCurve curve;
+  float initialImpulse; 
 }
 ```
 And now two systems:
@@ -102,14 +102,104 @@ foreach (e in set(PlatformerComponent p, PhysicsComponent ph, MovementComponent 
  
 In my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
 
+# Collection of data of the same type
+
+* TODO: The Abilities/Targetings special case (having list of data in one component to simulate having multiple components of one type) multiple Scripts? 
+
+# Too much logic in one system
+
+* TODO: code smell too much logic, too much components at the same time, or pattern want to order logic
+
+* TODO: Separate system in multiple small steps, for example, instead of updating the position directly in the jumpsystem, just update another component.
 
 
-* TODO: The Abilities/Targetings special case (having list of data in one component to simulate having multiple components of one type)
- multiple Scripts? 
 
 # Distributing logic in different Systems
 
 * TODO: explain separating iterations of tuples and be able to optimize by not iterating on things...
+
+# Systems delay of one or more frame for data
+
+One great thing about ECS is that easily allow ordering logic, you can be sure some logic runs before or after another and this is really important to improve determinism, debug, etc.
+
+However, there is also a drawback when a system or a script want to react as soon as possible to some data change but it might need to wait to the next update. 
+
+In my experience, it general (for most of the systems) is not an big issue but for some others it is, mainly when related with things the player can see. For example, when firing a projectile maybe one system creates the projectile entity and if the model loads in the next frame, the player might notice a visual delay. 
+
+Another case is when systems not ordered properly, they might need to wait even 2 frames for some data, this happens in this case:
+
+```csharp
+public class World() {
+  public void Update() {
+    SystemC.update();
+    SystemB.update();
+    SystemA.update();
+  }
+}
+
+```
+
+Lets assume those systems depend on data in order, SystemA produces some data, SystemB updates it and finally SystemC does the last logic. In that world, that data is processed in 3 different frames. The fix here is to reorder systems, that might be easy at first when having low count of systems but might become difficult over time. The good thing though is not all systems depend on all systems so changing order of small chunks of systems don't normally break anything.
+
+Now, back to the render issue, my approach for that case is to react as soon as possible to create everything and to separate systems in different Unity events (FixedUpdate, Update and LateUpdate). 
+
+The system API has a create/destroy callbacks when a new entity is created to configure it as soon as possible, and then the render systems, that run on the LateUpdate, might complete configuration (set positions, render order, etc) and render it.
+
+EXAMPLE MODELS
+
+EXAMPLE EVENTS
+
+# New logic that needs to run in the middle of a system's logic
+
+```csharp
+public class System {
+  public void Update() {
+    foreach (e in set(ComponentA, ComponentB)) {
+      // logic
+    }
+  }
+}
+```
+
+We have a system with some logic, like the jumping logic which detects input and applies a force and we need to run new logic in the middle of that, before appliying the force. One way to approach this is to make the original system more complex and run the new logic there but there is an issue, what happens if it needs new data, for example:
+
+```csharp
+public class System {
+  public void Update() {
+    foreach (e in set(ComponentA, ComponentB, ComponentC)) {
+      // previous logic - first part
+      // new logic
+      // previous logic - second part
+    }
+  }
+}
+```
+
+Even though it doesn't look back, there is an issue, now entities without ComponentC are not being updated while they previously were. If we know all of those entities have all the components might not be an issue, for now, but it normally becomes an issue at some point. To improve that we can separate in 3 systems.
+
+```csharp
+foreach (e in set(ComponentA, ComponentB)) {
+  // previous logic first part
+}
+
+foreach (e in set(ComponentA, ComponentB, ComponentC)) {
+  // new logic
+}
+
+foreach (e in set(ComponentA, ComponentB)) {
+  // previous logic second part
+}
+```
+
+We might even discover we only need ComponentA and ComponentC for the new logic, so we can improve it further. 
+
+By separating we now can be sure the new logic runs in the middle but also depends only on the minimum number of components in each logic. 
+
+* Example system, now I need to do something in the middle but with other components, one way is to add it there.
+
+There is a common case where you need to run some logic after other 
+
+Another thing to recap is, when a System iterates over entities with ComponentA and ComponentB, it doesn't care about other components
 
 # Tips to decide
 
@@ -155,7 +245,7 @@ In my experience, each time I detected some logic could be reusable and spent ti
 
 My tips to decide where to put the data and logic:
 
-* If it is a super transversal feature, like walking, might be in a system
+* If it is a super transversal feature, like walking, might be in a system.
 * If it is super specific feature like one entity doing something in specific level, then logic could be in a script and the data in a blackboard.
 * If you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
 * some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better.
@@ -166,6 +256,10 @@ By working using the ECS paradigm, there are also code smells and best practices
  
 * Separate data in different Components to achieve clarity, reusability, separation of concerns.
 * Separate logic in different systems, ir order to reduce coupling, improve parallelism and make the code more modular and also to control logic order.
+
+One great thing about ECS is that easily allow ordering logic, you can be sure some logic runs before or after another. However, there is also an issue with this when a system or a script want to react as soon as possible to some data change but it might need to wait to the next update. In my experience, it is normally not an issue when it is internal logic but it is common when you render stuff visually.
+
+It is better to have more systems and run small chunks of logic over reduced number of components.
 
 Notes
 
