@@ -102,11 +102,9 @@ foreach (e in set(PlatformerComponent p, PhysicsComponent ph, MovementComponent 
  
 In my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
 
-# Data too separated, might join in one component
+# Separated data is always processed together
 
-# Collection of data of the same type
-
-* TODO: The Abilities/Targetings special case (having list of data in one component to simulate having multiple components of one type) multiple Scripts? 
+It can also happen the opposite: having two Components that are always processed together and there is no way nor need to avoid. If that happens, it is not bad but might be a code smell too since you have to create iterations of that set of components and configure them appart, etc. One solution for this case is to integrate all the data into one component.
 
 # Too much logic in one system
 
@@ -218,6 +216,14 @@ _Tip: Try to depend in the minimum number of Components to make the code cleaner
 There is a common case where you need to run some logic after other 
 
 Another thing to recap is, when a System iterates over entities with ComponentA and ComponentB, it doesn't care about other components
+
+### Story: Having multiple Components of the same type in Iron Marines Invasion
+
+Most of the ECS solutions don't allow having mutliple Components of the same type but sometimes seems like a requirement. 
+
+When I was developing our ECS for Iron Marines Invasion, I wasn't sure if I hade to support this feature or not. There were some special cases like the `AbilityComponent` which stored data about one ability but our units should be able to have multiple abilities. 
+
+Initially we supported having list of components of the same type, however, there was another solution. Change the component to be `AbilitiesComponent` and store a list of Ability (a new struct with the ability data), similar to storing a list of any data (a Vector2 for example). This is a better solution in my opinion since it has best of both worlds, there is no special case of having multiple components, components can be used as filters for queries and we still can have mutliple datas of one type. 
 
 # Tips to decide
 
