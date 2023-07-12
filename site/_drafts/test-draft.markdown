@@ -106,6 +106,38 @@ In my case, working on an Endless Runner 2d game that uses Physics2d I reused a 
 
 It can also happen the opposite: having two Components that are always processed together and there is no way nor need to avoid. If that happens, it is not bad but might be a code smell too since you have to create iterations of that set of components and configure them appart, etc. One solution for this case is to integrate all the data into one component.
 
+# Tag Components
+
+Empty components can be used as a way to identify entities for some logic. 
+
+For example, you might have a set `ComponentA` and `ComponentB` and you want to run a logic over that set in a System only for a given condition. 
+
+One approach could be to add a boolean to either the first or the second component and check for that during the iteration.  
+
+Another approach to add a tag component `ComponentProcessAB` to the entity and check for the complete set of components to iterate. Tagging an entity is equal to adding the component, and to remove the tag, remove the component.
+
+The idea here is take advantage of the systems processing logic and iterate on the minimum set of entities. Most ECS solutions consider this and have some kind of cache to improve performance for that case but even if they don't, this approach is more ECS friendly and reduces data from components.
+
+How to decide what approach to follow? it depends, in my case I normally use the first one since it is super easy and the transition to the second (maybe after some time the code is stable).
+
+# Command Components
+
+There is another case of components that are used for one frame only, to mark a specific logic to be performed by a system. I don't know the name but I believe they act similar to a Command pattern.
+
+Why using a command instead of just doing the logic as a helper method in the Component or as an extension? Well, sometimes it needs a complex logic that some system is aware of, other times it needs to be sure it runs at a specific order (after some system run), in those cases I believe the command makes sense.
+
+It is a normal component, for example:
+
+```csharp
+struct SpineSkinChangeCommand {
+  strign newSkin;
+}
+```
+
+But the difference is that it is added when needed to be executed, and removed after that execution. 
+
+I use them for special cases like changing the skin of a Spine model and I need it to run after the spine model was created and initialized and before rendered, and I also call this command from different places so it was good to encapsulate that call.
+
 # Too much logic in one system
 
 * TODO: code smell too much logic, too much components at the same time, or pattern want to order logic
@@ -155,7 +187,7 @@ One thing I like about delaying the heavy stuff is that if I, for some reason de
 
 In my engine there is the `StatesComponent` that holds a set of states an entity could be at a given time. For example, an entity could be "walking" and "stunned". This component has a basic API to set values, like `enterState(state)` or `leaveState(state)`. Initially I thought I needed to do all logic in systems so when I entered a state I didn't really enter the state, I stored a value like `enteredStates` to be processed later in a system.
 
-This wasn't wrong but there was an issue, if I run the enterState(state), I should be able to check if I am in that state in the next line of code and should be true but what was happening was I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold data in the component so the system can compare and call corresponding callbacks to the scripting framework. 
+This wasn't wrong but there was an issue, if I run the `enterState(state)`, I should be able to check if I am in that state in the next line of code and should be true but what was happening was I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold data in the component so the system can compare and call corresponding callbacks to the scripting framework. 
 
 The learning here is to not try to put everything in systems, some logic that can be processed directly (like adding two vectors for example) to avoid systems complexity. 
 
