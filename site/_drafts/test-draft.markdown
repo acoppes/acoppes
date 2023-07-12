@@ -128,7 +128,7 @@ However, there is also a drawback when a system or a script want to react as soo
 
 In my experience, it general (for most of the systems) is not an big issue but for some others it is, mainly when related with things the player can see. For example, when firing a projectile maybe one system creates the projectile entity and if the model loads in the next frame, the player might notice a visual delay. 
 
-Another case is when systems not ordered properly, they might need to wait even 2 frames for some data, this happens in this case:
+For this issue, some times the main problem is that the systems not ordered properly so in some cases they might need to wait even one or more frames for some data to be in the final state, for example:
 
 ```csharp
 public class World() {
@@ -141,15 +141,25 @@ public class World() {
 
 ```
 
-Lets assume those systems depend on data in order, SystemA produces some data, SystemB updates it and finally SystemC does the last logic. In that world, that data is processed in 3 different frames. The fix here is to reorder systems, that might be easy at first when having low count of systems but might become difficult over time. The good thing though is not all systems depend on all systems so changing order of small chunks of systems don't normally break anything.
+Lets assume those systems depend on data in order, SystemA produces some data, SystemB updates it and finally SystemC does the last logic. In that world, that data is processed in 3 different frames. The fix is to reorder systems.
 
-Now, back to the render issue, my approach for that case is to react as soon as possible to create everything and to separate systems in different Unity events (FixedUpdate, Update and LateUpdate). 
+Reordering might be easy at first when having low count of systems but might become difficult over time. The good thing though is not all systems depend on all systems so changing order of small chunks of systems normally don't break anything. However, having good tests here simplify reordering changes.
 
-The system API has a create/destroy callbacks when a new entity is created to configure it as soon as possible, and then the render systems, that run on the LateUpdate, might complete configuration (set positions, render order, etc) and render it.
+Now, back to the projectile example, my approach consist in two things. 
 
-EXAMPLE MODELS
+The first one is to to react to entities creation as soon as possible. For that my system API has callbacks for entity creation and destruction. That allows systems to preconfigure as much as possible. This could be an issue if a systems needs to create heavy objects in order to work (for example a gameobject for the visuals of an entity). The approach here is to be lazy delaying the heavy part to the last moment.
 
-EXAMPLE EVENTS
+The second part is that systems can execute in different Unity events (FixedUpdate, Update and LateUpdate), so for model creation (heavy objects) and update (positioning) I delay it as much as possible (LateUpdate). At that time I am sure all the important systems from FixedUpdate already run and I know I am about the entity is about to be rendered. 
+
+One thing I like about delaying the heavy stuff is that if I, for some reason decided to destroy the entity in the same frame it was created, the render objects are never created. 
+
+### Story: State enter/exit events
+
+In my engine there is the `StatesComponent` that holds a set of states an entity could be at a given time. For example, an entity could be "walking" and "stunned". This component has a basic API to set values, like `enterState(state)` or `leaveState(state)`. Initially I thought I needed to do all logic in systems so when I entered a state I didn't really enter the state, I stored a value like `enteredStates` to be processed later in a system.
+
+This wasn't wrong but there was an issue, if I run the enterState(state), I should be able to check if I am in that state in the next line of code and should be true but what was happening was I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold data in the component so the system can compare and call corresponding callbacks to the scripting framework. 
+
+The learning here is to not try to put everything in systems, some logic that can be processed directly (like adding two vectors for example) to avoid systems complexity. 
 
 # New logic that needs to run in the middle of a system's logic
 
