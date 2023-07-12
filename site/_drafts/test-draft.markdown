@@ -27,10 +27,9 @@ To understand the examples of this blog post, I first have to tell you that I us
 
 It obviously depends but one thing I learned is that you might discover the best place over time. A good thing though is that it is normally easy to decide good first location and change it later. 
 
-_Note: even though it is against the idea of ECS to have logic in components, some times it comes super handy to have helper logic in there in the form of properties, methods or even extension methods._
+_Note: even though it is against the idea of ECS to have logic in components, some times it comes super handy to have helper logic in there in the form of properties, methods or even extension methods. Some times you are integrating an ECS to a previous codebase and some logic still runs in a class with the data (more on this later)_
 
-Having said that, I will share some examples inspired in my experience.
-# Too much data in only a component
+# Too much data in one Component
 
 In a platformer game, the main character walks over platforms and can jump from platform to platform. For this game, we could have just a CharacterComponent with data like movement horizontal speed over platforms and air, jump speed and initial impulse when jumping, etc:
 
@@ -104,13 +103,13 @@ In my case, working on an Endless Runner 2d game that uses Physics2d I reused a 
 
 # Separated data is always processed together
 
-It can also happen the opposite: having two Components that are always processed together and there is no way nor need to avoid. If that happens, it is not bad but might be a code smell too since you have to create iterations of that set of components and configure them appart, etc. One solution for this case is to integrate all the data into one component.
+It can also happen the opposite: having two Components that are always processed together and there is no way nor need to avoid it. If that happens, it is not bad but might be a code smell too since you have to create always iterations of that set of components and configure them apart, etc. A good practice for this case is to integrate all the data into one component.
 
 # Tag Components
 
 Empty components can be used as a way to identify entities for some logic. 
 
-For example, you might have a set `ComponentA` and `ComponentB` and you want to run a logic over that set in a System only for a given condition. 
+For example, you might have a set `[ComponentA, ComponentB]` and you want to run a logic over that set in a System only for a given condition. 
 
 One approach could be to add a boolean to either the first or the second component and check for that during the iteration.  
 
@@ -119,6 +118,8 @@ Another approach to add a tag component `ComponentProcessAB` to the entity and c
 The idea here is take advantage of the systems processing logic and iterate on the minimum set of entities. Most ECS solutions consider this and have some kind of cache to improve performance for that case but even if they don't, this approach is more ECS friendly and reduces data from components.
 
 How to decide what approach to follow? it depends, in my case I normally use the first one since it is super easy and the transition to the second (maybe after some time the code is stable).
+
+I use a tag component `DisabledComponent` for entities I don't want to be processed. Since it is core to my engine I have to consider not having that component when iterating over entities in almost every system.
 
 # Command Components
 
@@ -136,19 +137,47 @@ struct SpineSkinChangeCommand {
 
 But the difference is that it is added when needed to be executed, and removed after that execution. 
 
-I use them for special cases like changing the skin of a Spine model and I need it to run after the spine model was created and initialized and before rendered, and I also call this command from different places so it was good to encapsulate that call.
+I use them for example to change the skin of a Spine model and I needs to run after the spine model was created and initialized and before rendered. I also call this command from different places so it was good decision to encapsulate that in a command.
 
 # Too much logic in one system
 
-* TODO: code smell too much logic, too much components at the same time, or pattern want to order logic
+It can happen that, even if you have a good data separation, you might have a system that does logic on lots of Components at the same time.
 
-* TODO: Separate system in multiple small steps, for example, instead of updating the position directly in the jumpsystem, just update another component.
+```csharp
+foreach (e in set(ComponentA, ComponentB, ..., ComponentG)) {
+  // logic between ComponentA and ComponentB
+  // logic between ComponentB and ComponentF
+  // some ifs to decide if running logic for ComponentC
+  // ...
+  // logic between ComponentA and ComponentG
+}
+```
 
+That works but it is not ideal. The first reason is, you need ALL of those components at the same time in order for the system to consider running the logic. So for an entity with only `[ComponentA, ComponentB]`, it will not execute the first logic. If you want that, the approach is to start separating in systems.
 
+```csharp
+foreach (e in set(ComponentA, ComponentB)) {
+  // logic between ComponentA and ComponentB
+}
 
-# Distributing logic in different Systems
+foreach (e in set(ComponentB, ComponentF)) {
+  // logic between ComponentB and ComponentF
+}
 
-* TODO: explain separating iterations of tuples and be able to optimize by not iterating on things...
+foreach (e in set(ComponentC, TagComponent)) {
+  // logic for ComponentC
+}
+
+// ...
+
+foreach (e in set(ComponentA, ComponentG)) {
+  // logic between ComponentA and ComponentG
+}
+```
+
+In this way, we can no only execute part of the logic without the other but we helped in making the systems parallelizable, we can now execute not order dependant logic at the same time in different threads/cores, using jobs, etc. 
+
+_Note: why I talk about systems I mainly refer to the iteration over a set of components, not the class itself. I normally have one system class with more than one iteration, the drawback there is I cant reorder those iterations with other systems but it is easy to fix by creating a new system class and moving the iteration code there, and then reorder._
 
 # Systems delay of one or more frame for data
 
@@ -190,6 +219,57 @@ In my engine there is the `StatesComponent` that holds a set of states an entity
 This wasn't wrong but there was an issue, if I run the `enterState(state)`, I should be able to check if I am in that state in the next line of code and should be true but what was happening was I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold data in the component so the system can compare and call corresponding callbacks to the scripting framework. 
 
 The learning here is to not try to put everything in systems, some logic that can be processed directly (like adding two vectors for example) to avoid systems complexity. 
+
+# Integrating ECS to old OOP code base
+
+When we started Iron Marines Invasion (IM2) we weren't completely sure if we should go full ECS, and we also had lots of code from Iron Marines, so we decided to go step by step. When making IM1, we added a concept of formations for the second enemy race, it was similar to squads but allowed us to use it for enemies to follow a form and even rotate in a direction. That concept of `Formation` was migrated to IM2 as core of the movement systems for squads and enemies. Since that class contained a lot of code that we wanted to reuse, and as a team we had little experience with our new ECS, we integrated as it was. It was something like this:
+
+```csharp
+class Formation {
+  Unit main;
+  List<Unit> members;
+  List<Vector2> positions;
+
+  public void RecalculatePositions() {
+    // ...
+  } 
+
+  // more methods
+}
+```
+
+To run that logic we just referenced added that class in some other components, like the SquadComponent for example, and then in systems we just called `squadComponent.formation.method()`, and that worked well. We had a mix between ECS and OOP. This was a good first step in a transition to ECS, you don't have to convert everything to ECS from the start. One issue though was that Formation instances were shared between units of the same formation, so we had a system factory method in order to create formations and we then set the instance to each entity, it was really not ECS friendly.
+
+We had another similar case for the behaviours of IM1. Behaviours control a unit, one behaviour can run at a time and they are ordered in priority, as soon as a behaviour can run, it takes control of the unit until it completes and release control. To integrate in IM2, we used the same concept and added a BehaviourComponent with the Behaviours class in there and then had a system where we just run `behaviourComponent.behaviours.Run(dt)`, and also worked fine. 
+
+# Migrating from OOP to ECS
+
+Continuing the previous story, for both cases we end up migrating to full ECS when we had clear how to, and when we started to need it in order to take advantage of the ECS.
+
+* TODO: explain how we migrated the behaviours class and what we could achieve after that change
+
+# Everything is an Entity
+
+To complement the Formations story, when migrating the `Formation` concept we had that problem of sharing the Formation instance between units. To solve that we decided to make the Formation an entity itself, so any formation was an entity with a `FormationComponent`, and all units of that formation had a `FormationMemberComponent`. 
+
+```csharp
+struct FormationComponent {
+  List<Entity> members;
+  // form
+  // positions
+}
+
+struct FormationMemberComponent {
+  bool isLeader;
+  Entity formation;
+}
+```
+
+To use that, when an enemy squad was instantiated, with the first member (the leader of the formation) the formation entity was instantiated too and both the leader and the formation we configured together. The formation had an identifier and then each time a new entity of the same squad was instantiated, we gather the formation from the world and configured together.
+
+One good thing about having it as an Entity is that it allowed us to make add Components to it in order to have more logic, and we even decided at some point that the formation and the squad could be the same entity.
+
+My take here is that sometimes some lightweight or abstract concepts might need a separated entity, makes sense most of the time after you make the change and it opens tons of new possibilities. 
 
 # New logic that needs to run in the middle of a system's logic
 
