@@ -245,17 +245,63 @@ By separating we now can be sure the new logic runs in the middle and that also 
 
 _Tip: Try to depend in the minimum number of Components to make the code cleaner, easier to read and maintain but also to make it more reusable_
 
-There is a common case where you need to run some logic after other 
-
-Another thing to recap is, when a System iterates over entities with ComponentA and ComponentB, it doesn't care about other components
-
 ### Story: Having multiple Components of the same type in Iron Marines Invasion
 
-Most of the ECS solutions don't allow having mutliple Components of the same type but sometimes seems like a requirement. 
+Most of the ECS solutions don't allow having multiple Components of the same type but sometimes seems like a requirement. 
 
 When I was developing our ECS for Iron Marines Invasion, I wasn't sure if I hade to support this feature or not. There were some special cases like the `AbilityComponent` which stored data about one ability but our units should be able to have multiple abilities. 
 
-Initially we supported having list of components of the same type, however, there was another solution. Change the component to be `AbilitiesComponent` and store a list of Ability (a new struct with the ability data), similar to storing a list of any data (a Vector2 for example). This is a better solution in my opinion since it has best of both worlds, there is no special case of having multiple components, components can be used as filters for queries and we still can have mutliple datas of one type. 
+```csharp
+struct AbilityComponent: IComponent {
+  string name;
+  float cooldown;
+  bool isReady => cooldown <= 0;
+  bool isRunning;
+  // ...
+}
+```
+
+Initially we supported having list of components of the same type, however, there was another solution. Change the component to be `AbilitiesComponent` and store a list of Ability (a new struct with the ability data), similar to storing a list of any data (a Vector2 for example). This is a better solution in my opinion since it has best of both worlds, there is no special case of having multiple components, components can be used as filters for queries and we still can have multiple data of one type. It also allow to have shared knowledge data in that Component.
+
+```csharp
+struct Ability {
+  string name;
+  float cooldown;
+  bool isReady => cooldown <= 0;
+  bool isRunning;
+  // ... 
+}
+
+struct AbilitiesComponent: IComponent {
+  List<Ability> abilities;
+  Ability runningAbility;
+}
+```
+
+Another example was having an actions (move, attack, build) queue for the units. Using the Command Component could've work but we still need a way to order them and support for repetition, so it wouldn't easily work in this case.
+
+Since Actions normally share a common structure, for example:
+
+```csharp
+struct Action {
+  string name;
+  vector2 origin;
+  vector2 target;
+  // ... 
+}
+```
+
+We decided to have a component `PendingActionsComponent` with the queue of actions. That queue was consumed in different systems and scripts that controlled the entity in order to do what the action needs. We used this in a generic way, like this:
+
+```csharp
+var p = e.Get<PendingActionsComponent>();
+p.queue(new Action() {
+  name = "moveTo",
+  target = someTargetPosition
+})
+```
+
+So that allowed also delegating what kind of actions we could perform to design by avoiding hardcoded commands in code. 
 
 # Tips to decide
 
