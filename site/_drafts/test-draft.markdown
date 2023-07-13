@@ -495,13 +495,62 @@ p.queue(new Action() {
 
 So that allowed also delegating what kind of actions we could perform to design by avoiding hardcoded commands in code. 
 
-# My process when I don't know the best place for code or logic (TODO)
+# My process when I don't know the best place for code or logic
 
-// TODO: explain this more in detail and maybe with examples.
+For some logic it is super clear from the beginning where to code it, for others I am not so sure. For those, I normally start it as a script, even with mutable data.
 
-* I start with scritps both data and logic, then I want to read the data in somewhere else, so I move the data to components, then I want to reuse the logic, I move part of the logic to systems.
+```csharp
+public MyNewScript : Script {
+  public float someData;
 
-In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do.
+  public void OnUpdate(world, entity) {
+    if (somedata > 10) {
+      entity.Get<Position>() += 5;
+    }
+  }
+}
+```
+
+After that, I keep working on other things and if after some point some things could happen: 
+
+* Maybe I don't use the script anymore and remove it (the best case btw).
+* I need to read the data from other script or system.
+* I want to reuse the logic for another entity and I don't want to add the ScriptComponent and all of that.
+
+For the second case, my process is to extract the data to a component so I now can use it elsewhere.
+
+```csharp
+struct MyNewComponent {
+  float someData;
+}
+
+public MyNewScript : Script {
+  public void OnUpdate(world, entity) {
+    var newComponent = entity.Get<MyNewComponent>();
+
+    if (newComponent.someData > 10) {
+      entity.Get<Position>().value += 5;
+    }
+
+    // some other logic I am not interested in
+  }
+}
+```
+For the third case, I move the part of the interesting logic from the script into a system, almost directly. If it was all the logic, I remove the script also (best case).
+
+```csharp
+public MyNewSystem : System {
+  public void Update() {
+    foreach (e in set(MyNewComponent m, Position p)) {
+      if (m.someData > 10) {
+        p.value += 5;
+      }
+    }
+  }
+}
+```
+
+In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do. I also enjoy a lot removing unused code, and during the process I normally find some.
 
 # System that does super specific logic
 
