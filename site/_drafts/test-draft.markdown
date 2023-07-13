@@ -386,33 +386,7 @@ p.queue(new Action() {
 
 So that allowed also delegating what kind of actions we could perform to design by avoiding hardcoded commands in code. 
 
-# Tips to decide
-
-
-
-EXAMPLE OR LINK TO EXAMPLE HERE
-
-
-
-For example, in the game I am workin right now:
-
-EXAMPLE ABOUT MODEL AND SPINE?
-
-Systems are good to define general logic, things that you want to execute over any entity that matches the criteria of components. For example, in order to simulate gravityScale when using Unity Physics 3d I have a GravitySystem that adds gravity acceleration to entities with the GravityComponent. 
-
-THINKG A BETTER GAME EXAMPLE
-
-However, there are cases where you need specific logic that only one entity at a specific time of the game should do. In those cases I like to use some kind of scripting solution[^2], similar to MonoBehaviours, things that only run for one entity.
-
-Scripting
-- reuse controller instances
-- data stored in entities through components or through blackboard component
-- real examples from the game
-- the examples from the endless/platformer blogpost are in controllers/scripts
-
-Some times what logic should be in a System and what logic should be in a Script is not so obvious, and that is something I want to talk about in this blog post. .
-
-# My process when I don't know the best place for code or logic
+# My process when I don't know the best place for code or logic (TODO)
 
 // TODO: explain this more in detail and maybe with examples.
 
@@ -420,13 +394,11 @@ Some times what logic should be in a System and what logic should be in a Script
 
 In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do.
 
-# Examples
-
-* In IMI we had the formation as a class, SquadComponent had a Formation class and there we performed all the logic to locate units from a squad in a position. It worked but we had some issues... We later moved it to FormationComponent and moved the members's position calculation to a system.
+# Examples (TODO or REMOVE)
 
 * In IMI, show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
 
-# Conclusions
+# Conclusions (WIP)
 
 My tips to decide where to put the data and logic:
 
