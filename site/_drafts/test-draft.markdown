@@ -13,13 +13,15 @@ tags:
 
 # Background
 
-My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time for our games and even to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. For my current games I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity).
+My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time for our games and even to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/). For my current games I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity).
+
+_Note: For IMI I first tried used Unity ECS but it wasn’t ready at that time._
 
 I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. I also recommend this GDC talk about [Overwatch's ECS](https://youtu.be/zrIY0eIyqmI).
 
 Even though Systems implement the logic, they depend directly on which components an entity has and the data inside them. This means the behaviour of the game when using ECS is mostly data driven: adding or removing a component and changing its data changes which systems execute and what they do. 
 
-To understand the examples of this blog post, I first have to tell you that I use an scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and data. Data can be readonly or mutable but the recommendation is to avoid the second by moving it into Components. 
+To understand the examples of this blog post, I first have to tell you that I use an scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/). Scripts have logic and data. Data can be readonly or mutable but the recommendation is to avoid the second by moving it into Components. Also, if no mutable data is used, Script instances can be reused between different entities.
 
 **Where to put the data?** By definition, we know that it should be in a Component but, should it be in only one or distributed into multiple Components? Should I have data in systems? what about scripts? 
 
@@ -554,39 +556,38 @@ In my experience, each time I detected some logic could be reusable and spent ti
 
 # Story: A system does super specific logic for only one element of the game  
 
-In Iron Marines Invasion there is an enemy sniper tower that reveals itself over fog of war while it is targeting a player's unit. The idea here is to let the player react by relating the crosshair over a unit (someone is targeting my unit) with the tower targeting (it is probably that tower that was revealed out of nowhere).
+In Iron Marines Invasion there is an enemy sniper tower that reveals itself over fog of war while it is targeting a player's unit. The idea here is to let the player react by relating the crosshair over the targeted unit (oh! someone is targeting my unit) with the tower targeting it (it is probably that tower that was revealed itself out of nowhere).
 
-For that tower, we had a specific system that, if the main ability was executing and the entity has another specific ability (it was a bit of a mess, I don't remember exactly), it added a new entity on the main player team with some vision, and as soon as the ability completes, the new entity is removed. The abstract solution was good but having that super specific logic in the system felt wrong since could've been in a Behaviour.
+For that tower, we had a specific system that, if the main ability was executing and the entity has another specific ability (I don't remember exactly, it was kind of a mess), it added a new entity over the tower but on the main player team side with some vision, and as soon as the ability completes, the new entity is removed. The abstract solution was good but having that super specific logic in the system felt wrong since could've been in a Behaviour of the tower for that case.
 
 Later in development we added a way of revealing enemies when firing (not targeting) if they are behind fog (that happens a lot when on higher ground), similar to what happens with siege tanks in Starcraft, and that completely made sense as a feature so we did it in systems and we separated the previous one to reuse the part of creating an entity to reveal fog.
 
-_Note: This story is one of the reasons I normally start now by creating logic in Scripts and then move it to systems._
+_Note: This story is one of the reasons I normally start now by creating logic in Scripts and move it later to systems._
 
 # Conclusions
 
 To decide where to put the data and logic:
 
 * If it is a super transversal feature, like walking, might be in a system.
-* If it is super specific feature like one entity doing something in specific level, then logic could be in a script and the data in a blackboard.
-* If you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
+* If it is super specific feature like one entity doing something in specific level, then use a script. It can always be converted later.
+* If it is not clear, it is normally easier to start it as a script. It can always be converted later.
 
-Some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better.
+Some times for a game a feature is broader than for other games, but if you make it a clean component + system then it is always better to reuse it or not use it at all.
 
-When transitioning from OOP to ECS it normally happens to have a mix, but it is ok, both worlds can live together.
+ECS and OOP can live together, this normally happens when transitioning from old codebase to ECS.
 
-Having logic in Components or in helper methods is not bad, at least when it is simple and tend to be readonly.
+Having logic in Components or in helper methods is not bad, at least not when it is simple and tend to be readonly.
 
-By working using the ECS paradigm, there are also code smells and best practices start to arise, and both are related to the ones that happen in OOP but they just require other solutions. For example, instead of moving data and logic to another class, move data to another component, and logic to another system/iteration. 
+By working using the ECS paradigm, there are also code smells and best practices start to arise, and both are related to the ones that happen in OOP but they just require different solutions. For example, instead of extracting class with data and logic, in ECS you have to move data to another component, and logic to another system/iteration. 
 
-It is better to have more systems/iterations and run small chunks of logic over reduced number of components.
+It is better to have more systems running small chunks of logic and execute over a reduced number of components.
 
-My advice is to try to make the solution as refactorable as possible in order to support improving it over time, step by step. That can be done by exercising code refactor (and in that process, identify places to make refactoring easier), using a good IDE like Rider and making tools and tests to help you. Speaking about tests, I have a pending blogpost about testing in games that I have mind for a while now, hope to have some time to spend to write it.
+My general advice tough is to try to make the solution as refactorable as possible in order to support improving it over time, step by step. That can be done by exercising code refactor (and in that process, identify places to make refactoring easier), using a good IDE like Rider and making tools and tests to help you. 
+
+Speaking about tests, I have a pending blogpost about testing in games that I have mind for a while now, hope to have some time to write it soon.
+
+I probably have so much more cases and examples to share, I might come back to this topic later.
 
 Hope you liked it, remember to share on whatever social network you use. 
+
 Thanks for reading!!
-
-Notes
-
-[^1]: I first tried used Unity ECS but it wasn't ready at that time.
-
-[^2]: We created our own [scripting system](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/) since it felt like obviously necessary to have logic that runs outside systems.
