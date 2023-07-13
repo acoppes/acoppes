@@ -552,29 +552,38 @@ public MyNewSystem : System {
 
 In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do. I also enjoy a lot removing unused code, and during the process I normally find some.
 
-# System that does super specific logic
+# Story: A system does super specific logic for only one element of the game  
 
-* In IMI, show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
+In Iron Marines Invasion there is an enemy sniper tower that reveals itself over fog of war while it is targeting a player's unit. The idea here is to let the player react by relating the crosshair over a unit (someone is targeting my unit) with the tower targeting (it is probably that tower that was revealed out of nowhere).
 
-# Conclusions (WIP)
+For that tower, we had a specific system that, if the main ability was executing and the entity has another specific ability (it was a bit of a mess, I don't remember exactly), it added a new entity on the main player team with some vision, and as soon as the ability completes, the new entity is removed. The abstract solution was good but having that super specific logic in the system felt wrong since could've been in a Behaviour.
 
-My tips to decide where to put the data and logic:
+Later in development we added a way of revealing enemies when firing (not targeting) if they are behind fog (that happens a lot when on higher ground), similar to what happens with siege tanks in Starcraft, and that completely made sense as a feature so we did it in systems and we separated the previous one to reuse the part of creating an entity to reveal fog.
+
+_Note: This story is one of the reasons I normally start now by creating logic in Scripts and then move it to systems._
+
+# Conclusions
+
+To decide where to put the data and logic:
 
 * If it is a super transversal feature, like walking, might be in a system.
 * If it is super specific feature like one entity doing something in specific level, then logic could be in a script and the data in a blackboard.
 * If you don't know it is normally easier to start as script and scale it to a system, move data first to a component and then move the (or parts of the) logic to one or more systems
-* some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better.
 
-My most important advice for you is to try to make your solution as refactorable as possible in order to support improving it over time, step by step. How? well, first by exercising code refactor (and in that process, identify places to make refactoring easier), using a good IDE like Rider and making tools to help you. 
+Some times for a game a feature is broader than for other games, but if you make it a clean component+system then it is always better.
 
-By working using the ECS paradigm, there are also code smells and best practices start to arise, and both are related to the ones that happen in OOP but they just require different solutions.
- 
-* Separate data in different Components to achieve clarity, reusability, separation of concerns.
-* Separate logic in different systems, ir order to reduce coupling, improve parallelism and make the code more modular and also to control logic order.
+When transitioning from OOP to ECS it normally happens to have a mix, but it is ok, both worlds can live together.
 
-One great thing about ECS is that easily allow ordering logic, you can be sure some logic runs before or after another. However, there is also an issue with this when a system or a script want to react as soon as possible to some data change but it might need to wait to the next update. In my experience, it is normally not an issue when it is internal logic but it is common when you render stuff visually.
+Having logic in Components or in helper methods is not bad, at least when it is simple and tend to be readonly.
 
-It is better to have more systems and run small chunks of logic over reduced number of components.
+By working using the ECS paradigm, there are also code smells and best practices start to arise, and both are related to the ones that happen in OOP but they just require other solutions. For example, instead of moving data and logic to another class, move data to another component, and logic to another system/iteration. 
+
+It is better to have more systems/iterations and run small chunks of logic over reduced number of components.
+
+My advice is to try to make the solution as refactorable as possible in order to support improving it over time, step by step. That can be done by exercising code refactor (and in that process, identify places to make refactoring easier), using a good IDE like Rider and making tools and tests to help you. Speaking about tests, I have a pending blogpost about testing in games that I have mind for a while now, hope to have some time to spend to write it.
+
+Hope you liked it, remember to share on whatever social network you use. 
+Thanks for reading!!
 
 Notes
 
