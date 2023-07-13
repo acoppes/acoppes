@@ -499,7 +499,7 @@ So that allowed also delegating what kind of actions we could perform to design 
 
 # My process when I don't know the best place for code or logic
 
-For some logic it is super clear from the beginning where to code it, for others I am not so sure. For those, I normally start it as a script, even with mutable data.
+For some logic it is super clear from the beginning where to code it, for others I am not so sure. For those, I normally start it as a script, even with mutable data (can't share the instance among entities).
 
 ```csharp
 public MyNewScript : Script {
@@ -519,7 +519,7 @@ After that, I keep working on other things and if after some point some things c
 * I need to read the data from other script or system.
 * I want to reuse the logic for another entity and I don't want to add the ScriptComponent and all of that.
 
-For the second case, my process is to extract the data to a component so I now can use it elsewhere.
+For the second, my process is to extract the data to a component so I now can use it elsewhere.
 
 ```csharp
 struct MyNewComponent {
@@ -538,7 +538,10 @@ public MyNewScript : Script {
   }
 }
 ```
-For the third case, I move the part of the interesting logic from the script into a system, almost directly. If it was all the logic, I remove the script also (best case).
+
+_Note: Now my script instance can be shared._
+
+And for the third, I move the part of the interesting logic from the script into a system, almost directly. If it was all the logic, I remove the script also (best case).
 
 ```csharp
 public MyNewSystem : System {
@@ -569,8 +572,8 @@ _Note: This story is one of the reasons I normally start now by creating logic i
 To decide where to put the data and logic:
 
 * If it is a super transversal feature, like walking, might be in a system.
-* If it is super specific feature like one entity doing something in specific level, then use a script. It can always be converted later.
-* If it is not clear, it is normally easier to start it as a script. It can always be converted later.
+* If it is super specific feature like one entity doing something in specific level, then use a script. It can always be [converted](#my-process-when-i-dont-know-the-best-place-for-code-or-logic) later.
+* If it is not clear, it is normally easier to start it as a script. It can always be [converted](#my-process-when-i-dont-know-the-best-place-for-code-or-logic) later.
 
 Some times for a game a feature is broader than for other games, but if you make it a clean component + system then it is always better to reuse it or not use it at all.
 
