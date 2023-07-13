@@ -184,13 +184,13 @@ The logic to process this command runs after the spine model was created and ini
 
 # Systems delay of one or more frame for data
 
-One great thing about ECS is that easily allow ordering logic, you can be sure some logic runs before or after another and this is really important to improve determinism, debug, etc.
+One great thing about ECS solutions is that they easily allow ordering logic, you can be sure some logic runs before or after another and this is really important to improve determinism and debug, among others.
 
-However, there is also a drawback when a system or a script want to react as soon as possible to some data change but it might need to wait to the next update. 
+However, there is also a issue when a system or a script want to react as soon as possible to some data change but it might need to wait to the next update. 
 
-In my experience, it general (for most of the systems) is not an big issue but for some others it is, mainly when related with things the player can see. For example, when firing a projectile maybe one system creates the projectile entity and if the model loads in the next frame, the player might notice a visual delay. 
+In my experience, it general (or for most of the systems) is not an big issue but for some others it is. For example, when firing a projectile maybe one system creates the entity and if the model loads in the next frame, the player might notice a visual delay after pressing the fire action. 
 
-For this issue, some times the main problem is that the systems not ordered properly so in some cases they might need to wait even one or more frames for some data to be in the final state, for example:
+For this issue, a common problem is that the systems not ordered properly so in some cases they might need to wait one or more frames for some data to be in the final state, for example:
 
 ```csharp
 public class World() {
@@ -200,32 +200,75 @@ public class World() {
     SystemA.update();
   }
 }
-
 ```
 
-Lets assume those systems depend on data in order, SystemA produces some data, SystemB updates it and finally SystemC does the last logic. In that world, that data is processed in 3 different frames. The fix is to reorder systems.
+Lets assume those systems depend on data in order, SystemA produces some data, SystemB updates it and finally SystemC does the last logic. In that world, that data is processed in 3 different frames. The fix for this is to reorder the systems.
 
-Reordering might be easy at first when having low count of systems but might become difficult over time. The good thing though is not all systems depend on all systems so changing order of small chunks of systems normally don't break anything. However, having good tests here simplify reordering changes.
+```csharp
+public class World() {
+  public void Update() {
+    SystemA.update();
+    SystemB.update();
+    SystemC.update();
+  }
+}
+```
 
-Now, back to the projectile example, my approach consist in two things. 
+Deciding systems order might be easy at first, when having a low count of systems, but might become difficult over time. The good thing though is that not all systems depend on all the others so changing order of small chunks of systems normally work. However a good recommendation for that refactor is to have some tests.
 
-The first one is to to react to entities creation as soon as possible. For that my system API has callbacks for entity creation and destruction. That allows systems to preconfigure as much as possible. This could be an issue if a systems needs to create heavy objects in order to work (for example a gameobject for the visuals of an entity). The approach here is to be lazy delaying the heavy part to the last moment.
+Sometimes, can't fix it by just reordering. Lets go back to the projectile example, my approach to attack that problem consist in two things. 
 
-The second part is that systems can execute in different Unity events (FixedUpdate, Update and LateUpdate), so for model creation (heavy objects) and update (positioning) I delay it as much as possible (LateUpdate). At that time I am sure all the important systems from FixedUpdate already run and I know I am about the entity is about to be rendered. 
+The first part is to to react to entities creation as soon as possible. For that, my system API has callbacks for entity creation and destruction allowing systems to configure its first state. 
 
-One thing I like about delaying the heavy stuff is that if I, for some reason decided to destroy the entity in the same frame it was created, the render objects are never created. 
+For the case of having to create heavy objects in order to work (for example a GameObject for the visuals of an entity) there are two approaches. One is to use pooling techniques to reduce creation costs (but still has activate/deactivate cost). The other one it so be lazy by delaying the heavy part creation to the last moment (for example, when it is about to be rendered).
+
+The second part is that systems can execute in different Unity events (FixedUpdate, Update and LateUpdate), so some systems that update the visual model (position, rotation, etc) run during the LateUpdate before the entity is rendered. A pseudocode explaining the process (using the first approach for heavy objects):
+
+```csharp
+class SomeScript : Script {
+  void Update(world, entity) {
+    // some stuff
+    var projectile = world.Create(projectileDefinition);
+    // here it is already initialized but has might have no model
+    projectile.damage = 100; 
+  }
+}
+
+// fixed update
+class ModelCreationSystem : System {
+  void OnEntityCreated(Entity e) {
+    if (e.has<ModelComponent>()) {
+      // initialize model
+      e.get<ModelComponent>().instance = Pool.get();
+    }
+  }
+}
+
+// late update
+class ModelInstanceUpdateSystem : System {
+  void Update() {
+    foreach (e in set(ModelComponent m, Position p)) {
+      m.instance.transform.position = p.value;
+    }
+  }
+}
+```
+
+One thing I like about delaying the heavy stuff is that if I, for some reason decided to destroy the entity in the same frame it was created, the heavy objects were never created. 
 
 ### Story: State enter/exit events
 
-In my engine there is the `StatesComponent` that holds a set of states an entity could be at a given time. For example, an entity could be "walking" and "stunned". This component has a basic API to set values, like `enterState(state)` or `leaveState(state)`. Initially I thought I needed to do all logic in systems so when I entered a state I didn't really enter the state, I stored a value like `enteredStates` to be processed later in a system.
+In my engine there is the `StatesComponent` that holds a set of states an entity could be at a given time. For example, an entity could be "walking" and "stunned". This component has a basic API to set values, like `enterState(state)` or `leaveState(state)`. Initially I thought I needed to do the transition logic in systems so when I entered a state I didn't really enter the state, I stored a value like `enteredStates` to be processed later in a system.
 
-This wasn't wrong but there was an issue, if I run the `enterState(state)`, I should be able to check if I am in that state in the next line of code and should be true but what was happening was I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold data in the component so the system can compare and call corresponding callbacks to the scripting framework. 
+This wasn't wrong but there was an issue, if I run the `enterState(state)`, I should be able to check if I am in that state in the next line of code and should be true but that wasn't happening, I had to wait one frame. After some hesitation I decided to change the code to enter/leave the state as soon as invoked the method but to hold state change data in order to be able to call scripts callbacks in the scripting system. 
 
-The learning here is to not try to put everything in systems, some logic that can be processed directly (like adding two vectors for example) to avoid systems complexity. 
+The learning here is to not try to put everything in systems. Some logic, like adding two vectors for example, can be processed instantly and it is not wrong. 
 
 # Integrating ECS to old OOP code base
 
-When we started Iron Marines Invasion (IM2) we weren't completely sure if we should go full ECS, and we also had lots of code from Iron Marines, so we decided to go step by step. When making IM1, we added a concept of formations for the second enemy race, it was similar to squads but allowed us to use it for enemies to follow a form and even rotate in a direction. That concept of `Formation` was migrated to IM2 as core of the movement systems for squads and enemies. Since that class contained a lot of code that we wanted to reuse, and as a team we had little experience with our new ECS, we integrated as it was. It was something like this:
+When we started Iron Marines Invasion (IM2) we weren't completely sure if we should go full ECS, and we also had lots of code from first Iron Marines. So we decided to go step by step. 
+
+During the development of IM1, we added a concept of formations for the second enemy race. It was similar to squads but allowed us to use it for enemies to follow a formation and even rotate it based on the leader movement direction. That concept of `Formation` was migrated to IM2 as core of the movement systems for all units. Since that class contained a lot of code that we wanted to reuse, and our new ECS was being developed, we integrated the code as it was, something like this:
 
 ```csharp
 class Formation {
@@ -241,15 +284,81 @@ class Formation {
 }
 ```
 
-To run that logic we just referenced added that class in some other components, like the SquadComponent for example, and then in systems we just called `squadComponent.formation.method()`, and that worked well. We had a mix between ECS and OOP. This was a good first step in a transition to ECS, you don't have to convert everything to ECS from the start. One issue though was that Formation instances were shared between units of the same formation, so we had a system factory method in order to create formations and we then set the instance to each entity, it was really not ECS friendly.
+```csharp
+struct SquadComponent {
+  Formation formation;
+  //...
+}
+```
 
-We had another similar case for the behaviours of IM1. Behaviours control a unit, one behaviour can run at a time and they are ordered in priority, as soon as a behaviour can run, it takes control of the unit until it completes and release control. To integrate in IM2, we used the same concept and added a BehaviourComponent with the Behaviours class in there and then had a system where we just run `behaviourComponent.behaviours.Run(dt)`, and also worked fine. 
+```csharp
+class SquadFormationSystem {
+  void Update() {
+    foreach (e in set(SquadComponent c)) {
+      c.formation.RecalculatePositions();
+    }
+  }
+}
+```
+
+To run that logic we just referenced added that class in some other components, like the SquadComponent for example, and then in systems we just called `squadComponent.formation.method()`, and that worked well. We had a mix between ECS and OOP. 
+
+This was a good first step in a transition to ECS, you don't have to convert everything to ECS from the start. One issue, though, was that Formation instances were shared between units of the same formation, so we had a system factory method in order to create formations and we then set the instance to each entity, it was really not ECS friendly since we started having dependency to systems.
+
+```csharp
+class FormationsSystem {
+  public Formation createFormation(parameters) {
+    // 
+  }
+}
+```
+
+We had another similar case for the behaviours solution from IM1. Behaviours control a unit, one behaviour can run for some time and they are ordered in priority. As soon as a behaviour can run, it takes control of the unit until it completes it execution and releases control. To integrate this solution into IM2, we used the same approach and added a BehaviourComponent with the Behaviours class in there and then had a system where we just run `behaviourComponent.behaviours.Run(dt)`, and also worked fine.
+
+_Note: this behavior solution was like a scripting framework too, it was the way to add custom/specific logic to elements of the game._ 
 
 # Migrating from OOP to ECS
 
 Continuing the previous story, for both cases we end up migrating to full ECS when we had clear how to, and when we started to need it in order to take advantage of the ECS.
 
-* TODO: explain how we migrated the behaviours class and what we could achieve after that change
+For the behaviours solution, what we did was to move, step by step, the internal `Behaviour` logic to a System and its data to the Component. We ended up with something like this:
+
+```csharp
+struct Behaviour {
+  bool executing;
+  Script script;
+}
+
+struct BehavioursComponent {
+  List<Behaviour> behaviours;
+  Behaviour runningBehaviour;
+  // more stuff
+}
+
+class BehavioursSystem {
+  void Update() {
+
+    // this logic (and more) was in the Behaviour concept from IM1
+    foreach (e in set(BehavioursComponent b)) {
+      foreach (behaviour in b.behaviours) {
+        behaviour.RunPassive(); // logic that always run independently the behaviour is executing or not.
+      }
+      
+      var executing = false;
+
+      if (b.runningBehaviour) {
+        executing = b.runningBehaviour.Run();
+      }
+
+      if (!executing) {
+        // search for new behaviour to execute and make it the running behaviour.
+      }
+    }
+  }
+}
+```
+
+Making this change allowed us to start taking advantages of ECS. One of those was that we added a callbacks framework over the scripting and we could order when the callbacks are called, before or after `Run()`, and even order between them.
 
 # Everything is an Entity
 
@@ -268,11 +377,11 @@ struct FormationMemberComponent {
 }
 ```
 
-To use that, when an enemy squad was instantiated, with the first member (the leader of the formation) the formation entity was instantiated too and both the leader and the formation we configured together. The formation had an identifier and then each time a new entity of the same squad was instantiated, we gather the formation from the world and configured together.
+To use that, when an enemy squad was instantiated, a formation entity was instantiated with the first member (the leader of the formation) and both the leader and the formation we configured together. The formation had an identifier and then each time a new entity of the same squad was instantiated, we gather the formation from the world and configured together.
 
-One good thing about having it as an Entity is that it allowed us to make add Components to it in order to have more logic, and we even decided at some point that the formation and the squad could be the same entity.
+One good thing about having it as an Entity is that it allowed us to add Components to it in order to have more logic (or debug), and we even decided at some point that the formation and the squad were the same entity, and they were also the formation leader. When a formation was without units it was auto destroyed.
 
-My take here is that sometimes some lightweight or abstract concepts might need a separated entity, makes sense most of the time after you make the change and it opens tons of new possibilities. 
+The learning here is that sometimes some lightweight, abstract or invisible (to the player) concepts might need to have a separated entity and from experience, it makes sense most of the time after you make the change and it opens new ECS possibilities. 
 
 # New logic that needs to run in the middle of a system's logic
 
@@ -394,7 +503,7 @@ So that allowed also delegating what kind of actions we could perform to design 
 
 In my experience, each time I detected some logic could be reusable and spent time moving logic from scripts to systems at the end of the day it always felt the right thing to do.
 
-# Examples (TODO or REMOVE)
+# System that does super specific logic
 
 * In IMI, show in fog while targeting (vultures sniper tower) is a super specific system only used by that tower
 
