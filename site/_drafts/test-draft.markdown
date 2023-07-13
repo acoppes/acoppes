@@ -594,3 +594,5 @@ I probably have so much more cases and examples to share, I might come back to t
 Hope you liked it, remember to share on whatever social network you use. 
 
 Thanks for reading!!
+
+_BTW, it seems you can buy me a coffee if you want now, much appreciated._
