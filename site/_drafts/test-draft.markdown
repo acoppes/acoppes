@@ -2,7 +2,7 @@
 layout: post
 title:  "Design decisions when building games using ECS"
 # date:   2022-11-22 00:08:30 -0300
-excerpt:  When using ECS (Entity Component System), how to decide which data goes in which Component and why?, which logic goes in which System?, and in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions making different games. 
+excerpt:  When using ECS (Entity Component System), how to decide which data goes in which Component and why?, which logic goes into which System? should I put logic in components?, and in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions making games. 
 author: Ariel Coppes
 tags:
   - personal
@@ -13,31 +13,35 @@ tags:
 
 # Background
 
-My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time and we used it to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and I even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. Nowadays, I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity) for my games.
+My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time for our games and even to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/)[^1]. For my current games I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity).
 
-I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. I also recommend this GDC talk about [Overwatch's ECS](https://youtu.be/zrIY0eIyqmI?t=102).
+I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. I also recommend this GDC talk about [Overwatch's ECS](https://youtu.be/zrIY0eIyqmI).
 
-Even though Systems implement the logic, they depend directly on which components the entity has and their data. This means the behaviour of the application in ECS is mostly data driven: adding or removing a component or changing its data will change which systems execute and what they do. 
+Even though Systems implement the logic, they depend directly on which components an entity has and the data inside them. This means the behaviour of the game when using ECS is mostly data driven: adding or removing a component and changing its data changes which systems execute and what they do. 
 
-To understand the examples of this blog post, I first have to tell you that I use a scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and readonly and mutable data but the second is discouraged by moving that data into Components. 
+To understand the examples of this blog post, I first have to tell you that I use an scripting framework similar to the [one we created at Gemserk](https://blog.gemserk.com/2011/11/13/scripting-with-artemis/)[^2]. Scripts have logic and data. Data can be readonly or mutable but the recommendation is to avoid the second by moving it into Components. 
 
-**Where to put the data?** By definition, we know that it should be in a Component but, should it be in only one or distributed into multiple Components? Inside the Component, should it be a field or should it be in a Blackboard/Dictionary? 
+**Where to put the data?** By definition, we know that it should be in a Component but, should it be in only one or distributed into multiple Components? Should I have data in systems? what about scripts? 
 
 **Where to process the logic?** By definition, we know it should be in a System, but should it be in only one or distributed into multiple Systems? should it be in a Script or in multiple Scripts? should I put logic in Components even though I am not supposed to?
 
-It obviously depends but one thing I learned is that you might discover the best place over time. A good thing though is that it is normally easy to decide good first location and change it later. 
-
 _Note: even though it is against the idea of ECS to have logic in components, some times it comes super handy to have helper logic in there in the form of properties, methods or even extension methods. Some times you are integrating an ECS to a previous codebase and some logic still runs in a class with the data (more on this later)_
 
-# Too much data in one Component
+The answer of all of these questions is that it obviously depends on the case but one thing I learned is that you might discover the best over time while it is normally easy to have a first step to start and change it later. In the next sections I will share some cases that might help you decide when facing this questions.
 
-In a platformer game, the main character walks over platforms and can jump from platform to platform. For this game, we could have just a CharacterComponent with data like movement horizontal speed over platforms and air, jump speed and initial impulse when jumping, etc:
+# Having too much data in one Component
+
+There is a platformer game where the main character walks over platforms and can jump from platform to platform. For this game, we could have just a CharacterComponent with data like movement speed over platforms and air, jump speed and initial impulse when jumping, etc:
 
 ```csharp
 struct CharacterComponent {
+  float controlMovementDirection;
+  bool controlJumpPressed;
+
   bool inContactWithPlatform;
   float platformSpeedOnGround;
   float platformSpeedOnAir;
+
   bool jumping;
   float jumpSpeed;
   float jumpInitialImpulse;
@@ -45,32 +49,34 @@ struct CharacterComponent {
 }
 ```
 
-In this solution there might be a System processing the set CharacterComponent and PhysicsComponent (or similar) and in that iteration performing both the movement and jump logic.
+In this solution there might be a System processing the set CharacterComponent and in that iteration performing different game logic together.
 
 A pseudo code system could be something like this:
 
 ```csharp
 void Update() {
-  foreach (e in set(CharacterComponent c, PhysicsComponent p, MovementComponent m)) {
-    updateJumping(c, p) // apply vertical movement with physics if jumping
-    updatePlatformer(c, p, m); // detect if over platform or not and set in another component 
+  foreach (e in set(CharacterComponent c)) {
+    updateControls(c)
+    updateJumping(c) // apply vertical movement with physics if jumping
+    updatePlatformer(c); // detect if over platform or not and set in another component 
   }
 }
 ```
 
-That solution isn't wrong, those values need in some way to work together, you cant have a jump if you cant place the character (or whatever) over platforms. There are code smells here, for example:
+That solution isn't wrong, those values need in some way to work together, you cant have a jump if you cant place the character (or whatever) over platforms but there are some code smells here:
 
 * Variables with prefixes.
-* System is doing multiple logic together (maybe with lots of ifs), and that logic probably acting on part of the data, and other logic on the other part. 
-* I can't easily reuse only part of the data (and logic). I might want to have something that can be over platforms and fall, but can't Jump, so I want to use only part of the data. I could always use a bool like `jumpEnabled` for example, to say the unit has no jump, but that means it is processed anyway by systems to compare and do nothing. It is better to not have that Component if not used.
+* System is doing lots of logic together and there might be logic acting on only part of the data. 
+* I can't easily reuse only part of the logic and data. I might want to have something that can be over platforms and fall, but can't Jump, so I want to use only part of the data. I could always use a bool like `jumpEnabled` for example, to say the unit has no jump, but that means it is processed anyway by systems to compare and do nothing. It is better to not have that Component if not used.
 
-_Note: The first code smell is common in OOP too and one way to attack it is to extract a class. In ECS a good practice is to extract a component and separate systems._
+_Note: These code smells are common in OOP too and one way to attack it is to separate in different classes with the data ana logic. In ECS a good practice is to extract a component and separate systems._
 
 We could separate in different Components, for example:
 
 ```csharp
-struct CharacterComponent {
-  // others related with the character
+struct ControlComponent {
+  float movementDirection;
+  bool jumpPressed;
 }
 
 // Indicates something can be placed over platforms
@@ -87,25 +93,61 @@ struct JumpComponent {
   float initialImpulse; 
 }
 ```
-And now two systems:
+So now the system looks like this:
 
 ```csharp
-foreach (e in set(JumpComponent j, PhysicsComponent p)) {
-  updateJumping(j, p) // apply vertical movement with physics if jumping
-}
-
-foreach (e in set(PlatformerComponent p, PhysicsComponent ph, MovementComponent m)) {
-  updatePlatformer(p, ph, m); // detect if over platform or not and set in another component 
+foreach (e in set(ControlComponent c, JumpComponent j, PlatformerComponent p)) {
+  updateControls(c, j) // configure jump component values from the controls
+  updateControls(c, p) // configure platformer component values from the controls
+  updateJumping(j); // update jumping logic 
+  updatePlatformer(p); // update platformer logic
 }
 ```
- 
-In my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
+
+[//]: Note: in my case, working on an Endless Runner 2d game that uses Physics2d I reused a JumpComponent from the 2.5d Beat'em Up which was using Physics3d. The changes were in the systems, I added more systems or added some data in the component extending its reusability.
 
 # Separated data is always processed together
 
 It can also happen the opposite: having two Components that are always processed together and there is no way nor need to avoid it. If that happens, it is not bad but might be a code smell too since you have to create always iterations of that set of components and configure them apart, etc. A good practice for this case is to integrate all the data into one component.
 
-# Tag Components
+# Having too much logic in one system
+
+To continue with the previous example, even if you have a good data separation, you might have a system that does logic on lots of Components at the same time.
+
+```csharp
+foreach (e in set(ControlComponent c, JumpComponent j, PlatformerComponent p)) {
+  updateControls(c, j) // configure jump component values from the controls
+  updateControls(c, p) // configure platformer component values from the controls
+  updateJumping(j); // update jumping logic 
+  updatePlatformer(p); // update platformer logic
+}
+```
+
+That works but it is not ideal. The first reason is, you need ALL of those components at the same time in order for the system to consider running the logic. So for an entity with only `[ControlComponent, JumpComponent]`, it will not execute. If you want that, the approach is to start separating into different systems.
+
+```csharp
+foreach (e in set(ControlComponent c, JumpComponent j)) {
+  updateControls(c, j) // configure jump component values from the controls
+}
+
+foreach (e in set(ControlComponent c, PlatformerComponent p)) {
+  updateControls(c, p) // configure platformer component values from the controls
+}
+
+foreach (e in set(JumpComponent j)) {
+  updateJumping(j); // update jumping logic 
+}
+
+foreach (e in set(PlatformerComponent p)) { 
+  updatePlatformer(p); // update platformer logic
+}
+```
+
+We can now run part of the logic for entities with only some components and if going further, we could now parallelize logic in different threads/cores, using jobs, etc. 
+
+_Note: when I talk about systems I mainly refer to the iteration over a set of components, not the class itself. I normally have one system class with more than one iteration, the drawback there is I can't reorder those iterations with other systems but the fix is creating a new system class and moving the iteration code there, and then reorder systems._
+
+# Identify entities to include or exclude from logic: Tag Component
 
 Empty components can be used as a way to identify entities for some logic. 
 
@@ -113,71 +155,32 @@ For example, you might have a set `[ComponentA, ComponentB]` and you want to run
 
 One approach could be to add a boolean to either the first or the second component and check for that during the iteration.  
 
-Another approach to add a tag component `ComponentProcessAB` to the entity and check for the complete set of components to iterate. Tagging an entity is equal to adding the component, and to remove the tag, remove the component.
+Another approach is to add a tag component `ComponentProcessAB` to the entity and check for the complete set of components to iterate. Tagging an entity is equal to adding the component, and removing the tag is equal to remove the component.
 
-The idea here is take advantage of the systems processing logic and iterate on the minimum set of entities. Most ECS solutions consider this and have some kind of cache to improve performance for that case but even if they don't, this approach is more ECS friendly and reduces data from components.
+The idea here is take advantage of the systems processing logic and iterate over the minimum set of entities. Most of the ECS solutions consider this and have some kind of cache to improve performance for this case but even if they don't, this approach is more ECS friendly and reduces data from components.
 
-How to decide what approach to follow? it depends, in my case I normally use the first one since it is super easy and the transition to the second (maybe after some time the code is stable).
+How to decide what approach to follow? in my case I normally use the first one since it is super easy and then I transition to the second (maybe after some time after the code is more stable). Sometimes I just know it is the right way and start with the second approach.
 
-I use a tag component `DisabledComponent` for entities I don't want to be processed. Since it is core to my engine I have to consider not having that component when iterating over entities in almost every system.
+Tag Component can also be used to exclude entities, and don't execute logic if they have that component. For example, for my games I use a tag component named `DisabledComponent` to tell the system I don't want to execute logic for them. Since it is a core part of my engine I have to consider not having that component when processing entities in almost every system I have.
 
-# Command Components
+# One time logic that needs to run in systems: Command Component
 
-There is another case of components that are used for one frame only, to mark a specific logic to be performed by a system. I don't know the name but I believe they act similar to a Command pattern.
+There is another case of components that are used for only one frame, to mark a specific logic to be performed by a system. I named them Command Components since they act similar to a Command pattern.
 
-Why using a command instead of just doing the logic as a helper method in the Component or as an extension? Well, sometimes it needs a complex logic that some system is aware of, other times it needs to be sure it runs at a specific order (after some system run), in those cases I believe the command makes sense.
+Why using a command instead of just doing the logic as a helper method in the Component or as an extension? Well, sometimes the logic might be complex and do things only a system is aware of. Other times it needs runs at an specific order (after or before some system). For those cases I believe the Command Component makes sense.
 
-It is a normal component, for example:
+It is a normal component with some data but the difference is that it is added when needed and removed after processed. 
+
+For example a component likt this one, to switch skins:
 
 ```csharp
 struct SpineSkinChangeCommand {
-  strign newSkin;
+  string newSkin;
 }
 ```
 
-But the difference is that it is added when needed to be executed, and removed after that execution. 
 
-I use them for example to change the skin of a Spine model and I needs to run after the spine model was created and initialized and before rendered. I also call this command from different places so it was good decision to encapsulate that in a command.
-
-# Too much logic in one system
-
-It can happen that, even if you have a good data separation, you might have a system that does logic on lots of Components at the same time.
-
-```csharp
-foreach (e in set(ComponentA, ComponentB, ..., ComponentG)) {
-  // logic between ComponentA and ComponentB
-  // logic between ComponentB and ComponentF
-  // some ifs to decide if running logic for ComponentC
-  // ...
-  // logic between ComponentA and ComponentG
-}
-```
-
-That works but it is not ideal. The first reason is, you need ALL of those components at the same time in order for the system to consider running the logic. So for an entity with only `[ComponentA, ComponentB]`, it will not execute the first logic. If you want that, the approach is to start separating in systems.
-
-```csharp
-foreach (e in set(ComponentA, ComponentB)) {
-  // logic between ComponentA and ComponentB
-}
-
-foreach (e in set(ComponentB, ComponentF)) {
-  // logic between ComponentB and ComponentF
-}
-
-foreach (e in set(ComponentC, TagComponent)) {
-  // logic for ComponentC
-}
-
-// ...
-
-foreach (e in set(ComponentA, ComponentG)) {
-  // logic between ComponentA and ComponentG
-}
-```
-
-In this way, we can no only execute part of the logic without the other but we helped in making the systems parallelizable, we can now execute not order dependant logic at the same time in different threads/cores, using jobs, etc. 
-
-_Note: why I talk about systems I mainly refer to the iteration over a set of components, not the class itself. I normally have one system class with more than one iteration, the drawback there is I cant reorder those iterations with other systems but it is easy to fix by creating a new system class and moving the iteration code there, and then reorder._
+The logic to process this command runs after the spine model was created and initialized and before rendered. I also call this command from different places in code so it makes sense to encapsulate it.
 
 # Systems delay of one or more frame for data
 
