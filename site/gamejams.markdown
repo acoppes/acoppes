@@ -3,6 +3,13 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Abduction101"
+    url: https://arielsan.itch.io/abduction101
+    images: 
+      - /images/jams-lowrezjam-2023-03.gif
+      - /images/jams-lowrezjam-2023-01.gif
+    description: Learn human abduction in a few steps and take control of the planet. 
+    jam: lowrezjam 2023
   - name: "Mini RTS Battle Experience"
     url: https://arielsan.itch.io/rtsgame
     images: 
@@ -61,9 +68,11 @@ Here is the list of games, ordered by most recent first.
     <div class="title">{{project.name}}</div>
     <a href="{{project.url}}">(click to play)</a>
     <a href="{{project.url}}">
+      <span>
       {%- for image in project.images -%}
-        <span><img src="{{image}}" /></span>
+        <img src="{{image}}" />
       {%- endfor -%}
+      </span>
     </a>
     <span>{{project.description}} #{{project.jam}}</span>
 </div>
