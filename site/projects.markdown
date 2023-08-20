@@ -27,16 +27,6 @@ projects:
 
 This page shows some of my most important games I've worked on.
 
-#### Unfinished
-
-An endless fast paced action game with some beatemup elements. 
-
-<div align="center">
-<iframe src="https://itch.io/embed/1768301?linkback=true" width="552" height="167" frameborder="0"><a href="https://arielsan.itch.io/beatemup">beatemup by arielsan</a></iframe>
-</div>
-
-#### Previous work
-
 Here is a list of games I've worked on in the past, ordered by most recent first.
 
 <p>

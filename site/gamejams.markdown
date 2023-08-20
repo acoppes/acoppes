@@ -32,6 +32,10 @@ projects:
     images: /images/jams_screenshots_05.gif
     description: Harvest Dune's Spice while surviving Sand Worm attacks.
     jam: LDJAM52
+  - name: Generic Beat'em up
+    url: https://arielsan.itch.io/beatemup
+    images: /images/jams_beatemup-screenshot-01.gif
+    description: Endless fast paced action game with some beatemup elements. 
   - name: Seedcity Chasers
     url: https://arielsan.itch.io/seedcity-chasers
     images: /images/jams_screenshot_03.gif
@@ -74,7 +78,7 @@ Here is the list of games, ordered by most recent first.
       {%- endfor -%}
       </span>
     </a>
-    <span>{{project.description}} #{{project.jam}}</span>
+    <span>{{project.description}} {% if project.jam %} #{{project.jam}} {% endif %}</span>
 </div>
 {%- endfor -%}
 
