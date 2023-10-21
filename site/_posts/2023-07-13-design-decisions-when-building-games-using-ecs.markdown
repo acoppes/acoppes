@@ -19,7 +19,7 @@ image:
 
 My experience with ECS goes back to 2010 when we started making games at Gemserk with [@rgarat](https://twitter.com/rgarat), we used [Artemis](http://entity-systems.wikidot.com/artemis-entity-system-framework) at that time for our games and even to make the port of Clash of the Olympians for mobile devices. Over the years I used different ECS solutions and even developed my own for [Iron Marines Invasion](https://www.ironmarinesinvasion.com/). For my current games I use the Community maintained fork of [LeoECS](https://github.com/LeoECSCommunity).
 
-_Note: For IMI I first tried used Unity ECS but it wasn’t ready at that time._
+_Note: For Iron Marines Invasion I first tried used Unity ECS but it wasn’t ready at that time._
 
 I assume you already know about ECS but here is a great [source of information](https://github.com/SanderMertens/ecs-faq) as introduction. If you come from an OOP background you have to [change your mindset](https://github.com/SanderMertens/ecs-faq#how-is-ecs-different-from-oop) to maximize the value of using ECS. I also recommend this GDC talk about [Overwatch's ECS](https://youtu.be/zrIY0eIyqmI).
 
