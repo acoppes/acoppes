@@ -5,8 +5,10 @@ date:   2023-07-13 00:08:00 -0300
 excerpt:  When using ECS (Entity Component System), how to decide which data goes in which Component and why?, which logic goes into which System? should I put logic in components?, and in the case of using a Scripting framework, which logic goes in scripts instead of systems?. This blog post tries to share how I approach these decisions after years of using different ECS solutions making games. 
 author: Ariel Coppes
 tags:
-  - personal
-  - update
+  - ecs
+  - unity
+  - techniques
+  - design
 image:
   path: /images/ecs-post-preview.jpg
   height: 100
