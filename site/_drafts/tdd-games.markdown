@@ -63,7 +63,10 @@ To do that, the game and engine must support a way to configure these things. Un
 
 In my case, I am using en ECS framework and I have an abstraction layer to instantiate entitties and override values, I call it Level Design elements and they normally are something like "Spawn a new Entity using this Definition here and override these values".
 
-
+<div class="post-image">
+ <img src="/assets/tdd-nekoplatformer-screenshot-02.png" width="100%" />
+<span>Character initial location for the test.</span>
+</div>
 
 
 
