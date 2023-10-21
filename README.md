@@ -8,7 +8,7 @@ Some of my core values:
 * Generate trust by being transparent and having good communication skills.
 * I don't believe in separated roles with separated responsibilities but I do believe in having different knowledge and points of view and achieving excellence by interacting to find the best value from them. 
 
-I believe in [Agile](http://agilemanifesto.org/), some of my favorite development best practices:
+I believe in [Agile](http://agilemanifesto.org/) and [XP](http://www.extremeprogramming.org/), some of my favorite development best practices:
 
 * Continuous delivery
 * Test driven development
