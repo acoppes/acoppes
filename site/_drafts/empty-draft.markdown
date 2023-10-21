@@ -5,8 +5,12 @@ title:  "Template"
 excerpt:  Template excerpt idea 
 author: Ariel Coppes
 tags:
-  - personal
-  - update
+  - tag1
+  - tag2
+image:
+  path: /images/ecs-post-preview.jpg
+  height: 100
+  width: 100
 ---
 
 {{page.excerpt}}

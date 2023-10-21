@@ -1,0 +1,102 @@
+---
+layout: post
+title:  "How I follow a Test Driven Development approach to make games"
+# date:   2022-11-22 00:08:30 -0300
+excerpt: Which tools I use and how I structure my games in order to use a TDD (Test Driven Development) approach. 
+author: Ariel Coppes
+tags:
+  - tdd
+  - unity
+  - howto
+image:
+  path: /images/ecs-post-preview.jpg
+  height: 100
+  width: 100
+---
+
+{{page.excerpt}}
+
+[TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a code and design technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it. That cycle repeats over and over, like a spiral.
+
+In this blog post I want to go from that theory, to this in practice:
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd-nekoplatformer-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>An example of my tests using the Test Runner in Play Mode</span>
+</div>
+
+I've been using it for years in different environments and in different projects. It's main value to me is as a design process and that could be applied at different abstraction layers, not only for code.
+
+Matching its definition, I normally first start thinking on how I want to validate a new content or feature, then I work creating the context to validate that (the test) and when it fails start working on the implementation. Sometimes it could be just code, just using the unit test framework, others it could be an entire scene with a complex setting. 
+
+#### Example: adding double jump to character (abstract)
+
+Suppose I want to add a double jump to the main character of a platformer game. Here I could consider different cases that also drive in some way the exact double jump I want. Some questions I ask to myself could be: 
+
+* Do I want to be able to jump at any time during the jump?
+* Do I want to allow a jump if I fall from a platform or double jump in that case? 
+* Do I want the second jump to be the same as the initial one or different (faster, less height, etc)?
+
+These questions and how I want to validate them are shaping the design of the game and the code.
+
+For the first question, suppose I only want to allow a double jump if the player presses the jump button while the character is going up, before starting to fall. 
+
+To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And I also want to have a test where the character jumps by pressing the jump button and press the jump button agian but after falling and see it doesn't jump again. 
+
+Now, I also want to make the second jump more powerful than the first one. For that, and using a previous test I did to make sure a jump reaches the max height X, I will now make a test case where the a double jump has to reach more than 2X of max height.
+
+### How am I validating that in my games 
+
+#### Setting up the context 
+
+First, I set the context of the test. For example, I want the character to be over a corner so when it moves right it falls.
+
+<div class="post-image">
+ <img src="/assets/tdd-nekoplatformer-screenshot-01.png" width="50%" />
+<span>Character initial location for the test.</span>
+</div>
+
+To do that, the game and engine must support a way to configure these things. Unity for example supports that by instantiating a prefab and locating it in a position, override values, etc.
+
+In my case, I am using en ECS framework and I have an abstraction layer to instantiate entitties and override values, I call it Level Design elements and they normally are something like "Spawn a new Entity using this Definition here and override these values".
+
+
+
+
+
+#### Defining the actions to validate the test
+
+Then I am using my Triggers' Logic to perform the actions in order to create the test.
+
+IMAGE
+
+
+
+Finally I am validating the results either manually or with some assert actions (like "the character should be here").
+
+IMAGE
+
+#### Automating it a bit more with the Test Runner?
+
+* Play mode tests
+
+#### Test life cycle
+
+What happens if the game changes? like I don't want double jump anymore or I want it different.
+
+As I said at the beginning I consider TDD a design technique that means I don't normally care so much about the tests after I desgined and validated what I wanted. 
+
+There are different cases here:
+
+* The test fails because it has no more value for the game/engine, then I remove it.
+* The test fails because the feature/mechanic changed, depending how much, I could consider adjusting the test before changing the mechanic, that means, using TDD for the change.
+* The test pass and validate a feature I am not using anymore, then I leave it as it is (I could decide to use it again). If it is too much noise I remove it.
+* The test is validating a feature that could be abstracted and decoupled from some specific content, like the feature of double jumping. In that case I could consider making that effort and keep the test and the feature alive.
+
+#### Conclusions
+
+* Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be imrpoved
+* How long do my tests live considering the design of the game could change a lot, for example I could change to not want double jump. 
