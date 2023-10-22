@@ -2,7 +2,7 @@
 layout: post
 title:  "How I follow a Test Driven Development approach to make games"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: Which tools I use and how I structure my games in order to use a TDD (Test Driven Development) approach. 
+excerpt: This blogpost covers how I am following a Test Driven Development approach when making games and which tools I am using. 
 author: Ariel Coppes
 tags:
   - tdd
@@ -15,6 +15,8 @@ image:
 ---
 
 {{page.excerpt}}
+
+# Introduction
 
 [TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a code and design technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it. That cycle repeats over and over, like a spiral.
 
@@ -32,7 +34,7 @@ I've been using it for years in different environments and in different projects
 
 Matching its definition, I normally first start thinking on how I want to validate a new content or feature, then I work creating the context to validate that (the test) and when it fails start working on the implementation. Sometimes it could be just code, just using the unit test framework, others it could be an entire scene with a complex setting. 
 
-#### Example: adding double jump to character (abstract)
+## Example: adding double jump to character (abstract)
 
 Suppose I want to add a double jump to the main character of a platformer game. Here I could consider different cases that also drive in some way the exact double jump I want. Some questions I ask to myself could be: 
 
@@ -48,14 +50,14 @@ To validate that, I want to have a test where the character jumps by pressing ju
 
 Now, I also want to make the second jump more powerful than the first one. For that, and using a previous test I did to make sure a jump reaches the max height X, I will now make a test case where the a double jump has to reach more than 2X of max height.
 
-### How am I validating that in my games 
+# How am I validating that in my games 
 
-#### Setting up the context 
+## Setting up the context 
 
 First, I set the context of the test. For example, I want the character to be over a corner so when it moves right it falls.
 
 <div class="post-image">
- <img src="/assets/tdd-nekoplatformer-screenshot-01.png" width="50%" />
+ <img src="/assets/tdd-nekoplatformer-screenshot-01.png" width="400px"/>
 <span>Character initial location for the test.</span>
 </div>
 
@@ -65,28 +67,27 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-screenshot-02.png" width="100%" />
-<span>Character initial location for the test.</span>
+<span>It shows my custom level design elements that allow me to customize entities creation.</span>
 </div>
 
+## Defining the actions to validate the test
 
+After having the initial context, I define the actions using my Triggers' Logic (which is like a oversimplified visual code tool using Game Objects) in order to create the test.
 
-#### Defining the actions to validate the test
+For example, for that case could be, wait a bit, move the character to the right, wait a bit, now assert the player is moving with negative velocity in the y component.
 
-Then I am using my Triggers' Logic to perform the actions in order to create the test.
+<div class="post-image">
+ <img src="/assets/tdd-nekoplatformer-triggers-test.png" width="100%" />
+<span>It shows the list of actions I execute to recreate the test I want to.</span>
+</div>
 
-IMAGE
+Finally I normally start by validating the results by watching if what I expected happens or not. But there are some cases I can use assert actions like "the character should be around this position" I can use too, it depends on how easy I can do that or not.
 
-
-
-Finally I am validating the results either manually or with some assert actions (like "the character should be here").
-
-IMAGE
-
-#### Automating it a bit more with the Test Runner?
+## Automating it a bit more with the Test Runner?
 
 * Play mode tests
 
-#### Test life cycle
+## Test life cycle
 
 What happens if the game changes? like I don't want double jump anymore or I want it different.
 
@@ -99,7 +100,7 @@ There are different cases here:
 * The test pass and validate a feature I am not using anymore, then I leave it as it is (I could decide to use it again). If it is too much noise I remove it.
 * The test is validating a feature that could be abstracted and decoupled from some specific content, like the feature of double jumping. In that case I could consider making that effort and keep the test and the feature alive.
 
-#### Conclusions
+# Conclusions
 
 * Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be imrpoved
 * How long do my tests live considering the design of the game could change a lot, for example I could change to not want double jump. 
