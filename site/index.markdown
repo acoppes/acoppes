@@ -9,7 +9,7 @@ layout: home
 
 I'm a 39 years old Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development 3.5+ years in software.
 
-I've started playing games when I was really young and I knew I wanted to make games since then. I really enjoy playing all kind of games, I tried to think in a favorite genre but as far as I remember I played lots of different genres during my life and enjoyed practically all of them.  
+I've started playing games when I was a kid and I knew at that time I wanted to make them. I really enjoy playing all kind of games, I tried to think in a favorite genre but as far as I remember I played lots of different genres during my life and enjoyed practically all of them.  
 
 Even though my main focus is making games, I enjoy a lot scaling them up by improving workflows, tools and development processes to increase speed and simplify making big games with smalls teams. I suppose that is my inner Engineer taking control of me.
 
