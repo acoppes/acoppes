@@ -189,6 +189,10 @@
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
+
+  p {
+    text-align: justify;
+  }
 }
 
 .page-heading {
@@ -239,6 +243,10 @@
 
 .post-content {
   margin-bottom: $spacing-unit;
+
+  p {
+    text-align: justify;
+  }
 
   h2 {
     @include relative-font-size(2);
