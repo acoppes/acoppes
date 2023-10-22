@@ -248,6 +248,12 @@
     text-align: justify;
   }
 
+  ul {
+    li {
+      text-align: justify;
+    }
+  }
+
   h1 {
     @include relative-font-size(1.5);
 

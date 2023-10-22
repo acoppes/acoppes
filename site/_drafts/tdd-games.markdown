@@ -72,26 +72,46 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 ## Defining the actions to validate the test
 
-After having the initial context, I define the actions using my Triggers' Logic (which is like a oversimplified visual code tool using Game Objects) in order to create the test.
+After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-For example, for that case could be, wait a bit, move the character to the right, wait a bit, now assert the player is moving with negative velocity in the y component.
+TODO: SIDE NOTE SUPER QUICK EXPLAINATION OF TRIGGERS LOGIC similar to what I did for IM1 and IM2, link to [related gemserk bgpost](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/ )
+
+For example, for that case could be: 
+  1. Move the character to the right
+  2. Wait half a second
+  3. Assert the character is moving with negative velocity in the y.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-triggers-test.png" width="100%" />
 <span>It shows the list of actions I execute to recreate the test I want to.</span>
 </div>
 
-Finally I normally start by validating the results by watching if what I expected happens or not. But there are some cases I can use assert actions like "the character should be around this position" I can use too, it depends on how easy I can do that or not.
+Finally I normally start by validating the results by watching if what I expected happens or not. That obviously don't scale well when having multiple test cases and when working with other people.
+
+There are some cases I automatically validate the test using assert actions like "the character should be around this position". Sometimes I use them, otherd I don't but I should try to use them more frequently.
 
 ## Automating it a bit more with the Test Runner?
 
-* Play mode tests
+Unity comes with a Test Runner to run unit tests and more complex tests like funcional/e2e. For the latter, you have to use Play Mode tests which use the Unity's runtime and execute over time.
 
-## Test life cycle
+Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
+
+<div class="post-image">
+ <img src="/assets/tdd-nekoplatformer-testrunner.png" width="100%" />
+<span>A list of tests in Unity's Test Runner based on my custom tests inside the scene.</span>
+</div>
+
+TODO: CODE TO SHOW HOW
+
+For these kind of tests I need the assert actions since they are validated automatically.
+
+Since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to see the test running. If something fails I can go to the specific test and work on that one. 
+
+# Test life cycle
 
 What happens if the game changes? like I don't want double jump anymore or I want it different.
 
-As I said at the beginning I consider TDD a design technique that means I don't normally care so much about the tests after I desgined and validated what I wanted. 
+As I said at the beginning, I consider TDD mainly design technique and that means I don't normally care so much about the tests after I desgined, implemented and validated what I wanted. 
 
 There are different cases here:
 
@@ -104,3 +124,5 @@ There are different cases here:
 
 * Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be imrpoved
 * How long do my tests live considering the design of the game could change a lot, for example I could change to not want double jump. 
+* The important part is validating small stuff in isolation by making the proper context and work with that.
+* This doesn't replace playing the game and/or testing the feature/content in the proper levels, but it helps a lot on working that in isolation, replicating bugs, etc, to improve the value when playing the game.
