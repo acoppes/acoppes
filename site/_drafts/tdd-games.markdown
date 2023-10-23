@@ -46,7 +46,7 @@ These questions and how I want to validate them are shaping the design of the ga
 
 For the first question, suppose I only want to allow a double jump if the player presses the jump button while the character is going up, before starting to fall. 
 
-To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And I also want to have a test where the character jumps by pressing the jump button and press the jump button agian but after falling and see it doesn't jump again. 
+To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And I also want to have a test where the character jumps by pressing the jump button and press the jump button again but after falling and see it doesn't jump again. 
 
 Now, I also want to make the second jump more powerful than the first one. For that, and using a previous test I did to make sure a jump reaches the max height X, I will now make a test case where the a double jump has to reach more than 2X of max height.
 
@@ -63,7 +63,7 @@ First, I set the context of the test. For example, I want the character to be ov
 
 To do that, the game and engine must support a way to configure these things. Unity for example supports that by instantiating a prefab and locating it in a position, override values, etc.
 
-In my case, I am using en ECS framework and I have an abstraction layer to instantiate entitties and override values, I call it Level Design elements and they normally are something like "Spawn a new Entity using this Definition here and override these values".
+In my case, I am using en ECS framework and I have an abstraction layer to instantiate entities and override values, I call it Level Design elements and they normally are something like "Spawn a new Entity using this Definition here and override these values".
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-screenshot-02.png" width="100%" />
@@ -74,7 +74,7 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blogpost I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaing where the inspiration came from and its first iterations. Even though it might look pretty similar to what I created at Ironide when working on Iron Marines, I coded it from zero and made different design decisions.
+The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blog posts I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaing where the inspiration came from and its first iterations. Even though it might look pretty similar to what I created at Ironhide when working on Iron Marines, I coded it from zero and made different design decisions.
 
 For example, the actions for the previous test case could be: 
   1. Move the character to the right.
@@ -101,9 +101,11 @@ I even have "tests" that are an isolated case that I use to validate a visual ef
 <span>It shows the scene I used to validate a bit the teleport effect</span>
 </div>
 
-## Automating it a bit more with the Test Runner?
+## Automatic validation with assert actions
 
-Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new Triggers' Logic assert actions to validate state, for example "this entity should be around this position", and also integrated it with Unity's Test Runner. In the case of the previous example, I have an assert action to validate the vertical velocity is negative and in a range.
+Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new assert actions to validate state, for example: "this entity should be around this position". 
+
+In the case of the previous example, I created an vertical velocity assert action to validate the entity is falling by comparing with a negative value.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -113,18 +115,29 @@ Recently, I started working in filling that missing part of my testing workflow,
 <span>Shows the same test running but now automatic validation.</span>
 </div>
 
-That works well but the next natural step is to integrate it with the Test Runner.
+## Integrate with Unity Test Runner
 
-Unity comes with a Test Runner that allows you to run from simple unit tests to more complex tests that require the Unity's runtime initialized and to execute over time. The latter are the Play Mode tests.
+Unity comes with a Test Runner that allows you to run from simple unit tests to more complex ones that require the runtime initialized and to execute over time.
 
-When working at Ironhide Games Studio I managed to make a way to detect scene test cases and run all of them automatically from the test runner and that is what I wanted to replicate here.
-
-The objective is to have my test cases listed in the test runner and when I run them, it should open each scene, activate a test and run it, wait for a result, show it and continue with next test.
+The objective here is to have my test cases listed in the test runner and when I run them, it should open each scene, activate the test and run it, wait for a result and show it before continuing with next test. The latter are called Play Mode tests.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testrunner.png" width="100%" />
 <span>A list of tests in Unity's Test Runner based on my custom tests inside the scene.</span>
 </div>
+
+NUnit comes with a way to populate tests by parameterize them using attributes. In my case I am using the [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html), and the good thing I the Test Runner automatically [considers this](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
+
+Since these are Play Mode tests there are some limitations. First, my tests should be on Scenes included in the runtime (could be excluded for a release) and also I can't use the Editor's API, for example, to detect my test cases to populate the test parameters. To fix that I have a menu item to process the tests scenes and create an asset in the Resources folder with all valid test cases (note: in the future I could change to automatically perform that when I save scene named Test or something like that).
+
+<div class="post-image">
+ <img src="/assets/tdd-nekoplatformer-testasset.png" width="500px" />
+<span>The asset in the Resources folder for the test executor to use as parameters.</span>
+</div>
+
+
+
+But for that I need to know where are my tests and since these are Play Mode, I can't easily use Unity's Editor API  , I first have to detect the tests I have in a programatic way and create some data for the 
 
 Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
 
@@ -136,7 +149,7 @@ Since I am using FixedUpdate for most of my important logic, it is possible to r
 
 What happens if the game changes? like I don't want double jump anymore or I want it different.
 
-As I said at the beginning, I consider TDD mainly design technique and that means I don't normally care so much about the tests after I desgined, implemented and validated what I wanted. 
+As I said at the beginning, I consider TDD mainly design technique and that means I don't normally care so much about the tests after I designed, implemented and validated what I wanted. 
 
 There are different cases here:
 
@@ -151,7 +164,7 @@ I am using Unity's Editor Mode unit tests for part of the code, for example to v
 
 # Conclusions
 
-* Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be imrpoved
+* Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be improved
 * How long do my tests live considering the design of the game could change a lot, for example I could change to not want double jump. 
 * The important part is validating small stuff in isolation by making the proper context and work with that.
 * This doesn't replace playing the game and/or testing the feature/content in the proper levels, but it helps a lot on working that in isolation, replicating bugs, etc, to improve the value when playing the game.
