@@ -86,24 +86,32 @@ For example, for that case could be:
 <span>It shows the list of actions I execute to recreate the test I want to.</span>
 </div>
 
-Finally I normally start by validating the results by watching if what I expected happens or not. That obviously don't scale well when having multiple test cases and when working with other people.
+Even though my test cases are automated in some way, they are not completely automatic. Most of the time I validate the results manually, for example, watching the character falling for the previous case. This obviously don't scale well when having multiple test cases and when working with other people.
 
-There are some cases I automatically validate the test using assert actions like "the character should be around this position". Sometimes I use them, otherd I don't but I should try to use them more frequently.
+I sometimes have "tests" that are an isolated case to validate a visual effect for example, both if it works as expected as well if I like it or not.
+
+VIDEO OF THE TELEPORT EFFECT
 
 ## Automating it a bit more with the Test Runner?
 
-Unity comes with a Test Runner to run unit tests and more complex tests like funcional/e2e. For the latter, you have to use Play Mode tests which use the Unity's runtime and execute over time.
+Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new Triggers' Logic assert actions to validate state, for example "this entity should be around this position", and also integrated it with Unity's Test Runner.
 
-Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
+Unity comes with a Test Runner that allows you to run from simple unit tests to more complex tests that require the Unity's runtime initialized and to execute over time. The latter are the Play Mode tests.
+
+When working at Ironhide Games Studio, I managed to make something similar, a way to detect scene test cases and run all of them automatically from the test runner, so I wantd to replicate that here.
+
+The objective is to have my test cases listed in the test runner and when I run them, it should open each scene, activate a test and run it, wait for a result, show it and continue with next test.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testrunner.png" width="100%" />
 <span>A list of tests in Unity's Test Runner based on my custom tests inside the scene.</span>
 </div>
 
+Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
+
 TODO: CODE TO SHOW HOW
 
-For these kind of tests I need the assert actions since they are validated automatically.
+To run these and validate the expected results automatically I created new Triggers' Logic actions, for example "this entity should be around this position".
 
 Since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to see the test running. If something fails I can go to the specific test and work on that one. 
 
@@ -119,6 +127,10 @@ There are different cases here:
 * The test fails because the feature/mechanic changed, depending how much, I could consider adjusting the test before changing the mechanic, that means, using TDD for the change.
 * The test pass and validate a feature I am not using anymore, then I leave it as it is (I could decide to use it again). If it is too much noise I remove it.
 * The test is validating a feature that could be abstracted and decoupled from some specific content, like the feature of double jumping. In that case I could consider making that effort and keep the test and the feature alive.
+
+# What about unit tests?
+
+I am using Unity's Editor Mode unit tests for part of the code, for example to validate a transformation of data of an ECS system, but most of the time I add the test later to improve code, not so driven by the test first.  
 
 # Conclusions
 
