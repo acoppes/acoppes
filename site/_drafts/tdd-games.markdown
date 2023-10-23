@@ -74,31 +74,50 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-TODO: SIDE NOTE SUPER QUICK EXPLAINATION OF TRIGGERS LOGIC similar to what I did for IM1 and IM2, link to [related gemserk bgpost](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/ )
+The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blogpost I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaing where the inspiration came from and its first iterations. Even though it might look pretty similar to what I created at Ironide when working on Iron Marines, I coded it from zero and made different design decisions.
 
-For example, for that case could be: 
-  1. Move the character to the right
-  2. Wait half a second
-  3. Assert the character is moving with negative velocity in the y.
+For example, the actions for the previous test case could be: 
+  1. Move the character to the right.
+  2. Wait some time.
+  3. Check the character is falling.
 
 <div class="post-image">
- <img src="/assets/tdd-nekoplatformer-triggers-test.png" width="100%" />
-<span>It shows the list of actions I execute to recreate the test I want to.</span>
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-testcase-manual-validation.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Shows the test running with no automatic validation but showing visually what is expected (I already have the code to make the character fall implemented).</span>
 </div>
 
-Even though my test cases are automated in some way, they are not completely automatic. Most of the time I validate the results manually, for example, watching the character falling for the previous case. This obviously don't scale well when having multiple test cases and when working with other people.
+Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the character falling for the previous case. This obviously don't scale well when having multiple test cases and when working with other developers.
 
-I sometimes have "tests" that are an isolated case to validate a visual effect for example, both if it works as expected as well if I like it or not.
+I even have "tests" that are an isolated case that I use to validate a visual effect is working as expected as well as if I like it or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I like it.
 
-VIDEO OF THE TELEPORT EFFECT
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-vfx-validation.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>It shows the scene I used to validate a bit the teleport effect</span>
+</div>
 
 ## Automating it a bit more with the Test Runner?
 
-Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new Triggers' Logic assert actions to validate state, for example "this entity should be around this position", and also integrated it with Unity's Test Runner.
+Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new Triggers' Logic assert actions to validate state, for example "this entity should be around this position", and also integrated it with Unity's Test Runner. In the case of the previous example, I have an assert action to validate the vertical velocity is negative and in a range.
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-testcase-automatic-validation.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Shows the same test running but now automatic validation.</span>
+</div>
+
+That works well but the next natural step is to integrate it with the Test Runner.
 
 Unity comes with a Test Runner that allows you to run from simple unit tests to more complex tests that require the Unity's runtime initialized and to execute over time. The latter are the Play Mode tests.
 
-When working at Ironhide Games Studio, I managed to make something similar, a way to detect scene test cases and run all of them automatically from the test runner, so I wantd to replicate that here.
+When working at Ironhide Games Studio I managed to make a way to detect scene test cases and run all of them automatically from the test runner and that is what I wanted to replicate here.
 
 The objective is to have my test cases listed in the test runner and when I run them, it should open each scene, activate a test and run it, wait for a result, show it and continue with next test.
 
@@ -110,8 +129,6 @@ The objective is to have my test cases listed in the test runner and when I run 
 Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
 
 TODO: CODE TO SHOW HOW
-
-To run these and validate the expected results automatically I created new Triggers' Logic actions, for example "this entity should be around this position".
 
 Since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to see the test running. If something fails I can go to the specific test and work on that one. 
 
