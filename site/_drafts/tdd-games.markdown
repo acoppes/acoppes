@@ -128,22 +128,86 @@ The objective here is to have my test cases listed in the test runner and when I
 
 NUnit comes with a way to populate tests by parameterize them using attributes. In my case I am using the [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html), and the good thing I the Test Runner automatically [considers this](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
 
-Since these are Play Mode tests there are some limitations. First, my tests should be on Scenes included in the runtime (could be excluded for a release) and also I can't use the Editor's API, for example, to detect my test cases to populate the test parameters. To fix that I have a menu item to process the tests scenes and create an asset in the Resources folder with all valid test cases (note: in the future I could change to automatically perform that when I save scene named Test or something like that).
+Since these are Play Mode tests there are some limitations. First, my tests should be on Scenes included in the build (could be excluded in a release build) and also I can't use the Editor's API, for example, to detect my test cases to populate the test parameters. 
+
+To fix that I have a menu item to process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases. _(Note to myself: I should change to automatically generate it when a test scene is saved)_
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testasset.png" width="500px" />
 <span>The asset in the Resources folder for the test executor to use as parameters.</span>
 </div>
 
+Now, to populate the test parameters, there is a method that load the asset and returns the data:
 
+```csharp
+public static TestData[] GetTestCases()
+{
+  var testsAsset = Resources.Load<TestDefinitionAsset>("Tests");
+  return testsAsset.testCases.ToArray();
+}
+```
 
-But for that I need to know where are my tests and since these are Play Mode, I can't easily use Unity's Editor API  , I first have to detect the tests I have in a programatic way and create some data for the 
+Then there is the code to run the test for each of those:
 
-Combining the NUnit attributes and generating a small framework around my Triggers' Logic, I can add my test cases to the list of test to run in the Test Runner and execute them in a specific way in order to validate one by one my tests and show the results there. 
+```csharp
+[UnityTest]
+public IEnumerator RunTests([ValueSource(nameof(GetTestCases))] TestData testData)
+{
+  // set state
+  TestRunnerState.message = null;
+  TestRunnerState.currentState = TestRunnerState.State.Starting;
+  
+  yield return SceneManager.LoadSceneAsync(testData.sceneName, LoadSceneMode.Single);
+  
+  Time.timeScale = testData.timeScale;
+  
+  TestRunnerState.currentState = TestRunnerState.State.Running;
+  
+  var testCase = GameObject.FindObjectsByType<TestCase>(FindObjectsInactive.Include, FindObjectsSortMode.None)
+      .First(t => t.gameObject.name.Equals(testData.testCase, StringComparison.OrdinalIgnoreCase));
+  
+  testCase.gameObject.SetActive(true);
 
-TODO: CODE TO SHOW HOW
+  TestRunnerState.currentRunTime = 0;
 
-Since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to see the test running. If something fails I can go to the specific test and work on that one. 
+  if (testData.timeout < 0)
+  {
+    yield return new WaitWhile(() => TestRunnerState.currentState == TestRunnerState.State.Running);
+  }
+  else
+  {
+    while (TestRunnerState.currentState == TestRunnerState.State.Running)
+    {
+      yield return new WaitForSeconds(0.1f);
+      TestRunnerState.currentRunTime += 0.1f;
+
+      if (TestRunnerState.currentRunTime > testData.timeout)
+      {
+        TestRunnerState.Fail("Timeout");
+        break;
+      }
+    }   
+  }
+
+  var testResult = TestRunnerState.currentState;
+  
+  TestRunnerState.currentState = TestRunnerState.State.None;
+  Time.timeScale = 1;
+  
+  if (testResult == TestRunnerState.State.Pass)
+  {
+    Assert.Pass(TestRunnerState.message);
+  }
+  else if (testResult == TestRunnerState.State.Fail)
+  {
+    Assert.Fail(TestRunnerState.message);
+  }
+}
+```
+
+It basically loads the scene for the test case, initializes test state and variables (to validate later), find the test and activate it, wait for a result or a timeout.
+
+One interesting point here is that, since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to visually validate these tests when running from the test runner and if something fails I can go to the specific test and work on that one. 
 
 # Test life cycle
 
