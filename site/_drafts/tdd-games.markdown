@@ -18,7 +18,7 @@ image:
 
 # Introduction
 
-[TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a code and design technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it. That cycle repeats over and over, like a spiral.
+[TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it, and repeat.
 
 In this blog post I want to go from that theory, to this in practice:
 
@@ -30,31 +30,37 @@ In this blog post I want to go from that theory, to this in practice:
 <span>An example of my tests using the Test Runner in Play Mode</span>
 </div>
 
-I've been using it for years in different environments and in different projects. It's main value to me is as a design process and that could be applied at different abstraction layers, not only for code.
+I've been using TDD for years in different projects. I feel it has great value as a design process that could be applied at different layers of abstraction, not only for code.
 
-Matching its definition, I normally first start thinking on how I want to validate a new content or feature, then I work creating the context to validate that (the test) and when it fails start working on the implementation. Sometimes it could be just code, just using the unit test framework, others it could be an entire scene with a complex setting. 
+Matching its definition, I normally start thinking on how I want to validate a new content or feature. Then, I create the context and logic to validate it and when that fails I move into implementing the feature. Sometimes it can be validated using one or more unit test, others, it might need an entire scene with a complex setting. 
 
 ## Example: adding double jump to character (abstract)
 
-Suppose I want to add a double jump to the main character of a platformer game. Here I could consider different cases that also drive in some way the exact double jump I want. Some questions I ask to myself could be: 
+At some point of the development of a platformer game we decided we want to add a double jump to the main character. 
+
+Asking myself different questions helps me in defining how I want this feature to behave and the different cases I could use to validate what I want.
 
 * Do I want to be able to jump at any time during the jump?
 * Do I want to allow a jump if I fall from a platform or double jump in that case? 
 * Do I want the second jump to be the same as the initial one or different (faster, less height, etc)?
 
-These questions and how I want to validate them are shaping the design of the game and the code.
+This process help in the design of the feature, the game and the code.
 
 For the first question, suppose I only want to allow a double jump if the player presses the jump button while the character is going up, before starting to fall. 
 
-To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And I also want to have a test where the character jumps by pressing the jump button and press the jump button again but after falling and see it doesn't jump again. 
+To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. 
 
-Now, I also want to make the second jump more powerful than the first one. For that, and using a previous test I did to make sure a jump reaches the max height X, I will now make a test case where the a double jump has to reach more than 2X of max height.
+Also, I need a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
 
 # How am I validating that in my games 
 
 ## Setting up the context 
 
-First, I set the context of the test. For example, I want the character to be over a corner so when it moves right it falls.
+Suppose I am adding a new feature that if the character is not over a platform it should fall until it touches one. 
+
+My test will be something like this, the character starts over a platform, near a corner, moves right, validate is falling.
+
+First, I set the context of the test, so I create the level and put the character in a corner.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-screenshot-01.png" width="400px"/>
@@ -74,9 +80,10 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blog posts I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaing where the inspiration came from and its first iterations. Even though it might look pretty similar to what I created at Ironhide when working on Iron Marines, I coded it from zero and made different design decisions.
+The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blog posts I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iterations. It is pretty similar to what I created at Ironhide when working on Iron Marines but I've to code it from zero and made different design decisions in that process.
 
 For example, the actions for the previous test case could be: 
+
   1. Move the character to the right.
   2. Wait some time.
   3. Check the character is falling.
@@ -89,9 +96,9 @@ For example, the actions for the previous test case could be:
 <span>Shows the test running with no automatic validation but showing visually what is expected (I already have the code to make the character fall implemented).</span>
 </div>
 
-Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the character falling for the previous case. This obviously don't scale well when having multiple test cases and when working with other developers.
+Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the character falling for the previous case. This obviously doesn't scale well when having multiple test cases and when working with other developers.
 
-I even have "tests" that are an isolated case that I use to validate a visual effect is working as expected as well as if I like it or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I like it.
+_Note: I even have "tests" that I use to validate visual effects working as expected and if I like them or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I do._
 
 <div class="post-image">
 <video width="100%" controls>
@@ -103,9 +110,9 @@ I even have "tests" that are an isolated case that I use to validate a visual ef
 
 ## Automatic validation with assert actions
 
-Recently, I started working in filling that missing part of my testing workflow, the automatic validation. To do that, I created new assert actions to validate state, for example: "this entity should be around this position". 
+Recently, I started working in filling that missing part of my workflow: the automatic validation. To do that, I created new assert actions to validate state, for example: "this entity should be around this position". 
 
-In the case of the previous example, I created an vertical velocity assert action to validate the entity is falling by comparing with a negative value.
+In the case of the previous example, the new action asserts the entity is falling by comparing it velocity with a range of negative values.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -114,6 +121,8 @@ In the case of the previous example, I created an vertical velocity assert actio
 </video> 
 <span>Shows the same test running but now automatic validation.</span>
 </div>
+
+Even though I now have automatic validation, I still have to go test by test to validate it each time I change something, I want an easy way to run them all. 
 
 ## Integrate with Unity Test Runner
 
@@ -126,18 +135,18 @@ The objective here is to have my test cases listed in the test runner and when I
 <span>A list of tests in Unity's Test Runner based on my custom tests inside the scene.</span>
 </div>
 
-NUnit comes with a way to populate tests by parameterize them using attributes. In my case I am using the [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html), and the good thing I the Test Runner automatically [considers this](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
+NUnit comes with a way to populate tests parameters by using attributes. In my case I am using [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html) with custom data with the name test, the time scale to use, etc. One good thing about the Test Runner is that automatically [considers this test with parameters](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
 
-Since these are Play Mode tests there are some limitations. First, my tests should be on Scenes included in the build (could be excluded in a release build) and also I can't use the Editor's API, for example, to detect my test cases to populate the test parameters. 
+Since these are Play Mode tests there are some limitations: my tests should be on Scenes included in the build (could be excluded from a release build) and the Editor's API can't be used. 
 
-To fix that I have a menu item to process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases. _(Note to myself: I should change to automatically generate it when a test scene is saved)_
+To generate the custom data for the test parameters, I pre process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases, during edit time.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testasset.png" width="500px" />
 <span>The asset in the Resources folder for the test executor to use as parameters.</span>
 </div>
 
-Now, to populate the test parameters, there is a method that load the asset and returns the data:
+Now, to populate the parameters the assets is loaded and the custom data is returned by this method:
 
 ```csharp
 public static TestData[] GetTestCases()
@@ -147,7 +156,7 @@ public static TestData[] GetTestCases()
 }
 ```
 
-Then there is the code to run the test for each of those:
+And here is the code that runs each test case:
 
 ```csharp
 [UnityTest]
@@ -205,11 +214,13 @@ public IEnumerator RunTests([ValueSource(nameof(GetTestCases))] TestData testDat
 }
 ```
 
-It basically loads the scene for the test case, initializes test state and variables (to validate later), find the test and activate it, wait for a result or a timeout.
+It basically loads the scene where the test case is, initializes test state and variables (to validate later), find the test and activate it, wait for a result or a timeout.
 
-One interesting point here is that, since I am using FixedUpdate for most of my important logic, it is possible to run this kind with increased speed by modifying the timeScale, which is super useful since I don't need to visually validate these tests when running from the test runner and if something fails I can go to the specific test and work on that one. 
+One interesting point here is, since I am using FixedUpdate for most of my important logic, it is possible to speed up the execution by modifying the time scale. If something fails, I can go to the specific test and manually run it to work on fixing the issue. 
 
 # Test life cycle
+
+// TODO: from here on
 
 What happens if the game changes? like I don't want double jump anymore or I want it different.
 
