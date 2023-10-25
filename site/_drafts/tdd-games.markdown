@@ -220,26 +220,29 @@ One interesting point here is, since I am using FixedUpdate for most of my impor
 
 # Test life cycle
 
-// TODO: from here on
-
 What happens if the game changes? like I don't want double jump anymore or I want it different.
 
 As I said at the beginning, I consider TDD mainly design technique and that means I don't normally care so much about the tests after I designed, implemented and validated what I wanted. 
 
-There are different cases here:
+There might be different cases here:
 
 * The test fails because it has no more value for the game/engine, then I remove it.
 * The test fails because the feature/mechanic changed, depending how much, I could consider adjusting the test before changing the mechanic, that means, using TDD for the change.
 * The test pass and validate a feature I am not using anymore, then I leave it as it is (I could decide to use it again). If it is too much noise I remove it.
 * The test is validating a feature that could be abstracted and decoupled from some specific content, like the feature of double jumping. In that case I could consider making that effort and keep the test and the feature alive.
 
-# What about unit tests?
-
-I am using Unity's Editor Mode unit tests for part of the code, for example to validate a transformation of data of an ECS system, but most of the time I add the test later to improve code, not so driven by the test first.  
-
 # Conclusions
 
-* Yes, I am validating by senses/eye some cases, not by values, for example, watching the character jumps. It can be improved
-* How long do my tests live considering the design of the game could change a lot, for example I could change to not want double jump. 
-* The important part is validating small stuff in isolation by making the proper context and work with that.
-* This doesn't replace playing the game and/or testing the feature/content in the proper levels, but it helps a lot on working that in isolation, replicating bugs, etc, to improve the value when playing the game.
+Testing like this doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content but it helps a lot when working on it in isolation, replicating bugs, etc, increasing the playtime value.
+
+Lets end the blog post with a video.
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-nekoplatformer-gameplay.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Just some gameplay of the game I am working on.</span>
+</div>
+
+Hope you liked it, share, love, peace.
