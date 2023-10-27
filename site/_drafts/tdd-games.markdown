@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "How I follow a Test Driven Development approach to make games"
+title:  "How I use Test Driven Development to make games"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: This blogpost covers how I am following a Test Driven Development approach when making games and which tools I am using. 
+excerpt: In this blog post I explain how I use (TDD) Test Driven Development, and testing in genera, to make games. 
 author: Ariel Coppes
 tags:
   - tdd
@@ -20,7 +20,7 @@ image:
 
 [TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it, and repeat.
 
-In this blog post I want to go from that theory, to this in practice:
+In this blog post I want to go from that theory, to something like this in practice:
 
 <div class="post-image">
 <video width="100%" controls>
@@ -52,22 +52,34 @@ To validate that, I want to have a test where the character jumps by pressing ju
 
 Also, I need a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
 
+> _Wait a minute, are you using TDD to make a character jump?_
+
+Well, fair question... the answer is NO, I didn't use TDD to make the character jump of that prototype, this section was more like a "hello world" example. Will try to show more real examples in the next section.
+
 # How am I validating that in my games 
 
 ## Setting up the context 
 
-Suppose I am adding a new feature that if the character is not over a platform it should fall until it touches one. 
-
-My test will be something like this, the character starts over a platform, near a corner, moves right, validate is falling.
-
-First, I set the context of the test, so I create the level and put the character in a corner.
+For this game prototype, I have the character has an ability that automatically teleports to special locations by hit them with a kunai.
 
 <div class="post-image">
- <img src="/assets/tdd-nekoplatformer-screenshot-01.png" width="400px"/>
-<span>Character initial location for the test.</span>
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-teleport-feature-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>It shows the teleport feature.</span>
 </div>
 
-To do that, the game and engine must support a way to configure these things. Unity for example supports that by instantiating a prefab and locating it in a position, override values, etc.
+At some point I decided to add an level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired to hit the redirect element and when it hits it, it is redirected up.
+
+To create this element I started by first creating the context where I wanted it validated, I put the character and in front of it, a redirect element (using a visual placeholder). 
+
+<div class="post-image">
+ <img src="/assets/tdd/tdd-redirect-firstscene-01.png" width="400px"/>
+<span>The first context to validate the new feature.</span>
+</div>
+
+In order to easily configure context the game and engine must support a way to set it up. Unity for example supports that by instantiating a prefab, locating it in a position and override values, among other useful things.
 
 In my case, I am using en ECS framework and I have an abstraction layer to instantiate entities and override values, I call it Level Design elements and they normally are something like "Spawn a new Entity using this Definition here and override these values".
 
@@ -84,21 +96,41 @@ The Triggers' Logic is something I made to create logic composing Game Objects. 
 
 For example, the actions for the previous test case could be: 
 
-  1. Move the character to the right.
+  1. Press fire button pointing to right.
   2. Wait some time.
-  3. Check the character is falling.
+  3. Check kunai projectile is going up.
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-testcase-manual-validation-noimplemenetation.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Shows the test case running but no logic yet</span>
+</div>
+
+After some magical implementation where I use physics triggers and redirect the body velocity, I have the test working as I expected:
 
 <div class="post-image">
 <video width="100%" controls>
   <source src="/assets/tdd/tdd-testcase-manual-validation.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
-<span>Shows the test running with no automatic validation but showing visually what is expected (I already have the code to make the character fall implemented).</span>
+<span>And now with the code working.</span>
 </div>
 
-Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the character falling for the previous case. This obviously doesn't scale well when having multiple test cases and when working with other developers.
+Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases and when working with other developers.
 
-_Note: I even have "tests" that I use to validate visual effects working as expected and if I like them or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I do._
+Of course, after having the initial test, I wanted another to see how the redirect behaves in different directions and... what happens if I make a loop?
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/nekoplatformer-redirect-hipnotic.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Redirect kunai feature</span>
+</div>
+
+_As a side note, I also have "tests" that I use to validate visual effects working as expected and if I like them or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I do._
 
 <div class="post-image">
 <video width="100%" controls>
@@ -112,7 +144,7 @@ _Note: I even have "tests" that I use to validate visual effects working as expe
 
 Recently, I started working in filling that missing part of my workflow: the automatic validation. To do that, I created new assert actions to validate state, for example: "this entity should be around this position". 
 
-In the case of the previous example, the new action asserts the entity is falling by comparing it velocity with a range of negative values.
+In the case of the previous example, the new action asserts the kunai entity is traveling up (like the y component of the velocity should be positive and x should be 0).
 
 <div class="post-image">
 <video width="100%" controls>
@@ -214,35 +246,38 @@ public IEnumerator RunTests([ValueSource(nameof(GetTestCases))] TestData testDat
 }
 ```
 
-It basically loads the scene where the test case is, initializes test state and variables (to validate later), find the test and activate it, wait for a result or a timeout.
+It basically loads the scene where the test case is, initializes test state and variables (used by the Triggers's logic Actions to set test results), find the test and activate it, wait for a result or a timeout.
 
 One interesting point here is, since I am using FixedUpdate for most of my important logic, it is possible to speed up the execution by modifying the time scale. If something fails, I can go to the specific test and manually run it to work on fixing the issue. 
 
-# Test life cycle
-
-What happens if the game changes? like I don't want double jump anymore or I want it different.
-
-As I said at the beginning, I consider TDD mainly design technique and that means I don't normally care so much about the tests after I designed, implemented and validated what I wanted. 
-
-There might be different cases here:
-
-* The test fails because it has no more value for the game/engine, then I remove it.
-* The test fails because the feature/mechanic changed, depending how much, I could consider adjusting the test before changing the mechanic, that means, using TDD for the change.
-* The test pass and validate a feature I am not using anymore, then I leave it as it is (I could decide to use it again). If it is too much noise I remove it.
-* The test is validating a feature that could be abstracted and decoupled from some specific content, like the feature of double jumping. In that case I could consider making that effort and keep the test and the feature alive.
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-testcase-automatic-validation-testrunner.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Here is the same test running through the test runner and at 10x.</span>
+</div>
 
 # Conclusions
 
-Testing like this doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content but it helps a lot when working on it in isolation, replicating bugs, etc, increasing the playtime value.
+One of the important things of the process of having automatic tests is to generate a context where can easily test (automatically or manually) game content and features without requiring the rest of the game loaded and interacting, this means helping in decoupling code and content (and in Unity also prefabs, assets, scenes).
 
-Lets end the blog post with a video.
+The important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that make no sense now. 
+
+Another great feature of tests is: documentation. Tests are a great way to remember why you decided to do something in some way or another. I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development, we wanted to add a new feature that play against something we decided like 1 year before and we did't remember why. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we decided that xD. 
+
+Automatic testing doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content. It also doesn't replace fine tuning and polishing stuff but having isolated context to work on them it does and having tests help in having isolated contexts. In fact, I have a special play button that loads the game, from the start, in a maximized window to allow me to test the complete experience and return to the scene I was after stop. But I also have cheats to move from one level to the other :)
+
+Lets end the blog post with a video of this prototype.
 
 <div class="post-image">
 <video width="100%" controls>
   <source src="/assets/tdd/tdd-nekoplatformer-gameplay.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
-<span>Just some gameplay of the game I am working on.</span>
+<span>Just some gameplay of the prototype I am working on.</span>
 </div>
 
 Hope you liked it, share, love, peace.
+
+_Special thanks to my friends Rubén Garat and Juan Andrés Nin who help me validating the drafts for each blog post and suggest fixes and improvements._ 
