@@ -2,7 +2,7 @@
 layout: post
 title:  "How I use Test Driven Development to make games"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: In this blog post I explain how I use (TDD) Test Driven Development, and testing in genera, to make games. 
+excerpt: This blog post is about using TDD (Test Driven Development) (and testing in general) for game development. It explains my personal process and tools I use for my current prototypes that are pretty similar to what I used at Ironhide Game Studio to make Iron Marines and Iron Marines Invasion.
 author: Ariel Coppes
 tags:
   - tdd
@@ -18,7 +18,7 @@ image:
 
 # Introduction
 
-[TDD (Test Driven Development)](https://en.wikipedia.org/wiki/Test-driven_development) is a technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it, and repeat.
+[TDD](https://en.wikipedia.org/wiki/Test-driven_development) is a technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it, and repeat that process.
 
 In this blog post I want to go from that theory, to something like this in practice:
 
@@ -32,9 +32,13 @@ In this blog post I want to go from that theory, to something like this in pract
 
 I've been using TDD for years in different projects. I feel it has great value as a design process that could be applied at different layers of abstraction, not only for code.
 
-Matching its definition, I normally start thinking on how I want to validate a new content or feature. Then, I create the context and logic to validate it and when that fails I move into implementing the feature. Sometimes it can be validated using one or more unit test, others, it might need an entire scene with a complex setting. 
+I normally start thinking on how I want to validate a new content or feature. Then, I create the context and actions to validate it (the test) and when that fails I move into implementing the feature. Sometimes it could be validated using one or more unit test, others, it might need an entire scene with a complex setting. This blog post is about the latter. 
 
-## Example: adding double jump to character (abstract)
+To implement a new content or feature a combination of elements is required, for example: code, configurations and assets.
+
+_By feature I normally mean a new horizontal mechanic, for example jumping, and by content I mean an specific game element that could have new mechanics, for example an enemy that bounces on the screen._  
+
+## Abstract Example: adding double jump to character
 
 At some point of the development of a platformer game we decided we want to add a double jump to the main character. 
 
@@ -54,11 +58,19 @@ Also, I need a test where the character jumps by pressing the jump button and pr
 
 > _Wait a minute, are you using TDD to make a character jump?_
 
-Well, fair question... the answer is NO, I didn't use TDD to make the character jump of that prototype, this section was more like a "hello world" example. Will try to show more real examples in the next section.
+Well, fair question... the answer is NO, I didn't use TDD to make the character jump of that prototype but I could have, this section was more like a "hello world" example. Will show more real examples in the next section.
+
+I did however TDD for a special case I wanted for the jump. I wanted the to have a minimum jump, if the player tap the jump button I wanted the character to at least jump 1 tile so when you are playing and moving fast through the level and find a wall of 1 tile of height you just tap the jump button and be over it and continue moving. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/tdd/tdd-testcase-minjump.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>A test case to validate that minimum jump when tap reaches at least one tile of height.</span>
+</div>
 
 # How am I validating that in my games 
-
-## Setting up the context 
 
 For this game prototype, I have the character has an ability that automatically teleports to special locations by hit them with a kunai.
 
@@ -71,6 +83,8 @@ For this game prototype, I have the character has an ability that automatically 
 </div>
 
 At some point I decided to add an level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired to hit the redirect element and when it hits it, it is redirected up.
+
+## Setting up the context 
 
 To create this element I started by first creating the context where I wanted it validated, I put the character and in front of it, a redirect element (using a visual placeholder). 
 
@@ -92,13 +106,13 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-The Triggers' Logic is something I made to create logic composing Game Objects. There is a [blog posts I wrote at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iterations. It is pretty similar to what I created at Ironhide when working on Iron Marines but I've to code it from zero and made different design decisions in that process.
+The Triggers' Logic is something I made to create logic composing Game Objects. I wrote a [blog post at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iterations. My current solution is pretty similar to what I created when making Iron Marines.
 
 For example, the actions for the previous test case could be: 
 
-  1. Press fire button pointing to right.
+  1. Press the fire button.
   2. Wait some time.
-  3. Check kunai projectile is going up.
+  3. Check kunai is moving up.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -108,7 +122,7 @@ For example, the actions for the previous test case could be:
 <span>Shows the test case running but no logic yet</span>
 </div>
 
-After some magical implementation where I use physics triggers and redirect the body velocity, I have the test working as I expected:
+After some magical implementation with physics, trigger callbacks and changing velocities, I have the test working as I expected:
 
 <div class="post-image">
 <video width="100%" controls>
@@ -118,9 +132,9 @@ After some magical implementation where I use physics triggers and redirect the 
 <span>And now with the code working.</span>
 </div>
 
-Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases and when working with other developers.
+Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases.
 
-Of course, after having the initial test, I wanted another to see how the redirect behaves in different directions and... what happens if I make a loop?
+_After having the initial test, I wanted another to see how the redirect behaves in different directions and... what happens if I make a loop?_
 
 <div class="post-image">
 <video width="100%" controls>
@@ -142,9 +156,9 @@ _As a side note, I also have "tests" that I use to validate visual effects worki
 
 ## Automatic validation with assert actions
 
-Recently, I started working in filling that missing part of my workflow: the automatic validation. To do that, I created new assert actions to validate state, for example: "this entity should be around this position". 
+Recently, I started working in filling that missing part of my workflow: the automatic validation. To do that I created new assert actions to validate state, for example: "this entity should be around this position". 
 
-In the case of the previous example, the new action asserts the kunai entity is traveling up (like the y component of the velocity should be positive and x should be 0).
+In the case of the previous example, the new action asserts the kunai entity is moving up (like the y component of the velocity should be positive and x should be 0).
 
 <div class="post-image">
 <video width="100%" controls>
@@ -154,24 +168,24 @@ In the case of the previous example, the new action asserts the kunai entity is 
 <span>Shows the same test running but now automatic validation.</span>
 </div>
 
-Even though I now have automatic validation, I still have to go test by test to validate it each time I change something, I want an easy way to run them all. 
+Now that I have automatic validation there is no need for me to go test by test to run them each time I change something. For that, I need a way to run them all.
 
-## Integrate with Unity Test Runner
+## Integration with Unity Test Runner
 
 Unity comes with a Test Runner that allows you to run from simple unit tests to more complex ones that require the runtime initialized and to execute over time.
 
-The objective here is to have my test cases listed in the test runner and when I run them, it should open each scene, activate the test and run it, wait for a result and show it before continuing with next test. The latter are called Play Mode tests.
+The objective here is to have my test cases listed in the test runner and when I run them, it should open each scene, run the test, wait for a result and then show it before continuing with next test.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testrunner.png" width="100%" />
 <span>A list of tests in Unity's Test Runner based on my custom tests inside the scene.</span>
 </div>
 
-NUnit comes with a way to populate tests parameters by using attributes. In my case I am using [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html) with custom data with the name test, the time scale to use, etc. One good thing about the Test Runner is that automatically [considers this test with parameters](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
+NUnit comes with a way to populate tests parameters by using attributes. I am using [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html) with custom data with the name test, the time scale to use, etc. One good thing about the Test Runner is that automatically [considers this test with parameters](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
 
-Since these are Play Mode tests there are some limitations: my tests should be on Scenes included in the build (could be excluded from a release build) and the Editor's API can't be used. 
+Since these are Play Mode tests there are some limitations: my tests should be on Scenes included in the build and the Editor's API can't be used. 
 
-To generate the custom data for the test parameters, I pre process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases, during edit time.
+To generate the custom data for the test parameters, during edit time I pre process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases custom data.
 
 <div class="post-image">
  <img src="/assets/tdd-nekoplatformer-testasset.png" width="500px" />
@@ -260,15 +274,17 @@ One interesting point here is, since I am using FixedUpdate for most of my impor
 
 # Conclusions
 
-One of the important things of the process of having automatic tests is to generate a context where can easily test (automatically or manually) game content and features without requiring the rest of the game loaded and interacting, this means helping in decoupling code and content (and in Unity also prefabs, assets, scenes).
+One of the important things of the process of having automatic tests is to generate a context where can easily test (automatically or manually) game content and features without requiring the rest of the game loaded and interacting, this means helping in decoupling code and content (and in Unity also prefabs, assets, scenes). For example, this is super great when replicating bugs to fix them, I have lots of bug replication tests.  
 
-The important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that make no sense now. 
+For me, the important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that make no sense. 
 
-Another great feature of tests is: documentation. Tests are a great way to remember why you decided to do something in some way or another. I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development, we wanted to add a new feature that play against something we decided like 1 year before and we did't remember why. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we decided that xD. 
+Another great feature of tests is documentation. Tests are a great way to remember why you made a decision. Bug replication tests help a lot in this matter too. 
 
-Automatic testing doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content. It also doesn't replace fine tuning and polishing stuff but having isolated context to work on them it does and having tests help in having isolated contexts. In fact, I have a special play button that loads the game, from the start, in a maximized window to allow me to test the complete experience and return to the scene I was after stop. But I also have cheats to move from one level to the other :)
+_I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development we wanted to add a new feature that played against something we've decided like 1 year before but we did't remember the why. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we've decided and have to fix now an issue._ 
 
-Lets end the blog post with a video of this prototype.
+Automatic testing doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content. I have a special play button that allows me to test the full experience by loading the game from the start, in a maximized window, and returns to the scene I was after I press the stop button. I even have cheats to move from one level to the other. Also, tests can't replace fine tuning and polishing but having isolated context to work on that speeds up the iteration time a lot. 
+
+To end the blog post I want to show a video of this prototype.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -278,6 +294,8 @@ Lets end the blog post with a video of this prototype.
 <span>Just some gameplay of the prototype I am working on.</span>
 </div>
 
-Hope you liked it, share, love, peace.
+Hope you liked it, and if you do, remember to share and like in social media if you want. 
 
-_Special thanks to my friends Rubén Garat and Juan Andrés Nin who help me validating the drafts for each blog post and suggest fixes and improvements._ 
+Thanks so much for reading!! 
+
+_And special thanks to my friends [Rubén Garat](https://rgarat.dev/) and [Juan Andrés Nin](https://www.nin.com.uy/) who help me validating the drafts for each blog post and suggest me fixes and improvements._ 
