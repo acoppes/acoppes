@@ -58,9 +58,9 @@ Also, I need a test where the character jumps by pressing the jump button and pr
 
 > _Wait a minute, are you using TDD to make a character jump?_
 
-Well, fair question... the answer is NO, I didn't use TDD to make the character jump of that prototype but I could have, this section was more like a "hello world" example. Will show more real examples in the next section.
+Well, fair question... the answer is NO, I didn't use TDD to make the character jump but I could have, this section was more like a "hello world" example. Will show more real examples in the next section.
 
-I did however TDD for a special case I wanted for the jump. I wanted the to have a minimum jump, if the player tap the jump button I wanted the character to at least jump 1 tile so when you are playing and moving fast through the level and find a wall of 1 tile of height you just tap the jump button and be over it and continue moving. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
+I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -82,7 +82,7 @@ For this game prototype, I have the character has an ability that automatically 
 <span>It shows the teleport feature.</span>
 </div>
 
-At some point I decided to add an level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired to hit the redirect element and when it hits it, it is redirected up.
+At some point I decided to add an level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired to hit the redirect element and after it hits it, it is moving up.
 
 ## Setting up the context 
 
@@ -106,7 +106,7 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-The Triggers' Logic is something I made to create logic composing Game Objects. I wrote a [blog post at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iterations. My current solution is pretty similar to what I created when making Iron Marines.
+The Triggers' Logic is something I made to create logic composing Game Objects. I wrote a [blog post at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iteration. My current solution is pretty similar to what I created when making Iron Marines.
 
 For example, the actions for the previous test case could be: 
 
@@ -131,6 +131,8 @@ After some magical implementation with physics, trigger callbacks and changing v
 </video> 
 <span>And now with the code working.</span>
 </div>
+
+REFACTOR
 
 Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases.
 
