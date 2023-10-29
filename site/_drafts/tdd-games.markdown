@@ -38,17 +38,17 @@ To implement a new content or feature a combination of elements is required, for
 
 _By feature I normally mean a new horizontal mechanic, for example jumping, and by content I mean an specific game element that could have new mechanics, for example an enemy that bounces on the screen._  
 
-## Abstract Example: adding double jump to character
+## A design example: double jump
 
-At some point of the development of a platformer game we decided we want to add a double jump to the main character. 
+Suppose that, at some point of the development of a platformer game, we decided we want to add a double jump. 
 
-Asking myself different questions helps me in defining how I want this feature to behave and the different cases I could use to validate what I want.
+There are multiple ways of adding that feature. Asking myself different questions helps me in defining how I want it to behave and the different cases I could use to validate what I want.
 
 * Do I want to be able to jump at any time during the jump?
 * Do I want to allow a jump if I fall from a platform or double jump in that case? 
 * Do I want the second jump to be the same as the initial one or different (faster, less height, etc)?
 
-This process help in the design of the feature, the game and the code.
+This process is shaping the design of the feature, the game and the code.
 
 For the first question, suppose I only want to allow a double jump if the player presses the jump button while the character is going up, before starting to fall. 
 
@@ -56,11 +56,7 @@ To validate that, I want to have a test where the character jumps by pressing ju
 
 Also, I need a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
 
-> _Wait a minute, are you using TDD to make a character jump?_
-
-Well, fair question... the answer is NO, I didn't use TDD to make the character jump but I could have, this section was more like a "hello world" example. Will show more real examples in the next section.
-
-I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
+This is more like a 'Hello World' example, I don't have a double jump in this prototype but wanted to show the general idea. I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -70,7 +66,9 @@ I did however TDD for a special case related with jumping. I wanted a minimum ju
 <span>A test case to validate that minimum jump when tap reaches at least one tile of height.</span>
 </div>
 
-# How am I validating that in my games 
+The next examples are all real cases from the prototype.
+
+# How am I testing 
 
 For this game prototype, I have the character has an ability that automatically teleports to special locations by hit them with a kunai.
 
@@ -82,7 +80,7 @@ For this game prototype, I have the character has an ability that automatically 
 <span>It shows the teleport feature.</span>
 </div>
 
-At some point I decided to add an level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired to hit the redirect element and after it hits it, it is moving up.
+At some point I decided to add a level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired and after it hits the redirect element, the kunai should be moving up.
 
 ## Setting up the context 
 
@@ -132,10 +130,6 @@ After some magical implementation with physics, trigger callbacks and changing v
 <span>And now with the code working.</span>
 </div>
 
-REFACTOR
-
-Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases.
-
 _After having the initial test, I wanted another to see how the redirect behaves in different directions and... what happens if I make a loop?_
 
 <div class="post-image">
@@ -145,6 +139,12 @@ _After having the initial test, I wanted another to see how the redirect behaves
 </video> 
 <span>Redirect kunai feature</span>
 </div>
+
+## Refactoring
+
+After the test is working, I normally do some refactoring for the code and for the data, and having the test to validate everything still works helps a lot. 
+
+I will not enter in detail here but one example data refactor I do is to extract to prefabs the definition and the level design element. An example code refactor I do is to move logic [from a scripts to systems](/2023/07/13/design-decisions-when-building-games-using-ecs).
 
 _As a side note, I also have "tests" that I use to validate visual effects working as expected and if I like them or not. The cycle here is to modify the effect, play the scene, if I like it, then continue with another thing, if I don't like it, then modify the effect until I do._
 
@@ -156,11 +156,15 @@ _As a side note, I also have "tests" that I use to validate visual effects worki
 <span>It shows the scene I used to validate a bit the teleport effect</span>
 </div>
 
+# Automatization
+
+Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases.
+
 ## Automatic validation with assert actions
 
-Recently, I started working in filling that missing part of my workflow: the automatic validation. To do that I created new assert actions to validate state, for example: "this entity should be around this position". 
+Recently, I started working in filling that missing part of my workflow. To do that I created new assert actions to validate state, for example: "this entity should be around this position". 
 
-In the case of the previous example, the new action asserts the kunai entity is moving up (like the y component of the velocity should be positive and x should be 0).
+In the case of the previous example, the new action asserts the velocity of an entity (the kunai) is between to values, in this case I want the x component to be 0 and y to be positive.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -276,15 +280,17 @@ One interesting point here is, since I am using FixedUpdate for most of my impor
 
 # Conclusions
 
-One of the important things of the process of having automatic tests is to generate a context where can easily test (automatically or manually) game content and features without requiring the rest of the game loaded and interacting, this means helping in decoupling code and content (and in Unity also prefabs, assets, scenes). For example, this is super great when replicating bugs to fix them, I have lots of bug replication tests.  
+One of the important things of the process of having automatic tests is to generate a context where game content and features can be easily tested (automatically or manually) without requiring the rest of the game loaded and interacting. This indirectly helps in decoupling code and content (and in Unity also prefabs, assets, scenes). To be able to easily create isolated context is super helpful also when replicating bugs and fix them. I have a lot of bug replication tests.  
 
-For me, the important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that make no sense. 
+For me, the important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that don't make sense anymore. 
 
 Another great feature of tests is documentation. Tests are a great way to remember why you made a decision. Bug replication tests help a lot in this matter too. 
 
-_I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development we wanted to add a new feature that played against something we've decided like 1 year before but we did't remember the why. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we've decided and have to fix now an issue._ 
+_I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development we wanted to add a new feature that played against something we've decided like 1 year before but we did't remember the reason. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we've decided it and then we had a double problem to solve._ 
 
-Automatic testing doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content. I have a special play button that allows me to test the full experience by loading the game from the start, in a maximized window, and returns to the scene I was after I press the stop button. I even have cheats to move from one level to the other. Also, tests can't replace fine tuning and polishing but having isolated context to work on that speeds up the iteration time a lot. 
+Automatic testing doesn't replace playing the game and/or testing the feature/content in the proper levels and with the rest of the game content. I have a special play button that allows me to test the full experience by loading the game from the start, in a maximized window, and returns to the scene I was after I press the stop button. I even have cheats to move from one level to the other. 
+
+Also, tests can't replace fine tuning and polishing but having isolated context to work on that speeds up the iteration time a lot. 
 
 To end the blog post I want to show a video of this prototype.
 
