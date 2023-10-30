@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I use Test Driven Development to make games"
-date:   2023-10-30 00:09:00 -0300
+date:   2023-10-29 22:00:00 -0300
 excerpt: This blog post is about using TDD (Test Driven Development) (and testing in general) for game development. It explains my personal process and tools I use for my games that are pretty similar to what I used at Ironhide Game Studio to make Iron Marines and Iron Marines Invasion.
 author: Ariel Coppes
 tags:
