@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How I use Test Driven Development to make games"
-# date:   2022-11-22 00:08:30 -0300
+date:   2023-10-30 00:09:00 -0300
 excerpt: This blog post is about using TDD (Test Driven Development) (and testing in general) for game development. It explains my personal process and tools I use for my games that are pretty similar to what I used at Ironhide Game Studio to make Iron Marines and Iron Marines Invasion.
 author: Ariel Coppes
 tags:
@@ -76,7 +76,7 @@ For this game prototype, the main character has an ability that automatically te
 <span>It shows the teleport feature.</span>
 </div>
 
-At some point I decided to add a level design element that redirects the kunai when they touch each other. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired and after it hits the redirect element, the kunai should be moving up.
+At some point I decided to add a level design element that redirects the kunai on contact. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired and after it hits the redirect element, the kunai should be moving up.
 
 ## Setting up the context 
 
