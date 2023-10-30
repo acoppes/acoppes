@@ -32,7 +32,7 @@ This is an example of a list of tests running in the Unity's Test Runner.
 
 I've been using TDD for years in different projects. I feel it has great value as a design process that could be applied at different layers of abstraction, not only for code.
 
-I normally start thinking on how I want to validate a new content or feature. Then, I create the context and actions to validate it (the test) and when that fails I move into implementing it. Sometimes that could be done using just one unit test, others it might need an entire scene with a complex setting. This blog post is about the latter. 
+I normally start by thinking on how I want to validate a new content or feature. Then, I create the context and actions (the test) to validate it and when that fails I move into its implementation. Sometimes that could be done using just one unit test, others it need an entire scene with a complex setting. This blog post is about the latter. 
 
 To implement a new content or feature a combination code, configurations and assets is required.
 
@@ -54,7 +54,7 @@ For the first question, suppose I only want to allow a double jump if the player
 
 To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
 
-This is more like a 'Hello World' example, I don't have a double jump in this prototype but wanted to show the general idea. I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test that failed, and then I modified the logic and fine tuned values to make it pass.
+It might sound a bit exaggerated to use TDD to implement a jump but I just wanted to show the general idea behind the process (I even don't have a double jump in the game). However, I've used it for a variety of cases, from simple and complex ones. For example, when the player taps the jump button the character should at least jump a height of 1 tile in order to allow moving fast through the level when finding small walls or obstacles. For that case I created a test with the character moving and the jump button is tapped (pressed and released as soon as possible) near a wall of 1 tile and after it failed, I modified the logic and and values to make it pass.
 
 <div class="post-image">
 <video width="100%" controls>
