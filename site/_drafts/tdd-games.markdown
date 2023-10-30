@@ -2,10 +2,11 @@
 layout: post
 title:  "How I use Test Driven Development to make games"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: This blog post is about using TDD (Test Driven Development) (and testing in general) for game development. It explains my personal process and tools I use for my current prototypes that are pretty similar to what I used at Ironhide Game Studio to make Iron Marines and Iron Marines Invasion.
+excerpt: This blog post is about using TDD (Test Driven Development) (and testing in general) for game development. It explains my personal process and tools I use for my games that are pretty similar to what I used at Ironhide Game Studio to make Iron Marines and Iron Marines Invasion.
 author: Ariel Coppes
 tags:
   - tdd
+  - testing
   - unity
   - howto
 image:
@@ -20,27 +21,26 @@ image:
 
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) is a technique of writing tests before writing actual code, after those tests fail write the code to make them pass and finally refactor the code to improve it, and repeat that process.
 
-In this blog post I want to go from that theory, to something like this in practice:
+This is an example of a list of tests running in the Unity's Test Runner.
 
 <div class="post-image">
 <video width="100%" controls>
   <source src="/assets/tdd-nekoplatformer-01.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
-<span>An example of my tests using the Test Runner in Play Mode</span>
 </div>
 
 I've been using TDD for years in different projects. I feel it has great value as a design process that could be applied at different layers of abstraction, not only for code.
 
-I normally start thinking on how I want to validate a new content or feature. Then, I create the context and actions to validate it (the test) and when that fails I move into implementing the feature. Sometimes it could be validated using one or more unit test, others, it might need an entire scene with a complex setting. This blog post is about the latter. 
+I normally start thinking on how I want to validate a new content or feature. Then, I create the context and actions to validate it (the test) and when that fails I move into implementing it. Sometimes that could be done using just one unit test, others it might need an entire scene with a complex setting. This blog post is about the latter. 
 
-To implement a new content or feature a combination of elements is required, for example: code, configurations and assets.
+To implement a new content or feature a combination code, configurations and assets is required.
 
-_By feature I normally mean a new horizontal mechanic, for example jumping, and by content I mean an specific game element that could have new mechanics, for example an enemy that bounces on the screen._  
+_By feature I normally mean a new horizontal mechanic, for example jumping, and by content I mean a game element that could have a new mechanic, for example an enemy that bounces on the screen._  
 
 ## A design example: double jump
 
-Suppose that, at some point of the development of a platformer game, we decided we want to add a double jump. 
+Suppose that, at some point of the development of a platformer game, we decided to add a double jump. 
 
 There are multiple ways of adding that feature. Asking myself different questions helps me in defining how I want it to behave and the different cases I could use to validate what I want.
 
@@ -52,25 +52,21 @@ This process is shaping the design of the feature, the game and the code.
 
 For the first question, suppose I only want to allow a double jump if the player presses the jump button while the character is going up, before starting to fall. 
 
-To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. 
+To validate that, I want to have a test where the character jumps by pressing jump button and press jump button again before falling and see the character jump again. And a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
 
-Also, I need a test where the character jumps by pressing the jump button and press the jump button again but after it started falling and see it doesn't jump the second time. 
-
-This is more like a 'Hello World' example, I don't have a double jump in this prototype but wanted to show the general idea. I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test, it failed, and then I created logic to have a minimum jump and fine tuned values to make this happen.
+This is more like a 'Hello World' example, I don't have a double jump in this prototype but wanted to show the general idea. I did however TDD for a special case related with jumping. I wanted a minimum jump, when the player taps the jump button the character should at least jump a height of 1 tile, in order to allow moving fast through the level when finding small walls. For that case I created a test that failed, and then I modified the logic and fine tuned values to make it pass.
 
 <div class="post-image">
 <video width="100%" controls>
   <source src="/assets/tdd/tdd-testcase-minjump.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
-<span>A test case to validate that minimum jump when tap reaches at least one tile of height.</span>
+<span>A test case to validate that by tapping jump button the character reaches at least one tile.</span>
 </div>
-
-The next examples are all real cases from the prototype.
 
 # How am I testing 
 
-For this game prototype, I have the character has an ability that automatically teleports to special locations by hit them with a kunai.
+For this game prototype, the main character has an ability that automatically teleports him to special locations by firing a kunai.
 
 <div class="post-image">
 <video width="100%" controls>
@@ -80,7 +76,7 @@ For this game prototype, I have the character has an ability that automatically 
 <span>It shows the teleport feature.</span>
 </div>
 
-At some point I decided to add a level design element to redirect the kunai. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired and after it hits the redirect element, the kunai should be moving up.
+At some point I decided to add a level design element that redirects the kunai when they touch each other. My idea for the test sequence is something like this: the fire button is pressed, a kunai is fired and after it hits the redirect element, the kunai should be moving up.
 
 ## Setting up the context 
 
@@ -104,7 +100,7 @@ In my case, I am using en ECS framework and I have an abstraction layer to insta
 
 After having the initial context, I define the actions using my Triggers' Logic (which is like a simplified tool to control execution using Game Objects) in order to create the test.
 
-The Triggers' Logic is something I made to create logic composing Game Objects. I wrote a [blog post at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iteration. My current solution is pretty similar to what I created when making Iron Marines.
+The Triggers' Logic is something I made to create logic composing GameObjects. I wrote a [blog post at Gemserk](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/) explaining where the inspiration came from and its first iteration I did for Iron Marines. My current solution is pretty similar to that one.
 
 For example, the actions for the previous test case could be: 
 
@@ -158,7 +154,7 @@ _As a side note, I also have "tests" that I use to validate visual effects worki
 
 # Automatization
 
-Even though my test cases are automated, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale well when having multiple test cases.
+Even though my test cases have no need of manual interaction, they are not completely automatic since I validate the results manually, for example, watching the kunai being redirected for the previous case. This obviously doesn't scale when having multiple test cases and in different scenes.
 
 ## Automatic validation with assert actions
 
@@ -189,7 +185,7 @@ The objective here is to have my test cases listed in the test runner and when I
 
 NUnit comes with a way to populate tests parameters by using attributes. I am using [`ValueSource`](https://docs.nunit.org/articles/nunit/writing-tests/attributes/valuesource.html) with custom data with the name test, the time scale to use, etc. One good thing about the Test Runner is that automatically [considers this test with parameters](https://docs.unity3d.com/Packages/com.unity.test-framework@1.3/manual/reference-tests-parameterized.html) and shows them in the UI.
 
-Since these are Play Mode tests there are some limitations: my tests should be on Scenes included in the build and the Editor's API can't be used. 
+Since these are Play Mode tests there are some limitations: my tests scene should be included in the build and the Editor's API can't be used. 
 
 To generate the custom data for the test parameters, during edit time I pre process the tests scenes and create an asset in the Resources folder (in order to be found in runtime) with all test cases custom data.
 
@@ -266,9 +262,9 @@ public IEnumerator RunTests([ValueSource(nameof(GetTestCases))] TestData testDat
 }
 ```
 
-It basically loads the scene where the test case is, initializes test state and variables (used by the Triggers's logic Actions to set test results), find the test and activate it, wait for a result or a timeout.
+It basically loads the scene where the test case is, initializes test state and variables (used by the Triggers's logic Actions to set test results), finds the test and activates it, waits for a result or a timeout.
 
-One interesting point here is, since I am using FixedUpdate for most of my important logic, it is possible to speed up the execution by modifying the time scale. If something fails, I can go to the specific test and manually run it to work on fixing the issue. 
+One interesting point here is that since I am using FixedUpdate for most of my important logic, it is possible to speed up the execution by modifying the time scale. If something fails, I can always go to the specific test and manually run it to fix the issue. 
 
 <div class="post-image">
 <video width="100%" controls>
@@ -280,11 +276,11 @@ One interesting point here is, since I am using FixedUpdate for most of my impor
 
 # Conclusions
 
-One of the important things of the process of having automatic tests is to generate a context where game content and features can be easily tested (automatically or manually) without requiring the rest of the game loaded and interacting. This indirectly helps in decoupling code and content (and in Unity also prefabs, assets, scenes). To be able to easily create isolated context is super helpful also when replicating bugs and fix them. I have a lot of bug replication tests.  
+One of the important things of the process of having automatic tests is to generate a context where game content and features can be easily tested (automatically or manually) without requiring the rest of the game loaded and interacting. This indirectly helps in decoupling code and content (and in Unity also prefabs, assets, scenes). To be able to easily create isolated context is super helpful also when replicating bugs to fix them. I have a lot of bug replication tests.  
 
-For me, the important part is the design process when making the tests, not the tests themselves. If a feature changed over time, I don't force myself to maintain tests that don't make sense anymore. 
+For me, the important part is the design process when making the tests, not the tests themselves. If a feature changes over time, I don't force myself to maintain tests that don't make sense anymore. 
 
-Another great feature of tests is documentation. Tests are a great way to remember why you made a decision. Bug replication tests help a lot in this matter too. 
+Another great feature of having tests is documentation. Tests are a great way to remember why you made a decision. Bug replication tests help a lot in this matter too. 
 
 _I remember when we started working on Iron Marines, we went back and forward with a lot of features. At some point of its development we wanted to add a new feature that played against something we've decided like 1 year before but we did't remember the reason. Sometimes we just avoided that, others we went against the original decision only to find out sometime later why we've decided it and then we had a double problem to solve._ 
 
