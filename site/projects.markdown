@@ -3,6 +3,9 @@ layout: page
 title: Projects
 permalink: /projects/
 projects:
+  - name: Moon Miner (Work in progress)
+    videos: /assets/moonminer/moonminer-miningray-mockup-06.mp4
+    description: 1bit Pixelart moon and asteroids mining game.
   - name: Gorilla Jones
     url: https://arielsan.itch.io/gorillajones
     images: /images/screenshots_gorillajones.png
@@ -43,6 +46,18 @@ Here is a list of games I've worked on in the past, ordered by most recent first
       {%- for image in project.images -%}
         <img src="{{image}}" />
       {%- endfor -%}
+
+      {%- for video in project.videos -%}
+      <div class="post-image">
+        <video width="100%" controls>
+          <source src="{{video}}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video> 
+      </div>
+      {%- endfor -%}
+
+
+
       </span>
     </a>
     <span>{{project.description}}</span>
