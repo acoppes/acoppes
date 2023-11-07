@@ -40,6 +40,8 @@ mastodon:
   - username: arielsan
     instance: mastodon.gamedev.place
 
+itchio_username: arielsan
+
 # Build settings
 theme: minima
 plugins:
