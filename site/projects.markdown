@@ -3,7 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 projects:
-  - name: Moon Miner (Work in progress)
+  - name: Ship Miner (Work in progress)
     url: https://shipminer.arielcoppes.dev
     videos: /assets/moonminer/moonminer-miningray-mockup-06.mp4
     description: 1bit Pixelart moon and asteroids mining game.
