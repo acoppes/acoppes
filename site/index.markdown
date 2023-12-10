@@ -17,7 +17,7 @@ Site map:
 
 * Want to work together? check the [Contact](/contact) page to decide how to contact me.
 * Check out the [Projects](/projects) I worked on to see what I do, also the [Game Jams](/jams) I've participated. 
-* If you want more detail, you can check out the [Blog](/blog) page to see some development blog posts I did over the years at [Gemserk](https://blog.gemserk.com) website.
+* For developers, you can check out my dev [Blog](/blog) page for technical content. I've also generated technical content over the years in my old dev blog at [Gemserk](https://blog.gemserk.com) website.
 
 <!-- * And at the [Work](/work) page I will share specific things I did while working at different projects. -->
 
@@ -26,7 +26,7 @@ So after the years working on different teams, with different people, in differe
 * Collaboration, teamwork and growing together.
 * Psychological safety by treating others and being treated as peers.
 * Continuous improvement and empowerment.
-* Generate trust by being Transparent and through good Communication.
+* Generate trust by being Transparent and by having good Communication.
 
 <!-- 
 My skills
