@@ -7,6 +7,10 @@ projects:
     url: https://github.com/acoppes/unity-history-window
     image: /images/tools-selection-history.gif
     description: Editor window plugin for Unity with a selection history and other features. 
+  - name: Unity Refactor Tools
+    url: https://github.com/acoppes/unity-refactoring-tools
+    image: /images/tools-refactoring.png
+    description: A set of tools to help refactoring prefabs, scenes and other assets. 
   - name: Unity package Git pusher
     url: https://github.com/acoppes/unity-upm-gitpackagepusher
     image: /images/tools-upm-gitpusher.png
