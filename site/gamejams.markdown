@@ -3,6 +3,12 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Nekoplatformer"
+    url: https://arielsan.itch.io/nekoplatformer
+    images: 
+      - /images/jams-nekoplatformer.gif
+    description: Platformer with kunai-teleport mechanics, started as a gameboy jam idea.
+    jam: personal jam
   - name: "Abduction101"
     url: https://arielsan.itch.io/abduction101
     images: 
