@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projects
+title: Games
 permalink: /projects/
 projects:
   - name: Ship Miner (Work in progress)
