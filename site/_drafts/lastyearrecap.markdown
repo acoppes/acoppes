@@ -7,7 +7,8 @@ author: Ariel Coppes
 tags:
   - personal
   - update
-  - recap
+  - review
+  - nontechnical
 ---
 
 {{page.excerpt}}
@@ -74,27 +75,45 @@ After those iterations, it ended up looking something like this:
 
 The main reason was that I was reducing assets resolution and complexity to see if it was something I could modify if I had to, or if I had to hire someone it should be easier for them too, compared to the initial version.
 
-During this process I found [@penusbmic](https://penusbmic.itch.io/) assets pack and I fell in love with his art style and how he animates. One thing I found out was that, even with low res asset packs I found myself limited pretty fast when I wanted to do try something new and I didn't feel comfortable with modifying the assets for my needs yet. 
+During this process I found [penusbmic](https://penusbmic.itch.io/) and his assets pack and I fell in love with the art style and how he animates. One thing I realized was that, even with low res asset packs I found myself limited pretty fast when I wanted to try something new and I didn't feel comfortable with modifying the assets for my needs (yet?). 
 
 [Play the game here](https://arielsan.itch.io/beatemup)
 
-After spending lots of time in this game, I wasn't so sure how to stop working on it, I mean, I knew this was a learning process but it was becoming a project more and more, I was thinking lots of ideas I wanted to test, but I knew this wasn't the right project. Thankfully, a Ludumdare was coming and I wanted to participate, and that was the proper excuse to stop thinking in this game and do something different to clear my mind.
+After spending lots of time in this game, I wasn't so sure how to stop working on it, I mean, I knew this was a learning process but it was becoming a project more and more, I was thinking lots of ideas I wanted to test, but I believed this wasn't the right project. Thankfully, a Ludumdare was coming and that was the proper excuse to stop thinking in this game and do something different to clear my mind.
 
-### LDJAM - Spice Must Flow
+### Spice Must Flow
 
-Tell about the jam
+It was [Ludum dare 52](https://ldjam.com/events/ludum-dare/52) and the theme was: Harvest. I did a game about Dune Harvesters and the Sand Worm, [here is a blog post](/2023/01/12/ludumdare52jam) about it.
 
-Participating in a LDJAM to make the harvester game helped me in abandon that game, the objective was kinda done and I was like continuing making the game which I knew it wasn't something interesting to finish. 
+<div class="post-image">
+    <img src="/assets/ldjam52-travel_01.gif" />
+</div>
 
-I decided to create my own "jams"
+It was super fun to make and I had the chance to make something different, a low poly 3d game with vehicle driving mechanics. 
 
-Loved doing some low poly 3d stuff, even though it wasn't completed.
+Participating in this game jam refreshed me and helped to decide do abandon the Beat'em up and go back to make mini games and/or prototypes to try to find something interesting I want to, and I can, finish to the end. I decided to start making my own "game jams", where I had to make a game in one or two weeks, and let my spice flow....
 
-### Stranded: planet survivor - personal jam
+### Stranded: planet survivor
 
-- some 3d low poly + pixelart explorations here
+This was a survivor game like Don't starve but Sci-fi, and was heavily inspired by Penusbmic Stranded asset pack. The story was that you are one of those guys that go to explore a planet in FTL and never return, so you are now alone in an unknown planet and you have to find a way to fix your ship and return to your crew.
 
-PLAY HERE
+<div class="post-image">
+    <img src="/images/jams_survivor-screenshot-01.gif" />
+</div>
+
+After one or two weeks of development, I only had some world generation but there was no real game, only exploration, it was fun to make but I trying to do all the ideas I had for that game in two weeks was impossible for me.
+
+[Play the game here](https://arielsan.itch.io/survivorgame)
+
+*A glitch in the matrix: At some point in the future (don't remember exactly when), and inspired by other developers, I experimented mixing low poly cellshaded 3d with pixel art billboards thinking in better world generation for the game, here is a video of that:*  
+
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/2023review/lowpolyandpixelart.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+<span>I really love how this looks too, but didn't explore more, maybe something for the future</span> 
+</div>
 
 ### Hunter games - personal jam
 
@@ -102,25 +121,58 @@ PLAY HERE
 
 ### Super dino box
 
-At this point, I was interested in having some lateral income but related to games, I was already working on an app for some friends but wanted to be 100% in games at some point. 
+At this point, I was interested in having some lateral income but related to games. I was already [working on an app for some friends and also teaching in University](2023/03/04/update-current-plan.html) but wanted to be 100% in games at some point, maybe 50% in web games and 50% in making my long term games. 
 
-So I decided to explore the web portal [Poki](https://poki.com/) as a possibility but since I had two friends that were in a similar situation, we decided to start doing something together. 
+I decided to explore the web portal [Poki](https://poki.com/) as a possibility and since I had two friends that were in a similar situation, we decided to do something together. 
 
-After exploring other games and also based on our interests, we decided to make a game like a Super Crate Box but with Dinosaurs.
+After analyzing other games and also based on our interests, we decided to make a game like a Super Crate Box but with Dinosaurs.
 
 <div class="post-image">
 <video width="400" height="300" controls>
   <source src="/assets/2023review/superdinobox.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video> 
+<span>Super early prototype and super the last version of the game because we abandoned it at that time xD</span>
 </div>
 
-After a week of work, we decided it was going to take longer that we wanted to spend so we aborted the idea. However, we were still interested in trying to do something for Poki at some point in the future.
+After some work, we decided it was going to take longer that we wanted to spend so we aborted the idea. However, we were still interested in trying to do something for Poki at some point in the future.
 
-### Endless Runner => Gorilla Jones
+### Endless Runner -> Gorilla Jones
 
-Tell about poki too, tell about not finding a team either here.
-Tell about spending a lot of time on something that wasn't in the right direction (mobile, poki web, ads, etc)
+Even though we abandoned that Super Crate Box idea, I kept working on a [platformer mechanics as a learning process](2023/04/10/platformer_techniques_in_endless_runner.html) and that evolved into an endless runner using one of Penusbmic assets pack:
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/endlessrunner-gameplay-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
+
+As I said before, we were still interested in publishing a game in Poki and thought that maybe an Endless Runner could be a fit, so together with Matías Sniadower we decided to continue this prototype and change the assets and see what happens. I also wanted to experiment having a teammate to work with and see if that could become something in the future.
+
+The game changed to be Gorilla Jones and here is a video of what it became:
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/2023review/gorilla-teaser-01.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
+
+During its development, we started interacting with Poki and had like 3 iterations but in the end they weren't interested in the game so we decided to not spend more time on it. 
+
+We published the game for free anyways, you can [play it here](https://arielsan.itch.io/gorillajones)
+
+Working on this game wasn't a bad decision, it was an experiment, but working on it for so long was a big mistake.
+
+Almost everything failed:
+
+* Game wasn't published in Poki so we have no idea if that is a good platform or not.
+* Didn't had a great experience working together with Matías since he had his focus on other things so it felt like I was doing the game alone all the time. I don't blame him at all, it was my mistake, I put big expectations but we never talked about that before we started working.
+* We spent a lot of time (~4 months, part time) in something that didn't add a lot of value, and something we said it should've been 1 month tops.
+* One good thing was that I learned more about procedural generation and also a bit of game design.
+
+This was kinda a failure and we kinda knew it before those 4 months, and that is why in the middle of its development I decided to keep doing mini games/experiences jams.
 
 ### low res jam - Abduction
 
