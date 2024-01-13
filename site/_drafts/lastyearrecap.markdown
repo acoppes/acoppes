@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "2023 Recap and now What?"
+title:  "What I did on 2023 and my next moves"
 date:   2024-01-01 00:08:00 -0300
-excerpt: A recap of what I did on 2023 and what my current plan is.
+excerpt: This is my 2023 story in a blog post and what are my next moves.
 author: Ariel Coppes
 tags:
   - personal
@@ -14,45 +14,71 @@ tags:
 
 ## Intro
 
-When I started with this journey of making games by my own, I first evaluated my situation and then defined some pillars and objectives for myself.
+When I started this journey of making my own games, I evaluated my situation and then defined some objectives to achieve and pillars to have in mind all the time.
 
-My pillars were:
+I was super inspired by [Sokpop Collective](https://sokpop.itch.io/) and [PUNKCAKE Délicieux](https://punkcake.itch.io/) (among others) who develop small games super fast and I wanted to achieve something similar at some point. 
 
-* Long term growth
-* Engine and tools
-* Overcome weakness
-* Start small / Mini games
+So my pillars were:
 
-I was super inspired by [Sokpop Collective](https://sokpop.itch.io/) and [PUNKCAKE Délicieux](https://punkcake.itch.io/) who develop small complete games super fast, I wanted to have something similar to them at some point. 
+* **Long term growth**: each time I work on something, it has to have some value for me in the future or I should modify the premise to have some value for me in the future. 
+* **Tools and workflows**: create and improve tools and workflows all the time to reduce non creative time. 
+* **Overcome weakness**: train, improve, find different ways to attack my weakness or and sometimes avoid them and just focus on my strengths. 
+* **Start small / Mini games**: don't make an MMO, attack things I can control both in content and scope.
 
-My objectives were:
+And my objectives were:
 
-* **Find a game to work on**: my idea was to participate in many game jams as possible to try different things and find something interesting, while developing new tools and engine to become faster.
-* **Find a way to have art in my games**: for this issue I had like different paths in mind to explore:
-  * Buy assets
-  * Hire artists
-  * Find a teammate/partner
-  * Find a way to do the art myself 
+* **Find a game to work on**: my idea was to participate in many game jams as possible to try different things and find something interesting, while developing new tools and workflows to become faster. And also in that process, find the proper scope for my games.
+* **Find a way to have art in my games**: for this issue I had like different paths in mind to explore like buying assets, hiring an artist, find a teammate/partner and even start doing the art myself.
 
-I didn't have a clear roadmap, it was more like I want to do this or that so my actions should reflect that.
+I didn't have a clear roadmap, it was more like I want to do this or that so my actions should reflect that, and at some point I will start completing the objectives.
 
-Ok, that was the intro, now a bit of story of what happened during 2023. You can jump to [Conclusions](#conclusions) if you want the end of the story quick.
+Ok, that was the intro, now I want to share a more detailed story of what happened in 2023. You can jump to [Conclusions](#conclusions) if you want the end of the story.
 
-## 2023 Recap in detail
+## 2023 review in detail
 
 ### Beat'em up
 
-I've started by working on a Beat'em up with my friend [Franco Zucchi](https://twitter.com/pencilwing). I was super excited with this one, really wanted to learn from this genre but I also wanted to do something together. 
+I've started by working on a Beat'em up with my friend [Franco Zucchi](https://twitter.com/pencilwing). I was super excited with this one, really wanted to learn from this genre while also doing something together. It was a ninja game really inspired by Naruto. I decided to use the TMNT assets to start prototyping and Franco did the main character concepts and some placeholder animations to work with.
 
-GIF OF START
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/2023review/hit_animation_pause.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
 
-In the end I quickly found out that it wasn't the time to do something together but instead of cancelling the project I decided to continue it by switching to buy assets and see what I can do. I knew this genre is not so strong in terms of how much money they generate but I continued the development for the learning process. 
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/beatemup-example1.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+<span>Note: I still love this video each time I watch it.</span>
+</div>
 
-GIF OF END AND LINK TO PLAY
+In the end I quickly found out that it wasn't the time to do something together but instead of cancelling the project I decided to continue it by switching to buy assets and see what I can do. I knew this genre is not so strong in terms of how much money they generate but I continued its development as a learning process.
 
-Something good I found in the middle was that I knew @penusbmic assets there, and I fall in love with the style. 
+I iterated a lot, with different assets packs, and at some point I even started buying some, these are different versions of the same game:
 
-Quickly find that when I wanted to make new gameplay I needed new art I couldn't do it myself so buying asset packs wasn't a proper way.
+<div class="post-image">
+<video width="480" height="270" controls>
+  <source src="/assets/2023review/enemy_warrior_attacks.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
+
+After those iterations, it ended up looking something like this:
+
+<div class="post-image">
+    <img src="/assets/2023review/beatemup-gameplay3.gif" />
+</div>
+
+The main reason was that I was reducing assets resolution and complexity to see if it was something I could modify if I had to, or if I had to hire someone it should be easier for them too, compared to the initial version.
+
+During this process I found [@penusbmic](https://penusbmic.itch.io/) assets pack and I fell in love with his art style and how he animates. One thing I found out was that, even with low res asset packs I found myself limited pretty fast when I wanted to do try something new and I didn't feel comfortable with modifying the assets for my needs yet. 
+
+[Play the game here](https://arielsan.itch.io/beatemup)
+
+After spending lots of time in this game, I wasn't so sure how to stop working on it, I mean, I knew this was a learning process but it was becoming a project more and more, I was thinking lots of ideas I wanted to test, but I knew this wasn't the right project. Thankfully, a Ludumdare was coming and I wanted to participate, and that was the proper excuse to stop thinking in this game and do something different to clear my mind.
 
 ### LDJAM - Spice Must Flow
 
@@ -62,11 +88,36 @@ Participating in a LDJAM to make the harvester game helped me in abandon that ga
 
 I decided to create my own "jams"
 
-### Stranded: planet survivor
+Loved doing some low poly 3d stuff, even though it wasn't completed.
 
-### Hunter games
+### Stranded: planet survivor - personal jam
 
-### Endless Runner / Gorilla Jones
+- some 3d low poly + pixelart explorations here
+
+PLAY HERE
+
+### Hunter games - personal jam
+
+PLAY HERE
+
+### Super dino box
+
+At this point, I was interested in having some lateral income but related to games, I was already working on an app for some friends but wanted to be 100% in games at some point. 
+
+So I decided to explore the web portal [Poki](https://poki.com/) as a possibility but since I had two friends that were in a similar situation, we decided to start doing something together. 
+
+After exploring other games and also based on our interests, we decided to make a game like a Super Crate Box but with Dinosaurs.
+
+<div class="post-image">
+<video width="400" height="300" controls>
+  <source src="/assets/2023review/superdinobox.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
+
+After a week of work, we decided it was going to take longer that we wanted to spend so we aborted the idea. However, we were still interested in trying to do something for Poki at some point in the future.
+
+### Endless Runner => Gorilla Jones
 
 Tell about poki too, tell about not finding a team either here.
 Tell about spending a lot of time on something that wasn't in the right direction (mobile, poki web, ads, etc)
