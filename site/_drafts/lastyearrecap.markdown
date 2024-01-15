@@ -223,7 +223,7 @@ On September, there was going to be a [new GBJam](https://itch.io/jam/gbjam-11),
 After the theme "Space" was announced, we quickly discussed some ideas to add to Nekosama and I developed some prototypes:
 
 <div class="post-image">
-<video width="100%" controls>
+<video width="50%" controls>
   <source src="/assets/2023review/nekosama2-kunai-swap-02.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video>
@@ -233,34 +233,37 @@ After the theme "Space" was announced, we quickly discussed some ideas to add to
 Even though we wanted to expand Nekosama, we thought that maybe this mechanic goes better with a 2d platformer game when making level/puzzles, so we tested changing that.
 
 <div class="post-image">
-<video width="100%" controls>
+<video width="50%" controls>
   <source src="/assets/2023review/nekosama2-sidescroller-switchrooms.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video>
 </div>
 
-But reality hit me hard here. Franco was busy again with its own Company (super understandable) and I felt like I was working super alone (super delayed communication) so after two days of that situation I decided I didn't want it and left the jam. I suppose I was failing with setting high expectations on working with friends/artists.
+But reality hit me hard here. Franco was busy again with its own Company (super understandable) and I felt like I was working super alone (super delayed communication) so after two days of that situation I decided I didn't want that and left the jam. I suppose I was failing with setting high expectations on working with friends/artists.
 
-I was super demotivated and didn't want to do anything games related for a couple of days.
+I was super demotivated and didn't want to do anything games related (at least for a couple of days).
 
 ### Almost participating in the jam in the end?
 
-By the weekend (almost at the end of the jam) I decided to start doing some mockups and found something I liked and recover motivation. I decided to create a game named "There is no room in space". It was like an enter the gungeon kind of game where you explore attachable rooms in space, like you decide where to move and the room was going to be attached (I never managed to do that xD).
+By the weekend (almost at the end of the jam) I decided to start doing some mockups and found something I liked and my motivation was back. I decided to create a game named "There is no room in space". It was like an enter the gungeon kind of game where you explore attachable rooms in space, like you decide where to move and the room was going to be attached (I never managed to do that but was my vision).
 
 <div class="post-image">
-<video width="100%" controls>
+<video width="50%" controls>
   <source src="/assets/2023review/noroominspace-gameplay-02.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video>
+<span>And by the end of the video you see the player can also walk in space.</span>
 </div>
 
-I obviously couldn't complete it in two days so I didn't publish it but there were some positive things here. I tried again low resolution concepts (and even animated the character) that I felt comfortable with and also I managed to make a lot of stuff in two days so I was improving my dev speed. I started to feel I could make a game by my own without an artist.
+I obviously couldn't complete it in two days so I didn't publish it but there were some positive things here. I tried again low resolution concepts (and even animated the character) that I felt comfortable with and also I managed to make a lot of stuff in two days so I was improving my dev speed. I started to feel I could make a game by my own without an artist (not an awesome game but something not horrible).
 
-So my conclusion in the end was that, even though I didn't participate in the jam, it was a success in some way, I had the opportunity to test myself in creating art again, and also tested something new.
+So my conclusion in the end was that, even though I didn't participate in the jam, it was a success in some way, I had the opportunity to test myself in creating art again, and also tested something different.
 
-### Platformers hit me again
+*Timeline: we are almost at the end of September at this point.*
 
-During the nekosama 2d prototype I got interested in learning more about level design, so I decided to continue that prototype a bit, here is where Nekoplatformer born. My focus was to make some levels based on the teleport mechanic while also try to do some low res assets again.
+### Platformers again
+
+During the nekosama 2d prototype I got interested in learning more about level design, so I decided to continue that one a bit. The idea was to make some levels based on the teleport mechanic while also try to do some low res assets again.
 
 <div class="post-image">
     <img src="/assets/2023review/nekoplatformer-itch-cover-image.gif" />
@@ -275,12 +278,54 @@ I didn't explore a lot on puzzle/level design but I did some 1 bit palette low r
 </video>
 </div>
 
+*Timeline: we are around mid of October at this point.*
+
 You can [play the prototype here](https://arielsan.itch.io/nekoplatformer).
 
 ### A successful 1bit jam I never joined -> Ship miner
 
-Found an art style I like and control, people are interested. 
-Found a game I like to play while developing and people seem interested in that too.
+While working on the nekoplatformer thing the [1-bit jam #2](https://itch.io/jam/1-bit-jam-n2) got my interest. I was expecting this jam long time before it started, it was like the proper jam to test what I was exploring/learning about low res art style.
+
+But since there was still some time before the jam, and I am a bit anxious, I started making some mockups to see what can I do for the jam, even though I didn't have the theme:
+
+<div class="post-image">
+    <img src="/assets/2023review/moonlander-mockups.png" />
+</div>
+
+The idea was like a moon lander game where you have to land in different environments/planets. I kinda loved this concept so I started making some prototypes which quickly evolved from a lander into a mining game. Here there is a video of the first iterations:
+
+<div class="post-image">
+<video width="100%" controls>
+  <source src="/assets/2023review/moonminer-miningray-mockup-05.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+</div>
+
+I posted some videos of the game on [pixelart](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/) and [indiegames](https://www.reddit.com/r/indiegames/comments/17rb34z/i_started_a_lowres_1bit_pixelart_space_mining/) reddits, and got a lot of interest (1.6k upvotes and 50k views). 
+
+<div class="post-image">
+    <img src="/assets/2023review/moonminer-pixelartreddit.png" />
+</div>
+
+<div class="post-image">
+    <img src="/assets/2023review/moonminer-mastodon.png" />
+</div>
+
+<div class="post-image">
+    <img src="/assets/2023review/moonminer-twitter.png" />
+</div>
+
+This was the first time I did something that got a lot of people interested by just looking a gif or video of an early prototype, and even though this doesn't say anything, it reassured the game is interesting. 
+
+Also, it happens that while testing something new in the game, I play it already for a while, like it absorbs me and I forgot I was testing something specific.
+
+So this was a huge success in terms of my initial objectives. I found a game I wanted to continue and has some appeal, and does its own marketing. And also I found an art style I feel in control, I can create what I need for the game or if I can't then maybe the game shouldn't have that feature.
+
+The only bad thing was, at this point of the year (November), I was working a lot in freelance and had almost no time to spend on this game. I hope I can recover some free time in the next month and continue working on it maybe one or two days per week at some point.
+
+### A new project appears
+
+Talk about doing consultancy for a new project...
 
 ## Conclusion
 
