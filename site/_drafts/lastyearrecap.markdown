@@ -135,9 +135,9 @@ I wasn't looking for something new with this minigame, just wanted to complete a
 
 ### Super Dino Box
 
-At this point I was already [working on an app for some friends and also teaching in University](2023/03/04/update-current-plan.html) but I also wanted to be 100% focused on games in the future. For that reason, I thought about having a lateral income related with games, maybe with mobile and/or web games. 
+At this point I was [working on an app for two of my friends and also teaching "Programación de Videojuegos" in Universidad ORT](2023/03/04/update-current-plan.html) but I also wanted to be focused 100% on games in the future. For that reason, I thought about having a lateral income related with games, maybe with mobile and/or web games. 
 
-A friend of mine was developing games for [Poki](https://poki.com/) at that time and recommended it so I decided to see if I could publish something there, and since I had two other friends (Matías Sniadower and Enzo Gaiero) who were interested in experimenting this too, we decided to do something together. I was super excited since we were a more complete team: an artist, a game designer and a programmer, and if this worked we could do more stuff together in the future.
+A friend of mine was developing games for [Poki](https://poki.com/) at that time and recommended it, so I decided to see if I could publish something there, and since I had two other friends ([Matías Sniadower](https://www.artstation.com/mtthdower) and [Enzo Gaiero](https://twitter.com/playorbust)) who were also interested in experimenting this too, we decided to do something together. I was super excited since we were a more complete team: an artist, a game designer and a programmer, and if this worked we could do more stuff in the future.
 
 After analyzing other games and also based on our interests, we decided to make a game like a Super Crate Box but with Dinosaurs that should take around one month of work to complete.
 
@@ -149,13 +149,13 @@ After analyzing other games and also based on our interests, we decided to make 
 <span>A video of the game when we decided to abandon it.</span>
 </div>
 
-After a week of work we concluded it was going to take longer that we wanted to spend so we aborted the idea. However, we didn't lose interest in trying to do something for that web portal.
+After a week of work we concluded it was going to take longer that we wanted to spend so we aborted the idea. However, we didn't lose interest of trying to do something for Poki in the future.
 
 *Timeline: we are around March at this point.*
 
 ### Endless Runner -> Gorilla Jones
 
-After Super Dino Box, I decided to keep working on a game with [platformer mechanics as a learning process](/2023/04/10/platformer_techniques_in_endless_runner.html) and that evolved into an endless runner, here is a version using other pack of assets from Penusbmic:
+After Super Dino Box, I decided to keep working on a game with [platformer mechanics as a learning process](/2023/04/10/platformer_techniques_in_endless_runner.html) and that evolved into an endless runner using the [Tiny Alchemist asset pack by Penusbmic](https://itch.io/c/1993823/the-tiny-alchemist-patreon-tier-3-mini-series).
 
 <div class="post-image">
 <video width="100%" controls>
@@ -164,7 +164,7 @@ After Super Dino Box, I decided to keep working on a game with [platformer mecha
 </video> 
 </div>
 
-As I said before, we were still interested in publishing a game in Poki and thought that maybe an Endless Runner could be easy to do (big mistake) and a fit for the platform (another mistake xD). So Matías Sniadower and I decided to continue this project by make custom assets for it, and see what happens.
+As I said before, Matías and I were still interested in publishing a game in Poki and thought about using this Endless Runner as part of that experiment, so we decided to continue working on it but changing graphics to be original high resolution content.
 
 The game evolved to be Gorilla Jones:
 
@@ -175,50 +175,50 @@ The game evolved to be Gorilla Jones:
 </video> 
 </div>
 
-During its development, we started interacting with Poki and had like 3 iterations but in the end they weren't interested in the game, it wasn't clear if they didn't like the genre or they were avoiding Unity games but we decided to not spend more time on it anyways. 
-
-We decided to publish the game for free on itch, you can [play it here](https://arielsan.itch.io/gorillajones).
-
-*Timeline: we started the game on March and released it on September.*
-
-Working on this game was a good experiment that should've failed sooner (like 2 months before) but it didn't.
+During its development, we started interacting with Poki and had like 3 iterations but in the end they weren't so interested in the game, it wasn't clear if they didn't like the game itelf, the genre wasn't a good match for the platform or if they were avoiding Unity games, so we decided to not spend more time on it. However, we also decided to publish the game for free on itch, you can [play it here](https://arielsan.itch.io/gorillajones).
 
 Some conclusions:
 
-* Game wasn't published in Poki so we have no idea if that is a good platform and we also don't know how to publish a game there.
-* We didn't set the proper expectations about working together, and I had big expectations in my mind but since Mati was working on other stuff a lot I didn't enjoy the process (super slow iteration, communication delays, etc).
-* We spent like four months (part time) in something that didn't add a lot of value, and something we said it should've been completed in around one month.
-* I had the chance to experiment more with procedural generation and also to learn some things about game design (Thanks Leandro and Enzo for that!).
+* Game wasn't published in Poki so we have no idea if that is a good platform and we also don't know how to publish a game there (failure!).
+* We couldn't align our work hours with Mati and I had high expectations on working together (we didn't discuss this before starting), those two things ended up in me not enjoying the process. That doesn't affect our relationship and I still love his art style and whatever he does.
+* Working on this game was a good experiment that should've failed sooner.
+* I had the chance to experiment more with procedural generation and also to learn more things about game and level design (Thanks Leandro and Enzo for that!).
 
-During some gaps in its development (like waiting for poki or waiting for assets) I still did some mini game jams.
+*Timeline: game was released on September.*
+
+During some gaps in the development of Gorilla Jones (like waiting for poki or waiting for assets) I still did some mini game jams.
 
 ### Mini RTS experience
 
-This is a micro RTS experience focused on micromanagement. I decided to use the core of Hunter games to start with but the game was pretty different, it was more about controlling multiple units and making them survive a difficult situation by using good micro management. I really love the genre and from time to time come back to try to develop something related to it.
+This is a an RTS experience focused on micromanagement, that means controlling multiple units with lot of actions like move, attack, stop, etc, and making them survive difficult situations. It was also developed in around two weeks as part of my personal jams.
 
 <div class="post-image">
     <img src="/images/jams_rtsgame-screenshot-02.gif" />
 </div>
 
-With this game I also focused on having a game loop (win and lose) while also trying to improve the game feel (blood particles, dead bodies, etc). I obviously had more ideas in mind I couldn't try in time but I am still pretty happy with the game.
+With this game I was also focused on having a game loop (win and lose) while also trying to improve the game feel (blood particles, dead bodies, etc). I obviously had more ideas in mind I couldn't try in time but I am still pretty happy with the results.
+
+*Note: I really love the RTS genre and from time to time come back to try to develop something related to it.*
 
 *Timeline: this game was developed in July and released at the beginning of August.*
 
 ### Abduction 101
 
-While developing the last game, I was already looking a game jam to participate (not one of my own) and found the [low rez jam](https://itch.io/jam/lowrezjam-2023). The idea is to make a low resolution (64x64) game in two weeks and there were different optional themes that you could pick, even more than one if you want. In my case, I decided to consider Invasion and Catch'Em All, and made a game named Abduction 101, where you play an UFO abducting people, destructing stuff and invading earth.
+While developing the previous game, I was already looking for a game jam to participate (not one of my own) and found the [low rez jam](https://itch.io/jam/lowrezjam-2023). The idea is to make a low resolution (64x64) game in two weeks and there were different optional themes that you could pick, even more than one if you want. In my case, I decided to consider Invasion and Catch'Em All, and made a game named Abduction 101, where you play an UFO abducting people, destructing stuff and invading earth.
 
 <div class="post-image">
     <img src="/images/jams-lowrezjam-2023-01.gif" />
 </div>
 
-*Timeline: this game was released mid August.*
+This game was super fun to make, but it was more like a sandbox, I couldn't find a good lose condition and the win condition is not so satisfactory, but just playing, throwing stuff, abducting people, spawning aliens, etc, is fun.
 
-One thing I loved about joining this jam was that it was the first time I made all the assets for a game, and it didn't look bad. Having a limitation in resolution and colors allowed me to create art by brute force in some way, and I felt really in control of the development, at last. This opened a new possibility that I decided to explore more: make lower resolution games and do the art myself.    
+One thing I loved about joining this jam was that it was the first time I made all the assets for a game, and it didn't look bad. Having a limitation in resolution and colors allowed me to create art (by brute force in some way) that I felt in control, finally. This opened a new possibility that I decided to explore more: make lower resolution games and do the art myself.    
+
+*Timeline: this game was released mid August.*
 
 ### A failed GBJAM?
 
-On September, there was going to be a [new GBJam](https://itch.io/jam/gbjam-11), a jam I normally love to participate and Franco and I were preparing for it some time before it started. We were discussing about making the second part of [Nekosama](https://arielsan.itch.io/neko-sama) and try to adapt the theme (not announced yet) in the way we can. I had really really big expectations. 
+On September, there was going to be a [new GBJam](https://itch.io/jam/gbjam-11), a jam that I normally love to participate with Franco and we were preparing for it some time before it started. We were discussing about making the second part of [Nekosama](https://arielsan.itch.io/neko-sama) and try to adapt the theme (not announced yet) in any way we could.
 
 After the theme "Space" was announced, we quickly discussed some ideas to add to Nekosama and I developed some prototypes:
 
@@ -239,7 +239,7 @@ Even though we wanted to expand Nekosama, we thought that maybe this mechanic go
 </video>
 </div>
 
-But reality hit me hard here. Franco was busy again with its own Company (super understandable) and I felt like I was working super alone (super delayed communication) so after two days of that situation I decided I didn't want that and left the jam. I suppose I was failing with setting high expectations on working with friends/artists.
+But reality hit me hard here. Franco was busy again with its own Company (super understandable) and I felt like I was working alone. So after two days of that situation I decided I didn't want that and left the jam. I failed again with having high expectations.
 
 I was super demotivated and didn't want to do anything games related (at least for a couple of days).
 
@@ -263,7 +263,7 @@ So my conclusion in the end was that, even though I didn't participate in the ja
 
 ### Platformers again
 
-During the nekosama 2d prototype I got interested in learning more about level design, so I decided to continue that one a bit. The idea was to make some levels based on the teleport mechanic while also try to do some low res assets again.
+During the nekosama 2d prototype I got interested in learning more about level design, so I decided to continue that one for a while. The idea was to make some levels based on the teleport mechanic while also trying to do some low res assets again.
 
 <div class="post-image">
     <img src="/assets/2023review/nekoplatformer-itch-cover-image.gif" />
@@ -286,13 +286,13 @@ You can [play the prototype here](https://arielsan.itch.io/nekoplatformer).
 
 While working on the nekoplatformer thing the [1-bit jam #2](https://itch.io/jam/1-bit-jam-n2) got my interest. I was expecting this jam long time before it started, it was like the proper jam to test what I was exploring/learning about low res art style.
 
-But since there was still some time before the jam, and I am a bit anxious, I started making some mockups to see what can I do for the jam, even though I didn't have the theme:
+But since there was still some time before the jam, and I am a bit anxious, I started making some mockups to see what can I do even though I didn't have the theme yet:
 
 <div class="post-image">
     <img src="/assets/2023review/moonlander-mockups.png" />
 </div>
 
-The idea was like a moon lander game where you have to land in different environments/planets. I kinda loved this concept so I started making some prototypes which quickly evolved from a lander into a mining game. Here there is a video of the first iterations:
+The idea was like a moon lander game where you have to land in different environments/planets. I kinda like this concept so I started making some prototypes which quickly evolved from a lander into a mining game. Here there is a video of the first iterations:
 
 <div class="post-image">
 <video width="500px" controls>
@@ -301,7 +301,7 @@ The idea was like a moon lander game where you have to land in different environ
 </video>
 </div>
 
-I posted some videos of the game on [pixelart](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/) and [indiegames](https://www.reddit.com/r/indiegames/comments/17rb34z/i_started_a_lowres_1bit_pixelart_space_mining/) reddits, and got a lot of interest (1.6k upvotes and 50k views). 
+I posted some videos of the game on [pixelart](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/) and [indiegames](https://www.reddit.com/r/indiegames/comments/17rb34z/i_started_a_lowres_1bit_pixelart_space_mining/) sub reddits, and got great reaction with around 1.6k upvotes and 50k views. 
 
 <div class="post-image">
     <img width="500px" src="/assets/2023review/moonminer-pixelartreddit.png" />
@@ -315,32 +315,41 @@ I posted some videos of the game on [pixelart](https://www.reddit.com/r/PixelArt
 
 <div class="post-image">
     <img width="500px" src="/assets/2023review/moonminer-twitter.png" />
-    <span>For twitter/x it was like the 4th tweet (the previous didn't impact) that got good reaction of 25 retweets and 161 likes.</span>
+    <span>For twitter/x it was like the 4th tweet (the previous didn't have impact) that got good reaction of 25 retweets and 161 likes.</span>
 </div>
 
 This was the first time something I do get a lot of people interested by just looking a gif or video of an early prototype. This doesn't mean the game is good but that it has some auto marketing potential.
 
-Another great thing is that, during development, while testing a new feature or content I normally end up playing for a while and sometimes I even forget I was testing something specific.
+Another great thing is that, during development, while testing a new feature or content I normally end up playing for a while and sometimes I even forget I was testing something specific. What I mean here is, I like playing it for long periods.
 
-So this was a huge success in terms of my initial objectives. I found a game I want to continue, seems interesting for people and also has an art style can control (I hope), this means I can create what I need for the game or if I can't then maybe the game shouldn't have that feature.
+So this was a huge success in terms of my initial objectives. I found a game I want to continue, seems interesting for people and also has an art style I can control (I hope), this means I can create what I need for the game or if I can't then maybe the game shouldn't have that feature or content.
 
-The only bad thing was, at this point of the year (November), I was working a lot in freelance and had almost no time to spend on this game. I hope I can recover some free time in the next month and continue working on it maybe one or two days per week at some point.
+The only bad thing was, at this point of the year (November), I was working a lot on other projects and had almost no time to spend on developing this game. I hope I can recover some free time in the next months.
 
 ## Conclusion
 
-About the objectives I defined when started, here are the conclusions about them for 2023. 
+Considering the objectives I defined when I started, here are the conclusions for 2023:
 
-* Found a game I want to develop and has some appeal and I did a lot of minigames I am super happy with in the process.
-* Found an art style I like and feel I can control.
-* Didn't find an art teammate yet, and I don't know if I want or at least if I try again, I have to minimize my expectations.
+* Found a game I want to develop and has some appeal. 
+* I did a lot of mini games that I am supper happy with.
+* Found an art style I like and I can control.
+* Didn't find an art teammate yet, and I don't know if I want or at least if I try again, I have to lower my expectations.
 * Buying art was great for prototyping but not great when I have to modify for my needs.
-* Improved my tools and workflows.
+* Improved my tools, workflows and dev speed.
 
 Special thanks for my friend [Esteban Dal Monte](https://twitter.com/esti_uy) and my brother Iván Coppes for helping me with the soundtracks of the games.
 
+### Working with penusbmic
+
+After using Penusbmic assets in most of my mini games, and also participating a in his Discord server, I caught his attention. At some point in December he asked me if I could make a quick demo to validate some animations [for a new enemy he was doing](https://penusbmic.itch.io/stranded-dust-jumper-enemy). After some quick iterations, that escalated into making a complete working demo and [publish it into on itch](https://arielsan.itch.io/penusbmic) to see if experiencing an alive version of an asset helped other devs when buying the asset. I am super happy with the interaction and iterations we had, and with the results and would love to improve that demo with more units in the future.  
+
+<div class="post-image">
+    <img src="/assets/2023review/penusbmic-screenshots-cover.gif" />
+</div>
+
 ### Here comes a new challenger!
 
-By the end of the year, I friend of mine recommended me for a project as unity/gamedev consultant and after some talks I started working for [Colin Karpfinger](https://twitter.com/colin_k) in [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/) a Helicopter action game with lots of shooting like the good ol'days. 
+By the end of the year, I friend of mine recommended me for a project as unity/gamedev consultant and after some talks I started working for [Colin Karpfinger](https://twitter.com/colin_k) in [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/), a Helicopter action game with lots of shooting like the good ol'days. 
 
 <div class="post-image">
 <video width="500px" controls>
@@ -349,12 +358,12 @@ By the end of the year, I friend of mine recommended me for a project as unity/g
 </video>
 </div>
 
-Working on this project is awesome and it is what I wanted when doing work for hire, to be able to use all my game development knowledge and experience. At the same time, I am enjoying a lot working directly with Colin the day to day and also learning a lot. Hope I can help as much as I can to make this release the best way possible. 
+Working on this project is awesome and it is what I wanted when doing work for hire, to be able to use all my game development knowledge and experience. At the same time, I am enjoying a lot working directly with Colin the day to day and also learning a lot. Hope I can help as much as I can to make the release of this game the best way possible. 
 
 ### Where am I right now?
 
-My plan now is to keep working on both work for hire, the app and the game, but try to reach a balance between them while also having time for my games. In terms of my games, I want to focus now on Ship Miner only but don't want to stop doing jams from time to time.
+My plan now is to keep working on both work for hire projects: the app and the game, but also try to reach a balance to have time to spend for my games. In terms of my games, I want to focus now on Ship Miner only but don't want to stop doing jams from time to time since I believe it is the way I push my limits and also could be a great way to know new devs.
 
-As always, thanks to my friends Rubén and Juan Andrés Nin for being there all the time to discuss how to survive in the industry, and other stuff too.
+As always, thanks to my friends Rubén and Juan Andrés Nin for being there all the time to discuss how to survive in the industry and giving me feedback of my blog posts before publishing them.
 
 Thanks for reading.
