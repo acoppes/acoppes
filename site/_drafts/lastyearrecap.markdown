@@ -295,7 +295,7 @@ But since there was still some time before the jam, and I am a bit anxious, I st
 The idea was like a moon lander game where you have to land in different environments/planets. I kinda loved this concept so I started making some prototypes which quickly evolved from a lander into a mining game. Here there is a video of the first iterations:
 
 <div class="post-image">
-<video width="100%" controls>
+<video width="500px" controls>
   <source src="/assets/2023review/moonminer-miningray-mockup-05.mp4" type="video/mp4">
    Your browser does not support the video tag.
 </video>
@@ -304,73 +304,57 @@ The idea was like a moon lander game where you have to land in different environ
 I posted some videos of the game on [pixelart](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/) and [indiegames](https://www.reddit.com/r/indiegames/comments/17rb34z/i_started_a_lowres_1bit_pixelart_space_mining/) reddits, and got a lot of interest (1.6k upvotes and 50k views). 
 
 <div class="post-image">
-    <img src="/assets/2023review/moonminer-pixelartreddit.png" />
+    <img width="500px" src="/assets/2023review/moonminer-pixelartreddit.png" />
+    <span>Post in pixelart subreddit had an awesome reaction.</span>
 </div>
 
 <div class="post-image">
-    <img src="/assets/2023review/moonminer-mastodon.png" />
+    <img width="500px" src="/assets/2023review/moonminer-mastodon.png" />
+    <span>Same post on mastodon was pretty good too, 50 reposts and 209 stars.</span>
 </div>
 
 <div class="post-image">
-    <img src="/assets/2023review/moonminer-twitter.png" />
+    <img width="500px" src="/assets/2023review/moonminer-twitter.png" />
+    <span>For twitter/x it was like the 4th tweet (the previous didn't impact) that got good reaction of 25 retweets and 161 likes.</span>
 </div>
 
-This was the first time I did something that got a lot of people interested by just looking a gif or video of an early prototype, and even though this doesn't say anything, it reassured the game is interesting. 
+This was the first time something I do get a lot of people interested by just looking a gif or video of an early prototype. This doesn't mean the game is good but that it has some auto marketing potential.
 
-Also, it happens that while testing something new in the game, I play it already for a while, like it absorbs me and I forgot I was testing something specific.
+Another great thing is that, during development, while testing a new feature or content I normally end up playing for a while and sometimes I even forget I was testing something specific.
 
-So this was a huge success in terms of my initial objectives. I found a game I wanted to continue and has some appeal, and does its own marketing. And also I found an art style I feel in control, I can create what I need for the game or if I can't then maybe the game shouldn't have that feature.
+So this was a huge success in terms of my initial objectives. I found a game I want to continue, seems interesting for people and also has an art style can control (I hope), this means I can create what I need for the game or if I can't then maybe the game shouldn't have that feature.
 
 The only bad thing was, at this point of the year (November), I was working a lot in freelance and had almost no time to spend on this game. I hope I can recover some free time in the next month and continue working on it maybe one or two days per week at some point.
-
-### A new project appears
-
-Talk about doing consultancy for a new project...
 
 ## Conclusion
 
 About the objectives I defined when started, here are the conclusions about them for 2023. 
 
-### Find a game
+* Found a game I want to develop and has some appeal and I did a lot of minigames I am super happy with in the process.
+* Found an art style I like and feel I can control.
+* Didn't find an art teammate yet, and I don't know if I want or at least if I try again, I have to minimize my expectations.
+* Buying art was great for prototyping but not great when I have to modify for my needs.
+* Improved my tools and workflows.
 
-I experimented with different games in terms of genres, a bit with different art styles
+Special thanks for my friend [Esteban Dal Monte](https://twitter.com/esti_uy) and my brother Iván Coppes for helping me with the soundtracks of the games.
 
-Improved my tools and workflows while doing different games too.
+### Here comes a new challenger!
 
-### Find an art style
+By the end of the year, I friend of mine recommended me for a project as unity/gamedev consultant and after some talks I started working for [Colin Karpfinger](https://twitter.com/colin_k) in [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/) a Helicopter action game with lots of shooting like the good ol'days. 
 
-#### Buy assets
+<div class="post-image">
+<video width="500px" controls>
+  <source src="/assets/2023review/clearedhot.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video>
+</div>
 
-Tried buying assets, it worked pretty well as starting point, there are a lot of assets packs out there, I super recommend @penusbmic ones (but probably because I love pixel art). But using assets has some issues. One is, when you try to expand, you need an artist or pay or convince the original artist to expand the asset pack the way you want. The other is that it is normally a creative limitation, sometimes this is good since you want to do something super related with those assets, and sometimes it is really bad since you can't move outside those bounds. 
+Working on this project is awesome and it is what I wanted when doing work for hire, to be able to use all my game development knowledge and experience. At the same time, I am enjoying a lot working directly with Colin the day to day and also learning a lot. Hope I can help as much as I can to make this release the best way possible. 
 
-#### Hire artists
+### Where am I right now?
 
-Didn't try hiring an artist, the reason was, if I have to hire an artist, I want to be pretty sure about the game I am doing. So is something I could try in the future. But one thing I wanted to try was to hire different artists for specific tasks to start knowing them and experiment the workflow, etc, but I had no money to spend on that once I decided that could've been a good move.
+My plan now is to keep working on both work for hire, the app and the game, but try to reach a balance between them while also having time for my games. In terms of my games, I want to focus now on Ship Miner only but don't want to stop doing jams from time to time.
 
-#### Find teammate/partner
+As always, thanks to my friends Rubén and Juan Andrés Nin for being there all the time to discuss how to survive in the industry, and other stuff too.
 
-Tried to work with two friends to see if I find a partner there but with no luck, both experiments were pretty unsuccessful, it wasn't the right time to work together I suppose or my expectations were pretty high. I am talking with new people (juan and penusbmic, artists) and at some point I want to experiment doing a small thing together, maybe I can find partnership there. I also was in contact with Calix Jumio (dev in general) a lot, we normally share stuff and discuss, I feel pretty comfortable talking with him but we never had a chance to do something together either. 
-
-#### Find my own style
-
-I found a simple style with lowres low color palette games that I like and I can control/hack pretty well and I believe this is something that will allow me to prototype more and even grow at some point, so I feel pretty successful here. 
-
-MUSIC
-
-* ESTI
-* IVAN
-
-STORY HERE
-
-WHERE AM I RIGHT NOW
-
-MY PLAN FOR THE FUTURE
-
-As always, thanks for my friends Rubén and Juan Andrés Nin for being there all the time discussing how to survive in the industry.
-
-Others
-
-* met new friends 
-* 
-
-but I was on my own, I didn't have a team but also in some way I wanted to be able to work with other devs without the need to become a Company.
+Thanks for reading.
