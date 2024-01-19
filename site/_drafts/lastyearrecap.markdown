@@ -9,6 +9,10 @@ tags:
   - update
   - review
   - nontechnical
+image:
+  path: /images/2023-post-preview.jpg
+  height: 100
+  width: 100
 ---
 
 {{page.excerpt}}
