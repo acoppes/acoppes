@@ -13,6 +13,10 @@ tags:
 
 {{page.excerpt}}
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1661129973&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"></div>
+
+*Before starting, you have this optional feature of playing this soundtrack by Unfold (Esteban Dal Monte) while reading the blogpost, I was hearing it while writing the last reviews.*
+
 ## Intro
 
 When I started this journey of making my own games, I analyzed my situation and defined some objectives to achieve, and some pillars to have in mind all the time, things that might change over time but were a good starting point to have.
@@ -240,13 +244,13 @@ Even though we wanted to expand Nekosama, we thought that maybe this mechanic go
 </video>
 </div>
 
-But reality hit me hard here. Franco was busy again with its own Company (super understandable) and I felt like I was working alone. So after two days of that situation I decided I didn't want that and left the jam. I failed again with having high expectations.
+But Franco was busy again with its own Company and I felt like I was working alone. So after a couple of days of that situation I realized that didn't work for me and decided to leave the jam.
 
-I was super demotivated and didn't want to do anything games related (at least for a couple of days).
+I was super demotivated and didn't want to do anything games related (at least for some days).
 
 ### Almost participating in the jam in the end?
 
-By the weekend (almost at the end of the jam) I decided to start doing some mockups and found something I liked and my motivation was back. I decided to create a game named "There is no room in space". It was like an enter the gungeon kind of game where you explore attachable rooms in space, like you decide where to move and the room was going to be attached (I never managed to do that but was my vision).
+By the weekend (almost at the end of the jam) I decided to start doing some mockups and found something I liked and my motivation was back. I decided to create a game named "There is no room in space". It was like an Enter the Gungeon kind of game where you explore attachable rooms in space, like you decide where to move and the room was going to be attached like Loot River (I never managed to do that but was my vision).
 
 <div class="post-image">
 <video width="50%" controls>
@@ -256,7 +260,7 @@ By the weekend (almost at the end of the jam) I decided to start doing some mock
 <span>And by the end of the video you see the player can also walk in space.</span>
 </div>
 
-I obviously couldn't complete it in two days so I didn't publish it but there were some positive things here. I tried again low resolution concepts (and even animated the character) that I felt comfortable with and also I managed to make a lot of stuff in two days so I was improving my dev speed. I started to feel I could make a game by my own without an artist (not an awesome game but something not horrible).
+I obviously couldn't complete it in two days so I didn't publish it but there were some positive things here. I tried again low resolution concepts (and even animated the character) that I felt comfortable with and also I managed to make a lot of stuff in two days so I was improving my dev speed. I started to feel I could make the art of my games, maybe not super awesome art but art anyways.
 
 So my conclusion in the end was that, even though I didn't participate in the jam, it was a success in some way, I had the opportunity to test myself in creating art again, and also tested something different.
 
@@ -293,7 +297,7 @@ But since there was still some time before the jam, and I am a bit anxious, I st
     <img src="/assets/2023review/moonlander-mockups.png" />
 </div>
 
-The idea was like a moon lander game where you have to land in different environments/planets. I kinda like this concept so I started making some prototypes which quickly evolved from a lander into a mining game. Here there is a video of the first iterations:
+The idea was like a moon lander game where you have to land in different environments/planets. I kinda liked this concept so I started making some prototypes which quickly evolved from a lander into a mining game (I was playing a lot of Dome Keeper at that time). Here there is a video of the first iterations:
 
 <div class="post-image">
 <video width="500px" controls>
