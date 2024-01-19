@@ -79,7 +79,7 @@ Even though it started with bigger and maybe better looking assets, the process 
 
 During this process I found [penusbmic](https://penusbmic.itch.io/) and his assets pack and I fell in love with the art and animation style. One thing I realized was that, even with low res asset packs I found myself limited pretty fast when I wanted to try something new and I didn't feel ready to modify the assets for my needs (yet?). 
 
-[Play the game](https://arielsan.itch.io/beatemup)
+You can [play the game here](https://arielsan.itch.io/beatemup).
 
 After spending a lot of time in this game, I wasn't so sure how to stop working on it, I mean, I knew this was a learning process but it was becoming a project more and more, I was thinking lots of ideas I wanted to try but I believed this wasn't the right project. Thankfully, a Ludumdare was coming and that was the proper excuse to stop thinking in this game and do something different to clear my mind.
 
@@ -93,7 +93,7 @@ It was [Ludum dare 52](https://ldjam.com/events/ludum-dare/52) and the theme was
 
 It was super fun to do and I had the chance to try something different, a low poly 3d game with vehicle driving mechanics. 
 
-[Play the game](https://arielsan.itch.io/spice-must-flow)
+You can [play the game here](https://arielsan.itch.io/spice-must-flow) if you want to.
 
 Participating in this game jam refreshed me and helped me deciding to abandon the Beat'em up and go back to make mini games and/or prototypes to try to find something interesting I want to, and I can, finish to the end. I decided to start making my own "game jams", where I had to make a game in one or two weeks, and let my spice flow.... :stuck_out_tongue_closed_eyes:
 
@@ -105,11 +105,11 @@ This was a survivor game like Don't starve but Sci-fi, and was heavily inspired 
     <img src="/images/jams_survivor-screenshot-01.gif" />
 </div>
 
-After one or two weeks of development, I only had some world generation but there was no real game, only exploration, it was fun to make but trying to do all the ideas I had for that game in two weeks was impossible.
+After one or two weeks of development, I only had some world generation but there was no real game, only exploration, it was fun to make but trying to do all the ideas I had for that game in two weeks was impossible (part of this process was to learn to control the scope of my games).
 
-[Play the game](https://arielsan.itch.io/survivorgame)
+If you want you can [play the game here](https://arielsan.itch.io/survivorgame).
 
-*A glitch in the matrix: At some point in the future (don't remember exactly when), and inspired by other developers, I experimented mixing low poly cellshaded 3d with pixel art billboards thinking in better world generation for the game, here is a video of that:*  
+*A glitch in the matrix: At some point in the future (don't remember exactly when), and inspired by other developers, I experimented mixing low poly cellshaded 3d (and shader graph!) with pixel art billboards thinking in better world generation for the game, here is a video of that:*  
 
 <div class="post-image">
 <video width="480" height="270" controls>
@@ -121,21 +121,22 @@ After one or two weeks of development, I only had some world generation but ther
 
 ### Hunter games
 
-My next mini game was Hunter Games. You play a hunter competing for your tribe and you have to hunt more creeps than the other hunters in order to save your tribe.  
+My next mini game was Hunter Games. You play a hunter competing for your tribe and you have to hunt more creeps than the other hunters in order to save your people.  
 
 <div class="post-image">
     <img src="/images/jams_huntersgame-screenshot-01.gif" />
+    <span>Secret: You can't target other hunters directly but you can "accidentally" hit them when hunting critters and the hunter become hostile towards you, theoretically you can win by killing the other hunters.</span>
 </div>
 
 I wasn't looking for something new with this minigame, just wanted to complete a mini experience and have a game loop, even though it was pretty simple, but compared with the previous game which has no game loop at all. I was super happy with the result and this game became the core for other prototypes and mini experiences I did later.
 
 [Play the game](https://arielsan.itch.io/huntersgame)
 
-*Fun Fact: while writing this blogpost I though this game was released mid 2023 but when I checked out I released it around [Feb 13](https://twitter.com/arielsan/status/1625207607295188992), which means my memory is probably mixing up stuff.*
+*Interesting fact: while writing this blogpost I though this game was released mid 2023 but when I checked out I released it around [Feb 13](https://twitter.com/arielsan/status/1625207607295188992), which means my memory is probably mixing up stuff.*
 
 ### Super Dino Box
 
-At this point I was [working on an app for two of my friends and also teaching "Programación de Videojuegos" in Universidad ORT](2023/03/04/update-current-plan.html) but I also wanted to be focused 100% on games in the future. For that reason, I thought about having a lateral income related with games, maybe with mobile and/or web games. 
+At this point I was [working on an app for two of my friends and also teaching "Programación de Videojuegos" in Universidad ORT](2023/03/04/update-current-plan.html) but I also wanted to be focused 100% on games in the future. For that reason I thought about having a lateral income related with games, maybe with mobile and/or web games. 
 
 A friend of mine was developing games for [Poki](https://poki.com/) at that time and recommended it, so I decided to see if I could publish something there, and since I had two other friends ([Matías Sniadower](https://www.artstation.com/mtthdower) and [Enzo Gaiero](https://twitter.com/playorbust)) who were also interested in experimenting this too, we decided to do something together. I was super excited since we were a more complete team: an artist, a game designer and a programmer, and if this worked we could do more stuff in the future.
 
@@ -179,8 +180,8 @@ During its development, we started interacting with Poki and had like 3 iteratio
 
 Some conclusions:
 
-* Game wasn't published in Poki so we have no idea if that is a good platform and we also don't know how to publish a game there (failure!).
-* We couldn't align our work hours with Mati and I had high expectations on working together (we didn't discuss this before starting), those two things ended up in me not enjoying the process. That doesn't affect our relationship and I still love his art style and whatever he does.
+* Game wasn't published in Poki so we have no idea if that is a good platform and we also don't know how to publish a game there (maybe for good).
+* We couldn't align our work hours with Mati and I had high expectations on working together (we didn't discuss this before starting), those two things ended up in me not enjoying the process. I still love his art style and whatever he does.
 * Working on this game was a good experiment that should've failed sooner.
 * I had the chance to experiment more with procedural generation and also to learn more things about game and level design (Thanks Leandro and Enzo for that!).
 
