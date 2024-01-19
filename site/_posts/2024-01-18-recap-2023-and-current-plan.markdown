@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2023 recap and my current plan of work"
-date:   2024-01-01 00:08:00 -0300
+date:   2024-01-18 20:00:00 -0300
 excerpt: This a recap of what I did in 2023, where am I right now and what my current plan is.
 author: Ariel Coppes
 tags:
