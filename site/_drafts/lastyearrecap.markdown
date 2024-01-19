@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "What I did on 2023 and my next moves"
+title:  "2023 recap and my current plan of work"
 date:   2024-01-01 00:08:00 -0300
-excerpt: This is my 2023 recap in a blog post and what are my next moves.
+excerpt: This a recap of what I did in 2023, where am I right now and what my current plan is.
 author: Ariel Coppes
 tags:
   - personal
@@ -22,7 +22,7 @@ I was super inspired by [Sokpop Collective](https://sokpop.itch.io/) and [PUNKCA
 The pillars I defined were:
 
 * **Long term growth**: each time I work on something, it has to have some value for me in the future or I should modify the premise to have some value for me in the future. 
-* **Tools and workflows**: create and improve tools and workflows all the time to minimize non creative time. 
+* **Tools and workflows**: create and improve tools and workflows all the time to minimize non creative time and improve my development speed over time. 
 * **Overcome weakness**: train, improve, find different ways to attack my weakness while also improving my strengths. 
 * **Start small / Mini games**: don't make an MMO, attack things I can control both in content and scope, so for example, if a project becomes too big, reduce it or cancel it.
 
@@ -31,7 +31,7 @@ And my objectives were:
 * **Find a game to work on**: my idea was to participate in many game jams as possible to try different things and find something interesting. During that process, find the proper scope for my games and develop new tools and workflows to become faster.
 * **Find a way to have art in my games**: for this issue I had like different paths in mind to explore like buying assets, hiring an artist, find a teammate/partner and even start doing the art myself, things to explore over time.
 
-I didn't have a clear roadmap, it was more like I want to do this or that so my actions should reflect that, and at some point I will start completing the objectives.
+I didn't have a clear roadmap, it was more like I want to do this or that so my actions should reflect that, and at some point I will start completing the objectives (I hope).
 
 Ok, that was the intro, now I want to share a more detailed story of what happened in 2023 but you can jump to [Conclusions](#conclusions) if you want to just read the end of the story.
 
@@ -326,19 +326,6 @@ So this was a huge success in terms of my initial objectives. I found a game I w
 
 The only bad thing was, at this point of the year (November), I was working a lot on other projects and had almost no time to spend on developing this game. I hope I can recover some free time in the next months.
 
-## Conclusion
-
-Considering the objectives I defined when I started, here are the conclusions for 2023:
-
-* Found a game I want to develop and has some appeal. 
-* I did a lot of mini games that I am supper happy with.
-* Found an art style I like and I can control.
-* Didn't find an art teammate yet, and I don't know if I want or at least if I try again, I have to lower my expectations.
-* Buying art was great for prototyping but not great when I have to modify for my needs.
-* Improved my tools, workflows and dev speed.
-
-Special thanks for my friend [Esteban Dal Monte](https://twitter.com/esti_uy) and my brother Iván Coppes for helping me with the soundtracks of the games.
-
 ### Working with penusbmic
 
 After using Penusbmic assets in most of my mini games, and also participating a in his Discord server, I caught his attention. At some point in December he asked me if I could make a quick demo to validate some animations [for a new enemy he was doing](https://penusbmic.itch.io/stranded-dust-jumper-enemy). After some quick iterations, that escalated into making a complete working demo and [publish it into on itch](https://arielsan.itch.io/penusbmic) to see if experiencing an alive version of an asset helped other devs when buying the asset. I am super happy with the interaction and iterations we had, and with the results and would love to improve that demo with more units in the future.  
@@ -360,10 +347,25 @@ By the end of the year, I friend of mine recommended me for a project as unity/g
 
 Working on this project is awesome and it is what I wanted when doing work for hire, to be able to use all my game development knowledge and experience. At the same time, I am enjoying a lot working directly with Colin the day to day and also learning a lot. Hope I can help as much as I can to make the release of this game the best way possible. 
 
+## Conclusions
+
+Considering the objectives I defined when I started, here are the conclusions for 2023:
+
+* I found a game I want to develop and has some appeal. 
+* I did a lot of mini games that I am supper happy with.
+* I found an art style I like and I can control.
+* Didn't find an art teammate yet, and I don't know if I want or at least if I try again, I have to lower my expectations.
+* Buying art was great for prototyping but felt limited when I have to modify for my needs (and also lot of devs might be using the same assets).
+* Improved my tools, workflows and dev speed.
+* I am working as consultant for a game so I am going closer to being 100% of my time on game development.
+* I had the chance to work with one of my [favorite pixelart artist](https://penusbmic.itch.io/) thanks to the mini games I did.
+
+*As a side note, I improved my [selection history plugin](https://github.com/acoppes/unity-history-window) during the last year and I am super happy a lot of people seems to be using it.*
+
 ### Where am I right now?
 
-My plan now is to keep working on both work for hire projects: the app and the game, but also try to reach a balance to have time to spend for my games. In terms of my games, I want to focus now on Ship Miner only but don't want to stop doing jams from time to time since I believe it is the way I push my limits and also could be a great way to know new devs.
+My plan now is to keep working on both work for hire projects: the app and the game but balancing towards game dev over time. In terms of my games, I want to focus on Ship Miner but I don't want to stop doing jams from time to time since I believe is part of my DNA and want to keep it that way.
 
-As always, thanks to my friends Rubén and Juan Andrés Nin for being there all the time to discuss how to survive in the industry and giving me feedback of my blog posts before publishing them.
+Special thanks for my friend [Esteban Dal Monte](https://soundcloud.com/dalmontemusic) and my brother Iván Coppes for helping me with the soundtracks of the games, and to my friends [Rubén](https://rgarat.dev/) and [Juan Andrés Nin](https://www.nin.com.uy/) for being there all the time to discuss how to survive in the industry and giving me feedback of my blog posts before publishing them.
 
 Thanks for reading.
