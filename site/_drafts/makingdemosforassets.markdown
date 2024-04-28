@@ -37,21 +37,23 @@ I am now working on integrating also the main hero of that asset pack, and it lo
     <img src="/assets/penusbmicdemos/stranded-hero-01.gif" width="370px"/>
 </div>
 
+**[PLAY THE DEMO HERE](https://arielsan.itch.io/penusbmic)**
+
 So, I just implemented them, what is the interesting part of this blog post?
 
 ## High level process
 
-Well, the general high level process is simple, penusbmic did a character (already released or not), he sends the character to me (already done or almost done), and I implement that in the demo. 
+Well, the general high level process is simple, penusbmic created a character (already released or not), he sends the character to me (already done or almost done), and I implement that in the demo. 
 
-I start by getting the assets and think some ideas on what the abilities should be, if it is easy to implement a base idea I do that quickly and share some gifs with him and we discuss and align on the ideas. Normally we are almost 100% aligned so my initial interpretations on the character and animations are what it ends up being implemented.
+I start by getting the assets and think some ideas on what the abilities should be, if it is easy to implement a base idea I do that quickly and share some gifs or videos with him and we discuss and align on the ideas. Since the assets are pretty visual and clear, we normally are pretty aligned on the direction to follow so my initial interpretations of the character and animations are what I end up implementing.
 
-We could normally iterate a bit in the middle (if he is still working on the character, before releasing it) to adjust something (for example, adding a charge animation in the case of the Dusk Warrior), or if it is 100% done (like the hero), I just manage to make something interesting with what it is there.
+We could normally iterate a bit in the middle (if he is still working on the character, before releasing it) to adjust something (for example, adding a charge animation in the case of the Dusk Warrior, or adding the position indicator in the case of the Dusk Jumper), or if it is 100% done (like the Stranded Hero), I just manage to make something interesting with what it is there.
 
-## My internal process
+## From the asset to the implementation
 
-Internally, for these assets I reuse a lot of what I had implemented with all the mini games I did last year (handle input, handle animations, movement, leave footsteps, some particles, fire projectiles, camera shakes, etc), so making demos for this kind of assets is super straightforward to me. But still, there are some decisions to make and some code to write, and that might be interesting to someone? lets find out.
+For these demos I reuse a lot of what I have implemented with all the mini games I did last year (input handling, animations, movement, footsteps, particles, projectiles, camera shake, etc), so making demos for this kind of assets is super straightforward to me. But still, there are some things to decide and make in order to implement the characters, and that might be interesting to someone? dunno, lets find out.
 
-# Dusk Jumper
+### Dusk Jumper
 
 The assets normally came with everything in one aseprite file, the character + visual effects + projectiles + decals, etc. 
 
@@ -76,11 +78,11 @@ For this character, we have normal idle/walk and then we have two abilities, one
 
 * Separate assets and objects in multiple parts (effect should be there if unit is not)
 
-# Dusk Warrior
+### Dusk Warrior
 
 * Do damage in order to feel the attacks (added some bushes)
 
-# Stranded Hero
+### Stranded Hero
 
 * Since it is a hero, get deeper, it should feel better (added acceleration/deceleration, walk/run anims, attack movement, allow interrupt anims, etc)
 
