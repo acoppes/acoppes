@@ -3,10 +3,10 @@ layout: page
 title: Games
 permalink: /projects/
 projects:
-  - name: Ship Miner (Work in progress)
+  - name: Ship Miner (CURRENT)
     url: https://shipminer.arielcoppes.dev
     videos: /assets/moonminer/shipminer.mp4
-    description: 1bit Pixelart moon and asteroids mining game.
+    description: Minimalistic pixelart 1bit miner game.
   - name: Gorilla Jones
     url: https://arielsan.itch.io/gorillajones
     images: /images/screenshots_gorillajones.png
