@@ -7,7 +7,7 @@ layout: home
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 
-I'm a 39 years old Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 3.5+ years in software.
+I'm a father of two, 40 years old, Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 3.5+ years in software.
 
 I've started playing games when I was a kid and I knew at that time I wanted to make them. I really enjoy playing all kind of games, I tried to think in a favorite genre but as far as I remember I played lots of different genres during my life and enjoyed practically all of them.  
 
