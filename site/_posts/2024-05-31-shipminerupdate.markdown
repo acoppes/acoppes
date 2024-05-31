@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ship Miner plan update"
-# date:   2024-01-18 20:00:00 -0300
+date:   2024-05-31 08:00:00 -0300
 excerpt: Share about my current time dedication plan for Ship Miner and also what to I am going to focus right now.
 author: Ariel Coppes
 tags:
