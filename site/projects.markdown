@@ -3,10 +3,14 @@ layout: page
 title: Games
 permalink: /projects/
 projects:
-  - name: Ship Miner (CURRENT)
+  - name: Cleared Hot (work in progress)
+    url: https://store.steampowered.com/app/1710820/Cleared_Hot/
+    images: /images/screenshots_clearedhot.gif
+    description: Nostalgic helicopter shooter with satisfying physics and light tactical elements.
+  - name: Ship Miner (work in progress)
     url: https://shipminer.arielcoppes.dev
     videos: /assets/moonminer/shipminer.mp4
-    description: Minimalistic pixelart 1bit miner game.
+    description: 1bit lowres pixelart scifi miner game. (personal project)
   - name: Gorilla Jones
     url: https://arielsan.itch.io/gorillajones
     images: /images/screenshots_gorillajones.png
@@ -35,7 +39,7 @@ projects:
 
 This page shows some of my most important games I've worked on.
 
-Here is a list of games I've worked on in the past, ordered by most recent first.
+Here is a list of games I worked on, ordered by most recent first (some work in progress).
 
 <p>
 
