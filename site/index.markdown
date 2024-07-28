@@ -9,7 +9,11 @@ layout: home
 
 I'm a father of two, 40 years old, Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 3.5+ years in software. 
 
-Recently, I started my own company named [Pixel Core Games](https://x.com/pixelcoregames) and I am developing [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart sci fi miner game.   
+Recently, I started my own company named [Pixel Core Games](https://x.com/pixelcoregames) and I am developing [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
+
+<div class="post-image">
+<iframe src="https://store.steampowered.com/widget/3113690/" frameborder="0" width="646" height="190"></iframe>
+</div>
 
 I've started playing games when I was a kid and I knew at that time I wanted to make them. I really enjoy playing all kind of games, I tried to think in a favorite genre but as far as I remember I played lots of different genres during my life and enjoyed practically all of them.  
 
