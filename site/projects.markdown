@@ -10,7 +10,7 @@ projects:
     description: Nostalgic helicopter shooter with satisfying physics and light tactical elements.
   - name: Ship Miner (work in progress)
     url: https://store.steampowered.com/app/3113690/Ship_Miner/
-    steam_widget: https://store.steampowered.com/widget/3113690/
+    steam_widget: https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement
     videos: /assets/moonminer/shipminer.mp4
     description: 1bit lowres pixelart scifi miner game. (personal project)
   - name: Gorilla Jones
