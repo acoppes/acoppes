@@ -48,7 +48,7 @@ David Strachan summarizes the most common used mechanics and tricks in his blog 
 <span>Different jumps by releasing the jump action at different times.</span>
 </div>
 
-All the movement in the game is processed by one controller with multiple [states](2022/12/28/using-states-for-abilities-in-prototype.html). In the case of jumping, the logic is something like this:
+All the movement in the game is processed by one controller with multiple [states](/2022/12/28/using-states-for-abilities-in-prototype.html). In the case of jumping, the logic is something like this:
 
 ```csharp
 if (states.TryGetState("Jumping", out state))
