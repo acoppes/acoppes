@@ -19,8 +19,8 @@ projects:
   - name: "Mini RTS Battle Experience"
     url: https://arielsan.itch.io/rtsgame
     images: 
-      - /images/jams_rtsgame-screenshot-01.gif
-      - /images/jams_rtsgame-screenshot-02.gif
+      - /images/jams_rtsgame-screenshot-01_small.gif
+      - /images/jams_rtsgame-screenshot-02_small.gif
     description: Survive waves of enemies using micromanagement in this minimalist RTS experience. 
     jam: two week personal jam
   - name: "Hunter Games"
