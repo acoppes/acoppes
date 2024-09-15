@@ -106,6 +106,8 @@ In the case of my games there is a concept for entity archetypes named EntityDef
 
 In the case of Cleared Hot, we have a concept named Spawnable which is a combination of a prefab we want to spawn and some configuration override. We use this to abstract how to override values for different unit prefab structures (an NPC is pretty different to a vehicle). For example, we want to spawn an enemy NPC with a rocket launcher, it is the same prefab, we just spawn it and override the weapon, instead of having a prefab variant of an expensive prefab with only 1 value changed.
 
+The important conclusion here is that keeping the objective of working in those projects all the time pays for itself in middle to long term, and the effort of maintaining those projects start to decrease over time while the value increases. In some way it feels like I am building something bigger than just one thing.
+
 That's all for now, just wanted to do a simple blog post with a bit of technical content since I didn't do that for a while and I was missing it.
 
 Thanks for reading!!
