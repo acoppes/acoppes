@@ -45,7 +45,6 @@ Here is a screenshot of how triggers look in the SC2 Editor:
 
 <div class="post-image">
     <img src="/assets/unity-triggers-sc2example-crop.png" />
-    <span>SC2 Trigger Editor.</span>
 </div>
 
 The implementation for this over Unity uses GameObjects and MonoBehaviours and is pretty simple.
@@ -80,7 +79,31 @@ public Object entityArchetype;
     <span>Object picker allows you to select GameObjects or Assets implementing an API directly or in a MonoBehaviour.</span>
 </div>
 
-In the case of my games there is a concept for entity archetypes named Entity Definition used when to new entities in the ECS system (it might be an interesting topic to talk in another blog post).
+To then use the Object reference, there is a useful extension method to get the API from it:
+
+```csharp
+public static T GetInterface<T>(this UnityEngine.Object obj) where T : class
+{
+    if (!obj)
+        return null;
+    
+    if (obj is T t)
+        return t;
+    
+    if (obj is GameObject go)
+        return go.GetComponentInChildren<T>();
+
+    if (obj is Component component)
+        return component.GetComponentInChildren<T>();
+
+    return null;
+}
+``` 
+This works with any interface or class.
+
+In the case of my games there is a concept for entity archetypes named EntityDefinition used when creating new entities in the ECS system _(might be an interesting topic to talk in another blog post)_.
+
+In the case of Cleared Hot, we have a concept named Spawnable which is a combination of a prefab we want to spawn and some configuration override. We use this to abstract how to override values for different unit prefab structures (an NPC is pretty different to a vehicle). For example, we want to spawn an enemy NPC with a rocket launcher, it is the same prefab, we just spawn it and override the weapon, instead of having a prefab variant of an expensive prefab with only 1 value changed.
 
 That's all for now, just wanted to do a simple blog post with a bit of technical content since I didn't do that for a while and I was missing it.
 
