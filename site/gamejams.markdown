@@ -3,6 +3,18 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Dance Zombie Dance"
+    url: https://arielsan.itch.io/gbjam12
+    images: 
+      - /images/jams_gbjam12_dancedance.gif
+    description: Help Michael Johnson to complete the dance sequence to make the dancing zombies happy and don't eat him alive.
+    jam: GBJAM12
+  - name: "Hell Collector"
+    url: https://arielsan.itch.io/ldjam55
+    images: 
+      - /images/jams_ldjam55_hellcollector.gif
+    description: Complete the ritual by activating the runes in different sequences to invoke the hell spawns.
+    jam: LDJAM55
   - name: "Nekoplatformer"
     url: https://arielsan.itch.io/nekoplatformer
     images: 
