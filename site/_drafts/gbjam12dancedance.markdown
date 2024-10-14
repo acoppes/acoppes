@@ -28,23 +28,27 @@ Our game is named Dance Zombie Dance, and you have to help Michael Johnson to co
 </span>
 </div>
 
-Before joining this jam I asked myself if I should do it or not. The last year, one of the main reasons for doing small games and/or participating in jams was to find a game to work on but now that I have Ship Miner, have the other reasons enough value for me to continue participating in game jams compared to the time investment?
+Before joining this jam I asked myself if I should do it or not. One of the main reasons I had the last year for doing small games and participating in game jams was to find a game to work on but now I have Ship Miner. So, I have to consider if the other reasons are important enough for me compared to investing time in my game.
 
-These are the main reasons I normally consider when joining a game jam:
+These could be a list of reasons I might consider when joining a game jam:
 
 * Test and find new game ideas and maybe end up with the next game to make. 
-* Challenge ourselves to do something new or in a different way. This could be the idea, a technical thing, a change in my process, hard skills, etc. 
+* Challenge myself to do something new or something in a different way. This could be the idea, a technical challenge, a change in the process, among other things. 
 * If working with a team, test how well we work together, how we distribute responsibilities, do we have synergy? do we want to work together again in the future?
-* Take some fresh air by stop doing what I do everyday. This also helps to return to day to day stuff with renewed energies and motivated. 
-* In the case of some game jams, the best rated games might reach some news sites, streamers, etc, and that could benefit developers getting attention and visibility. 
-* And, obviously and not less important than the other things: __Have Fun__.
-* Being part of the game jam community and/or specific game jam community, in my case I am a kind of fan of the GBJAM and like to join it each time. 
+* Take some fresh air by stop doing what I do everyday. This also helps to return to the day to day stuff with renewed energies and motivated, and even with new ideas.
+* In the case of some game jams, the best rated games might reach some news sites, streamers, etc, and that could benefit developers by getting attention and visibility. 
+* Be part of the game jam community or a specific game jam community, in my case I am a kind of fan of the GBJAM and like to join it each year. 
+* And not less important than the other things: __Have Fun__.
 
 I can't know beforehand the value of each reason, it is something I can only evaluate __after__ joining the game jam but what I know is I want to invest time in them every once in a while and I also know that I normally end up feeling fulfilled.
 
-So I decided to participate and after the jam was concluded, here is my evaluation and conclusions.
+So, I will share some of my conclusions of participating in this game jam this year.
 
-First, we decided to make something we never did before, a musical game, from the 
+As I said before, we decided to make something we never did before, a musical game inspired by Guitar Hero and Dance Dance Revolutions but for Game Boy. So here we had the challenge of processing the music in a way we can show it in the game as part of the game mechanics. 
+
+For Esteban making retro music that sounds good for Game Boy was new and something to learn and experiment during the jam. The good thing here is that we were inspired by Thriller and the idea was to make some kind of adaptation of that song to be played so we didn't have to create a song from 0. We ended up doing two songs and they matched really well the game and the theme, and the game was placed #22 in Soundtrack/SFX with a score of 4.185 of 5 so we are pretty happy with that result.
+
+Another thing we decided was that I was going to make the art for the game, even though I never did art for Game Boy before, I really liked the idea to challenge myself in this aspect, more now that I am doing the art for Ship Miner myself.
 
 ## New idea
 
