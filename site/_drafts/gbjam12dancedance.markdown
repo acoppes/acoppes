@@ -44,11 +44,11 @@ I can't know beforehand the value of each reason, it is something I can only eva
 
 So, I will share some of my conclusions of participating in this game jam this year.
 
-As I said before, we decided to make something we never did before, a musical game inspired by Guitar Hero and Dance Dance Revolutions but for Game Boy. So here we had the challenge of processing the music in a way we can show it in the game as part of the game mechanics. 
+As I said before, we decided to make something we never did before, a musical game inspired by Guitar Hero and Dance Dance Revolutions but for Game Boy. So here we had the challenge of processing the music in a way we can show it in the game as part of the game mechanics. In order to do this, we exported both an mp3 and a midi file, and we processed the midi file to get the time where the notes should be shown to the player, processing that was a bit complex but we managed to do it but games that depend on exact timing need a lot of tuning to make them feel as nice as possible and that was something that we couldn't achieve in the end. 
 
 For Esteban making retro music that sounds good for Game Boy was new and something to learn and experiment during the jam. The good thing here is that we were inspired by Thriller and the idea was to make some kind of adaptation of that song to be played so we didn't have to create a song from 0. We ended up doing two songs and they matched really well the game and the theme, and the game was placed #22 in Soundtrack/SFX with a score of 4.185 of 5 so we are pretty happy with that result.
 
-Another thing we decided was that I was going to make the art for the game, even though I never did art for Game Boy before, I really liked the idea to challenge myself in this aspect, more now that I am doing the art for Ship Miner myself.
+Another thing we decided was that I was going to make the art for the game, even though I never did art for Game Boy before, I really liked the idea to challenge myself in this aspect, more now that I am doing the art for Ship Miner myself. The idea was to have the zombies and the main character looking to the camera and show different dance steps inspired by Thriller. The UI should be clear enough, showing the notes coming and when you correctly play them, etc, and considering we have only 4 colors it was a real challenge. In this case, we also managed to get a score of 4.185 of 5 and that placed us #70 in graphics. Again, super happy with this result and how the game ended up looking.
 
 ## New idea
 
