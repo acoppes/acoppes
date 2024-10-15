@@ -10,7 +10,7 @@ tags:
   - gamejams
   - gbjam
 image:
-  path: /images/2023-post-preview.jpg
+  path: /images/gbjam-post-preview.jpg
   height: 100
   width: 100
 ---
