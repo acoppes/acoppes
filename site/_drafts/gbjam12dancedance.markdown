@@ -1,15 +1,14 @@
 ---
 layout: post
 title:  "Why do I participate in game jams if I already have a game to work on?"
-date:   2024-09-28 08:00:00 -0300
-excerpt: "A couple of weeks ago was the game jam GBJAM12 and with a friend of mine we decided to participate in it." 
+date:   2024-10-15 08:00:00 -0300
+excerpt: "A couple of weeks ago was the game jam GBJAM12 and with a friend of mine we decided to participate in it. But before joining I asked myself, should I do it now I already have a game to work on, or not?" 
 
 author: Ariel Coppes
 tags:
-  - tools
-  - technical
-  - unity
   - business
+  - gamejams
+  - gbjam
 image:
   path: /images/2023-post-preview.jpg
   height: 100
@@ -44,53 +43,22 @@ I can't know beforehand the value of each reason, it is something I can only eva
 
 So, I will share some of my conclusions of participating in this game jam this year.
 
-As I said before, we decided to make something we never did before, a musical game inspired by Guitar Hero and Dance Dance Revolutions but for Game Boy. So here we had the challenge of processing the music in a way we can show it in the game as part of the game mechanics. In order to do this, we exported both an mp3 and a midi file, and we processed the midi file to get the time where the notes should be shown to the player, processing that was a bit complex but we managed to do it but games that depend on exact timing need a lot of tuning to make them feel as nice as possible and that was something that we couldn't achieve in the end. 
+As I said before, we decided to make something we never did before, a musical game inspired by Guitar Hero and Dance Dance Revolutions but for Game Boy. So here we had the challenge of processing the music in a way we can show it in the game as part of the game mechanics. In order to do this, we exported both an mp3 and a midi file, and we processed the midi file to get the time where the notes should be shown to the player. Processing that was a bit complex but we managed to do it but games that depend on exact timing need a lot of tuning to make them feel as good as possible and that was something that we couldn't achieve in the end :sweat_smile: (also browsers behave a bit different). That was a weakness and for that it got scored of 3.25 of 5 in gameplay and was placed #125 of 397.
 
-For Esteban making retro music that sounds good for Game Boy was new and something to learn and experiment during the jam. The good thing here is that we were inspired by Thriller and the idea was to make some kind of adaptation of that song to be played so we didn't have to create a song from 0. We ended up doing two songs and they matched really well the game and the theme, and the game was placed #22 in Soundtrack/SFX with a score of 4.185 of 5 so we are pretty happy with that result.
+For Esteban making retro music that sounds good for Game Boy was new and something to learn and experiment during the jam. The good thing here is that we were inspired by Thriller and the idea was to make some kind of adaptation of that song to be played so we didn't have to create a song from 0. We ended up doing two songs, Thriller and Goosebumps, and they matched the theme really well. The game was placed #22 in Soundtrack/SFX with a score of 4.185 of 5 so we are pretty happy with that result.
 
-Another thing we decided was that I was going to make the art for the game, even though I never did art for Game Boy before, I really liked the idea to challenge myself in this aspect, more now that I am doing the art for Ship Miner myself. The idea was to have the zombies and the main character looking to the camera and show different dance steps inspired by Thriller. The UI should be clear enough, showing the notes coming and when you correctly play them, etc, and considering we have only 4 colors it was a real challenge. In this case, we also managed to get a score of 4.185 of 5 and that placed us #70 in graphics. Again, super happy with this result and how the game ended up looking.
+Another thing we decided was that I was going to make the art for the game, even though I never did art for Game Boy before, I really liked the idea to challenge myself in this aspect, more now that I am doing the art for Ship Miner myself. The idea was to have the zombies and the main character looking to the camera and show different dance steps inspired by Thriller. The UI should be clear enough, showing the notes coming and when you correctly play them, etc, and considering we have only 4 colors it was a real challenge. In this case, we also managed to get a score of 4.185 of 5 and that placed us #70 in graphics :open_mouth:. Again, super happy with this result and how the game ended up looking.
 
-## New idea
+Part of the jam consist in play and rate other games during the rating phase, after the submission, and takes around 2 weeks. Playing other games takes time but it is really interesting, some of them are better in one aspect and others in another and that learning experience inspires me a lot for future games. Rating and writing a review helps in interacting with the other devs and be part of the community and also in getting attention so other devs rate and review your game.
 
-## New challenges
+The other ratings are Gameboy Soul and Interpretation of the Secondary theme (spooky). We got 3.815 of 5 for the first one and 4.15 of 5 for the other which is great, I suppose :relaxed:.
 
-### Art
+The game got a good overall score of 3.919 of 5 and it was placed #55 of 397 entries :metal: but didn't get to the top for streamers and news sites to consider talking about it. In general this game jam is not so visible compared to other jams but it is a solid one in my opinion, all the games are really good.
 
-### Technical
+[Click here](https://itch.io/jam/gbjam-12/results) to check all the results and the best rated games, and [here](https://itch.io/jam/gbjam-12/rate/2983712) to see our results.
 
-## Team
+In the end, we had fun and enjoyed thinking and converting in this idea into a game :muscle:. I tested the tools and adapted the process to make a different game, and we learned new stuff and we are really proud of the results. We also learned from our mistakes and we have that knowledge to apply for future game jams.
 
-## 
+Thats all, thanks for reading :pray:.
 
-## New challenges & Fresh Air
-
-It feels really good and motivational to do something new and different from time to time. It is also an opportunity to test the engine and process in a different context.
-
-# Challenge myself on doing more complex art
-
-One core challenge that we had when we started was that we had no artist. I mean, I do the art for Ship Miner but it is super limited compared to what people do for this jam. However, I wanted to test myself and to do something different. After the jam results, we got placed 70 of 400 in graphics, with a score of 4.185 over 5, which felt awesome. 
-
-# Technical challenge for the musical part 
-
-In terms of technical challenges, the main one was to define how to show the notes based on the song we play, and for that we decided to export the wav/mp3 for the song and also the midi file used to create it, in that way we could get information from the midi and match it with what is being played, and that is how we show the notes in the lanes. 
-
-## Team
-
-Esteban already did the music for some of the game jams I participated the last year, but normally the process was more like I was working in the jam and at some point I asked some music, we talked a bit about what I wanted and then he did something and normally was pretty awesome already so that was the end of the process.
-
-Recently I asked him to work with me in making the music (and probably sound effects too) for Ship Miner, but one thing we quickly noticed is that I always include him later on, it is ok, but what about doing something together from the start, and collaborate in the idea conception. So for that reason we thought about doing some jam together at some point and since we both share some love for GameBoy, we decided that the GBJAM would be the most appropriate jam to do it. 
-
-## Marketing
-
-So this is the less important reason to join in terms of it is the less likely to happen but in the case of doing an interesting enough game, we could get some attention and use that to get Ship Miner more visibility. It happened before with Nekosama, a game I did with another friend, that got a nice place in the gbjam and we got a couple of streamers to play it.
-
-## Tradition
-
-I already joined this jam multiple times and for some reason I really love it. Some great games appear with the limitations of the gameboy, I played lots of interesting things that other devs did and also the community was always really cool. Maybe I also have some nostalgia for the Game Boy even though I never had one.
-
-# Conclusions
-
-How much I invested in this jam? around 25hs to 30hs, that means less time on Ship Miner and/or Cleared Hot this month.
-
-About the game
 
