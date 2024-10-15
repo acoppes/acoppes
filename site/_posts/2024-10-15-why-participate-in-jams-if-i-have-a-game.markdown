@@ -27,7 +27,7 @@ Our game is named Dance Zombie Dance, and you have to help Michael Johnson to co
 </span>
 </div>
 
-Before joining this jam I asked myself if I should do it or not. One of the main reasons I had the last year for doing small games and participating in game jams was to find a game to work on but now I have Ship Miner. So, I have to consider if the other reasons are important enough for me compared to investing time in my game.
+Before joining this jam I asked myself if I should do it or not. One of the main reasons for doing small games and participating in game jams last year was to find a game to work on but now that I have Ship Miner I have to consider if the other reasons are important enough for me compared to investing time in my game.
 
 These could be a list of reasons I might consider when joining a game jam:
 
