@@ -40,6 +40,8 @@ mastodon:
   - username: arielsan
     instance: mastodon.gamedev.place
 
+bluesky_username: arielsan
+
 itchio_username: arielsan
 
 # Build settings
