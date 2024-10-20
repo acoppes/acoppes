@@ -1,6 +1,8 @@
 <ul class="social-media-list">
-  {%- if site.itchio_username -%}<li><a href="https://{{ site.itchio_username| cgi_escape | escape }}.itch.io/"><svg class="svg-icon"><use href="/assets/social-icons-itchio.svg#itchio"></use></svg><span class="username">{{ site.itchio_username | escape }}</span></a> - itch.io</li>{%- endif -%}
-  
+
+  {%- if site.email -%}<li><a class="u-email" href="mailto:{{ site.email }}"><svg class="svg-icon"><use href="/assets/social-icons-email.svg#email"></use></svg><span class="username"> {{ site.email | escape }}</span></a> - email</li>{%- endif -%}
+  {%- if site.itchio_username -%}<li><a href="https://{{ site.itchio_username| cgi_escape | escape }}.itch.io/"><svg class="svg-icon"><use href="/assets/social-icons-itchio.svg#itchio"></use></svg><span class="username"> {{ site.itchio_username | escape }}</span></a> - itch.io</li>{%- endif -%}
+
   {%- if site.dribbble_username -%}<li><a href="https://dribbble.com/{{ site.dribbble_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#dribbble' | relative_url }}"></use></svg> <span class="username">{{ site.dribbble_username| escape }}</span></a></li>{%- endif -%}
   {%- if site.facebook_username -%}<li><a href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use></svg> <span class="username">{{ site.facebook_username| escape }}</span></a></li>{%- endif -%}
   {%- if site.flickr_username -%}<li><a href="https://www.flickr.com/photos/{{ site.flickr_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#flickr' | relative_url }}"></use></svg> <span class="username">{{ site.flickr_username| escape }}</span></a></li>{%- endif -%}

@@ -16,8 +16,10 @@ When not super busy, you could contact me to:
 
 <!-- What I'm sure, though, is that I'm not looking for a full time job at the moment **unless** I find a dream job. -->
 
-Just send me an email to <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> or contact me via:
+<!-- Just send me an email to <a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a> or contact me via: -->
 
-<div>
+Here is a list of ways to follow or contact me:
+
+<div align="center">
    {%- include social.html -%}
 </div>
