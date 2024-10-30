@@ -11,7 +11,7 @@ projects:
   - name: Ship Miner (work in progress)
     url: https://shipminer.arielcoppes.dev/
     steam_widget: https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement
-    videos: /assets/moonminer/shipminer.mp4
+    images: /assets/moonminer/shipminer-gameplay-01.gif
     description: 1bit lowres pixelart scifi miner game. (personal project)
   - name: Gorilla Jones
     url: https://arielsan.itch.io/gorillajones
