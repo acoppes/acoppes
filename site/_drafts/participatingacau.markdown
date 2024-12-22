@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "My personal notes being part of the jury for a Uruguayan Videogames Government competitive grant organized by ACAU"
+title:  "My personal notes of being part of the evaluation committee for a Uruguayan public competitive grant"
 # date:   2024-01-18 20:00:00 -0300
-excerpt: The Uruguay Cinema and Audiovisual Agency (ACAU) organized a grant for videogames development as part of the Uruguay Audiovisual Program (PUA) and I was invited to join the jury to evaluate and select the projects receiving that grant. This was my first time doing this kind of job and it was pretty interesting.
+excerpt: The Uruguay Cinema and Audiovisual Agency (ACAU) organized a competitive grant for videogames development as part of the Uruguay Audiovisual Program (PUA) and I was invited to be part of the evaluation committee.
 author: Ariel Coppes
 tags:
   - personal
@@ -14,7 +14,7 @@ image:
   width: 100
 ---
 
-The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) organized a competitive grant for videogames development as part of the [Uruguay Audiovisual Program](https://www.gub.uy/ministerio-industria-energia-mineria/programa-uruguay-audiovisual) (PUA) and I was invited to be part of the evaluation committee. This was my first time doing this kind of job and it sounded pretty interesting so I accepted. The committee was composed by Francesca Esquenazi, Camila Gormaz and me.
+The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) organized a competitive grant for videogames development as part of the [Uruguay Audiovisual Program](https://www.gub.uy/ministerio-industria-energia-mineria/programa-uruguay-audiovisual) (PUA) and I was invited to be part of the evaluation committee. This was my first time doing this kind of job and it sounded pretty interesting so I accepted. The final committee was composed by Francesca Esquenazi, Camila Gormaz and me.
 
 ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total per project was around 10k USD. There were a total of 6 slots for projects, from where, by the rules, one of them should be filled by a project leaded by a woman, one for a project that is the first game of the company and one for a project that is created outside the capital city.
 
@@ -28,7 +28,7 @@ By taking a quick look at all the projects, it was easily noticeable the ones th
 
 There were no specific guidelines in how or what to evaluate either, just a high level contest rules, so even the committee didn't necessarily follow the same approach when evaluating. 
 
-The process we followed was to make our evaluations separately, and once we had our own results we did a remote meeting (we are from different countries) to compare and decide the final selection. For some project it was more direct since we were pretty aligned and for others we discussed a bit more but the contest rules helped us.
+The process we followed was to make our evaluations separately, and once we had them, we did a meeting to compare and decide the final selection. For some project it was more direct since we were pretty aligned and for others we discussed a bit more but the contest rules helped us.
 
 You can check [here in ACAU](https://www.acau.gub.uy/innovaportal/v/353/1/acau/ya-estan-disponibles-los-resultados-de-la-convocatoria-para-desarrollo-de-videojuegos-2024.html) to see the results of this grant with the list of selected projects.
 
