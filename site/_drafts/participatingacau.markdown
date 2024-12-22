@@ -14,11 +14,11 @@ image:
   width: 100
 ---
 
-The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) organized a competitive grant for videogames development as part of the [Uruguay Audiovisual Program](https://www.gub.uy/ministerio-industria-energia-mineria/programa-uruguay-audiovisual) (PUA) and I was invited to be part of the evaluation committee. This was my first time doing this kind of job and it sounded pretty interesting so I accepted. The final committee was composed by Francesca Esquenazi, Camila Gormaz and me.
+The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) organized a competitive grant for videogames development as part of the [Uruguay Audiovisual Program](https://www.gub.uy/ministerio-industria-energia-mineria/programa-uruguay-audiovisual) (PUA) and I was invited to be part of the evaluation committee. This was my first time doing this kind of job and it sounded pretty interesting so I accepted. The committee was composed by [Francesca Esquenazi](https://www.linkedin.com/in/francesca-esquenazi/), [Camila Gormaz](https://bsky.app/profile/burasto.bsky.social) and [me](https://arielcoppes.dev).
 
-ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total **per project** was around **10k USD**. There were a total of 6 slots for projects, from where, by the rules, one of them should be a project leaded by a woman, another should be a project that is the first game of the company and another should be a project of a company located outside the capital city.
+ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total **per project** was around **10k USD**. There were a total of 6 slots for projects, from where, by the rules, one of them should be a project leaded by a woman, one should be a project that is the first game of the company and one should be a project of a company located outside the capital city.
 
-There were 17 projects, all of them interesting. Considering it was the first time for this grant and also that the Uruguayan game dev community is small, it was a good number of projects. 
+There were a total of 17 projects. Considering it was the first time for this grant and also that the Uruguayan game dev community is small, it was a good number of projects. 
 
 Each applicant had to present four different documents: dossier, distribution strategy, development plan and budget. In those documents they had to put all the information needed for the evaluation. They could include more documents if they wanted to. 
 
