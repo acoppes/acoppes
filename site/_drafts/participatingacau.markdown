@@ -16,7 +16,7 @@ image:
 
 The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) organized a competitive grant for videogames development as part of the [Uruguay Audiovisual Program](https://www.gub.uy/ministerio-industria-energia-mineria/programa-uruguay-audiovisual) (PUA) and I was invited to be part of the evaluation committee. This was my first time doing this kind of job and it sounded pretty interesting so I accepted. The final committee was composed by Francesca Esquenazi, Camila Gormaz and me.
 
-ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total per project was around 10k USD. There were a total of 6 slots for projects, from where, by the rules, one of them should be filled by a project leaded by a woman, one for a project that is the first game of the company and one for a project that is created outside the capital city.
+ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total **per project** was around **10k USD**. There were a total of 6 slots for projects, from where, by the rules, one of them should be a project leaded by a woman, another should be a project that is the first game of the company and another should be a project of a company located outside the capital city.
 
 There were 17 projects, all of the interesting. Considering it was the first time for this grant and also that the Uruguayan game dev community is small, it was a good number of projects. 
 
@@ -40,7 +40,7 @@ From my point of view, one example is that the team is really important when eva
 
 As feedback for ACAU, it would be great to include more specific guidelines to help the new teams to focus on the important information and less on other things, something like a pitch deck would be great.
 
-My personal take in general is that is awesome to have grants like this one and that people present their projects. However, I also feel like a total of 60k USD is pretty low for the videogames industry, more if you consider how it grows year by year. It feels like it is a small help so you can start your project and get in touch with publishers or maybe get another grant, to get more money. Maybe there should be more categories (or different grants) depending the state of the project.
+My personal take in general is that is awesome to have grants like this one and that people present their projects. However, I also feel like a total of **60k USD** is pretty low for the videogames industry, more if you consider how it grows year by year. It feels like it is a small help so you can start your project and get in touch with publishers or maybe get another grant, to get more money. Maybe there should be more categories (or different grants) depending the state of the project.
 
 Another nice to have is to share something about the selected projects (and maybe the others too), now when you read the final list you only see their names and applicant and that's all. For someone outside the process, you know nothing about them and why they were selected and that plays  against having good transparency, which I believe you must have for government grants.
 
