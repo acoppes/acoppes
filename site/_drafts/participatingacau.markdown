@@ -18,13 +18,13 @@ The [Uruguay Cinema and Audiovisual Agency](https://www.acau.gub.uy) (ACAU) orga
 
 ACAU is mainly focused on cinema and audiovisual content and normally the grants too. This year a videogames development exclusive grant was included and the total **per project** was around **10k USD**. There were a total of 6 slots for projects, from where, by the rules, one of them should be a project leaded by a woman, another should be a project that is the first game of the company and another should be a project of a company located outside the capital city.
 
-There were 17 projects, all of the interesting. Considering it was the first time for this grant and also that the Uruguayan game dev community is small, it was a good number of projects. 
+There were 17 projects, all of them interesting. Considering it was the first time for this grant and also that the Uruguayan game dev community is small, it was a good number of projects. 
 
-Each project had to present four different documents: dossier, distribution strategy, development plan and budget. In those documents had to put all the information needed for the evaluation. Optionally, they could add more documents. 
+Each applicant had to present four different documents: dossier, distribution strategy, development plan and budget. In those documents they had to put all the information needed for the evaluation. They could include more documents if they wanted to. 
 
-The guidelines weren't so clear in what to say or not, so each participant application was really different and that made it a bit harder to evaluate since it was difficult to match them with the information provided. Some of them provided more about the company than the game, some others more about the game design than the pitch, etc. 
+The guidelines weren't so clear in what to say or not, so each application was really different and that made the evaluation harder since it was difficult to compare the information provided. Some of them said more about the company than the game, some others more about the game design than the pitch, etc. 
 
-By taking a quick look at all the projects, it was easily noticeable the ones that presented for the first time versus the ones that already had experience presenting to other grants, pitching games to publishers or even releasing  a game. Having those extra rules help balancing the results to give opportunities to new developers, otherwise the experienced ones would always take the lead.
+By taking a quick look to all the projects, it was easily noticeable the ones that presented for the first time versus the ones that already had experience with other grants, pitching games to publishers or even releasing a game. In general, having those extra rules help in balancing the results to give opportunities to new developers, otherwise the experienced ones would always take the lead.
 
 There were no specific guidelines in how or what to evaluate either, just a high level contest rules, so even the committee didn't necessarily follow the same approach when evaluating. 
 
