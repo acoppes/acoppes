@@ -2,7 +2,7 @@
 layout: post
 title:  "My personal notes of being part of the evaluation committee for a Uruguayan public competitive grant"
 date:   2024-12-22 22:00:00 -0300
-excerpt: The Uruguay Cinema and Audiovisual Agency (ACAU) organized a competitive grant for videogames development as part of the Uruguay Audiovisual Program (PUA) and I was invited to be part of the evaluation committee.
+excerpt: The Uruguay Cinema and Audiovisual Agency (ACAU) organized a competitive grant for videogames development as part of the Uruguay Audiovisual Program (PUA) and I was invited to be part of the evaluation committee. Here are my personal notes.
 author: Ariel Coppes
 tags:
   - personal
@@ -26,9 +26,7 @@ The guidelines weren't so clear in what to say or not, so each application was r
 
 By taking a quick look to all the projects, it was clear the ones that presented for the first time versus the ones that already had experience with other grants, pitching games to publishers or releasing games. In general, having the rules mentioned before help in balancing the results to give opportunities to new developers, otherwise the experienced ones would always take the lead.
 
-There were no specific guidelines in how or what to evaluate either, just a high level contest rules, so even the committee members didn't necessarily follow the same approach when evaluating. 
-
-The process we followed was to make our evaluations separately, and once that was done, we had a meeting to compare and decide the final selection. For some project it was more direct since we were pretty aligned and for others we discussed a bit more but the contest rules helped us.
+We decided to make our evaluations separately and then compare and select. For that, we had to evaluate social, cultural and artistic impact and also technical and financial viability but there were no specific guidelines in how to do that so we didn't necessarily follow the same approach. Once that was done, we had a meeting to compare and decide the final selection. For some projects it was clear since we were aligned and for others we had to discuss a bit but the contest rules helped us deciding.
 
 You can check [here in ACAU](https://www.acau.gub.uy/innovaportal/v/353/1/acau/ya-estan-disponibles-los-resultados-de-la-convocatoria-para-desarrollo-de-videojuegos-2024.html) to see the results of this grant with the list of selected projects.
 
