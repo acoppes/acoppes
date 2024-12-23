@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "My personal notes of being part of the evaluation committee for a Uruguayan public competitive grant"
-# date:   2024-01-18 20:00:00 -0300
+date:   2024-12-22 22:00:00 -0300
 excerpt: The Uruguay Cinema and Audiovisual Agency (ACAU) organized a competitive grant for videogames development as part of the Uruguay Audiovisual Program (PUA) and I was invited to be part of the evaluation committee.
 author: Ariel Coppes
 tags:
   - personal
   - grants
-  - jury
+  - evaluation
 image:
   path: /images/2023-post-preview.jpg
   height: 100
