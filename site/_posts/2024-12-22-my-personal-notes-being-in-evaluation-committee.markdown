@@ -26,9 +26,9 @@ The guidelines weren't so clear in what to say or not, so each application was r
 
 By taking a quick look to all the projects, it was clear the ones that presented for the first time versus the ones that already had experience with other grants, pitching games to publishers or releasing games. In general, having the rules mentioned before help in balancing the results to give opportunities to new developers, otherwise the experienced ones would always take the lead.
 
-We decided to make our evaluations separately and then compare and select. For that, we had to evaluate social, cultural and artistic impact and also technical and financial viability but there were no specific guidelines in how to do that so we didn't necessarily follow the same approach. Once that was done, we had a meeting to compare and decide the final selection. For some projects it was clear since we were aligned and for others we had to discuss a bit but the contest rules helped us deciding.
+We decided to make our evaluations separately and then compare and select. For that, we had to consider the social, cultural and artistic impact of the proposal as well as the technical and financial viability, but there were no specific guidelines in how to do that so we didn't necessarily follow the same approach. Once that was done, we had a meeting to compare and decide the final selection. For some projects it was clear since we were aligned and for others we had to discuss a bit but the contest rules helped us deciding.
 
-You can check [here in ACAU](https://www.acau.gub.uy/innovaportal/v/353/1/acau/ya-estan-disponibles-los-resultados-de-la-convocatoria-para-desarrollo-de-videojuegos-2024.html) to see the results of this grant with the list of selected projects.
+You can check [here in ACAU](https://www.acau.gub.uy/innovaportal/v/353/1/acau/ya-estan-disponibles-los-resultados-de-la-convocatoria-para-desarrollo-de-videojuegos-2024.html) to see the results with the list of selected projects.
 
 I really liked having this opportunity since it was something different to what I normally do. In some way it was like doing the role of a "Publisher" (even though I couldn't discard projects by just reading an email xD) and that gave me a lot of insight for the future if I decide to present my own projects for grants or to publishers.
 
