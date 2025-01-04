@@ -15,23 +15,27 @@ image:
   width: 100
 ---
 
-While during 2023 I focused on finding a project to work on and finding not one but two, In 2024 I was focused on consolidating those projects and push that forward. 
+While during 2023 I focused on finding a project to work on and finding not one but two, In 2024 I was focused on consolidating those projects and push them forward. 
 
-In this blog post I will share some important things that happened during 2024, considering a personal view, and my plan for 2025.
+In this blog post I will share some important things that happened during 2024 and my plan for 2025.
 
 # What happened in 2024
 
 ## Personal
 
-I don't normally write too much about personal stuff in this blog but since I am my own company, it is really difficult to separate personal from work.
+One of the most important things that happened was that we moved to our own house on Feb 2024 which means we don't have to pay for rent anymore helping a lot in economic terms. 
 
-One thing that happened was that we moved to our own home when on Feb 2024, and that was probably one of the most important things of the year. One of the reason is the obvious, it is completely ours and we don't have to pay for rent anymore, which helps a lot in economic terms. But the other reason is that we invested in this house on September 2022 and we hire a fast building method company named Vantem that process your house in 3 months. Well, those 3 months converted into 15 months, they went into bankruptcy in the middle and we suffered great part of the process thinking we were going to lose the money but thankfully at the end of 2023 we got the house (a lot of people didn't), and we moved in some months later.
+But another thing that makes it feel more important is that we invested most of our savings (our fault here) to build it in September 2022 by hiring a fast building method company named Vantem that promised us they will have it done in 3 months. Well, that time ended up being 15 months and they even went into bankruptcy at some point which made us suffer great part of the process thinking we were going to lose the money. Thankfully, at the end of 2023, we received the house (some people didn't), and we moved some months later. 
 
-Another thing that happened in 2024 was that I was able to consolidate Pixel Core Games, my Game Development company where I am working on my own game Ship Miner and also providing consultancy services for Cleared Hot.
+Another thing that happened in 2024 was that I was able to consolidate Pixel Core Games, my Game Development company where I am working on my own game [Ship Miner](https://store.steampowered.com/app/3113690/Ship_Miner/) and also providing consultancy and development services for [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/).
 
 And finally I was invited to use my experience in Game Development to be part of an [evaluation committee](/2024/12/22/my-personal-notes-being-in-evaluation-committee) for a government grant where I had the opportunity to evaluate interesting projects and learned a lot from that process.
 
 ## Cleared Hot
+
+<div class="post-image">
+  <img src="/images/screenshots_clearedhot.gif" />
+</div>
 
 Since I started working on Cleared Hot at the end of 2023, I had the chance to be part of an awesome growth in multiple fronts. 
 
@@ -42,6 +46,10 @@ From the team point of view, [m4ndrill](https://m4ndrill.bio.link/) joined the t
 I want to give thanks to Colin and the rest of the team for letting me be part of this awesome 2024, I am really happy to be making this awesome and technically challenging game.
 
 ## Ship Miner & Pixel Core Games
+
+<div class="post-image">
+  <img src="/assets/moonminer/shipminer-gameplay-01.gif" />
+</div>
 
 For Ship Miner, I managed to get a reasonable flow of dev hours to each moth and I was able to focus 100% on Game Development.
 
@@ -55,15 +63,20 @@ Had an initial experience talking to a possible partner/publisher, but I didn't 
 
 And in terms of the game itself, I have an early playtest with an initial version of the game loop ready and I shared it with a couple of friends to start getting some initial feedback on experience, controls, and gameplay in general.
 
-GAME JAMS!!
+In spite of having being pretty busy with Ship Miner and Cleared Hot I still participated in a couple of game jams this year and I am [pretty happy and proud](/2024/10/15/why-participate-in-jams-if-i-have-a-game) with that.
+
+<div class="project">
+<img src="/images/jams_ldjam55_hellcollector.gif" />
+<img src="/images/jams_gbjam12_dancedance.gif" />
+</div>
 
 # What's up for 2025
 
-In general terms, I plan to release Ship Miner in Early Access this year and also plan to have a new game defined (I have an idea in mind already and need to write it a bit more) to start presenting it for grants and to publishers.
+In general terms, I plan to release Ship Miner in Early Access while also have a new game defined to start prototyping and present it for grants and/or to publishers.
 
-## Roadmap for Ship Miner
+## Ship Miner's Roadmap
 
-When talking specifically on what's ahead for Ship Miner for EA, here is an oversimplified Roadmap that could be reordered over time.
+When talking specifically on what's ahead for Ship Miner to get into EA, I have a simplified Roadmap not necessarily ordered.
 
 ### Travel to different asteroids during a run
 
