@@ -21,7 +21,7 @@ image:
 
 Until last month, I was working half of my time in [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/) (pls wishlist!) and almost the other half of my time for a javascript web/mobile app for a couple of old friends. 
 
-My plan was to start slowly spending more time for my projects (mainly Ship Miner) by reducing the time spent on the app. But, while thinking that, this tweet happened:
+My plan was to start slowly spending more time on my projects (mainly Ship Miner) by reducing the time spent on the app. But, while thinking that, this tweet happened:
 
 <div class="post-image">
     <a href="https://x.com/arielsan/status/1789789080370258069" target="_blank"><img src="/assets/moonminer/shipminer-besttweet-2024_01.png" /></a>
