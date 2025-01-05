@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "2024 recap and my current plan of work"
-date:   2024-12-31 00:00:00 -0300
-excerpt: In this blog post I will share some important things that happened during 2024 and my plan for 2025.
+date:   2025-01-01 00:00:00 -0300
+excerpt: In this blog post I will share what happened during 2024 and my plan for 2025.
 author: Ariel Coppes
 tags:
   - personal
@@ -15,21 +15,21 @@ image:
   width: 100
 ---
 
-While during 2023 I focused on finding a project to work on and finding not one but two, In 2024 I was focused on consolidating those projects and push them forward. 
+While in [2023 I focused myself on finding my own game to work on](/2024/01/18/recap-2023-and-current-plan), in 2024 I focused more on transitioning to be fulltime in game dev for both [Cleared Hot and my game Ship Miner](/2024/05/31/shipminerupdate). 
 
-In this blog post I will share some important things that happened during 2024 and my plan for 2025.
+In this blog post I will share what happened during 2024 and my plan for 2025.
 
 # What happened in 2024
 
 ## Personal
 
-One of the most important things that happened was that we moved to our own house on Feb 2024 which means we don't have to pay for rent anymore helping a lot in economic terms. 
+One of the most important things that happened was that my wife, my kids an I moved to our own house on Feb 2024 which means we don't have to pay for rent anymore helping a lot in economic terms and we also can start making mid term plans for the family. 
 
-But another thing that makes it feel more important is that we invested most of our savings (our fault here) to build it in September 2022 by hiring a fast building method company named Vantem that promised us they will have it done in 3 months. Well, that time ended up being 15 months and they even went into bankruptcy at some point which made us suffer great part of the process thinking we were going to lose the money. Thankfully, at the end of 2023, we received the house (some people didn't), and we moved some months later. 
+But there is another hidden reason that makes it feel more important than normal and it is that we invested most of our savings hiring a fast building method company to build it and there were some issues. The process started around September 2022 and the company promised us they will have the house done in 3 months. That time converted into 15 months and even at some point they went into bankruptcy. We really suffered great part of the process thinking we were going to lose our investment but, at the end of 2023, we received the house and we moved some months later. We were really lucky, some other clients and providers were not. 
 
 Another thing that happened in 2024 was that I was able to consolidate Pixel Core Games, my Game Development company where I am working on my own game [Ship Miner](https://store.steampowered.com/app/3113690/Ship_Miner/) and also providing consultancy and development services for [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/).
 
-And finally I was invited to use my experience in Game Development to be part of an [evaluation committee](/2024/12/22/my-personal-notes-being-in-evaluation-committee) for a government grant where I had the opportunity to evaluate interesting projects and learned a lot from that process.
+And finally I was invited to use my experience in Game Development to be part of an [evaluation committee](/2024/12/22/my-personal-notes-being-in-evaluation-committee) for a government grant where I had the opportunity to evaluate interesting projects and to learn a lot from that process.
 
 ## Cleared Hot
 
@@ -43,7 +43,7 @@ From the wishlists point of view, the game was about 5k wishlists when I joined 
 
 From the team point of view, [m4ndrill](https://m4ndrill.bio.link/) joined the team to take care of the art direction and [Vitor Amado](https://vitoramado.framer.website/) the audio direction. I also had the chance to recommend my friends [Rubén Garat](https://rgarat.dev/) and [Enzo Gaiero](https://x.com/playorbust) as Game Developer and Game Designer respectively, and thankfully both joined the team.
  
-I want to give thanks to Colin and the rest of the team for letting me be part of this awesome 2024, I am really happy to be making this awesome and technically challenging game.
+I want to give thanks to Colin and the rest of the team for letting me be part of this awesome 2024, I am really happy to be making this interesting and technically challenging game.
 
 ## Ship Miner & Pixel Core Games
 
@@ -51,17 +51,17 @@ I want to give thanks to Colin and the rest of the team for letting me be part o
   <img src="/assets/moonminer/shipminer-gameplay-01.gif" />
 </div>
 
-For Ship Miner, I managed to get a reasonable flow of dev hours to each moth and I was able to focus 100% on Game Development.
+For Ship Miner, I managed to get a reasonable flow of dev hours each month and I was able to focus 100% of my time on Game Development, where 70% is for Cleared Hot and 30% for Ship Miner, more or less.  
 
-As I mentioned before, I created Pixel Core Games which was in part needed to create a Steam Page for Ship Miner. I did that around July 2024 to start capturing interested gamers with wishlists. At the time I announced the Steam Page my friend [penusbmic](https://penusbmic.itch.io/) shared it on his Instagram, that and the announcement tweets got me like 500 wishlist during the first two weeks. A couple of months later I submitted the game to the Space Exploration Fest, that in total got like another 100 and finally I was able to join [a twitter's trend](https://x.com/arielsan/status/1844013314910855450) and [that got me like 300 more](https://x.com/arielsan/status/1844741963360125214). Right now the game has like 1.3k wishlists.
+As I mentioned before, I created Pixel Core Games which was in part needed to create a Steam Page for Ship Miner. I did that around July 2024 to start capturing interested players with wishlists. At the time I announced the Steam Page my friend [penusbmic](https://penusbmic.itch.io/) shared it on his Instagram, that and the announcement tweets got me like 500 wishlist during the first two weeks. A couple of months later I submitted the game to the Space Exploration Fest, that in total got like another 100 and finally I was able to join [a twitter's trend](https://x.com/arielsan/status/1844013314910855450) and [that got me like 300 more](https://x.com/arielsan/status/1844741963360125214), to be currently around 1.3k wishlists in total.
 
-I submitted Ship Miner to Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) and got the [innovation award](https://x.com/arielsan/status/1857859473848852972).
+At the end of the year there was a Game Development SUMMIT here in Uruguay named [LevelUY](https://www.leveluy.com/), where Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) is hosted, and I decided to submit Ship Miner to it without much expectation since the game wasn't ready to compete. To my surprise, it got the [2024 Innovation Award](https://x.com/arielsan/status/1857859473848852972) and I couldn't be more happier.
 
-And I applied Ship Miner for a [government grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) like 3 months ago. Even though I am pretty sure I am not gonna get it (still waiting for results) it helped me in trying to make some plans and calculate possible budgets, etc. Obviously the money would've helped me a lot more xD.
+In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k and could be really important the game but normally there is a good competition in this kind of grants so I am a bit not expecting to get it.
 
-Had an initial experience talking to a possible partner/publisher, but I didn't know what to ask exactly and what I need so I decided to not continue forward with it, at least not for now. The good thing is they were super cool and we are in good terms and I hope we can work together at some point in the future, for Ship Miner or something else.
+I also had the chance of talking with a possible partner/publisher and it was a great experience, they were super cool and I also learned from that process. We didn't reach a deal but because I didn't know exactly what I need or want from a partner yet.
 
-And in terms of the game itself, I have an early playtest with an initial version of the game loop ready and I shared it with a couple of friends to start getting some initial feedback on experience, controls, and gameplay in general.
+And in terms of the game itself, I have already an early playtest with an initial version of the game loop and I shared it with a couple of friends to start getting feedback on experience, controls and gameplay.
 
 In spite of having being pretty busy with Ship Miner and Cleared Hot I still participated in a couple of game jams this year and I am [pretty happy and proud](/2024/10/15/why-participate-in-jams-if-i-have-a-game) with that.
 
@@ -124,6 +124,6 @@ Last but not least, create the platform to support multiple languages and also s
 
 ## To conclude
 
-This blog post was mainly to share a bit of what happened in 2024 and the high level plan for this year. A lot will probably change but I believe the main idea will be the same.
+This blog post was mainly to share what happened in 2024 and the plan for 2025. A lot could change but I believe the main idea will be the same.
 
 Thanks for reading!
