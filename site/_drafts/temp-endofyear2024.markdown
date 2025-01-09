@@ -23,7 +23,7 @@ In this blog post I will share what happened during 2024 and my plan for 2025.
 
 ## Personal
 
-One thing that happened past year was that, with my wife kids, we moved to our own house in Feb 2024. This was a great milestone in our lives considering we don't have to pay for rent anymore and chanted our mindset to how to improve it over time. 
+One thing that happened past year was that, with my wife kids, we moved to our own house in Feb 2024. This was a great milestone in our lives considering we don't have to pay for rent anymore and changed our mindset to how to improve it over time. 
 
 But one reason that makes it feel more important is that we invested most of our savings to build it and there were some big issues in the process. In September 2022 we hired a fast building method company that promised us they will have the house done in 3 months. That time ended up being 15 months and even at some point they went into bankruptcy. We really suffered thinking we were going to lose our investment. But at the end of 2023, we received the house. We were really lucky :pray:, some others were not so much :disappointed:.  
 
