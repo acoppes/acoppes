@@ -53,7 +53,9 @@ I want to give thanks to Colin and the rest of the team for letting me have an a
 
 For Ship Miner, I managed to get a reasonable flow of dev hours each month and I was able to focus 100% of my time on Game Development, where 70% is for Cleared Hot and 30% for Ship Miner, more or less.  
 
-As I mentioned before, I created Pixel Core Games which was in part needed to create a Steam Page for Ship Miner. I did that around July 2024 to start capturing interested players through wishlists. At the time I announced the Steam Page my friend [penusbmic](https://penusbmic.itch.io/) shared it on his Instagram, that and the announcement tweet got like 500 wishlists in the first two weeks. A couple of months later I submitted the game to the [Space Exploration Fest](https://store.steampowered.com/category/space_exploration), that in total got like another 100 wishlists. 
+Around June I decided to create a Steam Page for Ship Miner so people could start adding it to their wishlists. While doing so, I wasn't sure if doing the page as myself or consolidate a company and put the game as part of the company, something I wanted to do to make things more professional. In the end I decided to start the company creation process and wait the page until that was done, and that is when Pixel Core Games was born. That process took like a month and a half and at the end of July the Steam Page was ready and published.
+
+At the time I announced the Steam Page my friend [penusbmic](https://penusbmic.itch.io/) shared it on his Instagram, that and the announcement tweet got like 500 wishlists in the first two weeks. A couple of months later I submitted the game to the [Space Exploration Fest](https://store.steampowered.com/category/space_exploration), that in total got like another 100 wishlists. 
 
 <div class="post-image">
   <img src="/assets/2024review/spaceexploration.png" />
@@ -61,13 +63,13 @@ As I mentioned before, I created Pixel Core Games which was in part needed to cr
 
 Finally I was able to join [a twitter's trend](https://x.com/arielsan/status/1844013314910855450) and [that got me like 300 more](https://x.com/arielsan/status/1844741963360125214), to be currently around 1.3k wishlists in total.
 
-At the end of the year there was a Game Development SUMMIT here in Uruguay named [LevelUY](https://www.leveluy.com/), where Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) is hosted, and I decided to submit Ship Miner to it without much expectation since the game wasn't ready to compete. To my surprise, it got the [2024 Innovation Award](https://x.com/arielsan/status/1857859473848852972) and I couldn't be more happier.
+At the end of the year there was a Game Development SUMMIT here in Uruguay named [LevelUY](https://www.leveluy.com/), where Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) is hosted, and I decided to submit Ship Miner to it without much expectation since the game wasn't ready to compete. To my surprise, it got the [2024 Innovation Award](https://x.com/arielsan/status/1857859473848852972) [:scream:](https://tenor.com/view/omg-wow-really-surprised-feeling-it-gif-7779152694414443637).
 
 <div class="post-image">
-  <img src="/assets/2024review/conaviaward.jpg" />
+  <img src="/assets/2024review/conaviaward.jpg" width="50%"/>
 </div>
 
-In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k and could be really important the game but normally there is a good competition in this kind of grants so I am a bit not expecting to get it.
+In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k for each project and only two are selected. That could make a big difference for me but I understand there is a lot of competition so I have low expectations, not sure when the results will be announced.
 
 I also had the chance of talking with a possible partner/publisher and it was a great experience, they were super cool and I also learned from that process. We didn't reach a deal but because I didn't know exactly what I need or want from a partner yet.
 
