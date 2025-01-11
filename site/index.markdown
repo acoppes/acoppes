@@ -7,7 +7,7 @@ layout: home
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 
-I'm a father of two, 40 years old, Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 3.5+ years in software. 
+I'm a father of two, 40 years old, Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 4+ years in general software. 
 
 Recently, I started my own company named [Pixel Core Games](https://x.com/pixelcoregames) and I am developing [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
 
