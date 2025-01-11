@@ -27,7 +27,7 @@ One thing that happened past year was that, with my wife and kids, we moved to o
 
 But a reason that makes it feel more important is that we invested our savings to build it and there were problems in the process. In September 2022 we hired a fast building method company that promised us the house done in 3 months. They were delayed by a year and even at some point they went into bankruptcy. We thought we were going to lose our investment and it wasn't pleasing. But at the end of 2023, in spite of the bad process and communication with the company, we received the house and we couldn't be more happy. We were really lucky :pray:, some others were not so much :disappointed:.  
 
-Another important thing that happened in the middle of 2024 was that I founded my Game Development company Pixel Core Games where provide consultancy and development services for [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/) and also develop [Ship Miner](https://store.steampowered.com/app/3113690/Ship_Miner/).
+Another important thing that happened in the middle of 2024 was that I founded my Game Development company, Pixel Core Games, where provide consultancy and development services for [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/) and also develop [Ship Miner](https://store.steampowered.com/app/3113690/Ship_Miner/).
 
 And finally, at the end of the year, I was invited to provide my experience in Game Development to be part of an [evaluation committee](/2024/12/22/my-personal-notes-being-in-evaluation-committee) for a government grant where I had the opportunity to evaluate interesting projects and learn a lot by that.
 
@@ -63,10 +63,11 @@ At the time I announced the Steam Page my friend [penusbmic](https://penusbmic.i
 
 Finally I was able to join [a twitter's trend](https://x.com/arielsan/status/1844013314910855450) and [that got me like 300 more](https://x.com/arielsan/status/1844741963360125214), to be currently around 1.3k wishlists in total.
 
-At the end of the year there was a Game Development SUMMIT here in Uruguay named [LevelUY](https://www.leveluy.com/), where Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) is hosted, and I decided to submit Ship Miner to it without much expectation since the game wasn't ready to compete. To my surprise, it got the [2024 Innovation Award](https://x.com/arielsan/status/1857859473848852972) [:scream:](https://tenor.com/view/omg-wow-really-surprised-feeling-it-gif-7779152694414443637).
+At the end of the year there was a Game Development SUMMIT here in Uruguay named [LevelUY](https://www.leveluy.com/), where Concurso Nacional de Videojuegos (Uruguayan Game Development Contest) is hosted, and I decided to submit Ship Miner without much expectation. To my surprise, it got the [2024 Innovation Award](https://x.com/arielsan/status/1857859473848852972) [:scream:](https://tenor.com/view/omg-wow-really-surprised-feeling-it-gif-7779152694414443637) and I couldn't be more happy about it.
 
 <div class="post-image">
   <img src="/assets/2024review/conaviaward.jpg" width="50%"/>
+  <span>I was happy, I swear, I just couldn't smile so much for the photo xD</span>
 </div>
 
 In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k for each project and only two are selected. That could make a big difference for me but I understand there is a lot of competition so I have low expectations, not sure when the results will be announced.
