@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2024 recap and my plan for 2025"
-date:   2025-01-01 00:00:00 -0300
+date:   2025-01-12 00:00:00 -0300
 excerpt: In this blog post I will share what happened in 2024 and my plan for 2025.
 author: Ariel Coppes
 tags:
@@ -10,7 +10,7 @@ tags:
   - review
   - nontechnical
 image:
-  path: /images/2023-post-preview.jpg
+  path: /images/2024-post-preview.jpg
   height: 100 
   width: 100
 ---
