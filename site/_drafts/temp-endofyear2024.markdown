@@ -78,11 +78,11 @@ At the end of the year there was [LevelUY](https://www.leveluy.com/), a Uruguaya
   <span>I was happy, I swear, I just couldn't smile so much for the photo xD</span>
 </div>
 
-In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k for each project and only two are selected. That could make a big difference for me but I understand there is a lot of competition so I don't have great expectations but I am really anxious for them to announce the results.
+In September, I applied for a [government competitive grant](https://www.gub.uy/ministerio-industria-energia-mineria/comunicacion/noticias/abrio-convocatoria-videojuegos-2024) to help Ship Miner development. The grant is a total of around 30k for each selected project and they only select two. That money could make a big difference for the project but I understand there is a lot of competition so I don't have big expectations. However, I am a bit eager to know the results, it's been more than 3 months already and a lot of developers are waiting them.
 
-I also had the chance of talking with a possible partner/publisher and it was a great experience, they were super cool and I also learned from that process. We didn't reach a deal but because I didn't know exactly what I need or want from a partner yet.
+Around that time, I also had the chance to talk with a potential partner/publisher and it was a great experience. They were super nice to me and I learned a lot from that interaction. After talking a couple of times, I decided to delay that conversation for now since I was waiting for the government grant results. But also, because I have to know more specifically what I need from a partner and I don't have that so clear.
 
-Finally, even though I was very busy with Ship Miner and Cleared Hot, I participated in a couple of game jams and I am [pretty proud](/2024/10/15/why-participate-in-jams-if-i-have-a-game) of that.
+Finally, even though I was very busy working on Ship Miner and Cleared Hot, I decided to participate in a couple of game jams anyways and I am [pretty happy](/2024/10/15/why-participate-in-jams-if-i-have-a-game) with that since I believe it is part of what defines me and by transitivity Pixel Core Games.
 
 <div class="project">
 <img src="/images/jams_ldjam55_hellcollector.gif" />
@@ -91,7 +91,9 @@ Finally, even though I was very busy with Ship Miner and Cleared Hot, I particip
 
 # What's up for 2025
 
-In general terms, I plan to release a Demo of Ship Miner and release it in Early Access (if I believe it is the best option for the game when the time comes). I also plan to define a new game to start prototyping and present it for grants and/or to publishers. Why start a new game before knowing how Ship Miner and/or Cleared Hot is going to do? well, my idea is just to explore a couple of things I have in mind, one of them indirectly related to Ship Miner but how much to explore depends on the other projects of course.  
+In general terms, I plan to have a Demo of Ship Miner on Steam and define if it makes sense for the game to have Early Access or not. If true, I want to release it in EA in 2025 as well. 
+
+Also, I plan to define a new game to start prototyping and present it for grants and/or to publishers. Why start a new game before knowing how Ship Miner and/or Cleared Hot is going to do? well, my idea is just to explore a couple of things I have in mind, one of them indirectly related to Ship Miner but how much to explore or not depends on the other projects of course.  
 
 To start the new year, I shared a playable version of Ship Miner with a small group of friends to start getting feedback. Even though it is an early version and things will change, it helps me to start adjusting the experience, controls and gameplay. I will try to write a blogpost about Ship Miner's Roadmap to Demo and Early Access so I can share more where the game is right now and what's missing.
 
