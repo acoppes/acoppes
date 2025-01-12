@@ -83,7 +83,7 @@ Finally, even though I was very busy with Ship Miner and Cleared Hot, I particip
 
 # What's up for 2025
 
-In general terms, I plan to release a Demo of Ship Miner and release it in Early Access (if I believe it is the best option for the game when the time comes). I also plan to define a new game to start prototyping and present it for grants and/or to publishers.
+In general terms, I plan to release a Demo of Ship Miner and release it in Early Access (if I believe it is the best option for the game when the time comes). I also plan to define a new game to start prototyping and present it for grants and/or to publishers. Why start a new game before knowing how Ship Miner and/or Cleared Hot is going to do? well, my idea is just to explore a couple of things I have in mind, one of them indirectly related to Ship Miner but how much to explore depends on the other projects of course.  
 
 To start the new year, I shared a playable version of Ship Miner with a small group of friends to start getting feedback. Even though it is an early version and things will change, it helps me to start adjusting the experience, controls and gameplay. I will try to write a blogpost about Ship Miner's Roadmap to Demo and Early Access so I can share more where the game is right now and what's missing.
 
