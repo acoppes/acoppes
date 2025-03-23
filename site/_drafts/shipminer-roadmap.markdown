@@ -1,23 +1,73 @@
 ---
 layout: post
-title:  "Ship Miner Roadmap"
+title:  "Ship Miner's Roadmap to Demo"
 date:   2025-01-01 00:00:00 -0300
-excerpt: In this blog post I will share what happened during 2024 and my plan for 2025.
+excerpt: In this blogpost I want to write of what I think is the current state of Ship Miner and a possible roadmap for having a Demo in Steam.
 author: Ariel Coppes
 tags:
   - personal
   - update
   - review
-  - nontechnical
+  - shipminer
 image:
   path: /images/2023-post-preview.jpg
   height: 100 
   width: 100
 ---
 
-## Ship Miner's Roadmap
+For those here for the first time, Ship Miner is a 1-bit Pixel Art twin stick miner game in space that I am developing mainly for Steam and Steam Deck.
 
-When talking specifically on what's ahead for Ship Miner to get into EA, I have a simplified Roadmap not necessarily ordered.
+<div class="post-image">
+  <img src="/assets/roadmap/shipminer-gameplay-02.gif" />
+</div>
+
+You can wishlist and read more info about the game here:
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+</div>
+
+I recently did a recap of [what happened for me in 2024 and my plan for 2025](/2025/01/12/recap-2024-and-2025-plans/) and in this blogpost I want to write more about the plan for this year. In particular, what I think is the current state of Ship Miner and a possible roadmap for having a Demo in Steam.
+
+# Current State of the Game
+
+The core loop right now is to move around an asteroid to explore and mine it in order to discover and gather valuable minerals. Those minerals allow the player to improve the ship by increasing stats or building and installing different technology to the task faster and better and survive other dangers in the process. The objective (for now) is to find an artifact and charge it to destroy the Anomaly menace once and for all. 
+
+The current version has the core experience pretty close to what I envision for the release, including game controls and core mechanics like moving, exploring and mining asteroids. Improving the ship is closer to what I want but I feel it still needs a couple of iterations. And the combat experience is not so bad considering the game in mainly about mining but it needs a lot of content to make it more interesting.
+
+The music is great already, the game has a lot of songs and feels more and more aligned with the target mood with each new song. In terms of sound effects, the game needs more and higher quality for a better experience, right now it has some generated with [sfxr](https://sfxr.me/) and others are voice recordings postprocessed in Audacity with some filters and effects (yes, you can hear me doing wooooosh and braaaams and stuff like that).
+
+In general, the game needs more content, I have a list of things to implement already but was focused in trying to close the game loop until now.
+
+I don't have a clear path defined for metagame progress and replayability and that is my current big objective, there are a couple of ideas and I need to iterate a bit in order to define what is better for the game and for what I can deliver.
+
+If you are interested in playing the current version and want to help me with feedback, I have some Steam keys to give away (or you could wait for the Demo).  
+
+# Roadmap for Demo
+
+The objective of having a Demo is to show a bit more of the game experience but also to get more interest in the game from within Steam itself and get some public feedback in order to help me make the game better for the release.
+
+Defining the contents of the Demo should be a balance between doing the minimum amount of work that reflects the best of the game so I can publish the Demo as soon as possible to start capturing interested players. That is normally difficult but doing so while also defining the game will be even more.
+
+What I know is that independently of the decisions ahead, I want a good experience and that implies some stuff like:
+
+* Basic Steamworks integration: cloud save.
+* Optimizations: The game should run as smooth as possible
+* Basic tutorial to make the initial experience a bit more seamless (could be improved for the release)
+* A longer experience than what I have right now that reflects what the game is going to be but feels but makes sense for a demo.
+
+the closest deliverable would be a Demo. to share the game a bit more and hope to get more wishlists but from within steam. Maybe even join some of the Steam Fest but I believe it is better to join one of those closer to  a release. For that Demo, I have to define what it could include, obviously it is difficult because one could start to include as much as possible to share the best experience but if you add everything to the demo, then is that a demo or release?
+
+# Other things in the Roadmap for release
+
+Here is a list of other things that might be part of the Demo or not, but will be for sure be part of the release (final or EA).
+
+* Optimizations
+* Save and exit the game (continue where you were) and could save.
+* Sound Effects 2.0
+* More content
+* Tutorial + Steamworks integration
+* Localization
 
 ### Travel to different asteroids during a run
 
