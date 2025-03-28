@@ -33,31 +33,29 @@ I recently did a recap of [what happened for me in 2024 and a high level plan fo
 
 The core loop right now is to explore an asteroid and mine it in order to discover and gather valuable minerals. Those minerals allow the ship to improve by increasing stats or building and installing different technology to do the task faster and better and survive other challenges in the process. The objective (for now) is to find an artifact and charge it to destroy the Anomaly menace that is putting the galaxy in danger. 
 
-The current version has the core experience pretty close to what I envision for the release, including game controls and core mechanics like moving, exploring and mining asteroids. Improving the ship is close to what I want but I feel it still needs a couple of iterations. The combat experience is not so bad considering the game in mainly about mining but it needs content to make it more interesting.
+The current version has the core experience pretty close to what I envision for the release, including game controls and core mechanics like moving, exploring and mining asteroids. Improving the ship is close to what I want but I feel it still needs a couple of iterations. The combat experience is not so bad considering the game in mainly about mining but it needs more content to make it more interesting.
 
-The music is already great, the ost has a lot of songs and they feel more and more aligned with the target mood of the game with each new song. In terms of sound effects, the game needs more and higher quality for a better experience, right now it has some generated with [sfxr](https://sfxr.me/) and others are voice recordings postprocessed in Audacity with some filters and effects (yes, you can hear me doing wooooosh and braaaams and stuff like that).
+The music is already great, the OST has a lot of songs and they feel more and more aligned with the target vibe of the game with each new song. In terms of sound effects, the game needs more and higher quality for a better experience, right now it has some generated with [sfxr](https://sfxr.me/) and others are voice recordings postprocessed in Audacity with some filters and effects (yes, you can hear me doing wooooosh and braaaams and stuff like that).
 
-In general, the game needs more content, I have a list of things to implement already but was focused in trying to close the game loop until now.
+In general, the game needs more content and I already have a list of things to add.
 
-I don't have a clear path defined for metagame progress and replayability and finding that is my current big objective, there are a [couple of ideas](#design-decisions-ahead) and I need to iterate a bit in order to find what is better for the game and what I can do.
+I don't have a clear path defined for metagame, player progress and replayability and finding that is my current big objective, there are a [couple of ideas](#design-decisions-ahead) and I need to iterate a bit in order to find what is better for the game and what I can do.
 
 _Note: If you are interested in playing the current version and want to help me with feedback, I have some Steam keys to give away. Or you could wait for the Demo too._
 
 # Roadmap to Steam Demo
 
-The objective of having a Demo is to share part of the game experience to capture the interest of more players and by reaching a broader audience from within Steam itself. Also, it is a great opportunity to start getting more feedback in order to make the game better for the release (EA or final).
+The objective of having a Demo is to share part of the game experience to capture the interest of more players by reaching a broader audience from within Steam itself. Also, it is a great opportunity to start getting more feedback in order to make the game better for the release (EA or final).
 
 Defining the contents of the Demo should be a balance between doing the minimum amount of work that reflects the best of the game experience so I can publish the Demo as soon as possible. That is normally difficult but doing so while also defining part of the game will be even more.
 
-What I know is that independently of the game decisions ahead, there are some things that are part of the experience that should be in a good state for the Demo.
+What I know is that independently of the game decisions ahead, there are some things that are part of the experience that should be in a good state for the Demo. Here is a possible list of things:
 
-It should have:
-
-* Basic Steamworks integration, at least having a cloud save.
-* Wishlist moments like after finishing the game, in the main menu, etc.
+* Basic Steamworks integration, at least having cloud save.
+* Add to Wishlist moments like after finishing the game, in the main menu, etc.
 * Show the game is going to have more content and what that content is, but wouldn't be available for the demo. This is to work on expectations but also to communicate what the game is going to have. 
-* The game is running well in terms of performance right but I have to be suer it runs as smooth as possible for the demo too (I could use hacks here if something is not working so well).
-* Improve a bit the initial experience, maybe with a small tutorial.
+* The game is running well in terms of performance right but I have to be sure it runs as smooth as possible for the demo too (I could use hacks here if something is not working so well).
+* Maybe improve a bit the initial experience, maybe with a small tutorial.
 * More and better sound effects.
 * Other links like Discord, social networks, newsletter, etc.
 
@@ -65,25 +63,25 @@ It should have:
 
 Here is a quick high level list of other things, not ordered, that will be part of the release (EA or final) and could be part of the Demo.
 
-* More Optimizations
-* Better asteroid generation
-* Save and exit the game (continue where you were) and could save.
-* High quality Sound Effects
-* More content
+* More optimizations
+* Better asteroid generation, right now the procedural generation is basic.
+* Save and exit the game (continue where you were).
+* High quality sound effects
+* More content (this is more upgrades, enemies, etc)
 * Steamworks integration (achievements, cloud save, etc)
-* Localization to at least 4 main languages, and have a base to extend that over time. I want to release with English, Spanish (my main language), Japanese and Chinese.
+* Localization in at least 4 languages, and have a base to extend that over time in next updates. I would like to release in English, Spanish (my main language), Japanese and Chinese.
 * Tutorial
 * Better options
-* Retro visual effects
+* Retro visual effects like scanlines, crt, etc.
 * Optional game modes
 
 # Design Decisions
 
-As I mentioned before, I have to decide how to proceed with the metagame, progress and replayability.
+As I mentioned before, I have to decide how to proceed with the metagame, player progress and replayability.
 
-When I started developing Ship Miner I imagined the game would have some kind of FTL selection screen where you decide which asteroid to travel next, selecting from different options that would change the experience, like more minerals but more enemies, or a less but more relaxing, etc. In each jump the player has to find a piece of the Artifact until at some point to manage to complete it and try to beat the game. There could be also other game modes in some asteroids, like a another ship miner lost and you have to find it and help him, or one where you have to find something and escape fast, etc, that was a interesting thing to have but it feels it would be go in another direction of the mining as core part of the game. 
+When I started developing Ship Miner I imagined the game would have some kind of FTL selection screen where you decide which asteroid to travel next, selecting from different options that would change the experience, like more minerals but more enemies, or a less but more relaxing, etc. In each jump the player has to find a piece of the Artifact until, at some point, it is ready and try to beat the game with it. There could be also other game modes in some asteroids, like a another ship miner lost and you have to find it and provide help, or one where you have to find something and escape fast, etc, that was a interesting thing to have but it feels it would be go in another direction of the mining as core part of the game. 
 
-Right now I am not sure about that game, it was kinda interesting but I believe I can manage to have part of the experience I wanted with that in one asteroid only, I feel like I don't need to do the jump among asteroids as I initially thought and that would simplify some things too. At the same time, playing all the game in one asteroid allows me to do something I wasn't sure but now it could make more sense and that would be to start doing more "base building" idea where you have your base somewhere close to the asteroid, where you have to go back from time to time to install some tech or process something, etc. One reason I initially though I didn't want this was that I wanted to not be so similar to Dome Keeper, and this path feels like that. Another reason was that I wasn't sure about that being the game, but now it feels more aligned with using minerals and owning the asteroid in some way, and I could make bigger asteroids too (have to optimize the game a bit more first).
+Right now I am not sure about that game, it was kinda interesting but I believe I can manage to have part of the experience I wanted with that in one asteroid. I feel like I don't need to do the jump among asteroids as I initially thought and that would simplify some things too. At the same time, playing all the game in one asteroid allows me to do something I wasn't sure, that would be to have some "base building" experience where you have your base somewhere close to the asteroid, where you have to go back from time to time to install some tech or process something, etc. This path feels more aligned with using minerals and owning the asteroid in some way, and I could make bigger asteroids too.
 
 Game changes with player decisions (TO-DO)
 
