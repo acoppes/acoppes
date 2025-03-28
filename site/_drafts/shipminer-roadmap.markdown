@@ -10,7 +10,7 @@ tags:
   - review
   - shipminer
 image:
-  path: /images/2023-post-preview.jpg
+  path: /images/shipminer-preview.png
   height: 100 
   width: 100
 ---
@@ -40,6 +40,8 @@ The music is already great, the OST has a lot of songs and they feel more and mo
 In general, the game needs more content and I already have a list of things to add.
 
 I don't have a clear path defined for metagame, player progress and replayability and finding that is my current big objective, there are a [couple of ideas](#design-decisions-ahead) and I need to iterate a bit in order to find what is better for the game and what I can do.
+
+Btw, the game has 1.8k wishlists right now, a post on threads did good recently, hope to get to those 2k soon :relaxed:.
 
 _Note: If you are interested in playing the current version and want to help me with feedback, I have some Steam keys to give away. Or you could wait for the Demo too._
 
@@ -83,8 +85,8 @@ When I started developing Ship Miner I imagined the game would have some kind of
 
 Right now I am not sure about that game, it was kinda interesting but I believe I can manage to have part of the experience I wanted with that in one asteroid. I feel like I don't need to do the jump among asteroids as I initially thought and that would simplify some things too. At the same time, playing all the game in one asteroid allows me to do something I wasn't sure, that would be to have some "base building" experience where you have your base somewhere close to the asteroid, where you have to go back from time to time to install some tech or process something, etc. This path feels more aligned with using minerals and owning the asteroid in some way, and I could make bigger asteroids too.
 
-Game changes with player decisions (TO-DO)
+One thing I want in some way in the game is to affect the game by player's important decisions and thought that maybe the right moment to decide was when jumping from one asteroid to another but that might be something doable anyways and/or maybe before starting playing, and that is something I want to explore. 
 
-One thing that I feel right now is that the game starts to be a platform for games, and that's why I thought about having other game modes. I believe that's something I could explore later or during Early Access if I do that. I was even thinking at some point to make tools so the players could change/create other modes.
+The game is starting to feel like a platform for games and I believe that's something I will might explore after release. I am even thinking at some point to make tools so others could change or create other game experiences.
 
 Thanks for reading!
