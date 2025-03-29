@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ship Miner's Roadmap to Demo"
-date:   2025-01-01 00:00:00 -0300
+date:   2025-03-29 00:08:00 -0300
 excerpt: In this blogpost I want to write of what I think is the current state of Ship Miner and a possible roadmap for having a Demo in Steam.
 author: Ariel Coppes
 tags:
@@ -27,7 +27,7 @@ If you like it, you can add it to your wishlist here:
 <iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
 
-I recently did a recap of [what happened for me in 2024 and a high level plan for 2025](/2025/01/12/recap-2024-and-2025-plans/). In this blogpost I want to write of what I think is the current state of Ship Miner and a possible Roadmap for having a Demo in Steam.
+I recently did a recap of [what I did in 2024 and a high level plan for 2025](/2025/01/12/recap-2024-and-2025-plans/). In this blogpost I want to write of what I think is the current state of Ship Miner and a possible Roadmap for having a Demo in Steam.
 
 # Current State of the Game
 
@@ -58,7 +58,7 @@ Defining the contents of the Demo should be a balance between doing the minimum 
 What I know is that, independently of the game decisions ahead, there are some things that are part of the experience that should be in a good state for the Demo, and here is a list:
 
 * Basic Steamworks integration, at least having cloud save.
-* Add Wishlist calls to action like after finishing the game, in the main menu, etc.
+* Add calls to action to wishlist the game, for example, after completing the demo, in the main menu, etc.
 * Show the game is going to have more content and what that content is. This is to work on expectations but also to communicate what the game is going to have. 
 * The game is running well in terms of performance right now but I have to be sure it runs as smooth as possible for the Demo (more considering I expect people to play it on the Steam Deck).
 * More and better sound effects.
