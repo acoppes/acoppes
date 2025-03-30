@@ -96,6 +96,6 @@ Once decided, the Demo could have part of this that reflects the idea and experi
 
 On a side note, the game is starting to feel like a platform for games and I believe that's something I will might explore more after the release.
 
-_Note: If you are interested in playing the current version of Ship Miner and want to help me with your feedback, I have some Steam keys to give away. You could also wait for the Demo if you prefer._
+_Note: If you are interested in playing the current version of Ship Miner and want to help me with your feedback, I have some Steam keys to give away, just send me an email. You could also wait for the Demo if you prefer._
 
 Thanks for reading!
