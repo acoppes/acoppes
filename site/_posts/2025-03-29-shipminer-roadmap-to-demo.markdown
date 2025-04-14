@@ -90,7 +90,9 @@ Another path in mind is to have all the game to be in one asteroid, no traveling
 
 Independently the path, there are some ideas I want for the game that could be worked on anyways. One is having some big things that change the gameplay in a temporary or permanent way, for example, the reveled fog could start to regenerate or you only have local vision, or an star storm starts hitting the asteroid doing damage to everything. The main idea is to provide ways of changing the general gameplay and experience. 
 
-Related to this, another thing is changing the game parameters like playing in a smaller or bigger asteroid, more or less resistant, with more or less mineral density, etc. I will probably start by adding some kind of customization screen to detect what is more interesting to change or not, but it is in some way something important for both paths. Related to this, improving the procedural generation of the asteroid will benefit the game in general too, and I will try to work on this as part of my next steps too.
+Another thing to try is to change the game parameters like playing in a smaller or bigger asteroid, more or less resistant, with more or less minerals density, etc. I will probably start by adding some kind of customization screen to detect what is more interesting to change or not, but it is in some way something important for both paths. 
+
+Improving the procedural generation of the asteroid will benefit the game in general too, and I will try to work on this as part of my next steps too.
 
 Once decided, the Demo could have part of this that reflects the idea and experience but doesn't need to have all the content. The main thing here is to communicate as best as possible what the final game will be.
 
