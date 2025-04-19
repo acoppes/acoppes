@@ -43,6 +43,7 @@ mastodon:
 bluesky_username: arielsan
 
 itchio_username: arielsan
+discord: true
 
 # Build settings
 theme: minima
