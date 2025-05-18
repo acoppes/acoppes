@@ -19,17 +19,17 @@ image:
 
 I want to share part of my experience and learnings on how I am doing the marketing for Ship Miner.
 
-My experience of doing "marketing" started before Ship Miner, while still finding which game to make. My approach at that time was simple, and it is similar to what I do nowadays, I just share images and videos of everything I did, mainly in Twitter/X and Mastodon at that time. 
+My experience of doing "marketing" started while finding which game to make, before having Ship Miner. My approach at that time was to just share images and videos of what I did on Twitter/X only. 
 
-On November 2023 I decided to also start sharing some stuff on Reddit, in particular the PixelArt subreddit, and did my [first post of a prototype of Ship Miner](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/). I believe I was super lucky with it and got great feedback for a pixelart game in a subreddit dedicated to pixelart.
+On November 2023 I decided to also start sharing some stuff on Reddit, in particular in the PixelArt subreddit, and did my [first post of a prototype of Ship Miner](https://www.reddit.com/r/PixelArt/comments/17p7390/i_am_a_solodev_making_a_pixelart_1bit_space/). I believe I was super lucky with it and got great feedback for a pixelart game in a subreddit dedicated to pixelart.
 
-While that post kinda worked on Reddit, on Twitter/X wasn't so direct and took some time. After a slow start without much hope, I finally got a [great tweet](#following-twitterx-trends). Between Reddit and Twitter I stated to feel more secure with its marketing potential so I decided to continue the development.
+While that post kinda worked on Reddit, on Twitter/X wasn't so lucky and took more than a couple of tries before working, and it did while joining a [trend tweet](https://x.com/arielsan/status/1789789080370258069). Between Reddit and Twitter I stated to feel more secure with its marketing potential so I decided to continue the development.
 
-After finding the visual aesthetics of the game and kinda validated its marketing potential, it sounded reasonable to try to take advantage of that. My approach continued being similar but the objective changed from "trying to find something interesting to develop" to "try to get more visibility and convert interested players into steam wishlists".
+After finding the visual aesthetics of the game and kinda validated its marketing potential, it felt reasonable to take advantage of that. My approach continued being similar but the objective changed from "trying to find something interesting to develop" to "try to get more visibility and get the interest of players".
 
 # Following Twitter/X Trends
 
-On May 2024 I decided to [join a twitter/x trend](https://x.com/arielsan/status/1789789080370258069) where you had to quote another tweet in the trend with a similar text and share something about your game. Doing this worked pretty well so I decided to try to join more trends in the future.
+As I mentioned before, on May 2024 I decided to [join a twitter/x trend](https://x.com/arielsan/status/1789789080370258069) where the idea is you have to quote another tweet in the trend with a similar text and share something about your game. Since doing this worked pretty I decided to join more trends as they appear.
 
 This is a list of some of the trends I joined:
 
@@ -44,28 +44,27 @@ Some of them converted better than others but it was positive in general. I didn
 
 # Social networks
 
-Not so long ago, when Twitter/X was "going do die" and Bluesky and Threads started to get more and more interest, I decided to create my personal accounts and started to share Ship Miner content as well. Even though it was good to start having some presence there, if I compare them 1 to 1 to Twitter they were really initially. Obviously, I didn't have followers and had to build my presence there but I also believe the platforms were a bit green as well like you couldn't share GIFs, etc. 
+Not so long ago, when Twitter/X was "going do die" and Bluesky and Threads started to get more and more interest, I decided to create my personal accounts and started to share Ship Miner content as well. Even though it was good to start having some presence there, they were not comparable with Twitter initially. Obviously, I didn't have the same followers and had to build that but they also lacked some features like sharing GIFs. 
 
-After some months, both Bluesky and Threads started to improve getting more features and also more users. How are they doing now? Well, in my case, Bluesky has no explosive potential yet, at least for now, all my posts behave the same while the same posts did pretty well in other social networks. In the case of Threads, it started like I didn't exist to the world but at [some point I started to exist](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk) and then it started to behave similar to Twitter/X (completely unexpected).
+After some months, both Bluesky and Threads started to improve getting more features and also more users. How is Ship Miner doing now on those platforms? Well, in my case, Bluesky has no explosive potential yet, at least for me, my posts don't get new visibility while the same posts on other social networks do. In the case of Threads, I didn't have much luck initially but at [some point something changed](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk) and now it shows some numbers similar to Twitter/X.
 
 ### Tubmlr?
 
-I recently decided to start to interact a bit more on Tumblr too. The truth is I don't see a powerful marketing potential there but for some reason I like the community there, don't know why, I suppose it is more niche or something. So don't have any expectations there but I like it. 
+I recently decided to start to interact a bit more on Tumblr too. The truth is I don't see a powerful marketing potential there but for some reason I like the community since I suppose it is more niche or something. So I don't have any marketing expectations but I will keep posting stuff. 
 
 ### Discord
 
-Not sure if I can call it investing in marketing or investing in community, or maybe in both but I tried to be  
-Discord
+Not sure if I can call it investing in marketing or in community, or maybe in both but when I participate in the gamedev servers I am, I normally use examples of my game and/or share stuff there trying always to be open and collaborative. That was always my behaviour, like I didn't need an ultimate objective to do that since I know that in the long term, being part of communities normally bring something in return.  
 
 ## What about Reddit?
 
-What happened to Reddit? that's a question I ask myself several times. Even though the initial good reaction was on Reddit, nowadays I am posting less frequent. Why? well, mainly because the reaction to my posts didn't match my expectations after the first successful post. I believe there are different reasons for that. 
+What happened to Reddit? that's a question I ask myself several times. Even though the initial good reaction was on Reddit, nowadays I am posting less frequent. Why? well, mainly because the reaction to my posts didn't match my expectations after the initial successful one. I believe there are different reasons for that. 
 
-One reason is I believe I had a good reaction the first time because it was the typical "hey I am a solo dev making this" which normally is well received while anything else that looks like "I want your wishlist" feels more like ads and reddit users (me included) don't like that so much. 
+One reason is I believe I had a good reaction the first time because it was the typical "hey I am a solo dev making this" which normally is well received while anything else that looks like "I want your wishlist" feels more like it is an ad and reddit users (me included) don't like that so much. 
 
 Another reason that might affect was that reddit UI changed and my lowres 1bit color game is less visible on first sight when scrolling through reddit posts. 
 
-To take more advantage of Reddit I believe I should switch the approach and try something more natural and look for more interaction and feedback, for example sharing something I am doing like defining different enemy visual styles and explain why and ask for opinions, etc. That obviously will be more interesting to developers than players but I hope it will help in the long term.    
+An option to try to take more advantage of Reddit could be to switch to share more about the game development and look for interaction and feedback. That is normally more interesting to developers than players but I am in developers subreddit so it makes sense. Another option for the future is to start participating in gaming communities more to share about the game and/or start paying to have ads directly. 
 
 # General Marketing
 
@@ -84,33 +83,34 @@ Another thing to talk about is the call to action. Normally, after the post ther
 
 # Wishlists
 
-This is the graph of wishlists since I created the Steam page.  
+This is the graph of wishlists since I created the Steam page, and some of the things I did to get those small spikes.
 
 <div class="post-image">
-  <img src="/assets/marketing/marketing_wishlists_total.png" />
+  <img src="/assets/marketing/marketing_wishlists_total_marks.png" />
 </div>
 
-_TODO: map each moment with some action I took._
-
-
-# Development Marketing Tools
-
-* Dev scenes, cinematic tools, camera, etc, marketing image levels, etc.
-
- how I am modifying and/or doing some tools to easily do some marketing ideas, that could work more or less but still.
-
-My approach to marketing is pretty naive and simple for now, just post videos/gifs of the game from time to time. 
-
-## An example for the 2k wishlist post
-
-VIDEO/SCREENSHOTS OF BEHIND THE SCENES?
-
-One question that sometimes arises is, should I be spending all this dev time in marketing efforts? or maybe I should just switch to use that time to try to work more and use that money to pay for Ship Miner ads? I could also try to get a deal with a team and delegate marketing efforts and investment to them by sacrificing a % when the game gets released? Well, all of those options are not opposite between them so maybe I go with a combination but what I am sure is I am learning a lot by having more and better tools for marketing inside the game and I feel it is aligned with my long term investment pillar I decided when I started my company.
+1. Steam page Announcement (teaser) + [penusbmic](https://penusbmic.itch.io/) shared story with link on instagram :heart:
+2. Sep 2 - Steam Exploration Fest
+3. Oct 9 - Hi twitter this is my game
+4. Nov 9 - Happy birthday to Ship Miner
+5. Jan & Feb - Just some posts and/or trends.
+6. Mar & April - Shared multiple videos with audio, Threads discovered the game and started working
+7. More posts and/or trends
 
 # Conclusions
 
-One important conclusion is that a lot of times having luck is a big factor. So you can make a great post but if it isn't the right time, it will disappear in the aether. The opposite can happen to, you can do a shitty post and maybe it got a lot of visibility but got 0 reaction and ends up disappearing in the aether. So how do you know the post is good to keep trying. The answer is you don't know xD, and my conclusion is sometimes you have to try a couple of times if you believe in your post, and some others you are in charge of disappearing your post in the aether to not leave traces that it was really bad xD. 
+One important conclusion is that a lot of times having luck is a big factor. So you can make a great post but if it isn't the right time, it will disappear in the void. The opposite can happen to, you can do a shitty post and maybe it got a lot of visibility but got 0 reaction and ends up disappearing in the aether. So how do you know the post is good to keep trying. The answer is you don't know xD, and my conclusion is sometimes you have to try a couple of times if you believe in your post, and some others you are in charge of disappearing your post in the aether to not leave traces that it was really bad xD. 
 
 Participating in other communities and building a community feels like super related with doing marketing as well but in a more indirect way.
 
 Another important one is that, no matter how much effort I  put in this, having a good demo in steam will probably outpace by far all this small efforts, or maybe it will invalidate the game in some way.
+
+I want to write another dev blog post showing some of the internal tools I did inside the game that helps me when creating marketing content like videos and GIFs.
+
+Thanks for reading! 
+
+WISHLIST Ship Miner!!
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+</div>
