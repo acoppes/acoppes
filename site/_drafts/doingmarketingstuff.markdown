@@ -5,10 +5,11 @@ date:   2025-01-01 00:08:00 -0300
 excerpt: I want to share part of my experience and learnings on how I am doing the marketing of Ship Miner.
 author: Ariel Coppes
 tags:
-  - personal
-  - update
-  - review
+  - marketing
   - shipminer
+  - development
+  - learning
+  - community
 image:
   path: /images/shipminer-preview.png
   height: 100 
