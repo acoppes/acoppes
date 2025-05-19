@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Learning how to do marketing for Ship Miner"
-date:   2025-01-01 00:08:00 -0300
-excerpt: I want to share part of my experience and learnings on how I am doing the marketing of Ship Miner.
+title:  "Doing Marketing for Ship Miner"
+date:   2025-05-18 00:08:00 -0300
+excerpt: After a year of working on how to market my game Ship Miner I want to share part of my experience and learnings about it.
 author: Ariel Coppes
 tags:
   - marketing
@@ -18,7 +18,7 @@ image:
 
 # Intro
 
-I want to share part of my experience and learnings on how I am doing the marketing for Ship Miner.
+After a year of working on how to market my game Ship Miner I want to share part of my experience and learnings about it.
 
 It all started while finding which game to make, before having Ship Miner. My approach for "marketing" at that time was to just share images and videos of what I did on Twitter/X only. 
 
@@ -59,7 +59,7 @@ I recently decided to start to interact a bit more on Tumblr too. The truth is I
 
 Not sure if I can call it investing in marketing or in community, or maybe in both but when I participate in the gamedev servers I am, I normally use examples of my game and/or share stuff there trying always to be open and collaborative. That was always my behaviour, I didn't need an ultimate objective since I know that in the long term, being part of communities normally bring something good in return.  
 
-## What about Reddit?
+### What about Reddit?
 
 What happened to Reddit? that's a question I ask myself several times. Even though the initial good reaction was on Reddit, nowadays I am posting less frequent. Why? well, mainly because the reaction to my posts didn't match my expectations after the initial successful one. There might be different reasons for that. 
 
@@ -70,6 +70,12 @@ Another reason that might affect was that reddit UI changed and my lowres 1-bit 
 One way to try to take more advantage of Reddit could be to switch to share more about the game development and look for interaction and feedback. That is normally more interesting to developers than players but I am in developers subreddits so it might make more sense. 
 
 Another option for the future is to start participating in gaming communities more to share about the game and/or start paying to have ads directly. 
+
+### Others
+
+I didn't explore Tiktok nor Youtube Shorts yet. One of the reasons is I am not a user of those networks and would be more difficult to me to create something for that since it is not the same content I already create. However, it is something I have to explore eventually.
+
+I've never considered Linkedin as a marketing tool but I see more posts that start to feel like other social networks so maybe it is something to explore too? even though it always felt more "professional" and not to reach potential players. 
 
 # General Marketing
 
