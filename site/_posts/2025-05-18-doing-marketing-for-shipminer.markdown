@@ -2,7 +2,7 @@
 layout: post
 title:  "Doing Marketing for Ship Miner"
 date:   2025-05-18 00:08:00 -0300
-excerpt: After a year of working on how to market my game Ship Miner I want to share part of my experience and learnings about it.
+excerpt: After a year of working on how to market my game Ship Miner I want to share part of my experience and learning about it.
 author: Ariel Coppes
 tags:
   - marketing
@@ -18,7 +18,7 @@ image:
 
 # Intro
 
-After a year of working on how to market my game Ship Miner I want to share part of my experience and learnings about it.
+After a year of working on how to market my game Ship Miner I want to share part of my experience and learning about it.
 
 It all started while finding which game to make, before having Ship Miner. My approach for "marketing" at that time was to just share images and videos of what I did on Twitter/X only. 
 
