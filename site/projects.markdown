@@ -3,16 +3,16 @@ layout: page
 title: Games
 permalink: /projects/
 projects:
-  - name: Cleared Hot (work in progress)
-    url: https://store.steampowered.com/app/1710820/Cleared_Hot/
-    steam_widget: https://store.steampowered.com/widget/1710820/
-    images: /images/screenshots_clearedhot.gif
-    description: Nostalgic helicopter shooter with satisfying physics and light tactical elements.
   - name: Ship Miner (work in progress)
     url: https://shipminer.arielcoppes.dev/
     steam_widget: https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement
     images: /assets/moonminer/shipminer-gameplay-01.gif
     description: 1bit lowres pixelart scifi miner game. (personal project)
+  - name: Cleared Hot (work in progress)
+    url: https://store.steampowered.com/app/1710820/Cleared_Hot/
+    steam_widget: https://store.steampowered.com/widget/1710820/
+    images: /images/screenshots_clearedhot.gif
+    description: Nostalgic helicopter shooter with satisfying physics and light tactical elements.
   - name: Gorilla Jones
     url: https://arielsan.itch.io/gorillajones
     images: /images/screenshots_gorillajones.png
