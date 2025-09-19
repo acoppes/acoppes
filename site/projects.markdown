@@ -5,7 +5,7 @@ permalink: /projects/
 projects:
   - name: Ship Miner (work in progress)
     url: https://shipminer.arielcoppes.dev/
-    steam_widget: https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement
+    steam_widget: https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement
     images: /assets/moonminer/shipminer-gameplay-01.gif
     description: 1bit lowres pixelart scifi miner game. (personal project)
   - name: Cleared Hot (work in progress)
