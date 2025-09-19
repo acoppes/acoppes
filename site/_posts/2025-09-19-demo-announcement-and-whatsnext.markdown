@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ":rocket: Ship Miner Demo Announcement :rocket:"
+title:  "Ship Miner Demo Announcement"
 date:   2025-09-19 00:08:00 -0300
 excerpt: I've just released the Demo of Ship Miner but does that means the game is done? In this blogpost I will explain what the Demo means to the game, what is the current state and roadmap and what's next.
 author: Ariel Coppes
