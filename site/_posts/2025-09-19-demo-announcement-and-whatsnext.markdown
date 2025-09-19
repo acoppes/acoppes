@@ -24,7 +24,7 @@ image:
 </div>
 
 <div align="center">
-<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
 
 I've just released the Demo of Ship Miner :rocket: Weeee!!! But, does that means the game is almost done? No, it is far from over. In this blogpost I will explain what happened from the last Roadmap update, the new importance for having a Demo and the updated Roadmap.

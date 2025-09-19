@@ -24,7 +24,7 @@ For those here for the first time, Ship Miner is a 1-bit Pixel Art twin stick mi
 If you like it, you can add it to your wishlist here:
 
 <div align="center">
-<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
 
 I recently did a recap of [what I did in 2024 and a high level plan for 2025](/2025/01/12/recap-2024-and-2025-plans/). In this blogpost I want to write of what I think is the current state of Ship Miner and a possible Roadmap for having a Demo in Steam.
