@@ -61,6 +61,7 @@ So the current roadmap includes now:
 * Achievements
 * Retro visual effects like scanlines, crt, etc.
 * Better Savegame System (continue where you were)
+* Mouse support
 
 I am still unsure on how much time I need to complete the game considering I am working part time on it, right now I feel like I need at least 6 months more to have the game in the state I want to.
 
