@@ -63,7 +63,13 @@ So the current roadmap includes now:
 * Better Savegame System (continue where you were)
 * Mouse support
 
-I am still unsure on how much time I need to complete the game considering I am working part time on it, right now I feel like I need at least 6 months more to have the game in the state I want to.
+## What about the private Playtest
+
+_(Some players asked what I am going to do with the Playtest, so I added this section.)_
+
+Before the Demo was published, the idea of the private Playtest was to test the build for the Demo, so once I published it I removed the join Playtest button. However, my plan for the private Playtest is to continue using it but now to test the final game itself. I will re activate the join Playtest button on Steam for players wanting to continue playing and testing the real game, they can join there or by asking me for a key on [Discord](https://discord.gg/h8pBSNkzXd). The Demo will continue getting some feature related updates, and maybe some content updates too.
+
+I am still unsure on how much time I need to complete the game considering I am working part time on it, right now I feel like I need at least 6 months more to have the game close to the state I want to.
 
 Again, I want to thank so much all to the playtesters for taking time to play the game and give me feedback, it means a lot to me :beers:.
 
