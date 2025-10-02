@@ -3,6 +3,12 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Faster Than Luck"
+    url: https://arielsan.itch.io/gbjam13
+    images: 
+      - /images/jams_gbjam13_fasterthanluck.gif
+    description: Help Captain Lucky Pixel and his crew escape the Unfortunate Galaxy or become trapped forever? Gather as many Luckies and pay your fee to exit the galaxy.
+    jam: GBJAM13
   - name: "Dance Zombie Dance"
     url: https://arielsan.itch.io/gbjam12
     images: 
