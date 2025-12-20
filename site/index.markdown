@@ -7,9 +7,13 @@ layout: home
 
 <!-- The idea here is to show who am I and what I stand for in terms of game development and engineering and what are my main skills -->
 
-I'm a father of two, 40 years old, Game Developer and Software Engineer with passion for games and programming and 14 years of experience in game development and 4+ years in general software. 
+I'm a 41 years old Game Developer and Software Engineer with passion for games and programming, and I have more than 15 years of experience, mainly in game development. I am a father of a 5 years old kid and a 3 years old girl.
 
-Recently, I started my own company named [Pixel Core Games](https://x.com/pixelcoregames) and I am developing [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
+I have a Game Development company named [Pixel Core Games](https://x.com/pixelcoregames) and I am currently providing development services to [Clered Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/), a nostalgic helicopter shooter with satisfying physics and light tactical elements, and also developing my game [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
+</div>
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
@@ -21,7 +25,7 @@ Even though my main focus is making games, I enjoy a lot scaling them up by impr
 
 Site map:
 
-* Want to work together? check the [Contact](/contact) page to decide how to contact me.
+* In [Contact](/contact) page you can see how to get in contact with me.
 * Check out the [Games](/projects) I've worked on to see what I do and also the mini games and prototypes from the [Game Jams](/jams) I've participated. 
 * For technical content you can check out my dev [Blog](/blog) page. I've also generated technical content over the years in my old dev blog at [Gemserk](https://blog.gemserk.com) website.
 
