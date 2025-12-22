@@ -27,40 +27,48 @@ Those two events changed the dynamics of the family, for example I started helpi
 
 ## Cleared Hot
 
-This was a super interesting year for Cleared Hot, we managed to release an awesome [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for a Steam Next Fest. We worked hard to get it in time so when players reacted so well to the demo, we felt it paid off. 
+This was a super interesting year for Cleared Hot, we managed to release an awesome [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for Steam Next Fest. We worked hard on that one and when players reacted so well, we felt the effort paid off. 
 
-But then, a month ago, we released the game in [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) with the first chapter of the story. We worked even harder to get this one in proper shape and in time but the good thing is that it was received even better than the Demo. We couldn't be more prouder of the game and the work we did, thank you so much!!. Releasing a game is hard and takes time and having this great reception is a great relief.
+Then, a month ago, we released the game in [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) with the first chapter of the story. We worked even harder to get the game in proper shape, and do it in time, but this one was received even better than the Demo. We couldn't be more happy with the results. Releasing a game is hard and takes time so having a great reception is relieving.
 
-NEW GIF OF THE GAME
-
-Here is the link of the game:
+<div class="project">
+<img src="/images/screenshots_clearedhot.gif"/>
+</div>
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
 </div>
 
-When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. We grew over time and now we have a solid team of super talented people. 
+When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. The team grew up over time and now we have a solid core of super talented people. 
 
-LINK TO PREVIOUS POST
-
-I am enjoying the process, from the initial moments to right now, from the technical challenge side to the human one. I was very lucky Nacho from [Sarnayer]((https://x.com/sarnayer)) put me in contact with Colin. By the way, he is in the credits as:
+I am enjoying the process, from the initial moments to right now, from the technical challenge to the human interactions. I was very lucky that Ignacio from [Sarnayer]((https://x.com/sarnayer)) put me in and Colin in contact two years ago. By the way, he is in the credits with a special role as the one who connected us xD.
 
 <div class="project">
 <img src="/assets/2025review/nacho-credits.png" width="300px"/>
-<span>(note: we call Nacho to all Ignacios in Uruguay)</span>
 </div>
 
 ## Ship Miner & Pixel Core Games
 
-My plan for the year was to release a public Demo of Ship Miner and also to maybe release the game in Early Access.
+In terms of my game, my plan for the year was to release a public Demo of Ship Miner, which I did, and also try to release in Early Access, which I didn't.
 
-Well, after the initial [plan to have a demo](/2025/03/29/shipminer-roadmap-to-demo) 
+While [planning for the Demo]((/2025/03/29/shipminer-roadmap-to-demo)) I knew I had to work on defining some important parts of the game, so I focused first on that. While working on that, I changed my mind a bit and instead of rushing the Demo I started a private Playtest in Steam. That allowed me to start getting feedback more gradually and prepare a better Demo.
 
-GIF OF THE GAME
+I was surprised of how many people subscribed to the private playtest. As I continued working on the game week by week I started to activate more and more testers over time and to get more and more feedback, that was awesome and I am really grateful with everyone.
+
+The general marketing advice for small indies is to have a Demo as soon as possible and improve it over time. So, after multiple iterations with playtest version I decided the core game experience was ready to be there, even though I knew there are some big pieces missing, so in mid September I released the first version of [Ship Miner Demo](/2025/09/19/demo-announcement-and-whatsnext.html).
+
+<div class="post-image">
+<video controls width="100%" autoplay="autoplay" muted="muted">
+  <source src="/assets/shipminer/shipminer-demo-announcement-rc1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+</div>
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
+
+I continue working on the game, at a slow pace, and updating the Demo too in order to communicate better what the game is going to be. Right now I am working on the middle loop, where the player decides where to go next after completing one asteroid.
 
 In terms of other projects and jams, this year I took that easy and only decided to participate in the [GBJAM](https://itch.io/jam/gbjam-13). The theme for this year was Luck and we made a game named Faster than Luck with my friend [Unf0ld](https://www.instagram.com/unf0ldmusic/?hl=en).
 
