@@ -21,45 +21,39 @@ End of year is coming and it is a good time to do a recap of what happened this 
 
 ## Personal
 
-In personal terms, it was a difficult year, my dad passed away, he got a respiratory infection in July and even he was a healthy person, he couldn't recover. It was really unexpected and hard to process for all the family. We loved him so much and we are missing him a lot. Then, a month ago, my grandma also passed away. Even though her case was a bit different, since she was mentally ill for a long time and she was really old, it wasn't easy to process. I don't need to enter in more detail but we are still processing it.
+This was a difficult year since my dad passed away. He caught a respiratory infection around July and even thought he was a healthy person, he couldn't recover from it. We didn't expect this to happen and it was hard to process for all the family and friends. He was really loved by everyone and we are going to miss him a lot. I randomly cry when doing things (writing about this makes me cry too :sob:), I think about him but also about life and death, and about my children and how I want to be there for them.
 
-Those two events changed the dynamics of the family, for example I started helping my mom with different things. That affected my work but since I have flexibility I can gradually adjust working hours of each project while things happen, and adjust back once they go back to less not normal.
+That wasn't all, a month ago my grandma also passed away. Even though her case was a bit different, since she was mentally ill for a long time and she was really old, it was really sad as well.
+
+Those two events changed the dynamics of the family, included my work. One good thing is I have flexibility so I was able to adjust the hours I spend on each project to be there for family (mainly for my mom), and now things are returning to "normal", I can adjust back.
 
 ## Cleared Hot
 
-This was a super interesting year for Cleared Hot, we managed to release an awesome [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for Steam Next Fest. We worked hard on that one and when players reacted so well, we felt the effort paid off. 
-
-Then, a month ago, we released the game in [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) with the first chapter of the story. We worked even harder to get the game in proper shape, and do it in time, but this one was received even better than the Demo. We couldn't be more happy with the results. Releasing a game is hard and takes time so having a great reception is relieving.
-
 <div class="project">
 <img src="/images/screenshots_clearedhot.gif"/>
+</div>
+
+This was a super interesting year for Cleared Hot. We released the [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for Steam Next Fest, and it was really well received by players, wishlists increased a lot and, even though it was a great effort to get it in time and we were a bit tired, it was a great motivational push to work forward for the next big milestone. 
+
+Then, a month ago, we released the game in [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) with the first chapter of the story. We worked really hard for this one and it was received even better than the Demo. We couldn't be more happy with the results. Releasing a game is hard and takes time so having a great reception is relieving.
+
+When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. The team grew up over time and now we have a solid core of super talented people, each one with a super power (my superpower is to cleanup the project including code, prefabs, scenes, plugins and my commits remove stuff that what I add xD).
+
+We integrated my [GameObject Triggers' Logic](https://github.com/acoppes/unity-gemserk-utilities/tree/main/Packages/com.gemserk.triggers) into the project and we are using it to create the logic for the levels and I am really happy with that (btw, I am using the same core system in Ship Miner) since it proves again and again it is ready for games (I used a similar solution for Iron Marines 1 and Iron Marines 2 while in Ironhide).
+
+Even though we work together in most of the technical solutions, I was responsible of the destruction system of the game where models are destroyed by physics interactions _(I could write in detail about this system in another blog post)_. All the destructible models are created by [Mane](https://www.artstation.com/m4ndrill) and we worked together in tools so he can also integrate and test them in the game too.
+
+I am enjoying the process, from the moment I started to right now, from the technical challenge to the human interactions. I was very lucky that Ignacio from [Sarnayer]((https://x.com/sarnayer)) put me and Colin in contact two years ago :beers:. By the way, he is in the credits with a special role as the one who connected us :satisfied:.
+
+<div class="project">
+<img src="/assets/2025review/nacho-credits.png" width="300px"/>
 </div>
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
 </div>
 
-When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. The team grew up over time and now we have a solid core of super talented people. 
-
-I am enjoying the process, from the initial moments to right now, from the technical challenge to the human interactions. I was very lucky that Ignacio from [Sarnayer]((https://x.com/sarnayer)) put me in and Colin in contact two years ago. By the way, he is in the credits with a special role as the one who connected us xD.
-
-<div class="project">
-<img src="/assets/2025review/nacho-credits.png" width="300px"/>
-</div>
-
 ## Ship Miner & Pixel Core Games
-
-In terms of my game, my plan for the year was to release a public Demo of Ship Miner, which I did, and also try to release in Early Access, which I didn't.
-
-While [planning for the Demo]((/2025/03/29/shipminer-roadmap-to-demo)) I knew I had to work on defining some important parts of the game, so I focused first on that. While working on that, I changed my mind a bit and instead of rushing the Demo I started a private Playtest in Steam. That allowed me to start getting feedback more gradually and prepare a better Demo.
-
-I was surprised with how many people subscribed to the private playtest. As I continued working on the game, week by week, I started to give access to more playtesters over time and to receive more feedback from them. That was awesome and I really appreciate the time they spent on the game.
-
-However, the general marketing advice for small indies is to have a Demo as soon as possible, and while you continue working on the game, improve the Demo too. So, after multiple iterations with the playtest version I decided publish the [Ship Miner Demo](/2025/09/19/demo-announcement-and-whatsnext.html) since the core game experience was ready to be shared with the world. I knew there were some big pieces of the game missing but still believe there was something interesting to share. Bte, I continue using the private playtest with game updates too.
-
-Right now I am working on a mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
-
-This is Ship Miner: 
 
 <div class="post-image">
 <video controls width="100%" autoplay="autoplay" muted="muted">
@@ -67,6 +61,26 @@ This is Ship Miner:
   Your browser does not support the video tag.
 </video> 
 </div>
+
+In terms of my game Ship Miner, I released a Demo in , my plan for the year was to release a public Demo of Ship Miner, which I did, and also try to release in Early Access, which I didn't.
+
+While [planning for the Demo](/2025/03/29/shipminer-roadmap-to-demo) I knew I had to work on defining some important parts of the game, so I focused first on that. While working on that, I changed my mind a bit and instead of rushing the Demo I started a private Playtest in Steam. That allowed me to start getting feedback more gradually and prepare a better Demo.
+
+I was surprised with how many people subscribed to the private playtest. As I continued working on the game, week by week, I started to give access to more playtesters over time and to receive more feedback from them. That was awesome and I really appreciate the time they spent on the game.
+
+However, the general marketing advice for small indies is to have a Demo as soon as possible, and while you continue working on the game, improve the Demo too. So, after multiple iterations with the playtest version I decided publish the [Ship Miner Demo](/2025/09/19/demo-announcement-and-whatsnext.html) since the core game experience was ready to be shared with the world. I knew there were some big pieces of the game missing but still believe there was something interesting to share. Bte, I continue using the private playtest with game updates too.
+
+<div class="project">
+<img src="/assets/2025review/shipminer-wishlist-01.png"/>
+</div>
+
+<div class="project">
+<img src="/assets/2025review/shipminer-wishlist-02.png"/>
+</div>
+
+A year ago the game had around 1.3k wishlists and now the game has around 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when I am close to the release.
+
+I am currently working on a mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
