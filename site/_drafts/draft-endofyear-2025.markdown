@@ -66,13 +66,15 @@ I am enjoying the process, from the moment I started to right now, from the tech
 </video> 
 </div>
 
-In terms of my game Ship Miner, I released a Demo in , my plan for the year was to release a public Demo of Ship Miner, which I did, and also try to release in Early Access, which I didn't.
+In terms of my game Ship Miner, I started by publishing a private [Playtest](https://store.steampowered.com/news/app/3113690?emclan=103582791474645825&emgid=543363541685502057) around mid July with the idea of start getting feedback more gradually to prepare for a better Demo. I was surprised with how many people subscribed to it. I started with a small number of players but as I continued working on the game I gave access to more and more playtesters. I can't be more grateful for the time they spent on my game and for the feedback they gave me :raised_hands:.
 
-While [planning for the Demo](/2025/03/29/shipminer-roadmap-to-demo) I knew I had to work on defining some important parts of the game, so I focused first on that. While working on that, I changed my mind a bit and instead of rushing the Demo I started a private Playtest in Steam. That allowed me to start getting feedback more gradually and prepare a better Demo.
+_Btw, I continue using the Playtest with game updates before publishing to Demo_
 
-I was surprised with how many people subscribed to the private playtest. As I continued working on the game, week by week, I started to give access to more playtesters over time and to receive more feedback from them. That was awesome and I really appreciate the time they spent on the game.
+In September, after some playtest iterations, I published the first [Demo of Ship Miner](/2025/09/19/demo-announcement-and-whatsnext.html). Even though some important elements of the game are still being defined I decided to continue since I felt the core game experience was ready to be shared with the world. 
 
-However, the general marketing advice for small indies is to have a Demo as soon as possible, and while you continue working on the game, improve the Demo too. So, after multiple iterations with the playtest version I decided publish the [Ship Miner Demo](/2025/09/19/demo-announcement-and-whatsnext.html) since the core game experience was ready to be shared with the world. I knew there were some big pieces of the game missing but still believe there was something interesting to share. Bte, I continue using the private playtest with game updates too.
+I am currently working on the mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
+
+Here is wishlist activity along the year.
 
 <div class="project">
 <img src="/assets/2025review/shipminer-wishlist-01.png"/>
@@ -82,22 +84,21 @@ However, the general marketing advice for small indies is to have a Demo as soon
 <img src="/assets/2025review/shipminer-wishlist-02.png"/>
 </div>
 
-A year ago the game had around 1.3k wishlists and now the game has around 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when I am close to the release.
+A year ago the game had around 1.3k wishlists and now it has 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when the Demo is the best possible, closer to the release.
 
-In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a good post there). I recently started to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I don't have a good call to action there so I didn't convert almost anything. 
+In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a good post there). I started also to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I still don't have a good call to action there so the conversion to wishlists was really low.
+
 For the next year the idea is to start participating in more events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. 
-
-I am currently working on a mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
 
-Even though I didn't start Ship Miner to make my dad proud or something like that, I really wanted to share with him my gamedev journey and also the release of my own game to the world. He was one of the main reasons I decided to make games when I was a kid and I really hope he is somewhere out there, watching.
+Even though I didn't start Ship Miner to make my dad proud or something like that, I really wanted to share with him my gamedev journey and also the release of my own game to the world. He was one of the main reasons I decided to make games when I was a kid and I really hope he is somewhere out there watching over me.
 
 ## Other projects & game jams
 
-In terms of other projects and jams, this year I took that easy and only decided to participate in the [GBJAM](https://itch.io/jam/gbjam-13). The theme for this year was Luck and we made a game named Faster than Luck with my friend [Unf0ld](https://www.instagram.com/unf0ldmusic/?hl=en).
+In terms of other projects and jams, this year I took that easy and only decided to participate in the [GBJAM](https://itch.io/jam/gbjam-13). The theme for this year was Unlucky and we made a game named Faster than Luck with my friend [Unf0ld](https://www.instagram.com/unf0ldmusic/?hl=en), clearly inspired by [FTL](https://store.steampowered.com/app/212680/FTL_Faster_Than_Light/) (a game we both love).
 
 <div class="project">
 <img src="/assets/2025review/itch_cover.gif" width="240px"/>
