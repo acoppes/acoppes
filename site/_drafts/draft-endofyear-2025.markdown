@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "2025 recap and my plan fo 2026"
+title:  "2025 summary and my expectations for 2026"
 date:   2025-12-20 00:08:00 -0300
-excerpt: End of year is coming and I did a small analysis of where am I right now and my plan for next year.
+excerpt: The end of the year is approaching and I have made a summary of what happened during 2025 and what to expect for 2026.
 author: Ariel Coppes
 tags:
   - personal
@@ -15,7 +15,7 @@ image:
   width: 100
 ---
 
-End of year is coming and it is a good time to do a recap of what happened during 2025 and write of what I expect for 2026, [as I did the last year](/2025/01/12/recap-2024-and-2025-plans).
+The end of the year is approaching and I have made a summary of what happened during 2025 and write of what I expect for 2026, [as I did the last year](/2025/01/12/recap-2024-and-2025-plans).
 
 # What happened in 2025
 
@@ -66,13 +66,15 @@ I am enjoying the process, from the moment I started to right now, from the tech
 </video> 
 </div>
 
-In terms of my game Ship Miner, I started by publishing a private [Playtest](https://store.steampowered.com/news/app/3113690?emclan=103582791474645825&emgid=543363541685502057) around mid July with the idea of start getting feedback more gradually to prepare for a better Demo. I was surprised with how many people subscribed to it. I started with a small number of players but as I continued working on the game I gave access to more and more playtesters. I can't be more grateful for the time they spent on my game and for the feedback they gave me :raised_hands:.
+In terms of my game Ship Miner, I started by publishing a private [Playtest](https://store.steampowered.com/news/app/3113690?emclan=103582791474645825&emgid=543363541685502057) around mid July with the idea of start getting feedback more gradually to prepare for a better Demo. I was surprised with how many people subscribed to it. I started by giving access to a small number of playtesters and as I continued working on the game I gave access to more and more. I can't be more grateful for the time they spent on my game and for the feedback they gave me :raised_hands:.
 
-_Btw, I continue using the Playtest with game updates before publishing to Demo_
+_Btw, I continue using the Playtest with game updates before publishing to Demo._
 
 In September, after some playtest iterations, I published the first [Demo of Ship Miner](/2025/09/19/demo-announcement-and-whatsnext.html). Even though some important elements of the game are still being defined I decided to continue since I felt the core game experience was ready to be shared with the world. 
 
-I am currently working on the mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
+I am currently working on the mid loop of the game where the player decides where to go next after completing each asteroid, hope to get an update soon.
+
+In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a [good post there](https://www.reddit.com/r/PixelArt/comments/1pai9yq/my_programmer_pixel_art_xd_do_you_like_it/) but still not sure how to do it). I started also to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I still don't have a good call to action there so the conversion to wishlists was really low. I believe a key element here is to be consistent in posting content and I failed a bit this year.
 
 Here is wishlist activity along the year.
 
@@ -86,9 +88,7 @@ Here is wishlist activity along the year.
 
 A year ago the game had around 1.3k wishlists and now it has 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when the Demo is the best possible, closer to the release.
 
-In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a good post there). I started also to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I still don't have a good call to action there so the conversion to wishlists was really low.
-
-For the next year the idea is to start participating in more events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. 
+For the next year the idea is to start participating in more steam events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. I also plan to improve posting consistency.
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
@@ -120,12 +120,15 @@ When I started the year I also had the objective of find ideas for a possible ne
 
 # What's up for 2026
 
-For the next year the idea is to work hard and consistent on both projects, Cleared Hot needs to be prepare for full release and Ship Miner should get at least an Early Access one. 
+For the next year the idea is to work hard and consistent on both projects, Cleared Hot needs to be ready for a full release and Ship Miner should at least get an Early Access one. 
 
-Another idea is too try to get more time to work on prototypes and jams again just for fun, improvement and learning. And maybe, just maybe, get an idea for a next project while doing so.
+Another thing I want is too try to get more time to work on prototypes and jams again just for fun, improvement and learning. And maybe, just maybe, get an idea for a next project while doing so.
 
-I also would love to go to a gamedev conference outside my country this year.
+I would love to go to a gamedev conference outside my country this year, it's been a while since I go to something else than the local events.
 
-That's it for now, no big plans for 2026 more than just continue with what I am doing, 2025 was rough year with lows and highs.
+That's it for now, no big plans for 2026 more than just continue with what I am doing, 2025 was a rough year with lows and highs.
 
-Thanks for reading, I wish you all a great new year.
+Thanks for reading! 
+
+I wish you all a great new year.
+
