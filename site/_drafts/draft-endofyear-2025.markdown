@@ -47,11 +47,13 @@ We integrated my [GameObject Triggers' Logic](https://github.com/acoppes/unity-g
 
 Even though we work together in most of the technical solutions, I was responsible of the destruction system of the game where models are destroyed by physics interactions _(I could write in detail about this system in another blog post)_. All the destructible models are created by [Mane](https://www.artstation.com/m4ndrill) and we worked together in tools so he can also integrate and test them in the game too.
 
-I am enjoying the process, from the moment I started to right now, from the technical challenge to the human interactions. I was very lucky that Ignacio from [Sarnayer]((https://x.com/sarnayer)) put me and Colin in contact two years ago :beers:. By the way, he is in the credits with a special role as the one who connected us :satisfied:.
+I am enjoying the process, from the moment I started to right now, from the technical challenge to the human interactions. I was very lucky that Ignacio from [Sarnayer]((https://x.com/sarnayer)) put me and [Colin](https://colinkarpfinger.com/) in contact two years ago :beers:. By the way, he is in the credits with a special role as the one who connected us :satisfied:.
 
 <div class="project">
 <img src="/assets/2025review/nacho-credits.png" width="300px"/>
 </div>
+
+Here is the link of Cleared Hot for more info:
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
@@ -66,15 +68,19 @@ I am enjoying the process, from the moment I started to right now, from the tech
 </video> 
 </div>
 
-In terms of my game Ship Miner, I started by publishing a private [Playtest](https://store.steampowered.com/news/app/3113690?emclan=103582791474645825&emgid=543363541685502057) around mid July with the idea of start getting feedback more gradually to prepare for a better Demo. I was surprised with how many people subscribed to it. I started by giving access to a small number of playtesters and as I continued working on the game I gave access to more and more. I can't be more grateful for the time they spent on my game and for the feedback they gave me :raised_hands:.
+In terms of my game Ship Miner, I started by publishing a private [Playtest](https://store.steampowered.com/news/app/3113690?emclan=103582791474645825&emgid=543363541685502057) around mid July with the idea of start getting feedback more gradually to prepare for a better Demo. I was surprised with how many people subscribed to it. I started by giving access to a small number of playtesters and as I continued working on the game I gave access to more and more. Some of them even joined [Ship Miner's Discord server](https://discord.com/invite/h8pBSNkzXd) for a more direct interaction. I can't be more grateful for the time they spent on my game and for the feedback they gave me :raised_hands:. 
+
+I loved this dm from one of the playtesters :blush:: 
+
+> To be honest, I usually just lurk but I have to say the ost mellowed me out (and some tracks gave me Fifth Element vibes) in the best way possible when I played the demo. I was also completely enraptured by the aesthetic that I was really sucked into the gameplay.
+
+In September, after some playtest iterations, I published the first [Demo of Ship Miner](/2025/09/19/demo-announcement-and-whatsnext.html). Even though some important elements of the game are still being defined I decided to continue since I felt the core game experience was ready to be shared with the world. The Demo went ok, the reaction was similar to the playtest but now with more people. This isn't bad, some of them even converted to playtesters but I kinda expected a greater reaction but I failed in applying to any event to announce the Demo. My thinking there was, I don't want to burn all the announcement opportunities with an incomplete Demo but I want to have a Demo as soon as possible so I kinda failed there, I should've applied to all the events as possible announcing it, complete or not since now I will have less chances to re-announce the more completed Demo. 
 
 _Btw, I continue using the Playtest with game updates before publishing to Demo._
 
-In September, after some playtest iterations, I published the first [Demo of Ship Miner](/2025/09/19/demo-announcement-and-whatsnext.html). Even though some important elements of the game are still being defined I decided to continue since I felt the core game experience was ready to be shared with the world. 
-
 I am currently working on the mid loop of the game where the player decides where to go next after completing each asteroid, hope to get an update soon.
 
-In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a [good post there](https://www.reddit.com/r/PixelArt/comments/1pai9yq/my_programmer_pixel_art_xd_do_you_like_it/) but still not sure how to do it). I started also to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I still don't have a good call to action there so the conversion to wishlists was really low. I believe a key element here is to be consistent in posting content and I failed a bit this year.
+In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a [good post there](https://www.reddit.com/r/PixelArt/comments/1pai9yq/my_programmer_pixel_art_xd_do_you_like_it/) but still not sure how to do it). I started also to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I still don't have a good call to action there so the conversion to wishlists was really low. I believe a key element here is to be consistent in posting content and I failed a bit on that this year.
 
 Here is wishlist activity along the year.
 
@@ -86,10 +92,11 @@ Here is wishlist activity along the year.
 <img src="/assets/2025review/shipminer-wishlist-02.png"/>
 </div>
 
-A year ago the game had around 1.3k wishlists and now it has 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when the Demo is the best possible, closer to the release.
+A year ago the game had around 1.3k wishlists and now it has 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then publishing the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when the Demo is the best possible, closer to the release.
 
-For the next year the idea is to start participating in more steam events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. I also plan to improve posting consistency.
+For the next year the idea is to start participating in more steam events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. I also plan to improve my social network posting consistency.
 
+Here is the link for Ship Miner in case you want to play the Demo or just wishlist it:
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
@@ -122,9 +129,9 @@ When I started the year I also had the objective of find ideas for a possible ne
 
 For the next year the idea is to work hard and consistent on both projects, Cleared Hot needs to be ready for a full release and Ship Miner should at least get an Early Access one. 
 
-Another thing I want is too try to get more time to work on prototypes and jams again just for fun, improvement and learning. And maybe, just maybe, get an idea for a next project while doing so.
+Another thing I want is too try to get more time to work on prototypes and jams again just for fun, improvement and learning. And maybe, just maybe, get an idea for a next project while doing so. Doing procedural generation for Ship Miner asteroids was super interesting and I would love to learn more about that next year (maybe I should join a [procjam](https://itch.io/jam/procjam)). 
 
-I would love to go to a gamedev conference outside my country this year, it's been a while since I go to something else than the local events.
+I would love to go to a gamedev conference outside my country this year to personally connect with more people. It's been a while since I go to something else than the local events.
 
 That's it for now, no big plans for 2026 more than just continue with what I am doing, 2025 was a rough year with lows and highs.
 
