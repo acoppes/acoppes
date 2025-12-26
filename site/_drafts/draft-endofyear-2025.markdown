@@ -15,17 +15,17 @@ image:
   width: 100
 ---
 
-End of year is coming and it is a good time to do a recap of what happened this year and write of what I expect for the next year, [as I did the last year](/2025/01/12/recap-2024-and-2025-plans).
+End of year is coming and it is a good time to do a recap of what happened during 2025 and write of what I expect for 2026, [as I did the last year](/2025/01/12/recap-2024-and-2025-plans).
 
 # What happened in 2025
 
 ## Personal
 
-This was a difficult year since my dad passed away. He caught a respiratory infection around July and even thought he was a healthy person, he couldn't recover from it. We didn't expect this to happen and it was hard to process for all the family and friends. He was really loved by everyone and we are going to miss him a lot. I randomly cry when doing things (writing about this makes me cry too :sob:), I think about him but also about life and death, and about my children and how I want to be there for them.
+This was a difficult year since my dad passed away. He caught a respiratory infection around July and even thought he was a healthy person, he couldn't recover from it. We didn't expect this to happen and it was hard to process for all the family and friends. He was really loved by everyone and we are going to miss him a lot. From time to time, I cry thinking about him and life and death, and also about the future and about my children and everything (writing about this makes me cry too :sob:).
 
-That wasn't all, a month ago my grandma also passed away. Even though her case was a bit different, since she was mentally ill for a long time and she was really old, it was really sad as well.
+That wasn't all, a month ago my grandma also passed away. Even though her case was more expected, since she was old and suffering Alzheimer's disease for a long time, it was really sad for the family as well.
 
-Those two events changed the dynamics of the family, included my work. One good thing is I have flexibility so I was able to adjust the hours I spend on each project to be there for family (mainly for my mom), and now things are returning to "normal", I can adjust back.
+Those two events changed the everyday dynamics including my work. However, I am lucky enough to have flexibility with both projects so I adjusted the hours to be there for my mom and family. Now that things are slowly returning to "normal" I can adjust back and/or compensate.
 
 ## Cleared Hot
 
@@ -33,13 +33,17 @@ Those two events changed the dynamics of the family, included my work. One good 
 <img src="/images/screenshots_clearedhot.gif"/>
 </div>
 
-This was a super interesting year for Cleared Hot. We released the [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for Steam Next Fest, and it was really well received by players, wishlists increased a lot and, even though it was a great effort to get it in time and we were a bit tired, it was a great motivational push to work forward for the next big milestone. 
+This was a super interesting year for Cleared Hot. We released the [Demo](https://store.steampowered.com/news/app/1710820/view/497197576207992686) around June, just in time for Steam Next Fest, and it was really well received by players and wishlists increased a lot. Even though it was a great effort to get it in time and we were a bit tired, its success was a great motivational push to work forward for the next milestone. 
 
-Then, a month ago, we released the game in [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) with the first chapter of the story. We worked really hard for this one and it was received even better than the Demo. We couldn't be more happy with the results. Releasing a game is hard and takes time so having a great reception is relieving.
+A month ago, we released an [Early Access](https://store.steampowered.com/news/app/1710820/view/621061805456752828) of the game with the first story arc. We worked even harder but it was received even better than the Demo. We couldn't be happier with the results. Releasing a game is hard and takes time which makes having a great reception relieving. The main difference with the Demo is that players are paying now for the game.
 
-When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. The team grew up over time and now we have a solid core of super talented people, each one with a super power (my superpower is to cleanup the project including code, prefabs, scenes, plugins and my commits remove stuff that what I add xD).
+<div class="project">
+<img src="/assets/2025review/clearedhot-steam-reviews.png" width="50%"/>
+</div>
 
-We integrated my [GameObject Triggers' Logic](https://github.com/acoppes/unity-gemserk-utilities/tree/main/Packages/com.gemserk.triggers) into the project and we are using it to create the logic for the levels and I am really happy with that (btw, I am using the same core system in Ship Miner) since it proves again and again it is ready for games (I used a similar solution for Iron Marines 1 and Iron Marines 2 while in Ironhide).
+When I started working in Cleared Hot, my job was more like a consultant for the general solution of the game and/or specific code stuff. However, over time it changed to be more and more of a general developer, from discussing high level game stuff to deciding the technical solutions and coding too. The team grew up over time and now we have a solid core of super talented people, each one with a super power (my superpower is to cleanup the project including code, prefabs, scenes, plugins :satisfied:).
+
+We integrated my [GameObject Triggers' Logic](https://github.com/acoppes/unity-gemserk-utilities/tree/main/Packages/com.gemserk.triggers) into the project and we are using it to create the logic for the levels and I am really happy with that since it proves the core idea makes sense to create games. I am also using it for my game Ship Miner, and when I was working at Ironhide we used a [similar solution for Iron Marines 1 and Iron Marines 2](https://blog.gemserk.com/2017/03/27/playing-with-starcraft-2-editor-to-understand-how-a-good-rts-is-made/).
 
 Even though we work together in most of the technical solutions, I was responsible of the destruction system of the game where models are destroyed by physics interactions _(I could write in detail about this system in another blog post)_. All the destructible models are created by [Mane](https://www.artstation.com/m4ndrill) and we worked together in tools so he can also integrate and test them in the game too.
 
@@ -53,7 +57,7 @@ I am enjoying the process, from the moment I started to right now, from the tech
 <iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
 </div>
 
-## Ship Miner & Pixel Core Games
+## Ship Miner
 
 <div class="post-image">
 <video controls width="100%" autoplay="autoplay" muted="muted">
@@ -80,11 +84,18 @@ However, the general marketing advice for small indies is to have a Demo as soon
 
 A year ago the game had around 1.3k wishlists and now the game has around 3k. Some key moments were when I had the first [Threads "hit" post](https://www.threads.com/@ariel_coppes/post/DG9QtsgRdqk), starting the private Playtest and then the Demo. I didn't participate in any Steam Next Fest yet, I am saving that for when I am close to the release.
 
+In marketing terms, I did a low effort of showing some Gifs and Videos on Twitter, Bluesky, Threads and Tumblr. From time to time I try again Reddit with different luck (I recently had a good post there). I recently started to put videos in Youtube Shorts, TikTok and Instagram and even though they didn't do bad, I don't have a good call to action there so I didn't convert almost anything. 
+For the next year the idea is to start participating in more events now that I have a public Demo, and also start contacting content creators to try to catch some interest with time. 
+
 I am currently working on a mid loop of the game where the player decides where to go next after completing one asteroid, hope to get an update soon.
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
 </div>
+
+Even though I didn't start Ship Miner to make my dad proud or something like that, I really wanted to share with him my gamedev journey and also the release of my own game to the world. He was one of the main reasons I decided to make games when I was a kid and I really hope he is somewhere out there, watching.
+
+## Other projects & game jams
 
 In terms of other projects and jams, this year I took that easy and only decided to participate in the [GBJAM](https://itch.io/jam/gbjam-13). The theme for this year was Luck and we made a game named Faster than Luck with my friend [Unf0ld](https://www.instagram.com/unf0ldmusic/?hl=en).
 
@@ -104,18 +115,16 @@ I also did a couple of updates to the demo we have with [@penusbmic](https://pen
 <iframe frameborder="0" src="https://itch.io/embed/2440357" width="552" height="167"><a href="https://arielsan.itch.io/penusbmic">STRANDED Showcase - A Penusbmic Asset Packs Demo by arielsan, Penusbmic</a></iframe>
 </div>
 
-In general terms, I also wanted to prototype some new ideas for a possible next game but that didn't happen mainly because Ship Miner is still far from over and didn't make much sense to start something new and to keep the focus on one game.
-
-Even though I didn't start Ship Miner to make my dad proud or something like that, I wanted him to watch me doing it and releasing it to the world since he was one of the main reasons I decided to make games in the first place. I really hope he is somewhere out there, watching.
+When I started the year I also had the objective of find ideas for a possible next game but in the end I decided to keep my focus and energy on Ship Miner to make it as best as possible.
 
 # What's up for 2026
 
-For the next year the idea is to work hard on both projects again, the idea is to get Cleared Hot ready for full release (that means a lot of content) and I hope I can get out Ship Miner at least in Early Access this year. 
+For the next year the idea is to work hard and consistent on both projects, Cleared Hot needs to be prepare for full release and Ship Miner should get at least an Early Access one. 
 
-Another idea is too try to get more time to work on some prototypes and jams again just for fun, improvement and learning, and maybe get some ideas for my next project while doing so.
+Another idea is too try to get more time to work on prototypes and jams again just for fun, improvement and learning. And maybe, just maybe, get an idea for a next project while doing so.
 
 I also would love to go to a gamedev conference outside my country this year.
 
-That's it for now, no big plans for 2026 more than just continue with what I am doing.
+That's it for now, no big plans for 2026 more than just continue with what I am doing, 2025 was rough year with lows and highs.
 
 Thanks for reading, I wish you all a great new year.
