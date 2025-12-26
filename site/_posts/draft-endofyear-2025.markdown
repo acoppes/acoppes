@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "2025 summary and my expectations for 2026"
-date:   2025-12-20 00:08:00 -0300
+date:   2025-12-26 00:08:00 -0300
 excerpt: The end of the year is approaching and I have made a summary of what happened during 2025 and what to expect for 2026.
 author: Ariel Coppes
 tags:
