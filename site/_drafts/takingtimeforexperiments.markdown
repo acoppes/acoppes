@@ -31,11 +31,14 @@ SCREENSHOT
 
 # Migrating to new ECS
 
+Translation/Rotation => LocalTransform
+
 FROM DELEGATES TO FOREACH
 
 FROM TO ENTITY TO AUTHORING
 
-MIGRATING SYSTEMS USING AI
+MIGRATING SYSTEMS USING CLAUDE WEB
+  - defined the rules, migrated systems
   - it did the work faster than me (maybe 15 mins vs 3-4hs manual work), and pretty well
   - it lied to me super confident
   - it invented enums that didn't exist
