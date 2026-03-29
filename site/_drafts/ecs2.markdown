@@ -12,6 +12,7 @@ image:
   path: /images/ecs-post-preview.jpg
   height: 100
   width: 100
+comments: true
 ---
 
 Even though the [previous part](/2023/07/13/design-decisions-when-building-games-using-ecs.html) covered a lot of aspects on how I am using ECS (entity component system) when making games, I have new examples and stories to share :smiley:.
