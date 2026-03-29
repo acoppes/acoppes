@@ -157,6 +157,7 @@ For example, if I wanted to store how the entity died and where it was when that
 ```csharp
 public struct HealthStateEventComponent : IEventComponent {
     public Vector3 position;
+    public Vector3 damagePosition;
     public bool died;
     public string extraInformation;
 }
@@ -175,11 +176,12 @@ public class HealthSystem: System{
         foreach (e in filter<HealthComponent>()) {
             var previousState = e.health.current;
 
-            // -- process damage logic here -- 
+            // -- process damage logic here and store killDamage to use late -- 
 
             if (previousState != e.health.current) {
                 world.add(e, new HealthStateEventComponent() {
-                    died = e.health.state == death;
+                    died = e.health.state == death
+                    damagePosition = killDamage.position
                 })
             }
         }
@@ -207,7 +209,24 @@ public class OnHealthStateChangedControllerSystem: System{
 }
 ```
 
-Then, inside the controller implementing the callback, I could get the component with `e.Get<HealthStateEventComponent>()` and check for the data stored there.
+Suppose now I want to react to that new event in the RepairDrone to do some last blast when it dies, I could do something like this:
+
+```csharp
+public class RepairDroneController : ControllerBase, IHealthStateEvent
+{
+    // ... OTHER CODE ...
+
+    public void OnHealthStateChanged(Entity e) {
+        var eventData = e.Get<HealthStateEventComponent>()
+
+        if (eventData.died) {
+            var blastEntity = world.CreateEntity(blastDefinition);
+            blastEntity.Get<Position>().value = eventData.damagePosition;
+        }
+    }
+}
+```
 
 # TOOLS LIKE THE ECS DEBUGGER (EXTENDED VERSION OF THE LEOECS)
 
+-- TODO: talk about dead pr and fork? -- 
