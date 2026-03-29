@@ -17,9 +17,22 @@ image:
 
 Even though the previous [previous part](/2023/07/13/design-decisions-when-building-games-using-ecs.html) was super complete (now that I read it again), I have a couple of new examples that I want to share related with how I am using ECS (entity component system) approach when making games.
 
-# Scripting
+As I mentioned before, I am developing Ship Miner, and my other prototypes, following the ECS approach. I decided to use [leoecs-lite](https://github.com/LeoECSCommunity/ecslite) as the ECS solution and I built my own systems and tools over it. 
 
-As I mentioned before, I am using ECS for Ship Miner (and my other prototypes). In particular I am using [leoecs-lite](https://github.com/LeoECSCommunity/ecslite) as the ECS solution and I built my own systems and tools over it. 
+Here is a video of Ship Miner and the link to add to your steam wishlist.
+
+<div class="post-image">
+<video controls width="100%" autoplay="autoplay" muted="muted">
+  <source src="/assets/shipminer/shipminer-demo-announcement-rc1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video> 
+</div>
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+</div>
+
+# Scripting
 
 One important feature is to be able to have specific logic that only runs for some entities. For that purpose I have a scripting system over ECS, my scripts are named `Controllers` and are stored in a `ControllersComponent`, and then I have systems to process them.
 
@@ -74,6 +87,13 @@ public class RepairDroneController : ControllerBase, IUpdate, IStateChanged, IIn
 </div>
 
 This is super specific to this unit, it checks for targets to repair inside some range, if it finds one, it locks on a target and decides to move there, once it is close it activates a ray to repair the target, and then disables the ray for some time.
+
+<div style="text-align:center">
+<video width="480" height="270" controls>
+  <source src="/assets/ecs2/repairdrone-findtargets.mp4" type="video/mp4">
+   Your browser does not support the video tag.
+</video> 
+</div>
 
 The role of the Controller is to be the unit's brain and to manipulate the behavior by modifying the data stored in the entities' components and make the rest of the systems react to those changes. 
 
