@@ -14,9 +14,9 @@ image:
   width: 100
 ---
 
-Even though the [previous part](/2023/07/13/design-decisions-when-building-games-using-ecs.html) covered a lot of aspects on how I am using ECS (entity component system) when making games, I have a couple of new examples and stories to share.
+Even though the [previous part](/2023/07/13/design-decisions-when-building-games-using-ecs.html) covered a lot of aspects on how I am using ECS (entity component system) when making games, I have new examples and stories to share :smiley:.
 
-For the ECS solution I decided to use [leoecs-lite](https://github.com/LeoECSCommunity/ecslite), with my own systems and tools over it, and I used this solution for my game jams and also for my current in development game Ship Miner:
+For the ECS solution I decided to use [leoecs-lite](https://github.com/LeoECSCommunity/ecslite), with my own systems and tools over it. I am using this for game jams and for my game Ship Miner:
 
 <div class="post-image">
 <video controls width="100%" autoplay="autoplay" muted="muted">
@@ -33,7 +33,7 @@ For the ECS solution I decided to use [leoecs-lite](https://github.com/LeoECSCom
 
 When making games, one important feature to have is a scripting framework to support running specific logic in some entities. In my solution the scripts are named `Controllers` and they are stored in a `ControllersComponent`. Using a scripting framework is better for logic that can be added and removed dynamically (I suppose it also helps when adding mod support). 
 
-For example, the RepairDrone Controller looks something like this: 
+For example, the Repair Drone Controller looks something like this: 
 
 ```csharp
 public class RepairDroneController : ControllerBase, IUpdate, IStateChanged, IInit, IDamagedEvent, IDestroyed
@@ -97,29 +97,29 @@ The role of the Controller is to be the unit's brain manipulating the data store
 
 # Controllers System
 
-I don't want to go into too much detail of the code but basically I have a `ControllersComponent` in the entities, in the definition I point to a prefab where all the Controllers are stored. For example, the Repair Drone has the following prefab definition:
+Basically, there is a `ControllersComponent` with the list of Controllers. In the definition I reference the prefab where all the Controllers are declared. For example, the Repair Drone has the following prefab definition:
 
 <div class="post-image">
   <img src="/assets/ecs2/repairdrone-definition-controllers.png" />
-  <span>This is how part of the definition (entity prefab) looks.</span>
+  <span>This is how part of the entity definition (or entity prefab) looks.</span>
 </div>
 
-This entity definition in particular uses two controllers, the `BaseDroneController` with some common logic for drones (note: could be moved to systems) and the `RepairDroneController` with the main logic.
+This one in particular uses two controllers, the `BaseDroneController` with some common logic for drones (could be moved to systems) and the `RepairDroneController` with the unit specific logic.
 
-When a new entity with the `ControllersComponent` is created, the `ControllerSystem` initializes it by getting all the Controllers declared in the prefab and registering them in the component. Later, the `ControllerUpdateSystem` iterates over the controllers in the component and call the `Update` method for Controllers implementing that callback. Is is a simplified view of the system, for more information check the [code at github](https://github.com/acoppes/unity-gemserk-utilities).
+Then, when a new entity with `ControllersComponent` is created, the `ControllerSystem` initializes it by getting all the Controllers declared in the prefab and registering them in the component. Later, the `ControllerUpdateSystem` iterates over the controllers in the component and call the `Update` method for Controllers implementing that callback. This is a simplified view of the system, for more information check the [code at github](https://github.com/acoppes/unity-gemserk-utilities).
 
 # Using Stateless Controllers
 
-In my previous post I talked about my process when [I didn't know where I should put new logic](/2023/07/13/design-decisions-when-building-games-using-ecs.html#my-process-when-i-dont-know-the-best-place-for-code-or-logic) if it should be a system or a controller. Now, after using that workflow multiple times, another thing that I learned is that, when I decide to go with a Controller, I should always try to keep them as stateless as possible, and it is usually simple to do it.
+In my previous post I talked about my process when [I didn't know where to put new logic](/2023/07/13/design-decisions-when-building-games-using-ecs.html#my-process-when-i-dont-know-the-best-place-for-code-or-logic) if it should be in a System or in a Controller. Now, after using that workflow multiple times, another thing that I learned is that, when I decide to go with a Controller, I should always try to keep them as stateless as possible, and it is usually simple to do it.
 
-In the previous example, the repair drone has both configuration values like `healingPerSecond` or `rayDefinition` (that's ok, could be better) and runtime values, like the `currentHealing` or the `rayEntity`. Having runtime values there is an issue for the future, and here are some of the reasons:
+In the previous example, the repair drone has both configuration values like `healingPerSecond` or `rayDefinition` (that's ok, could be better) and runtime values, like the `currentHealing` or the `rayEntity`. Having runtime values there is an issue for the future, and here are some of the reasons :poop::
 
 * It is not easy accessible from other controllers nor systems if needed for other logic.
-* For the same reason and also because data in controllers tends to not follow any common structure, it is harder to debug. When data is in Components it is easier because it normally follows a more consistent structure and also it is easy to iterate over components.
-* I can't reuse the same Controller instance, I need to have an instance per entity in that case, while for stateless Controllers I can make entities reuse the same instance (and it also simplifies pooling). 
+* For the same reason and also because data in controllers tends to not follow a common structure, it is harder to debug. When data is in Components it is easier because it normally follows a more consistent structure and it is easy to iterate over all the components.
+* I can't reuse the same Controller instance since different entities will share same runtime data. So, I need to have a Controller instance per entity in that case, while for stateless Controllers I can make all entities of the same definition reuse the same instance (this also simplifies pooling). 
 * It is harder to serialize in case I want save/load the state of an entity or send it over the network.
 
-What I try to do now is, first, try to see if I can store the data I want in an existing Component that make sense. For example, if I am creating some cooldowns to execute some action, maybe I can channel that using other Components I already have, like the [AbilitiesComponent](https://github.com/acoppes/unity-gemserk-utilities/blob/main/Packages/com.gemserk.gamescore/Components/Abilities/AbilitiesComponent.cs). If I can't, I just create a new Component, could be a general use Component if it makes sense, or could be a specific Component. In the case of the Repair Drone, I could create a specific Component like this one: 
+What I try to do now is, first, try to see if I can store the data I want in an existing Component that make sense. For example, if I am creating some cooldowns to execute some action, maybe I can use other Components I already have like the [AbilitiesComponent](https://github.com/acoppes/unity-gemserk-utilities/blob/main/Packages/com.gemserk.gamescore/Components/Abilities/AbilitiesComponent.cs). If I can't, I just create a new Component, could be a general use Component if it makes sense, or could be a specific Component. In the case of the Repair Drone, I could create a specific Component like this one: 
 
 ```csharp
 public class RepairDroneComponent : IEntityComponent {
@@ -128,28 +128,26 @@ public class RepairDroneComponent : IEntityComponent {
 }
 ```
 
-And then either add that Component as part of that Entity Definition or add that Component dynamically in the Controller `Init()` and then use it by accessing the `entity.Get<RepairDroneComponent>()` inside the Controller's logic.
+And then either add that Component as part of that Entity Definition or add that Component dynamically in the Controller `Init()` and then use it by accessing the `entity.Get<RepairDroneComponent>()` in the rest of its logic.
 
 ## And what about the configuration values?
 
 Well, having configuration values it is a bit less troublesome since normally the values are kinda constant but still have some issues:
 
-* If I want different configuration values, I need for sure different Controller prefabs for each config, so I can't reuse the Controller instance in that case but I can reuse it per unit type, and it is also normal to have different list of controllers in different entity definitions. For example, the Scout Drone entity definition also uses the `BaseDroneController`.
-* It makes less clear where the entity definition configuration is, sometimes is in Components, sometimes in the Controller, and sometimes I lose time exploring where the data is.
-* It is also harder to have it visible in debug, I have to go to each definition prefab to see the configuration values.
-* I can't touch the configuration values in runtime, otherwise they become runtime values now.
+* If I want different configuration values, I need for sure different Controller prefabs for each config, so I can't reuse the Controller instance. However, it is normal to have different list of controllers per entity definition so in that case coupling the constant data is not so wrong. For example, the Scout Drone entity definition also uses the `BaseDroneController` but with another Controller for the main logic, so the structure of controllers is already different to the one in the Repair Drone definition.
+* It makes less clear where the entity definition configuration is, sometimes is in Components, sometimes in the Controller, and that makes me lose time searching where the data is.
+* It is also harder to make it visible, I have to go to each definition prefab to see the configuration values.
+* I have to avoid modifying the configuration values in runtime, but it is easy to do it because they are there with the logic.
 
-To improve this, I can either move those values to a new Component, for example RepairDroneConfigurationComponent or could even be the same Component I use for the runtime data if I want to. 
+To improve this, I can either move those values to a new Component, for example the `RepairDroneConfigurationComponent` or could even be the same Component I use for the runtime data if I want to. 
 
 Another option could be to move it to use a separated configuration concept, like we did in Iron Marines 2, and that's the next story.  
 
-## How we did configurations in Iron Marines 2
+## How we did configurations in Iron Marines Invasion
 
-When we did our ECS during the development of Iron Marines 2, we knew that we wanted to have configurations like we had in IM1, using json files where game designers could easily modify values and/or customize units.
+When we did our ECS during the development of Iron Marines Invasion (aka IM2), we knew that we wanted to have configurations like we had in IM1, using json files where game designers could easily modify values and/or customize units.
 
-The solution worked like this, there was a `ConfigurationComponent` declaring the configuration key to use. For example, the ranger unit used the `army.units.unit_ranger` as the configuration key.
-
-Then, there were json files for configurations with a structure similar to this: 
+The json files for configurations had a structure similar to this one: 
 
 ```json
 {
@@ -167,6 +165,8 @@ Then, there were json files for configurations with a structure similar to this:
     }
 }
 ```
+
+The solution worked like this, there was a `ConfigurationComponent` declaring the configuration key to use. For example, the ranger unit used the `army.units.unit_ranger` as the configuration key.
 
 The `ConfigurationComponent` stored the key and a cached dictionary for everything that was inside that key, for example, in the case of the previous key, the dictionary will only contain the values for `unit_ranger`.
 
@@ -193,7 +193,7 @@ _NOTE: as always, I am oversimplifying the code but the configuration supported 
 
 This allowed us to expose to game designers only the things they needed to configure and balance the game. One great lesson was that by systemizing we needed to create a common structure to configure similar things and that improved a lot the trial and error compared to IM1 where we decided how to configure each unit each time and it was more difficult to use same criteria for everything and game designers were some times trying stuff that didn't exist. For example, for one hero I might decide the health would be named `life` in the configuration and then another developer might decide it should be named `hitpoints` for another hero he is developing, and since we loaded the configuration in each unit logic, that was more common. 
 
-We still supported special cases, if there was a configuration that made no sense to be a general one, the Controller of the unit could access the `ConfigurationComponent` and try to get the specific value. If at some point we decided that config should be more general, we could create a new component and then add a new configuration subsystem to read from the config to that component, and remove the specific code from the unit. That process is related to the to the I don't know where to put logic if controllers or systems.
+For IM2, we still supported special cases, if there was a configuration that made no sense to be a general one, the Controller of the unit could access the `ConfigurationComponent` and try to get the specific value. If at some point we decided that config should be more general, we could create a new component and then add a new configuration subsystem to read from the config to that component, and remove the specific code from the unit controller. That process is related to the to the I don't know where to put logic if controllers or systems.
 
 In case of modifying the configuration, there was a way of asking the `ConfigurationSystem` to reload the values. 
 
@@ -215,7 +215,7 @@ I already spoiled this a bit but the main idea was to override values in the mai
 
 We treated overrides as arrays and we considered the level of the upgrade to read from there when overriding. In that example, the first level for that upgrade will override the `health` with the number `200` so when the configuration system configures the health, it uses the new value.
 
-I remember also adding some extra support to declare stuff as percentage or factors, so instead of doing the final number we could do something like this: 
+I remember :brain::fire: also adding some extra support to declare stuff as percentage or factors, so instead of doing the final number we could do something like this: 
 
 ```json
 {
@@ -350,7 +350,7 @@ It allows me to do query filter like systems do, for example, I can check for en
 
 For entities with `NameComponent`, I also show the name together with the entity id to easily identify them (for example the player ship).
 
-By default, it supports all type of components with plain basic fields, but when components have more data like lists for example, it doesn't show that. However the default debugger supports implementing some custom inspectors in a generic way to show those cases as you want, but you need to implement that. For example, this is the custom inspector for MineralsCollectorComponent:
+By default, it supports all type of components with plain basic fields, but when components have more data like lists for example, it doesn't show that. However it supports implementing custom inspectors in a generic way to show those cases as you want. For example, this is the custom inspector for MineralsCollectorComponent:
 
 ```csharp
 sealed class MineralsCollectorInspector : EcsComponentInspectorTyped<MineralCollectorComponent>
@@ -383,19 +383,17 @@ sealed class MineralsCollectorInspector : EcsComponentInspectorTyped<MineralColl
 }
 ``` 
 
-That is pretty handy since it is autodetected by the ecs custom editor. In there I could also modify data and/or show it in a inspector way.
+That is pretty handy since it is autodetected by the ecs custom editor. In there I could also modify data and/or show it in a more interesting way.
 
 # Conclusion
 
-Now that I am at the end of the article, I remembered a couple of extra cases to talk about but will leave that for a third part of the series, I hope to write that one soon not like this one that was two years later xD. A couple of topics to leave in mind for me are the `GameObjectComponent` used to connect the entity with a GameObject and its `EntityReference` corresponding MonoBehaviour, and which data I should try to avoid in Components to make them easier to serialize.
-
-Will leave this one here for now.
+Now that I am at the end of the article, I remembered a couple of extra cases to talk about but will leave that for a third part of the series, I hope to write that one soon not like this one that was two and a half years later :worried:. A couple of topics to leave in mind for me are the `GameObjectComponent` used to connect the entity with a GameObject and its `EntityReference` corresponding MonoBehaviour, and which data I should try to avoid in Components to make them easier to serialize.
 
 As always I hope it was useful and please ask me in social networks or join ship miner discord or whatever you want in case you want to interact for more information.
 
 Thanks for reading!!
 
-Add Ship Miner to your Steam Wishlist!!
+Remember to add Ship Miner to your Steam Wishlist!! and spread the word if you can.
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
