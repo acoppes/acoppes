@@ -17,11 +17,11 @@ image:
 
 Even though the previous [previous part](/2023/07/13/design-decisions-when-building-games-using-ecs.html) was super complete (now that I read it again), I have a couple of new examples that I want to share related with how I am using ECS (entity component system) approach when making games.
 
-# Scripting System
+# Scripting
 
 As I mentioned before, I am using ECS for Ship Miner (and my other prototypes). In particular I am using [leoecs-lite](https://github.com/LeoECSCommunity/ecslite) as the ECS solution and I built my own systems and tools over it. 
 
-One important system I have is the Scripting System, and it allows me to have a way to have custom logic for my entities but using the same components. I named my scripts `Controllers` (all the related systems contains that keyword in their name).
+One important feature is to be able to have specific logic that only runs for some entities. For that purpose I have a scripting system over ECS, my scripts are named `Controllers` and are stored in a `ControllersComponent`, and then I have systems to process them.
 
 For example, the Repair Drone script looks something like this: 
 
@@ -46,7 +46,6 @@ public class RepairDroneController : ControllerBase, IUpdate, IStateChanged, IIn
     {
         ref var states = ref entity.Get<StatesComponent>();
         ref var abilities = ref entity.Get<AbilitiesComponent>();
-        ref var shipMovement = ref entity.Get<ShipMovementComponent>();
         ref var animations = ref entity.Get<AnimationsComponent>();
         
         var healing = abilities.GetAbility("Healing");
@@ -69,15 +68,27 @@ public class RepairDroneController : ControllerBase, IUpdate, IStateChanged, IIn
 }
 ```
 
-TODO: SHOW SCREENSHOT OF CONTROLLER CONFIG (PREVIOUS EXPLAIN HOW CONTROLLERS WORK)
+<div class="post-image">
+  <img src="/assets/ecs2/repairdrone-controller-inspector.png" />
+  <span>This is how it looks to configure that controller in the Unity inspector</span>
+</div>
 
 This is super specific to this unit, it checks for targets to repair inside some range, if it finds one, it locks on a target and decides to move there, once it is close it activates a ray to repair the target, and then disables the ray for some time.
 
-The idea for the script is to be the brain and to reuse as much as possible all the components that already exists. 
+The role of the Controller is to be the unit's brain and to manipulate the behavior by modifying the data stored in the entities' components and make the rest of the systems react to those changes. 
 
-# The Implementation OF THE SYSTEM
+# Controllers System Sneak Peak
 
--- TODO: write about the system in general --
+I don't want to go into too much detail of the code but basically I have a `ControllersComponent` in the entities, in the definition I point to a prefab where all the Controllers are stored. For example, the Repair Drone has the following definition:
+
+<div class="post-image">
+  <img src="/assets/ecs2/repairdrone-definition-controllers.png" />
+  <span>This is how part of the definition (entity prefab) looks.</span>
+</div>
+
+This entity definition in particular uses two controllers, the `BaseDroneController` with some common logic for drones (could be a system) and the `RepairDroneController` with the main logic.
+
+When a new entity with the `ControllersComponent` is created, the `ControllerSystem` initializes it by getting all the Controllers declared in the prefab and registering them in the component. Later, the `ControllerUpdateSystem` iterates over the controllers in the component and call the `Update` method for Controllers implementing that callback (oversimplified view, for more real code, check the [github](https://github.com/acoppes/unity-gemserk-utilities)).
 
 # Using Stateless Controllers
 
@@ -105,14 +116,98 @@ And then either add that Component as part of that Entity Definition or add that
 
 Well, having configuration values it is a bit less troublesome since normally the values are kinda constant but still have some issues:
 
-* If I want different configuration values, I need for sure different Controller prefabs for each config, so I can´t reuse the Controller instance, but it is less bad since I can reuse per entity type normally.
+* If I want different configuration values, I need for sure different Controller prefabs for each config, so I can't reuse the Controller instance, but it is less bad since I can reuse per entity type normally.
 * It makes less clear where the entity definition configuration is, sometimes is in Components, sometimes in the Controller, and I have to explore multiple times. 
 
 To improve this, I can either move those values to a new Component, for example RepairDroneConfigurationComponent or could even be the same Component I use for the runtime data if I want to. Another option could be to move it to a separated configuration concept (we used that in Iron Marines 2).  
 
-# React to general events in Scripts (Controllers) 
+## Configuration System
 
-# The Event Component
+-- TODO: talk about configuration system in IM2 -- 
+
+# Reacting to events in Controllers
+
+In order to react to events in Controllers what I do is to have a way to implement different callbacks and then I have specific systems to call them if the event was triggered. As an example, there is a `IHealthStateChanged` interface to implement to be called when the unit either died or came back to life. After the `HealthSystem` is processed there is another system, the `OnHealthStateChangedControllerSystem`, that checks for the health state change and if that happened, it iterates over all the controllers implementing the callback and calling them. It is optional but it helps me to react to events in the specific unit logic.  
+
+This could be the reaction system code:
+```csharp
+public class OnHealthStateChangedControllerSystem: System {
+    public void Update() {
+        foreach (e in filter<HealthComponent, ControllersComponent>()) {
+            if (e.health.previousState != e.health.currentState) {
+                foreach (controller in e.controllers) {
+                    if (controller implements IHealthStateEvent) {
+                        controller.OnHealthStateChanged(e)
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+# Event Components
+
+One thing I use in some cases is to add a temporary component, the `Event` components, to react from outside to some important data change that happened in a system. It is kinda the opposite to the `Command` component [I explained in the previous post](/2023/07/13/design-decisions-when-building-games-using-ecs.html#one-time-logic-that-needs-to-run-in-systems-command-component) which was also temporary and used from outside to make systems react with some data change. 
+
+In the case of the `HealthSystem` what I normally do is to store two values in the `HealthComponent`, the previous and the current value, so I can check that in the other systems to decide to run or not. But in some cases, I prefer to not have that exposed, and to add a new temporary event Component, maybe with more information, and then remove it in the next iteration. This helps in not having to have all that extra information in the base component and even to not have to track the previous state.
+
+For example, if I wanted to store how the entity died and where it was when that happened, I could create a `HealthStateEventComponent` like this:
+
+```csharp
+public struct HealthStateEventComponent : IEventComponent {
+    public Vector3 position;
+    public bool died;
+    public string extraInformation;
+}
+```
+
+Then, the `HealthSystem` would change part of its code to something like this: 
+
+```csharp
+public class HealthSystem: System{
+    public void Update() {
+        
+        foreach (e in filter<HealthStateEventComponent>()) {
+            world.Remove(e, HealthStateEventComponent);
+        }
+
+        foreach (e in filter<HealthComponent>()) {
+            var previousState = e.health.current;
+
+            // -- process damage logic here -- 
+
+            if (previousState != e.health.current) {
+                world.add(e, new HealthStateEventComponent() {
+                    died = e.health.state == death;
+                })
+            }
+        }
+
+        foreach (e in filter<HealthStateEventComponent, PositionComponent>()) {
+            e.healthStateEvent.position = e.position;
+        }
+    }
+}
+```
+
+And the `OnHealthStateChangedControllerSystem` would change to iterate only on the entities with that Component and avoid the health changed state check internally. For example, that system could be changed to this:
+
+```csharp
+public class OnHealthStateChangedControllerSystem: System{
+    public void Update() {
+        foreach (e in filter<HealthStateEventComponent, ControllersComponent>()) {
+            foreach (controller in e.controllers) {
+                if (controller implements IHealthStateEvent) {
+                    controller.OnHealthStateChanged(e)
+                }
+            }
+        }
+    }
+}
+```
+
+Then, inside the controller implementing the callback, I could get the component with `e.Get<HealthStateEventComponent>()` and check for the data stored there.
 
 # TOOLS LIKE THE ECS DEBUGGER (EXTENDED VERSION OF THE LEOECS)
 
