@@ -336,6 +336,30 @@ public class RepairDroneController : ControllerBase, IHealthStateEvent
 }
 ```
 
-# TOOLS LIKE THE ECS DEBUGGER (EXTENDED VERSION OF THE LEOECS)
+# Extended debugger for entities
 
--- TODO: talk about dead pr and fork? -- 
+LeoECS lite already has a way to debug entity components but it became a bit limited over time so I did my own window reusing part of the debugger code.
+
+This is the window I normally use when checking for entities component values:
+
+<div class="post-image">
+  <img src="/assets/ecs2/esc-window-showcomponent.png" />
+</div>
+
+It allows me to do query filter like systems do, for example, I can check for entities containing some components but not others, and then I can also filter by component names, sort by name, etc. 
+
+<div class="post-image">
+  <img src="/assets/ecs2/ecs-window-withfilters.png" />
+</div>
+
+In the case the entity has the `NameComponent`, I show that together with the entity id to easily identify some entities there.
+
+By default, it supports all type of components with plain basic fields, but when components have more data like lists for example, it doesn't show that. However the default debugger supports implementing some custom inspectors in a generic way to show those cases as you want, but you need to implement that, for example:
+
+-- TODO: Show the DebugForComponents -- 
+ 
+```charp
+
+``` 
+
+In there I could also modify data and/or show it in a inspector way.
