@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Design decisions when building games using ECS II"
-# date:   2026-29-03 00:17:00 -0300
+date:   2026-03-29 00:17:00 -0300
 excerpt: This is just the second part to the "Design decisions when building games using ECS" since I have new patterns that I want to share. 
 tags:
   - ecs
