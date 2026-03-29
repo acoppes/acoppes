@@ -1,8 +1,7 @@
 ---
 layout: post
-# title:  "I got my interest on Unity ECS back"
 title:  "Design decisions when building games using ECS II"
-# date:   2022-11-22 00:08:30 -0300
+# date:   2026-29-03 00:17:00 -0300
 excerpt: This is just the second part to the "Design decisions when building games using ECS" since I have new patterns that I want to share. 
 tags:
   - ecs
@@ -130,10 +129,6 @@ public class RepairDroneComponent : IEntityComponent {
 ```
 
 And then either add that Component as part of that Entity Definition or add that Component dynamically in the Controller `Init()` and then use it by accessing the `entity.Get<RepairDroneComponent>()` inside the Controller's logic.
-
-## Data in Components
-
--- TODO: talk about using as less data to -- 
 
 ## And what about the configuration values?
 
@@ -336,30 +331,74 @@ public class RepairDroneController : ControllerBase, IHealthStateEvent
 }
 ```
 
-# Extended debugger for entities
+# Custom Editor Window for Entities
 
-LeoECS lite already has a way to debug entity components but it became a bit limited over time so I did my own window reusing part of the debugger code.
+LeoECS lite already has a way to see components data in the inspector but it does it with gameobjects and over time it became a bit limited for me so I decided to create my own editor window reusing part of the code.
 
-This is the window I normally use when checking for entities component values:
+This is the window I normally use when checking for data:
 
 <div class="post-image">
-  <img src="/assets/ecs2/esc-window-showcomponent.png" />
+  <img src="/assets/ecs2/ecs-window-showcomponent.png" />
 </div>
 
 It allows me to do query filter like systems do, for example, I can check for entities containing some components but not others, and then I can also filter by component names, sort by name, etc. 
 
 <div class="post-image">
   <img src="/assets/ecs2/ecs-window-withfilters.png" />
+  <span>In this case I am filtering entities with GameObjectComponent and without ConfigurationComponent</span>
 </div>
 
-In the case the entity has the `NameComponent`, I show that together with the entity id to easily identify some entities there.
+For entities with `NameComponent`, I also show the name together with the entity id to easily identify them (for example the player ship).
 
-By default, it supports all type of components with plain basic fields, but when components have more data like lists for example, it doesn't show that. However the default debugger supports implementing some custom inspectors in a generic way to show those cases as you want, but you need to implement that, for example:
+By default, it supports all type of components with plain basic fields, but when components have more data like lists for example, it doesn't show that. However the default debugger supports implementing some custom inspectors in a generic way to show those cases as you want, but you need to implement that. For example, this is the custom inspector for MineralsCollectorComponent:
 
--- TODO: Show the DebugForComponents -- 
- 
-```charp
+```csharp
+sealed class MineralsCollectorInspector : EcsComponentInspectorTyped<MineralCollectorComponent>
+{
+    public override bool OnGuiTyped(string label, ref MineralCollectorComponent collector,
+        EcsEntityDebugView entityView)
+    {
+        EditorGUI.indentLevel++;
 
+        for (var i = 0; i < collector.minerals.Length; i++)
+        {
+            var mineral = collector.minerals[i];
+            var mineralName = MineralTypes.ValueToName(i);
+            
+            if (mineral > 0 && !string.IsNullOrEmpty(mineralName))
+            {
+                EditorGUI.BeginChangeCheck();
+                mineral = EditorGUILayout.FloatField(mineralName, mineral);
+                if (EditorGUI.EndChangeCheck())
+                {
+                    collector.minerals[i] = mineral;
+                }
+            }
+        }
+
+        EditorGUI.indentLevel--;
+
+        return true;
+    }
+}
 ``` 
 
-In there I could also modify data and/or show it in a inspector way.
+That is pretty handy since it is autodetected by the ecs custom editor. In there I could also modify data and/or show it in a inspector way.
+
+# Conclusion
+
+Now that I am at the end of the article, I remembered a couple of extra cases to talk about but will leave that for a third part of the series, I hope to write that one soon not like this one that was two years later xD. A couple of topics to leave in mind for me are the `GameObjectComponent` used to connect the entity with a GameObject and its `EntityReference` corresponding MonoBehaviour, and which data I should try to avoid in Components to make them easier to serialize.
+
+Will leave this one here for now.
+
+As always I hope it was useful and please ask me in social networks or join ship miner discord or whatever you want in case you want to interact for more information.
+
+Thanks for reading!!
+
+Add Ship Miner to your Steam Wishlist!!
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+</div>
+
+See you soon! 
