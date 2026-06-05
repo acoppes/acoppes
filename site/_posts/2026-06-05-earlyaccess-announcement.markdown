@@ -2,7 +2,7 @@
 layout: post
 title:  "BIG NEWS: Ship Miner has an Early Access Release Date"
 date:   2026-06-05 00:08:00 -0300
-excerpt: Big news! I just announced that Ship Miner will be released in Early Access in November through the Latin American Games Showcase (LAGS)! I will share about what it means and the plan for EA.
+excerpt: Big news! I just announced that Ship Miner will be released in Early Access in November through the Latin American Games Showcase (LAGS)! In this blogpost I share some details of why and some stats too.
 author: Ariel Coppes
 tags:
   - shipminer
