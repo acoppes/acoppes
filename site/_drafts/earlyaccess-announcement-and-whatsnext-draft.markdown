@@ -44,11 +44,11 @@ It is going to be in November because I wanted it to be this year, I needed it t
 
 Following [How to market a Game](https://howtomarketagame.com/) Chris Zukowski :raised_hands: and other developers' advice, this year I decided to try to participate in as many steam festivals as possible. At the same time, I wanted to use those festivals as moments to announce important dates to get more attention and to have more chances to participate in the event since some of them give priority to new announcements.
 
-For example, last year I released the Demo but didn't want to announce it too loud because the demo wasn't super ready, the objective was starting having more people playing the game. But for that reason, I never announced it properly and lost an opportunity. If I could travel back in time I would continue working with the private playtest until the Demo was in a state I was ok doing a big announcement.
+For example, last year I released the Demo but didn't want to announce it too loud because it wasn't super ready, the objective was starting having more people playing the game. But for that reason, I never announced it properly and lost an opportunity. If I could travel back in time I would continue working with the private playtest until the Demo was in a state I was ok doing a proper announcement.
 
 The objective is to reach 10k wishlists for EA release and being in festivals is super important for that. 
 
-In February, I participated in the [Tiny Roguelikes 2026 Event](https://store.steampowered.com/developer/rogueduck/sale/TinyRoguelikes2026) and that went really well, considering the game was in the category with most games (action roguelikes) it got ~650 wishlists which was like 1/6 of my total wishlists at that time. I didn't have to do extra work for that festival, I just submitted the game and was lucky they selected it.
+In February, I participated in the [Tiny Roguelikes 2026 Event](https://store.steampowered.com/developer/rogueduck/sale/TinyRoguelikes2026) and that went really well, considering the game was in the category with most games (action roguelikes) it got ~650 wishlists which was like 1/6 of my total wishlists at that time. I didn't have to do extra work for that festival, I just submitted the game and was lucky to be selected.
 
 <div class="post-image">
   <img src="/assets/shipminer/earlyaccess-announcement/tinyroguelikes-wishlists.png" width="100%" />
@@ -68,7 +68,7 @@ Lets see how it goes during the event in terms of wishlists but it started reall
 
 ## Other Marketing Efforts
 
-I had luck with an [x/tweets post](https://x.com/arielsan/status/2058674364321567103) I did recently following the _"This is the vibe I'm going for with my game"_ trend where I got around 200 wishlists. If I compare the wishlists against the ones from being in festivals, it feels like it diminishes the value of doing marketing in social networks but I believe it still makes sense since most of the time is not a big effort (could be share some gif or follow some trend), they could affect being considered in festivals and they also allow me to engage more directly with the community.
+I had luck with an [x/tweets post](https://x.com/arielsan/status/2058674364321567103) I did recently following the _"This is the vibe I'm going for with my game"_ trend where I got around 200 wishlists. If I compare the wishlists against the ones from being in festivals, it feels like the value of doing marketing in social networks is lower but I believe it still makes sense since most of the time is not a big effort (could be share some gif or follow some trend), they could affect being considered in festivals or getting the interest of content creators and they also allow me to engage more directly with the community. In fact I got great contacts from twitter and reddit so they have more broad value than just convert to wishlists (same for festivals btw, the value is not just wishlists).
 
 <div class="post-image">
   <img src="/assets/shipminer/earlyaccess-announcement/twitter-trend.png" width="100%" />
