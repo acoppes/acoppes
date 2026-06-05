@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Learning how to do marketing for Ship Miner 2"
+title:  "Learning how to do marketing for Ship Miner second part"
 date:   2025-01-01 00:08:00 -0300
 excerpt: I want to share part of my experience and learnings on how I am doing the marketing of Ship Miner.
 author: Ariel Coppes

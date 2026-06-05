@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "BIG NEWS: Ship Miner has an Early Access Release Date"
-date:   2025-09-19 00:08:00 -0300
+date:   2026-06-05 00:08:00 -0300
 excerpt: Big news! I just announced that Ship Miner will be released in Early Access in November through the Latin American Games Showcase (LAGS)! I will share about what it means and the plan for EA.
 author: Ariel Coppes
 tags:
@@ -68,7 +68,7 @@ Lets see how it goes during the event in terms of wishlists but it started reall
 
 ## Other Marketing Efforts
 
-I had luck with some tweets posts recently where I got around 200 wishlists but if I compare them with being in festivals, the difference is so big that it diminishes the effort and value. I still believe it makes sense since most of the time is just sharing something interesting and/or follow some trend. 
+I had luck with an [x/tweets post](https://x.com/arielsan/status/2058674364321567103) I did recently following the _"This is the vibe I'm going for with my game"_ trend where I got around 200 wishlists. If I compare the wishlists against the ones from being in festivals, it feels like it diminishes the value of doing marketing in social networks but I believe it still makes sense since most of the time is not a big effort (could be share some gif or follow some trend), they could affect being considered in festivals and they also allow me to engage more directly with the community.
 
 <div class="post-image">
   <img src="/assets/shipminer/earlyaccess-announcement/twitter-trend.png" width="100%" />
