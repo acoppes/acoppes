@@ -17,19 +17,23 @@ image:
 
 Early access release date for Ship Miner [has been announced](/2026/06/05/earlyaccess-announcement.html) but what is the plan and roadmap to get into it? In this blogpost I want to share the current plan to Early Access as well as what I am working right now.
 
-# Current wishlists and how it did on LAGS showcase.
+# Current wishlists
 
-Bug first, I want to share current wishlists and more information about LAGS showcase impact on wishlists.
+Before writing about the plan and roadmap, I want to share current wishlists.
 
 IMAGE WISHLISTS
 
-Game is sitting in more than 8000 wishlists right now, 
+The game currently has around ~8k wishlists in Steam which is awesome. My objective is to get to 10k before the EA release. It feels it is a reachable number considering there is still sometime and that with some luck I will be in some other events/showcases. I also have the Steam Next Fest in October. 
+
+# The LAGS Showcase
+
+Participating in the LAGS Showcase was awesome and it had a really positive impact in Steam wishlists.
 
 IMAGE SHOWCASE
 
-For me, and for my game, this is nuts, the LAGS showcase had a pretty important impact on the total wishlists, basically, the game duplicated wishlists during the event. This was unexpected, I knew showcases/events help, for Tiny Roguelikes the game got ~650 wishlists which was about 1/6 of the total wishlists at that time, I was expecting something like that or maybe a bit better but ~4000 wishlists was completely out of my expectations. 
+Basically, the game duplicated wishlists during the event, which is nuts. For example when I participated the Tiny Roguelikes fest the game got around ~650 wishlists which was about 1/6 of the total wishlists at that time so I was expecting something like that or maybe a bit better but ~4000 wishlists was completely out of my expectations. 
 
-Obviously, I am really happy with this result, the current wishlists target to EA release is 10k and if I am lucky enough to be in more of these showcases and also with some luck in the Steam Next Fest in October, I believe the it is a reachable number. 
+Obviously, I am really happy with this result and super grateful the picked Ship Miner to be part of the event. I will continue trying to participate in as many fests as possible.
 
 # Roadmap
 
