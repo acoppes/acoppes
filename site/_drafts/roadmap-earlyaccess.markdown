@@ -6,9 +6,9 @@ excerpt: Early access release date for Ship Miner has been announced but what is
 author: Ariel Coppes
 tags:
   - shipminer
-  - earlyaccess
-  - announcement
-  - steam
+  - update
+  - review
+  - personal
 image:
   path: /images/shipminer-preview.png
   height: 100 
@@ -37,9 +37,29 @@ Obviously, I am really happy with this result and super grateful the picked Ship
 
 # Roadmap
 
+In general, I feel like the core of the game like mining, exploring, upgrading feels pretty well while the combat feels it needs more work. My idea is to get more depth in all aspects but game will continue to be a mining game first and I visualize the new combat elements to be more indirect, maybe going more to a tower defense/rts kind of game, like you build drones to attack enemies and stations to defend, and maybe you can install some technologies to be better in combat but right now I don't to add more active abilities and new controls (I am a huge fan of action games like Hades for example, but Ship Miner is not that kind of action in my mind). 
 
+The game has a win condition right now, it is not best but I believe I am going to continue changing it but it works for now while I work on other things.
+
+Then there is the meta game and the late game. My current focus is going to be on that and then come back to the game itself. Some ideas I have for a long time are unlocking different ships and having different game modes, among others.
+
+The asteroids procedural generation has a good base, and each time I add new content and/or new generation rules it feels it grows exponential in some way, which makes me really happy with its state.
+
+The current roadmap in broad terms is:
+
+* Unlock different metagame content (for example: ships and modes and ingame content) by playing the game
+* Other modes/rules: for example no enemies mode.
+* Localization 3 to 4 languages (my plan is english, spanish, japanese and chinese)
+* More customization and accessibility features.
+* More content in general, from enemies and other creeps to technologies and upgrades.
+* More visual effects and retro effects like scanlines, crt, etc.
 
 # Work in progress
+
+As I mentioned, my focus for the next couple of updates will be on the metagame and late game, mainly define if I will unlock content by playing the game what that content will be and also identify and define the ways of starting in different conditions. 
+
+Based on this, my initial tests are around having different ships with different startup settings, different base stats and different max stats. For example there c 
+Different ships
 
 # Latest update
 
