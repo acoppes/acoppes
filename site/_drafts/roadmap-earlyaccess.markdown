@@ -17,25 +17,38 @@ image:
 
 Early access release date for Ship Miner [has been announced](/2026/06/05/earlyaccess-announcement.html) but what is the plan and roadmap to get into it? In this blogpost I want to share the current plan to Early Access as well as what I am working right now.
 
+But before that, I want to share some information about the wishlists and participation in fests.
+
+# LAGS + Early Access Announcement 
+
+Participating in the [LAGS Summer Game Fest Edition](https://www.youtube.com/watch?v=3wocOGnjg_I) to announce the Early Access release date was awesome and it had a really positive impact in wishlists.
+
+<div class="post-image">
+  <img src="/assets/shipminer/roadmaptoea/lags-showcase-wishlists.png" width="100%" />
+  <span>Thanks LAGS!!</span>
+</div>
+
+The game duplicated wishlists during the event, which is nuts, and completely out of my expectations. I am really happy with this result and super grateful the picked Ship Miner to be part of the event. I will continue trying to participate in as many fests as possible.
+
 # Current wishlists
 
-Before writing about the plan and roadmap, I want to share current wishlists.
+The game currently has around ~8k wishlists in Steam which is awesome.
 
-IMAGE WISHLISTS
+<div class="post-image">
+  <img src="/assets/shipminer/roadmaptoea/current-wishlists.png" width="40%" />
+</div>
 
-The game currently has around ~8k wishlists in Steam which is awesome. My objective is to get to 10k before the EA release. It feels it is a reachable number considering there is still sometime and that with some luck I will be in some other events/showcases. I also have the Steam Next Fest in October. 
+My objective is to get to 10k before the EA release. It feels it is a reachable number considering there is still sometime and that with some luck I will be in some other events/showcases. I also have the Steam Next Fest in October. 
 
-# The LAGS Showcase
+# Marketing
 
-Participating in the LAGS Showcase was awesome and it had a really positive impact in Steam wishlists.
+One thing that happened recently, like 4 days ago, is that for some reason someone revived the "This is the vibe I’m going for with my game" trend quoting my [tweet](https://x.com/arielsan/status/2058674364321567103) and that started to get some traction again, and it ended up adding ~60 wishlists. Not a huge deal but the important thing here is, I did nothing, it was just automatic marketing and it felt awesome.
 
-IMAGE SHOWCASE
+<div class="post-image">
+  <img src="/assets/shipminer/roadmaptoea/random-marketing.png" width="100%" />
+</div>
 
-Basically, the game duplicated wishlists during the event, which is nuts. For example when I participated the Tiny Roguelikes fest the game got around ~650 wishlists which was about 1/6 of the total wishlists at that time so I was expecting something like that or maybe a bit better but ~4000 wishlists was completely out of my expectations. 
-
-Obviously, I am really happy with this result and super grateful the picked Ship Miner to be part of the event. I will continue trying to participate in as many fests as possible.
-
-# Roadmap
+# Roadmap to Early Access and Next Fest
 
 In general, I feel like the core of the game like mining, exploring, upgrading feels pretty well while the combat feels it needs more work. My idea is to get more depth in all aspects but game will continue to be a mining game first and I visualize the new combat elements to be more indirect, maybe going more to a tower defense/rts kind of game, like you build drones to attack enemies and stations to defend, and maybe you can install some technologies to be better in combat but right now I don't to add more active abilities and new controls (I am a huge fan of action games like Hades for example, but Ship Miner is not that kind of action in my mind). 
 
@@ -53,6 +66,8 @@ The current roadmap in broad terms is:
 * More customization and accessibility features.
 * More content in general, from enemies and other creeps to technologies and upgrades.
 * More visual effects and retro effects like scanlines, crt, etc.
+
+For the Steam Next Fest the idea is to update the demo with most of the finished things until that but for sure include localization, I feel that could impact positively for the demo.
 
 # Work in progress
 
