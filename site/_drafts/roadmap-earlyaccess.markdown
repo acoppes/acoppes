@@ -17,32 +17,32 @@ image:
 
 Early access release date for Ship Miner [has been announced](/2026/06/05/earlyaccess-announcement.html) but what is the plan and roadmap to get into it? In this blogpost I want to share the current plan to Early Access as well as what I am working right now.
 
-But before that, I want to share some information about the wishlists and participation in fests.
+But before that, I want to share some information about wishlists and participating in fests.
 
 # LAGS + Early Access Announcement 
 
-Participating in the [LAGS Summer Game Fest Edition](https://www.youtube.com/watch?v=3wocOGnjg_I) to announce the Early Access release date was awesome and it had a really positive impact in wishlists.
+Participating in the [LAGS Summer Game Fest Edition](https://www.youtube.com/watch?v=3wocOGnjg_I) to announce the Early Access release date had a really positive impact in wishlists.
 
 <div class="post-image">
   <img src="/assets/shipminer/roadmaptoea/lags-showcase-wishlists.png" width="100%" />
   <span>Thanks LAGS!!</span>
 </div>
 
-The game duplicated wishlists during the event, which is nuts, and completely out of my expectations. I am really happy with this result and super grateful the picked Ship Miner to be part of the event. I will continue trying to participate in as many fests as possible.
+Basically, the game duplicated wishlists during the event, which is nuts, and completely out of my expectations. I am really happy with this result and super grateful the picked Ship Miner. I will continue trying to participate in as many fests as possible.
 
 # Current wishlists
 
-The game currently has around ~8k wishlists in Steam which is awesome.
+The game has around ~8k wishlists in Steam.
 
 <div class="post-image">
   <img src="/assets/shipminer/roadmaptoea/current-wishlists.png" width="40%" />
 </div>
 
-My objective is to get to 10k before the EA release. It feels it is a reachable number considering there is still sometime and that with some luck I will be in some other events/showcases. I also have the Steam Next Fest in October. 
+My objective is to get to 10k before the EA release. It feels it is a reasonable objective considering there is still sometime and that with some luck I will be in some other fests, including the Steam Next Fest in October. 
 
 # Marketing
 
-One thing that happened recently, like 4 days ago, is that for some reason someone revived the "This is the vibe I’m going for with my game" trend quoting my [tweet](https://x.com/arielsan/status/2058674364321567103) and that started to get some traction again, and it ended up adding ~60 wishlists. Not a huge deal but the important thing here is, I did nothing, it was just automatic marketing and it felt awesome.
+One thing that happened recently, like 4 days ago, is that for some reason someone revived the "This is the vibe I’m going for with my game" trend quoting my [tweet](https://x.com/arielsan/status/2058674364321567103) and that started to get some traction again, and the game got around ~60 new wishlists during that time. Not a huge deal in terms of numbers but the important thing here is I did nothing, it was just automatic marketing and it felt awesome.
 
 <div class="post-image">
   <img src="/assets/shipminer/roadmaptoea/random-marketing.png" width="100%" />
@@ -50,9 +50,9 @@ One thing that happened recently, like 4 days ago, is that for some reason someo
 
 # Roadmap to Early Access and Next Fest
 
-In general, I feel like the core of the game like mining, exploring, upgrading feels pretty well while the combat feels it needs more work. My idea is to get more depth in all aspects but game will continue to be a mining game first and I visualize the new combat elements to be more indirect, maybe going more to a tower defense/rts kind of game, like you build drones to attack enemies and stations to defend, and maybe you can install some technologies to be better in combat but right now I don't to add more active abilities and new controls (I am a huge fan of action games like Hades for example, but Ship Miner is not that kind of action in my mind). 
+In general, I feel like the core of the game: mining, exploring, upgrading feels pretty well while the combat feels it needs more work. My idea is to get more depth in all aspects but game will continue to be a mining game first. I visualize the new combat elements to be more indirect, maybe going more to a tower defense/rts kind of game, like you build drones to attack enemies and stations to defend, and maybe you can install some technologies to be better in combat but right now I don't want to add new controls for new attacks/abilities. I am a huge fan of action games like Hades but Ship Miner is not that kind of action in my mind. 
 
-The game has a win condition right now, it is not best but I believe I am going to continue changing it but it works for now while I work on other things.
+The game can be completed but even though the win condition is not best right now, it works and for now I will work on other things. It will change over time though, but I am not sure how yet.
 
 Then there is the meta game and the late game. My current focus is going to be on that and then come back to the game itself. Some ideas I have for a long time are unlocking different ships and having different game modes, among others.
 
