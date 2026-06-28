@@ -28,21 +28,20 @@ Participating in the [LAGS Summer Game Fest Edition](https://www.youtube.com/wat
   <span>Thanks LAGS!!</span>
 </div>
 
-Basically, the game duplicated wishlists during the event, which is nuts, and completely out of my expectations. I am really happy with this result and super grateful the selected Ship Miner. I will try to participate in as many fests as possible.
+Basically, the game duplicated wishlists during the event, which is nuts, and completely out of my expectations. I am really happy with this result and super grateful they selected Ship Miner. I will try to participate in as many fests as possible.
 
 # Current wishlists
 
-The game has around ~8k wishlists in Steam.
 
 <div class="post-image">
   <img src="/assets/shipminer/roadmaptoea/current-wishlists.png" width="40%" />
 </div>
 
-My objective is to get to 10k before the EA release. It feels it is a reasonable objective considering there is still sometime and that with some luck I will be in some other fests, including the Steam Next Fest in October. 
+The game has around ~8k wishlists in Steam and my objective is to reach 10k before the EA release in November. It feels it is a reasonable objective considering there is still sometime and that with some luck I will be in some other fests, including the Steam Next Fest in October. 
 
 # Marketing
 
-One thing that happened recently, like 4 days ago, is that for some reason someone revived the "This is the vibe I’m going for with my game" trend quoting my [tweet](https://x.com/arielsan/status/2058674364321567103) and that started to get some traction again, and the game got around ~60 new wishlists during that time. Not a huge deal in terms of numbers but the important thing here is I did nothing, it was just automatic marketing and it felt awesome.
+One thing that happened recently, like 4 days ago, is that for some reason someone resurrected the "This is the vibe I’m going for with my game" trend quoting my [tweet](https://x.com/arielsan/status/2058674364321567103) and that started to get some traction again, and the game got around ~60 new wishlists during that time. Not a huge deal in terms of numbers but the important thing here is I did nothing, it was just automatic marketing and it felt awesome.
 
 <div class="post-image">
   <img src="/assets/shipminer/roadmaptoea/random-marketing.png" width="100%" />
