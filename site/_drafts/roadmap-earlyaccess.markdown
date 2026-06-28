@@ -63,8 +63,15 @@ Different ships
 
 # Latest update
 
-* Mouse support + better 4k support, some bug fixes as well.
+During the [LAGS Summer Game Fest Edition](https://store.steampowered.com/curator/44964619/sale/LatinAmericanGamesShowcaseSummer2026), after the [showcase presentation video](https://www.youtube.com/watch?v=3wocOGnjg_I), I was checking youtube for reactions to see what they said Ship Miner. Most reactions I watched were ok, nothing fancy, but I accidentally started to find some small streamers playing the game. 
 
+I watched some videos and I noticed the streamers tried to naturally play using keyboard for movement and mouse for aiming and they took some time to realize they needed to play all with keyboard or play with gamepad (mouse was only for UI in that version). I was delaying improving mouse controls to not unconsciously take decisions that could make the gamepad experience worse. But after watching streamers I realized that I had to improve it sooner than later.
+
+So I did a demo update with mouse aiming support and improved support for big resolutions too. In my case I normally play in a 4k monitor and by default the game looked really big and couldn't customize it as I wanted (I had some cheats to fix it for me but needed to do something for players). Now the game autodetects a better game scale for those big resolutions and it looks better. 
+
+I hope both changes improve the experience for streamers for the future.
+
+# Conclusions
 
 That's all, thanks for reading!
 
