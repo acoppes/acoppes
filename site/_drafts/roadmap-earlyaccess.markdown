@@ -55,7 +55,7 @@ In general terms, I feel like the core mechanics: mining, exploring, upgrading f
 
 The game can be completed since there is a win condition and even though it is not best right now, it works, and I will not change it for now. It will surely change in the future but I am not sure when nor how yet.
 
-My current focus is going to be on the meta game and late game, things that happen when you play over and over again. Some ideas I had for a long time now are unlocking different ships, having different game modes, and different starting conditions.
+My current focus is going to be on the meta game and late game, things that happen when you play over and over again. Some ideas I had for a long time now are unlocking different ships, having different game modes, and different starting conditions. And the other thing I will also focus is to get more depth on how the game changes by traveling. 
 
 The asteroids procedural generation has a good base in my opinion and each time I add new content and/or new generation rules it feels it grows exponentially which makes me really happy with its state.
 
