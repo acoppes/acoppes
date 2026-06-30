@@ -21,6 +21,11 @@ At the beginning of this month I announced [Ship Miner Early access release date
 
 Before that though, I want to share some information about wishlists.
 
+<div class="post-image">
+  <img src="/assets/shipminer/roadmaptoea/shipminer-gameplay_01.gif" width="100%" />
+  <span>Mandatory GIF in case you didn't see the game before.</span>
+</div>
+
 # LAGS + Early Access Announcement 
 
 Participating in the [LAGS Summer Game Fest Edition](https://www.youtube.com/watch?v=3wocOGnjg_I) to announce the Early Access release date had a really positive impact in wishlists.
