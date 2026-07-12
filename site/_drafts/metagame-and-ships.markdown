@@ -42,13 +42,47 @@ Some ideas for new ships include:
 
 ## Refactoring the game to support different ships
 
+Most of the time adding new content makes me rethink how I am structuring the game but since it is the current objective and it is aligned with the vision and pillars of the game, it always feels like I am doing what I have to do. Also I am a refactor madman so I love when this happens.
+
 In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I had to move that information to the ships.
 
-Most of the time adding new content makes me rethink how I am structuring the game but since it is the current objective and it is aligned with the vision and pillars of the game, it always feels like I am doing what I have to do. Also I am a refactor madman so I love when this happens.
+* supported stats & technologies and max stats per ship
+* weapon system
+* selected ship to savegame
+* changed main game to spawn the corresponding ship
+* selecting the ship and testing screen
 
 ### Configurations
 
-As an additional thing that happened during the making of new ships is having a way to configure the important stuff of each ship in the same place, in particular I started using a Json file, in a similar way we did in Iron Marines.
+As an additional thing that happened during the making of new ships is having a way to configure the important stuff of each ship in the same place, in particular I started using a Json file, in a similar way we did in Iron Marines. I was recently working in dynamic configurations in Cleared Hot so I decided to join forces and work in similar things.
+
+This is an example of the current configuration.
+
+```json
+{
+    "ship_main": {
+        "_health": {
+            "total": 3
+        },
+        "_ship_movement": {
+            "rotation_speed": 540,
+            "min_mult_by_direction": 0.5,
+            "max_mult_by_direction": 1,
+            "firing_speed_multiplier": 0.5
+        },
+        "_tractor": {
+            "max_range": 1,
+            "force_multiplier": 4
+        },
+        "_stats": {
+            "speed": 3500,
+            "vision_range": 3.5
+        }
+    }
+}
+```
+
+I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration.
 
 SIDE NOTE: now the json file is in the game folder, so it is open for anyone who wants to play with values and see how the game changes.
 
