@@ -57,11 +57,7 @@ Big fan of git and Github, using it in different projects since it was released 
 
 <div align="center">
 
-[![stats](https://github-readme-stats.vercel.app/api?username=acoppes&count_private=true&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
 [![stats](https://github-stats-extended.vercel.app/api?username=acoppes&show_icons=true&include_all_commits=true&theme=dark)](https://github.com/anuraghazra/github-readme-stats)
-
-![my top-langs used](https://github-readme-stats.vercel.app/api/top-langs?username=acoppes&count_private=true&show_icons=true&locale=en&layout=compact&langs_count=10&theme=dark&hide=objective-c,matlab,php)     
 
 ### Profile Visit Count   
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=acoppes.acoppes)
