@@ -52,11 +52,11 @@ In order to support having different ships I had to break a bit a lot of assumpt
 * changed main game to spawn the corresponding ship
 * selecting the ship and testing screen
 
-### Configurations
+### Simplifying game configurations through plain text files
 
-As an additional thing that happened during the making of new ships is having a way to configure the important stuff of each ship in the same place, in particular I started using a Json file, in a similar way we did in Iron Marines. I was recently working in dynamic configurations in Cleared Hot so I decided to join forces and work in similar things.
+While working on creating the new ships I needed an easy way to visualize, compare and modify their values. For that reason, I decided to do something I had pending for a long time: to implement a way to configure units through a dedicated file (a JSON file in this case) similar to what [we did for Iron Marines](/2026/03/29/design-decisions-when-building-games-using-ecs2.html#how-we-did-configurations-in-iron-marines-invasion).
 
-This is an example of the current configuration.
+This is an example of how the part of the configuration looks:
 
 ```json
 {
@@ -82,9 +82,11 @@ This is an example of the current configuration.
 }
 ```
 
-I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration.
+As a side note, the main configurations file will be exported plain text with the game so it will be easy for anyone to edit to play with different values and see how the game changes.
 
-SIDE NOTE: now the json file is in the game folder, so it is open for anyone who wants to play with values and see how the game changes.
+I would love to write about the technical details and decisions but will save that for the next post about my game framework + ECS.
+
+<!-- I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration. -->
 
 ## Ships selection screen (the hangar)
 
