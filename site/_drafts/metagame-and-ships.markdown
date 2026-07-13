@@ -2,7 +2,7 @@
 layout: post
 title:  "Adding new Ships to Ship Miner"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: To prepare for EA release I need to continue working on metagame and replayability and having different ships sounds like a reasonable step in a game named "Ship" Miner. 
+excerpt: To prepare for EA release I need to work on replayability and metagame. Having different ships sounds like a reasonable first step in a game named "Ship" Miner. 
 author: Ariel Coppes
 tags:
   - tag1
@@ -17,35 +17,53 @@ image:
 
 # Introduction
 
-In order to increase replayability, playing with a new ship should provide a different experience when playing the game again so they should be built over the same game core. 
+In order to increase replayability, playing with a new ship should provide a different experience when playing the game again. That doesn't mean the core game should change but more like looking at the same game with different lenses. 
 
-The approach I will follow try to be like in Dome Keeper or in FTL where playing with unlocked content is optional and not like Wall World for example where you have to unlock metagame content in order to be able to complete the game.
+The approach I want is more like Dome Keeper or FTL where playing with unlocked content is optional and not like Wall World for example where you have to unlock metagame content in order to progress inside the game and in order to beat it.
 
 ## How to unlock the new Ships
 
-My plan for unlocking ships is to complete different objectives, could be complete the game, complete a specific achievement or complete missions inside the game (same asteroid or not). However, since I don't support for that right now, I suppose I initially would unlock them by completing asteroids or the game itself. Like the egg or the chicken problem, I would love to have more content to unlock in order to make sense to have a good system to unlock stuff, but without that system I can't add new unlockable content. My approach for now will be to unlock everything I add with the same basic version and then improve that version if the content grows. 
+My plan for unlocking ships is to complete different objectives, could be complete the game, complete a specific achievement or complete missions inside the game (same asteroid or not). 
+
+However, since I don't have support for that right now, I suppose I initially would unlock them by completing asteroids or the game itself, and once I start having more content then improve how/when to unlock it. 
 
 ## First ships and thoughts on playing
 
+Right now I am working on a couple of ships that will be there for next playtest version.
+
+### The Flyer
+
+One of them starts with double rays (now mining devices) and different initial stats, it is faster while not using the mining device but slower while using it and it is a bit more fragile.
+
+* Fast
+* Fragile
+* Powerful
+
 GIF
 
-Right now I have a couple of new ships, one starts with a double ray and different stats, it is faster while not mining but slower while using the mining devices and also it is a bit more fragile.
+I didn't play too much with this Ship but I liked the double ray on start, it feels more powerful, and I like it moves faster than the other one. I still don't feel it so different than the main one but maybe it is ok since I needed a test of having a different "starting" values. However, I will probably continue playing with its balance and with how the weapon behaves. I imagine one change could be that the rays do some attack pattern or increase a bit the speed penalty while using the mining device but make it really more powerful. Or maybe change it to be more like a lighting charges that do some random spot attacks and some stat improvements could be to control it a bit better. 
 
-I didn't play too much with this Ship but I liked the double ray on start, it feels more powerful, and I like it moves faster than the other one. I still don't feel it so different than the main one, so I believe I will continue playing with the balance and with how the weapon behaves, I imagine one thing could be that the rays do some attack pattern or increase a bit the speed penalty while using the mining device but make it really more powerful. Or maybe change it to be more like a lighting charges that do some random spot attacks and some stat improvements could be to control it a bit better. 
+### The Bomber 
+
+The other one is a long range one, it fires mining bombs. It doesn't have movement penalty while using the mining device (at least for now) and it is a bit more resistant but it is slower. It has its own stats for the bombs blast damage and radius.
+
+* Slow
+* Long range
+* Area damage
 
 GIF
 
-The other one is a long range one, it fires mining bombs through the mining device, it doesn't have movement penalty while charging the shoot (at least for now) and it is a bit more resistant but it is normally slower. It has its own stats for the bombs blast damage and radius.
+For this one, it feels the gameplay is already different, I played more from long distance and that changed a bit how I normally approach the asteroid. Mining the asteroid feels a bit more chaotic but also more powerful (might have some balance to do yet). It is easier to kill current big enemies since I am in a safe place most of the time and since it has no movement penalty I could dodge while charging attacks at the same time. I believe I need to nerf it a bit or find some interesting enemies that make the game harder in some situations with this ship.
 
-For this one, I feel the gameplay is different already, I played more from long distance, as expected, and mining the asteroid feels pretty different, maybe more chaotic but also more powerful (might have some balance to do yet). It is easier to kill enemies since I am in a safe place most of the time and since it has no movement penalty I could continue moving and charging at the same time to dodge enemy attacks. I believe I need to nerf it a bit or find some interesting enemies that make the game harder in some situations with this ship.
-
-Some other ideas for ships:
+### Other ideas to try
 
 * The builder: it relies on building drones or mining stations (or something similar) close to the asteroid, could recycle them or move them with the main mining device.
-* The drill: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. 
+* The drill: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. Could also be more "active" ability type, where the main device charge does some kind of dash forward and that's how it mines differently from others.
 * The bouncer: it accelerates fast and breaks the asteroid by hitting it, similar to dome keeper (and similar to one of the tech upgrades I have right now).
 
-One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I disabled them but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses. 
+One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I disabled them but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses.
+
+I like the driller as a really different version, maybe I change the double ray with that one and then share it in the playest version and stop working on having too much content here. Let it bake for a bit, wait for feedback, work on the rest of the game, get new ideas and/or inspiration from other things in the game, and then come back and add the rest of the ships, closer to the EA release or while in EA.
 
 ## Refactoring the game to support different ships
 
