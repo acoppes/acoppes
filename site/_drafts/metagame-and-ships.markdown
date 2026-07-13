@@ -13,32 +13,39 @@ image:
   width: 100
 ---
 
-## Intro 
-
 {{page.excerpt}}
 
-The main objective with having different Ships is to increase replayability. In order to achieve that, the ships should be different enough so the experience of playing the game again doesn't feel the same. 
+# Introduction
 
-However, the game will not need the different unlockable content to be completed like Wall World for example, but provide different ways of experiencing the game, more similar to FTL, where you have options of starting the game in different conditions.
+In order to increase replayability, playing with a new ship should provide a different experience when playing the game again so they should be built over the same game core. 
+
+The approach I will follow try to be like in Dome Keeper or in FTL where playing with unlocked content is optional and not like Wall World for example where you have to unlock metagame content in order to be able to complete the game.
 
 ## How to unlock the new Ships
 
-This is something I still didn't define but would be either by completing the game, playing multiple times and/or completing specific achievements or missions in the game. I like the third option but right now I don't support for anything like that so I suppose initially it would be after completing asteroids or the game.
+My plan for unlocking ships is to complete different objectives, could be complete the game, complete a specific achievement or complete missions inside the game (same asteroid or not). However, since I don't support for that right now, I suppose I initially would unlock them by completing asteroids or the game itself. Like the egg or the chicken problem, I would love to have more content to unlock in order to make sense to have a good system to unlock stuff, but without that system I can't add new unlockable content. My approach for now will be to unlock everything I add with the same basic version and then improve that version if the content grows. 
 
 ## First ships and thoughts on playing
 
 GIF
 
-Right now I have a couple of new ships, one starts with a double ray and different stats, it is faster while not mining but slower while using the mining devices and also it is a bit more fragile. 
+Right now I have a couple of new ships, one starts with a double ray and different stats, it is faster while not mining but slower while using the mining devices and also it is a bit more fragile.
+
+I didn't play too much with this Ship but I liked the double ray on start, it feels more powerful, and I like it moves faster than the other one. I still don't feel it so different than the main one, so I believe I will continue playing with the balance and with how the weapon behaves, I imagine one thing could be that the rays do some attack pattern or increase a bit the speed penalty while using the mining device but make it really more powerful. Or maybe change it to be more like a lighting charges that do some random spot attacks and some stat improvements could be to control it a bit better. 
 
 GIF
 
 The other one is a long range one, it fires mining bombs through the mining device, it doesn't have movement penalty while charging the shoot (at least for now) and it is a bit more resistant but it is normally slower. It has its own stats for the bombs blast damage and radius.
 
-Some ideas for new ships include:
+For this one, I feel the gameplay is different already, I played more from long distance, as expected, and mining the asteroid feels pretty different, maybe more chaotic but also more powerful (might have some balance to do yet). It is easier to kill enemies since I am in a safe place most of the time and since it has no movement penalty I could continue moving and charging at the same time to dodge enemy attacks. I believe I need to nerf it a bit or find some interesting enemies that make the game harder in some situations with this ship.
 
-* Drilling device one, which mines from closer distances, could be faster for going in straight line and might be faster while not mining to escape from enemies or something.
-* Drones based one, could spawn drones to mine, could h 
+Some other ideas for ships:
+
+* The builder: it relies on building drones or mining stations (or something similar) close to the asteroid, could recycle them or move them with the main mining device.
+* The drill: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. 
+* The bouncer: it accelerates fast and breaks the asteroid by hitting it, similar to dome keeper (and similar to one of the tech upgrades I have right now).
+
+One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I disabled them but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses. 
 
 ## Refactoring the game to support different ships
 
@@ -46,8 +53,16 @@ Most of the time adding new content makes me rethink how I am structuring the ga
 
 In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I had to move that information to the ships.
 
-* supported stats & technologies and max stats per ship
+### Different mining devices
+
+The main thing to do was to decouple the ships from the mining ray. The game until recently assumed the ship could only have mining rays. So I had to create an intermediary concept which is the mining device and that device could be "anything" in the future, for now I have the mining ray and the bombs launcher. That obviously implicated some other changes like how the stat upgrades and the installable tech applies over the ship.
+
+### Supported stats & technologies and max stats
+
+
+
 * weapon system
+* supported stats & technologies and max stats per ship
 * selected ship to savegame
 * changed main game to spawn the corresponding ship
 * selecting the ship and testing screen
@@ -98,3 +113,9 @@ In the future I believe I still prefer something like this but might mix more wi
 ## First time
 
 Another thing to consider is not overwhelm the players showing too much from the beginning but at the same time show the game has different ships. So I suppose one path here is to delegate that information to the trailer, steam page, description, etc, and then have an initial clean experience where the game goes directly to the ingame and doesn't show there are different ships or anything. However, I am one of those developers that believe the game is the best place to communicate so maybe I end up with a mixed thing here, like showing the hangar button but not allowing you to enter, show some information like "Select different ships. Complete a small asteroid to unlock". Also, I suppose there should be an unlocked option the first time you unlock the hangar.  
+
+## Conclusion
+
+If you have ideas for different ships or unlockable content you want to see in the game, feel free to add a comment here or join discord to discuss there too. 
+
+As always, Thanks so much for reading!
