@@ -94,3 +94,26 @@ _As a side note, the main configurations file will be exported plain text with t
 I believe I will write more about this and the technical details in the next post about ECS and how I am making games.
 
 <!-- I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration. -->
+
+
+# The technical part of the blogpost (FROM THE SHIPS BLOGPOST)
+
+## Refactoring the game to support different ships
+
+Most of the time adding new content makes me rethink how I am structuring the game but since it is the current objective and it is aligned with the vision and pillars of the game, it always feels like I am doing what I have to do. Also I am a refactor madman so I love when this happens.
+
+In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I moved that information to the ships.
+
+### Different mining devices
+
+The main thing to do was to decouple the ships from the mining ray. The game until recently assumed the ship could only have mining rays. To do that I created the mining device intermediary concept to support having different implementations, for now I have the mining ray and the bombs launcher. That obviously implicated some other changes like how the stat upgrades and the installable technologies applies over the ship.
+
+### Supported stats & technologies and max stats
+
+For this I already moved information to each ship, to declare which stats they support and what is the max level they support, but I also started to do some changes to support how each stat level affect each ship, for one ship upgrading 1 stat could be increasing 20% of speed but for another could be 50%. That means I also have to modify the UI to support different values from each ship (I just remembered that xD).
+
+In the case of the technologies, I started to filter which ones are supported or not since some of them don't make sense for some of the ships, so I only added support for filtering.
+
+### Simplifying game configurations through plain text files
+
+While working on creating the new ships I needed an easy way to visualize, compare and modify their values. For that reason, I decided to do something I had pending for a long time: to implement a way to configure units through a dedicated file (a JSON file in this case) similar to what [we did for Iron Marines](/2026/03/29/design-decisions-when-building-games-using-ecs2.html#how-we-did-configurations-in-iron-marines-invasion). I will save the details for another ECS blogpost.

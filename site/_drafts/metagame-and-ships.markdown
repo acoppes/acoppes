@@ -94,28 +94,6 @@ Another thing to consider is not overwhelm the players showing too much from the
 
 However, I believe the best place to communicate what the game has is the game. So I might end up with a mixed solution like showing the hangar button but not allowing you to enter but still show some information like "Select different ships. Complete a small asteroid to unlock" when you press the button. Since I am still undecided I will wait to be closer to the EA release to define this.  
 
-# The technical (boring) part of the blogpost
-
-## Refactoring the game to support different ships
-
-Most of the time adding new content makes me rethink how I am structuring the game but since it is the current objective and it is aligned with the vision and pillars of the game, it always feels like I am doing what I have to do. Also I am a refactor madman so I love when this happens.
-
-In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I moved that information to the ships.
-
-### Different mining devices
-
-The main thing to do was to decouple the ships from the mining ray. The game until recently assumed the ship could only have mining rays. To do that I created the mining device intermediary concept to support having different implementations, for now I have the mining ray and the bombs launcher. That obviously implicated some other changes like how the stat upgrades and the installable technologies applies over the ship.
-
-### Supported stats & technologies and max stats
-
-For this I already moved information to each ship, to declare which stats they support and what is the max level they support, but I also started to do some changes to support how each stat level affect each ship, for one ship upgrading 1 stat could be increasing 20% of speed but for another could be 50%. That means I also have to modify the UI to support different values from each ship (I just remembered that xD).
-
-In the case of the technologies, I started to filter which ones are supported or not since some of them don't make sense for some of the ships, so I only added support for filtering.
-
-### Simplifying game configurations through plain text files
-
-While working on creating the new ships I needed an easy way to visualize, compare and modify their values. For that reason, I decided to do something I had pending for a long time: to implement a way to configure units through a dedicated file (a JSON file in this case) similar to what [we did for Iron Marines](/2026/03/29/design-decisions-when-building-games-using-ecs2.html#how-we-did-configurations-in-iron-marines-invasion). I will save the details for another ECS blogpost.
-
 ## Conclusion
 
 If you have ideas for different ships or unlockable content you want to see in the game, feel free to add a comment here or join discord to discuss there too. 
