@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Metagame and replayability with new Ships"
-# date:   2022-11-22 00:08:30 -0300
+date:   2026-07-15 00:08:30 -0300
 excerpt: To prepare for EA release I started working on adding more replayability through metagame unlocks. Having different ships sounds like a reasonable first thing to have in a game named "Ship" Miner. 
 author: Ariel Coppes
 tags:
@@ -68,9 +68,9 @@ For this one, it feels the gameplay is already different, I played more from lon
 
 ### Other ideas to try
 
-* The builder: it relies on building drones or mining stations (or something similar) close to the asteroid, could recycle them or move them with the main mining device.
-* The driller: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. Could also be more "active" ability type, where the main device charge does some kind of dash forward and that's how it mines differently from others.
-* The bouncer: it accelerates fast and breaks the asteroid by hitting it, similar to dome keeper (and similar to one of the tech upgrades I have right now).
+* __The builder__: it relies on building drones or mining stations (or something similar) close to the asteroid, could recycle them or move them with the main mining device.
+* __The driller__: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. Could also be more "active" ability type, where the main device charge does some kind of dash forward and that's how it mines differently from others.
+* __The bouncer__: it accelerates fast and breaks the asteroid by hitting it, similar to dome keeper (and similar to one of the tech upgrades I have right now).
 
 In all of them the core thing to have in mind is how they use the current controls of the game, what can I do as a player when using that ship. That's something more clear for some ships than others. 
 
@@ -96,6 +96,10 @@ However, I believe the best place to communicate what the game has is the game. 
 
 ## Conclusion
 
-If you have ideas for different ships or unlockable content you want to see in the game, feel free to add a comment here or join discord to discuss there too. 
+If you have ideas for different ships or unlockable content you want to see in the game, feel free to add a comment here, in steam discussions or join discord. 
 
 As always, Thanks so much for reading!
+
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
+</div>
