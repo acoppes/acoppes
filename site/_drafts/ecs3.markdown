@@ -61,3 +61,36 @@ IMAGE FOR THAT
 This elements are GameObjects that allow me to automatically spawn entities from a definition and apply some normal overrides, for example: spawn a mining ship here but in enemy team and with extra health. They are pretty useful for stuff that is already there in the scene when the game starts, and super useful for the development scenes. But they can also be invoked in runtime as part of the game logic, for example: when the main player ship gets a new upgrade, then spawn some EntityPrefabInstance, the good part about this case is that they already have some configuration in that object. 
 
 IMAGE OF ENTITY IN INSPECTOR AND IN SCENE
+
+
+This is an example of how the part of the configuration looks:
+
+```json
+{
+    "ship_main": {
+        "_health": {
+            "total": 3
+        },
+        "_ship_movement": {
+            "rotation_speed": 540,
+            "min_mult_by_direction": 0.5,
+            "max_mult_by_direction": 1,
+            "firing_speed_multiplier": 0.5
+        },
+        "_tractor": {
+            "max_range": 1,
+            "force_multiplier": 4
+        },
+        "_stats": {
+            "speed": 3500,
+            "vision_range": 3.5
+        }
+    }
+}
+```
+
+_As a side note, the main configurations file will be exported plain text with the game so it will be easy for anyone to edit to play with different values and see how the game changes._
+
+I believe I will write more about this and the technical details in the next post about ECS and how I am making games.
+
+<!-- I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration. -->
