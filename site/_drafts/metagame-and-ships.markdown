@@ -5,8 +5,9 @@ title:  "Metagame and replayability with new Ships"
 excerpt: To prepare for EA release I started working on adding more replayability through metagame unlocks. Having different ships sounds like a reasonable first thing to have in a game named "Ship" Miner. 
 author: Ariel Coppes
 tags:
-  - tag1
-  - tag2
+  - development
+  - gamedesign
+  - metagame
 image:
   path: /images/ecs-post-preview.jpg
   height: 100
@@ -15,13 +16,13 @@ image:
 
 {{page.excerpt}}
 
-# Introduction
-
-In order to increase replayability, playing with a new ship should provide a different experience when playing the game again. That doesn't mean the core game should change but more like looking at the same game with different lenses. 
-
 <div class="post-image">
   <img src="/assets/shipminer/ships/shipminer-intro.gif" width="75%" />
 </div>
+
+# Introduction
+
+In order to increase replayability, playing with a new ship should provide a different experience when playing the game again. That doesn't mean the core game should change but more like looking at the same game with different lenses. 
 
 The approach I want is more like Dome Keeper or FTL where playing with unlocked content is optional and not like Wall World for example where you have to unlock metagame content in order to progress inside the game and in order to beat it.
 
@@ -75,7 +76,7 @@ In all of them the core thing to have in mind is how they use the current contro
 
 One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I deactivated them for those ships but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses.
 
-I like the driller as a really different version, maybe I change the double ray with that one and then share it in the playest version and stop working for now. I will let it bake for a bit, wait for feedback, work on the rest of the game, get new ideas and/or inspiration from other things in the game, and then come back to add more ships, probably closer to the EA release and/or while in EA.
+I like the driller as a really different version, maybe I change the double ray with that one and then share it in the playtest version and stop working for now. I will let it bake for a bit, wait for feedback, work on the rest of the game, get new ideas and/or inspiration from other things in the game, and then come back to add more ships, probably closer to the EA release and/or while in EA.
 
 ## Selecting ship screen (the hangar)
 
@@ -89,7 +90,9 @@ For the future I still prefer having something like this but maybe adding some u
 
 ## First game experience
 
-Another thing to consider is not overwhelm the players showing too much from the beginning but at the same time show the game has different ships. I suppose one path here is to delegate that information to the trailer, steam page, description, etc, and then have an initial clean experience where the game goes directly to the ingame and doesn't show there are different ships or anything. However, I am one of those developers that believe the game is the best place to communicate what the game has so maybe I end up with a mixed thing here, like showing the hangar button but not allowing you to enter, show some information like "Select different ships. Complete a small asteroid to unlock". But I am still undecided and will wait to be closer to the EA release to decide this.  
+Another thing to consider is not overwhelm the players showing too much from the beginning but at the same time show the game has different ships. I suppose one path here is to delegate that information to the trailer, steam page, description, etc, and then have an initial clean experience where the game goes directly to the ingame and doesn't show there are different ships or anything. 
+
+However, I believe the best place to communicate what the game has is the game. So I might end up with a mixed solution like showing the hangar button but not allowing you to enter but still show some information like "Select different ships. Complete a small asteroid to unlock" when you press the button. Since I am still undecided I will wait to be closer to the EA release to define this.  
 
 # The technical (boring) part of the blogpost
 
