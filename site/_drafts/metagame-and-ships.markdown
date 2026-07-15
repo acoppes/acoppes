@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Adding new Ships to Ship Miner"
+title:  "Metagame and replayability with new Ships"
 # date:   2022-11-22 00:08:30 -0300
-excerpt: To prepare for EA release I need to work on replayability and metagame. Having different ships sounds like a reasonable first step in a game named "Ship" Miner. 
+excerpt: To prepare for EA release I started working on adding more replayability through metagame unlocks. Having different ships sounds like a reasonable first thing to have in a game named "Ship" Miner. 
 author: Ariel Coppes
 tags:
   - tag1
@@ -31,7 +31,7 @@ However, since I don't have support for that right now, I suppose I initially wo
 
 Right now I am working on a couple of ships that will be there for next playtest version.
 
-### The Flyer
+### Dual Rays (or the one that is the same but not the same for now)
 
 One of them starts with double rays (now mining devices) and different initial stats, it is faster while not using the mining device but slower while using it and it is a bit more fragile.
 
@@ -41,11 +41,11 @@ One of them starts with double rays (now mining devices) and different initial s
 
 GIF
 
-I didn't play too much with this Ship but I liked the double ray on start, it feels more powerful, and I like it moves faster than the other one. I still don't feel it so different than the main one but maybe it is ok since I needed a test of having a different "starting" values. However, I will probably continue playing with its balance and with how the weapon behaves. I imagine one change could be that the rays do some attack pattern or increase a bit the speed penalty while using the mining device but make it really more powerful. Or maybe change it to be more like a lighting charges that do some random spot attacks and some stat improvements could be to control it a bit better. 
+I didn't play too much with this Ship but I liked the double ray on start, it feels more powerful, and I like it moves faster than the other one. I still don't feel it so different than the main one but maybe it is ok since I needed a test of having a different "starting" values. However, I will probably continue playing with its balance and with how the weapon behaves. I imagine one change could be that the rays do some attack pattern or increase a bit the speed penalty while using the mining device but make it really more powerful. Or maybe change it to be more like a electric/lighting charges that do some random spot attacks and some stat improvements could be to control it a bit better. 
 
 ### The Bomber 
 
-The other one is a long range one, it fires mining bombs. It doesn't have movement penalty while using the mining device (at least for now) and it is a bit more resistant but it is slower. It has its own stats for the bombs blast damage and radius.
+The other one is a long range one, it fires mining bombs from the "mining devices" (not weapons!). It doesn't have movement penalty while using the mining device (at least for now) and it is a bit more resistant but it is slower in general. It has stats to upgrade for the bombs blast damage and radius.
 
 * Slow
 * Long range
@@ -61,29 +61,37 @@ For this one, it feels the gameplay is already different, I played more from lon
 * The drill: it is pretty good for mining in close distance, could be faster if going in straight line for example and/or needs to charge the drill and then can't change direction. Could also be more "active" ability type, where the main device charge does some kind of dash forward and that's how it mines differently from others.
 * The bouncer: it accelerates fast and breaks the asteroid by hitting it, similar to dome keeper (and similar to one of the tech upgrades I have right now).
 
-One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I disabled them but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses.
+In all of them the core thing to have in mind is how they use the current controls of the game, what can I do as a player when using that ship. That's something more clear for some ships than others. 
 
-I like the driller as a really different version, maybe I change the double ray with that one and then share it in the playest version and stop working on having too much content here. Let it bake for a bit, wait for feedback, work on the rest of the game, get new ideas and/or inspiration from other things in the game, and then come back and add the rest of the ships, closer to the EA release or while in EA.
+One thing that happened while iterating on ships is that it feels that some of the current tech I have for the main ship doesn't work well for the other ships, so I deactivated them for those ships but also made me realize that maybe each ship could have its own special tech that could either maximize some of the ship's uniqueness or could minimize some of its weaknesses.
+
+I like the driller as a really different version, maybe I change the double ray with that one and then share it in the playest version and stop working for now. I will let it bake for a bit, wait for feedback, work on the rest of the game, get new ideas and/or inspiration from other things in the game, and then come back to add more ships, probably closer to the EA release and/or while in EA.
 
 ## Refactoring the game to support different ships
 
 Most of the time adding new content makes me rethink how I am structuring the game but since it is the current objective and it is aligned with the vision and pillars of the game, it always feels like I am doing what I have to do. Also I am a refactor madman so I love when this happens.
 
-In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I had to move that information to the ships.
+In order to support having different ships I had to break a bit a lot of assumptions I did before where there was only one main ship and only one type. For example, the stats definitions were general and they had the max stats in the data asset. Now that each ship could have different stats and each stat could have a different max, I moved that information to the ships.
 
 ### Different mining devices
 
-The main thing to do was to decouple the ships from the mining ray. The game until recently assumed the ship could only have mining rays. So I had to create an intermediary concept which is the mining device and that device could be "anything" in the future, for now I have the mining ray and the bombs launcher. That obviously implicated some other changes like how the stat upgrades and the installable tech applies over the ship.
+The main thing to do was to decouple the ships from the mining ray. The game until recently assumed the ship could only have mining rays. To do that I created the mining device intermediary concept to support having different implementations, for now I have the mining ray and the bombs launcher. That obviously implicated some other changes like how the stat upgrades and the installable technologies applies over the ship.
 
 ### Supported stats & technologies and max stats
 
+For this I already moved information to each ship, to declare which stats they support and what is the max level they support, but I also started to do some changes to support how each stat level affect each ship, for one ship upgrading 1 stat could be increasing 20% of speed but for another could be 50%. That means I also have to modify the UI to support different values from each ship (I just remembered that xD).
 
+In the case of the technologies, I started to filter which ones are supported or not since some of them don't make sense for some of the ships, so I only added support for filtering.
 
-* weapon system
-* supported stats & technologies and max stats per ship
-* selected ship to savegame
-* changed main game to spawn the corresponding ship
-* selecting the ship and testing screen
+## Selecting ship screen (the hangar)
+
+For the technical side, I had to save the selected ship somehow in the savegame and then change the ingame to not always instantiate the same hardcoded ship xD, that wasn't super hard but needed some test for sure.
+
+For the selection screen, I am not super sure what to do but I really like games where there is a mix of ingame and ui in order to do metagame actions, and in this case I created a selection level where you use a small shuttle ship and take control of the ship you want to use for the game. There you can experience a bit the basic stuff and see the stats, etc, and once you are decided, you can start the game.
+
+GIF
+
+For the future I still prefer having something like this but maybe adding some ui to show other information like the ship is locked and maybe show hint in how to unlock it or show the specific way to unlock it, for example: complete the game once.
 
 ### Simplifying game configurations through plain text files
 
@@ -115,22 +123,15 @@ This is an example of how the part of the configuration looks:
 }
 ```
 
-As a side note, the main configurations file will be exported plain text with the game so it will be easy for anyone to edit to play with different values and see how the game changes.
+_As a side note, the main configurations file will be exported plain text with the game so it will be easy for anyone to edit to play with different values and see how the game changes._
 
-I would love to write about the technical details and decisions but will save that for the next post about my game framework + ECS.
+I believe I will write more about this and the technical details in the next post about ECS and how I am making games.
 
 <!-- I decided to have some basic systems to autoconfigure the components, for those I reserve keys starting with `_`, so for example `_tractor` is automatically detected by the configuration system, but then the keys like `ship_main` are things I use in the main ship definition to identify it wants that configuration. -->
 
-## Ships selection screen (the hangar)
+## First game experience
 
-Not super sure what to do here but I really like the games where there is a mix of ingame and ui in order to do metagame actions, and in this case I did a hangar screen where you move using a shuttle ship and take control to the ship you want to play, and you can check the stats and test flight a bit the ship in the game itself. 
-
-In the future I believe I still prefer something like this but might mix more with ui to show some other information, for example, show a ship is locked until some mission is completed (or maybe keep that hidden, not sure about that one).
-
-
-## First time
-
-Another thing to consider is not overwhelm the players showing too much from the beginning but at the same time show the game has different ships. So I suppose one path here is to delegate that information to the trailer, steam page, description, etc, and then have an initial clean experience where the game goes directly to the ingame and doesn't show there are different ships or anything. However, I am one of those developers that believe the game is the best place to communicate so maybe I end up with a mixed thing here, like showing the hangar button but not allowing you to enter, show some information like "Select different ships. Complete a small asteroid to unlock". Also, I suppose there should be an unlocked option the first time you unlock the hangar.  
+Another thing to consider is not overwhelm the players showing too much from the beginning but at the same time show the game has different ships. I suppose one path here is to delegate that information to the trailer, steam page, description, etc, and then have an initial clean experience where the game goes directly to the ingame and doesn't show there are different ships or anything. However, I am one of those developers that believe the game is the best place to communicate what the game has so maybe I end up with a mixed thing here, like showing the hangar button but not allowing you to enter, show some information like "Select different ships. Complete a small asteroid to unlock". But I am still undecided and will wait to be closer to the EA release to decide this.  
 
 ## Conclusion
 
