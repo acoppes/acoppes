@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Making runs feel a bit more different and indirect combat"
+title:  "Ship Miner: Making runs feel more different and indirect combat."
 date:   2026-07-15 00:08:30 -0300
-excerpt: Preparing the game for Early Access release in November, I am trying to start attacking some of what I consider the big issues of the game to then focus on adding more content and polishing the game. In this blogpost in particular I want to talk about two issues.
+excerpt: Preparing the game for release, I am tackling some big issues and unknowns to then focus on adding more content and polishing the game. In this blogpost in particular I want to talk about making runs feel more different and having more indirect combat.
 author: Ariel Coppes
 tags:
   - development
@@ -23,16 +23,23 @@ image:
 
 {{page.excerpt}}
 
-One of the issues is that the game feels a bit repetitive in some decisions during the run. This doesn't mean there are no interesting explicit decisions to make, there are even lots of implicit decisions in the core gameplay but some of the explicit ones feel "repetitive". For example, in the current version, which technology to install in the ship is a matter of time and randomness but you end up installing everything in the end and it feels like there is no real decision there.
+One of the issues is that the game feels a bit repetitive in some decisions during the run, reducing replayability. This doesn't mean there are no interesting decisions, in fact, there are even lots of implicit decisions around the core gameplay but the explicit ones need more work. For example, which technology to install in the ship is a matter of time and randomness but you end up installing everything and it feels like there is no real decision there after playing multiple times.
 
-The other issue is that the game combat is too centered around the ship right and that makes me (and other players) feel like the game needs more combat oriented actions (dash, shields, etc) but that was never my intention, it is a "relaxing" mining game with combat, not a combat game with mining.
+The other issue is that the game combat is too centered around the ship and it feels like it needs more combat oriented actions like dashing or blocking but that was never my intention, it is a "relaxing" mining game with combat, not a combat game with mining, so that not the direction I want for the solution.
 
 ## Current planned idea/solution
 
-To improve first issue my idea is to start digging deeper in the roguelike elements. The idea is to have more optional unlocks during runs, probably when collecting blueprints. Those unlocks could be technologies, buildings, global upgrades, etc, but it will presented more in a roguelike manner, where you have to select one of three, and they will unlock paths but you will probably sacrifice one path when selecting the other. Obviously, in order to support that, I need more content. 
+To improve first issue the idea is to start digging deeper in the roguelike elements. This means having more optional unlocks during runs, probably when collecting blueprints or traveling to other asteroids. Those unlocks could be technologies, buildings, global upgrades, etc, but it will presented more in a roguelike manner, where you have to select one of multiple choices, and they will unlock paths but might block others. In order to support that, the game needs more content. 
 
-Now, for the other issue, my idea is to remove the ship as center of the combat by adding more indirect elements like defensive stations and delegate to automatic drones and ships the real combat, each one with different attacks, some of them could even be ship modules or extensions. 
+For the other issue, the idea is to remove the ship as center of the combat by adding more automatic elements like buildings, drones and ships, each one with different attacks, and delegate the real combat to them. Some of them could even be extensions of the main ship that automatically react to enemies.
 
+## Micro base building 
+
+Implementing everything takes time, I prefer to do it in steps, and decided to start with some fo the indirect elements, in particular, the buildings which I call _space stations_. 
+
+-- tower defense
+-- GIF
+-- 
 
 
 ## Conclusion
