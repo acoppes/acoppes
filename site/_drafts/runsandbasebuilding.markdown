@@ -35,18 +35,31 @@ For the other issue, the idea is to remove the ship as center of the combat by a
 
 ## Micro base building 
 
-Implementing everything takes time, I prefer to do it in steps, and decided to start with some fo the indirect elements, in particular, the buildings which I call _space stations_. 
+Implementing everything together takes time and might delay having some feedback so I instead preferred to start in steps, I started with some indirect elements, in particular, the buildings which I call _space stations_. 
 
--- tower defense
--- GIF
--- 
+To build new stations there are some _invisible holders_ around other stations that become visible and interactable when the ship is near, and support different build options. Once the station is built over the station holder, that one disappear and now there are new ones around the first one.
 
+GIF OF HOLDER + BUILDING
+
+As part of the first iteration I added three utility stations and one defensive station. The utility stations use part of the content I already had, for example, the mining station spawns mining drones over time. The other ones are the repair station, which spawns repair drones and the scan station which spawns the drones that explore the asteroid and find minerals.
+
+GIF OF MINING STATION
+
+And the defensive station attacks enemies when they are close to the base, the default one just fires projectiles similar to the bomber ship (I also reused part of the content here to have the general idea working first).
+
+GIF OF DEFENSIVE STATION
+
+Having stations to build also helps in having more options to spend minerals, which was another issue to improve.
+
+Current stations are no interactable and have no options per station but that's is something I might re explore later.
 
 ## Conclusion
 
--- TODO
+Next step is to add a couple of new stations and start unlocking the game content and global upgrades through the run. With global upgrades I mean for example something like adding +1 drone to all mining stations, or extra speed to all drones from all stations. 
 
-As always, Thanks so much for reading!
+Next iteration though it's going to be about localization, I have delayed that a bit but I want to start having it more defined since it is a must for steam next fest before the release. 
+
+Thanks so much for reading and remember to play the demo and/or wishlist the game! 
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=devlog" frameborder="0" width="646" height="190"></iframe>
