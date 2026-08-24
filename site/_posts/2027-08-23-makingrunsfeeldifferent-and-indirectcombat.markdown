@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Ship Miner: Making runs feel more different and indirect combat."
-date:   2026-08-24 00:08:30 -0300
+title:  "Making runs feel more different and indirect combat in Ship Miner"
+date:   2026-08-23 00:08:30 -0300
 excerpt: While I am preparing the game for EA release, I am tackling some big issues and unknowns to then focus on adding more content and polishing the game. In this blogpost in particular I want to talk about making runs feel more different and changing the combat to be more indirect.
 author: Ariel Coppes
 tags:
