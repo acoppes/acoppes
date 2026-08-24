@@ -16,7 +16,7 @@ image:
 
 <div class="post-image">
   <img src="/assets/shipminer/shipminer-gameplay_02.gif" width="75%" />
-  <span>This is Ship Miner btw, <a href="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=devlog">Demo available on Steam!</a></span>
+  <span>This is Ship Miner btw, <a href="https://store.steampowered.com/app/3113690/Ship_Miner/?utm_source=personalpage&utm_campaign=devlog">Demo available on Steam!</a></span>
 </div>
 
 # Introduction
@@ -27,13 +27,13 @@ One of the issues is that the game feels a bit repetitive in some decisions duri
 
 The other issue is that the game combat is too centered around the ship and it feels like it needs more combat oriented actions like dashing or blocking but that was never my intention since it is a "relaxing" mining game with combat, not a combat game with mining, so that's not the direction I want for the solution.
 
-## Current planned idea/solution
+## Current planned idea to solve these issues
 
 To improve first issue the idea is to start digging deeper in the roguelike elements. This means having more optional unlocks during runs, probably when collecting blueprints or traveling to other asteroids. Those unlocks could be technologies, buildings, global upgrades, etc, but they will presented more in a roguelike way, where you have to select one of multiple choices, and they will unlock paths but might block others. 
 
 For the other issue, the idea is to remove the ship as center of the combat by adding more automatic elements like buildings, drones and ships, each one with different attacks. Some of them could even be extensions of the main ship.
 
-## Micro base building 
+## Initial steps towards the solution
 
 As first step I decided to start by implementing indirect elements to build, the _space stations_.
 
@@ -59,9 +59,11 @@ Having stations to build also helps in having more options to spend minerals on.
 
 Current stations have no options to improve or change but that is something I might work in further iterations.
 
-This is available in private beta already.
+This is available in private beta already. If you want to be part of it, go to the Game Steam Page and press the request access button.
 
-## Conclusion
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=devlog" frameborder="0" width="646" height="190"></iframe>
+</div>
 
 Next step for the solution is to start unlocking game content and global upgrades through the run. With global upgrades I mean for example something like adding +1 drone to all mining stations, or extra speed to all drones from all stations. For in asteroid unlocks I might use blueprints and for others I might use the asteroid destination selection. 
 
@@ -69,6 +71,3 @@ However, my next iteration is going to be about localization since I want to be 
 
 Thanks so much for reading and remember to play the demo and/or wishlist the game! 
 
-<div align="center">
-<iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=devlog" frameborder="0" width="646" height="190"></iframe>
-</div>
