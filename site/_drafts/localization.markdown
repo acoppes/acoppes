@@ -15,7 +15,7 @@ image:
 ---
 
 <div class="post-image">
-  <img src="/assets/shipminer/shipminer-gameplay_02.gif" width="75%" />
+  <img src="/assets/shipminer/shipminer-gameplay_02.gif" width="100%" />
   <span>This is Ship Miner btw, <a href="https://store.steampowered.com/app/3113690/Ship_Miner/?utm_source=personalpage&utm_campaign=devlog">Demo available on Steam!</a></span>
 </div>
 
@@ -34,7 +34,7 @@ Here is how part of the spanish file looks like:
 "general_ui_continue" = "Continuar"
 ```
 
-Long story short, the results were really good, the font seems to support pretty well Japanese, Chinese, Korean and Russian. From the UI side, I had to adjust some UI text elements pivots/anchors so the texts are centered properly and the size of the containers but in general it was relatively easy (although it might require still more work I didn't notice).
+Long story short, the results were really good, the font seems to support pretty well Japanese, Chinese, Korean and Russian. From the UI side, I had to adjust some UI text elements pivots/anchors so the texts are centered properly and the size of the containers but in general it was relatively easy (although it might require still more work I didn't notice). I can say that the work I did on the UI some time ago to support the new font payed off now.
 
 After testing the game in other languages, maybe the only thing I might change are the ingame notifications which now look a bit too big considering the new font, maybe I change all notifications to be in HUD but I will wait to test it a bit more before deciding that.
 
@@ -45,7 +45,7 @@ I also made this easy to extend by the community since adding new languages is a
 To validate the game changes for the main languages I want to support, I used the manual Spanish translation and autotranslated versions for the other languages. For the autotranslated ones, I don't know what they say and/or if they are right or not but it helped me to validate features. It is not my plant to release with autotranslated files as part of the "official translations" but I am thinking about adding command line option to show the autotranslated versions in the language selection window just in case someone wants to play with them anyways (might also show a warning when selecting them).
 
 <div class="post-image">
-  <img src="/assets/shipminer/localization/shipminer-localization-jptest.gif" width="75%" />
+  <img src="/assets/shipminer/localization/shipminer-localization-jptest.gif" width="100%" />
   <span>Here is how the game could look in Japanese.</span>
 </div>
 
