@@ -57,4 +57,8 @@ I can already start talking with the localization team and start adjusting my pl
 
 I am really happy with how the game looks in other languages already, it feels more like a real product. I really hope more players can enjoy the game now.
 
+<div align="center">
+<iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=devlog" frameborder="0" width="646" height="190"></iframe>
+</div>
+
 Thanks so much for reading and remember to play the demo and/or wishlist the game!
