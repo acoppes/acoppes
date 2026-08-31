@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ship Miner now supports multiple languages!"
-# date:   2026-08-23 00:08:30 -0300
+date:   2026-08-31 00:08:30 -0300
 excerpt: Even though the game is not finished, and will change for sure, preparing the game to support different languages shouldn't be the last thing to do.
 author: Ariel Coppes
 tags:
