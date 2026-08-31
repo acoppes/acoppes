@@ -15,9 +15,14 @@ image:
 ---
 
 <div class="post-image">
+  <img src="/assets/shipminer/localization/shipminer-localization-jptest.gif" width="100%" />
+  <span>Here is how the game could look in Japanese.</span>
+</div>
+
+<!-- div class="post-image">
   <img src="/assets/shipminer/shipminer-gameplay_02.gif" width="100%" />
   <span>This is Ship Miner btw, <a href="https://store.steampowered.com/app/3113690/Ship_Miner/?utm_source=personalpage&utm_campaign=devlog">Demo available on Steam!</a></span>
-</div>
+</div -->
 
 {{page.excerpt}}
 
@@ -33,11 +38,6 @@ I also made this easy to extend by the community since adding new languages is a
 
 To validate the game changes for the main languages I want to support, I used the manual Spanish translation and autotranslated versions for the other languages. For the autotranslated ones, I don't know what they say and/or if they are right or not but it helped me to validate features. My plan is to work with a localization team but I am thinking about adding command line option to show the autotranslated versions in the language selection window just in case someone wants to play with them anyways (might also show a warning when selecting them).
 
-<div class="post-image">
-  <img src="/assets/shipminer/localization/shipminer-localization-jptest.gif" width="100%" />
-  <span>Here is how the game could look in Japanese.</span>
-</div>
-
 There are still things to be done to completely support for other languages, for example adjusting upgrade texts based on the selected ship and/or current upgrade level. My plan is to try to close a couple of things and make a new release for playtesters.
 
 After that, my next iteration will be on unlocking content during the game to start having a glimpse of how that feels and the impact in the game, focusing on the objective of making the game feel more different between runs.
@@ -46,8 +46,8 @@ I can already start talking with the localization team and start adjusting my pl
 
 I am really happy with how the game looks in other languages already, it feels more like a real product. I really hope more players can enjoy the game now.
 
+Thanks so much for reading and remember to play the demo and/or wishlist the game!
+
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/3113690/?utm_source=personalpage&utm_campaign=devlog" frameborder="0" width="646" height="190"></iframe>
 </div>
-
-Thanks so much for reading and remember to play the demo and/or wishlist the game!
