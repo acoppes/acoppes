@@ -9,7 +9,7 @@ layout: home
 
 I'm a 42 years old Game Developer and Software Engineer with passion for games and programming, and I have more than 15 years of experience, mainly in game development. I am a father of a 6 years old kid and a 4 years old girl.
 
-I have a Game Development company named [Pixel Core Games](https://x.com/pixelcoregames) and I am currently providing development services to [Clered Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/), a nostalgic helicopter shooter with satisfying physics and light tactical elements, and also developing my game [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
+I have a Game Development company named [Pixel Core Games](https://x.com/pixelcoregames) and I am currently providing development services to [Cleared Hot](https://store.steampowered.com/app/1710820/Cleared_Hot/), a nostalgic helicopter shooter with satisfying physics and light tactical elements, and also developing my game [Ship Miner](https://shipminer.arielcoppes.dev), a 1 bit low res pixelart twinstick sci fi miner game.   
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/1710820/?utm_source=arielsan" frameborder="0" width="646" height="190"></iframe>
