@@ -3,6 +3,12 @@ layout: page
 title: Jams
 permalink: /jams/
 projects:
+  - name: "Eriq Topson and The Treasure of Hollow Island"
+    url: https://arielsan.itch.io/gbjam14
+    images: 
+      - /images/jams_gbjam14_eriqtopson.gif
+    description: Help Eriq Topson in his search for the ONE TREASURE, hidden in Hollow Island.
+    jam: GBJAM14
   - name: "Faster Than Luck"
     url: https://arielsan.itch.io/gbjam13
     images: 
