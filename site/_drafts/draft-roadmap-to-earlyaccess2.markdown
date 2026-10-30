@@ -17,13 +17,13 @@ image:
   width: 100
 ---
 
-Ship Miner Demo was part of the last [Steam Next Fest (Oct 2026)](https://store.steampowered.com/sale/nextfest) and this post is about how it performed and my plans towards the Early Access Release on November 26th.
+Ship Miner Demo was part of the last [Steam Next Fest (Oct 2026)](https://store.steampowered.com/sale/nextfest) and this post is about how it performed and my plan towards the Early Access Release on November 26th.
 
 <div class="post-image">
   <img src="/assets/shipminer/nextfest/shipminer-in-nextfest.png" width="75%" />
 </div>
 
-This Steam next fest started the first couple of days with a random mode where all games get similar visibility. I understand that the only thing that could affect visibility was which languages are supported by the game, for example, if I only speak english and spanish, games that don't support neither of those languages will be less visible to me than games that support at least one of them. They switched to a personalized mode when on the third day, showing games related to what you like, and start considering which games are doing better during the fest. 
+This Steam next fest started in a random mode where all games get similar visibility. I understand that the only thing that could affect visibility was which languages are supported by the game, for example, if I only speak english and spanish, games that don't support neither of those languages will be less visible to me than games that support at least one of them. They switched to a personalized mode on the third day, showing games related to what you like, and start considering which games are doing better during the fest. 
 
 <div class="post-image">
   <img src="/assets/shipminer/nextfest/steam-next-fest-explorationmode.png" width="100%" />
@@ -54,17 +54,15 @@ During the fest I used the [How to market a game](https://howtomarketagame.com/)
 
 And if interested in it, here is the HTMAG [results card](/assets/shipminer/nextfest/ship-miner-snf-score.png).
 
-Best thing about the fest was how many people tried the demo and shared feedback both in the discord and in the feedback form. And based on this and my own feedback and conclusions about the game, I decided to adjust some things towards the release.
+Best thing about the fest was how many people tried the demo and shared feedback both in discord and in the feedback form. And based on this and my own feedback and conclusions about the game, I decided to adjust some things towards the release:
 
-Here are a list of things that I want to address somehow before or during EA:
-
-* Game feels good but needs more content (ships, drones, build stations, enemies, technologies, etc)
-* Base building is lost when traveling
+* Game feels good but needs more content (ships, drones, build stations, enemies, technologies, etc).
+* Base building is lost when traveling.
 * Combat doesn't feel good enough.
 * Some players just want to chill out, no combat.
-* To be able to uninstall technologies (this one is a bit tricky, more detail later)
+* To be able to uninstall technologies (this one is a bit tricky, more detail later).
 * End of game is not so clear and/or not so epic.
-* Some reported bugs
+* Some reported bugs.
 
 ## Plan for Early Access
 
@@ -76,7 +74,7 @@ The game will start by selecting different game modes and different asteroid siz
   <img src="/assets/shipminer/nextfest/shipminer-different-modes.gif" width="100%" />
 </div>
 
-Since I am removing the asteroid travel, the run progression will be affected. To balance that, the idea is to move some of the asteroid travel progression to inside the asteroid and use the anomaly for that. My plan is that each time you defeat an anomaly (or it is alive for more than some time), it does a game changing effect (like a gravitaitonal wave) and the rules of the universe change, normally for bad xD. This changes could be for example less visibility (fog removal), the asteroid is now more resistant or the anomalies get more attacks. And related to this, one idea is that the player chooses among different options. 
+Since I am removing the asteroid travel, the run progression will be affected. To balance that, the idea is to move some of the asteroid travel progression to inside the asteroid and use the anomaly for that. My plan is that each time you defeat an anomaly (or it is alive for more than some time), it does a game changing effect and the rules of the universe change, normally for bad xD. This changes could be for example less visibility, the asteroid is now more resistant or the anomalies get more attacks. And related to this, one idea is that the player chooses among different options. 
 
 What about the Savegame? right now the game saves the progress each time the player travels to the next asteroid. To fix that, the idea is to add save and close option to keep the asteroid progress but it will not that easy so I might end up adding that feature during early access and not before.
 
