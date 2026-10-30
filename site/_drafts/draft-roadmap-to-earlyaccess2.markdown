@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Steam Next Fest results and plan to get into Early Access in November"
-# date:   2026-06-29 00:08:00 -0300
-excerpt: Ship Miner was part of the last Steam Next Fest (Oct 2026) and I want to share a bit how it did and my plans for the EA release.
+date:   2026-10-30 00:08:00 -0300
+excerpt: Ship Miner Demo was part of the last Steam Next Fest (Oct 2026) and this post is about how it performed and my plan towards the Early Access Release on November 26th.
 author: Ariel Coppes
 tags:
   - shipminer
@@ -20,7 +20,7 @@ image:
 Ship Miner Demo was part of the last [Steam Next Fest (Oct 2026)](https://store.steampowered.com/sale/nextfest) and this post is about how it performed and my plan towards the Early Access Release on November 26th.
 
 <div class="post-image">
-  <img src="/assets/shipminer/nextfest/shipminer-in-nextfest.png" width="75%" />
+  <img src="/assets/shipminer/nextfest/shipminer-in-nextfest.png" width="100%" />
 </div>
 
 This Steam next fest started in a random mode where all games get similar visibility. I understand that the only thing that could affect visibility was which languages are supported by the game, for example, if I only speak english and spanish, games that don't support neither of those languages will be less visible to me than games that support at least one of them. They switched to a personalized mode on the third day, showing games related to what you like, and start considering which games are doing better during the fest. 
@@ -66,7 +66,7 @@ Best thing about the fest was how many people tried the demo and shared feedback
 
 ## Plan for Early Access
 
-The main change is to remove the asteroid travel during runs and to play in one asteroid the full run. The main reason behind it is because I couldn't get more depth with the asteroid travel the way I want it and playing the run in one asteroid will help in the progress during the run by working in your bases and others.
+The main change is to remove the asteroid travel during runs and to play in one asteroid the full run. The main reason behind it is because I couldn't get more depth with the asteroid travel the way I want it and I believe it will help with the feeling of progression of the asteroid itself with the base building and others.
 
 The game will start by selecting different game modes and different asteroid sizes, some of them unlocked by playing the game which will be part of the metagame progress.
 
@@ -74,9 +74,9 @@ The game will start by selecting different game modes and different asteroid siz
   <img src="/assets/shipminer/nextfest/shipminer-different-modes.gif" width="100%" />
 </div>
 
-Since I am removing the asteroid travel, the run progression will be affected. To balance that, the idea is to move some of the asteroid travel progression to inside the asteroid and use the anomaly for that. My plan is that each time you defeat an anomaly (or it is alive for more than some time), it does a game changing effect and the rules of the universe change, normally for bad xD. This changes could be for example less visibility, the asteroid is now more resistant or the anomalies get more attacks. And related to this, one idea is that the player chooses among different options. 
+Since I am removing the asteroid travel, the run progression will be affected. To balance that, the idea is to move some of the asteroid travel progression to inside the asteroid and use the anomaly for that. My plan is that each time you defeat an anomaly (or it is alive for more than some time), it does a game changing effect and the rules of the universe change. This changes could be for example less visibility, the asteroid is now more resistant or the anomalies get more attacks. And related to this, one idea to explore is that the player chooses among different options. 
 
-What about the Savegame? right now the game saves the progress each time the player travels to the next asteroid. To fix that, the idea is to add save and close option to keep the asteroid progress but it will not that easy so I might end up adding that feature during early access and not before.
+What about the Savegame? right now the game saves the progress each time the player travels to the next asteroid. To fix that, the idea is to add save and close option to keep the asteroid progress but it will not be that easy so I might end up adding that feature during early access and not before.
 
 For the base building, I will try to add more stations, improve how the drones work (mainly the explorer), and add support for different spots not just around the main base. I am still undecided if it is going to be a free mode or there are different spots in the map and you can build around them.
 
@@ -100,10 +100,10 @@ I am still defining what the roadmap to 1.0 is going to be, but I can imagine ad
 
 ### What about the Demo during EA? 
 
-My current plan is to remove it during the release to be focused only on the EA but in the future could be useful to have for different fests so I might adjust it and rework it but I don't have a clear plan for it yet. 
+My current plan is to remove it (maybe a couple of weeks before the release) and to focus only on the EA but in the future could be useful to have for different steam events so I might adjust it and rework it but I don't have a clear plan for it yet.
 
 Thanks for reading! 
-And remember to try the Demo and Wishlist!
+And remember to try the Demo and add Ship Miner to your wishlist!
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
