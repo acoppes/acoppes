@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Steam Next Fest results and new Roadmap to Early Access"
+title:  "Steam Next Fest results and plan to get into Early Access in November"
 # date:   2026-06-29 00:08:00 -0300
 excerpt: Ship Miner was part of the last Steam Next Fest (Oct 2026) and I want to share a bit how it did and my plans for the EA release.
 author: Ariel Coppes
@@ -17,60 +17,95 @@ image:
   width: 100
 ---
 
-Ship Miner was part of the last Steam Next Fest (Oct 2026) and I want to share a bit how it did and my plans for the EA release.
+Ship Miner Demo was part of the last [Steam Next Fest (Oct 2026)](https://store.steampowered.com/sale/nextfest) and this post is about how it performed and my plans towards the Early Access Release on November 26th.
 
-## Steam Next Fest
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/shipminer-in-nextfest.png" width="75%" />
+</div>
 
-Next fest didn't start so well, it was crowded with games the first couple of days and visibility was a bit bad for Ship Miner, I thought it was going to be a really bad fest, but after the first couple of days, they started to show the personalized view and that helped a lot, and it ended up being a normal fest.
+This Steam next fest started the first couple of days with a random mode where all games get similar visibility. I understand that the only thing that could affect visibility was which languages are supported by the game, for example, if I only speak english and spanish, games that don't support neither of those languages will be less visible to me than games that support at least one of them. They switched to a personalized mode when on the third day, showing games related to what you like, and start considering which games are doing better during the fest. 
 
-During the second day I was lucky to get an Indie Game Joe (link) post and that got a nice visibility push + wishlists. 
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/steam-next-fest-explorationmode.png" width="100%" />
+</div>
 
-RESULTS
+For Ship Miner, the fest didn't start well, I was checking numbers after hours and had almost no wishlists and no players plying the demo. I suppose its visibility was bad considering how many games were in the fest this time and I thought for a moment that it was going to be a really really bad fest.
 
-My initial expectations were a bit higher but I understand there are a lot of awesome games that got more attention and also that there were more games than previous fests but it still was good.
+During the first day I was lucky enough that [Indie Game Joe](https://indiegamejoe.com/) did [a post about Ship Miner](https://x.com/IndieGameJoe/status/2112327036060545216) on multiple social networks and that got a good visibility push which also generated wishlists. I'm not sure if that affected the steam next fest performance but it was good to see it to balance the bad start. 
 
-During the fest I used the SNF tool and here are my final results.
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/tweet-indiegamejoe.png" width="75%" />
+  <span>Thanks you so much Joe :raised_hands:!!</span>
+</div>
 
-SNF IMAGE
+After the third day the game started to get good amount of impressions which also generated wishlists, and even though my expectations were higher before the fest, it ended up being a good result considering the bad start and that there were so many games.
 
-Best thing about the fest, how many people tried the demo and shared feedback both in the discord and in the feedback form. And based on this and my own feedback and conclusions about the game, I decided to adjust some things towards the EA.
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/steam-next-fest-results.png" width="100%" />
+</div>
 
-Some of the things mentioned:
+The steam results card show 1118 unique players that played the Demo during the fest and a total of 1392 new wishlists during the event (this could be mixed with joe's post) with the intersection of 306 that played the demo and wishlisted the game.
 
-* Game needs more content
-* Some players want to uninstall technologies
+During the fest I used the [How to market a game](https://howtomarketagame.com/) SNF tool to see the projections per day, here is the last day data:
 
-Based on that, these are some of my conclusions, and things I will work on somehow before EA
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/snf-tool-final.png" width="100%" />
+</div>
 
-* Game needs more content
-* Traveling goes against base building
-* Game difficulty is not consistent
-* End of game is not so clear
+And if interested in it, here is the HTMAG [results card](/assets/shipminer/nextfest/ship-miner-snf-score.png).
 
-## PLAN FOR EARLY ACCESS
+Best thing about the fest was how many people tried the demo and shared feedback both in the discord and in the feedback form. And based on this and my own feedback and conclusions about the game, I decided to adjust some things towards the release.
 
-INCOMING CHANGES
+Here are a list of things that I want to address somehow before or during EA:
 
-GAME LOOP + METAGAME UNLOCKS
-* select mode + asteroid size, play only one asteroid (remove travel)
-* unlock chill out mode + custom mode
-* unlock bigger asteroid sizes
-* anomaly modifies the game on destroyed (modifiers)
-* anomaly/asteroid progression
-* be able to build more bases around the map
-* end of game
+* Game feels good but needs more content (ships, drones, build stations, enemies, technologies, etc)
+* Base building is lost when traveling
+* Combat doesn't feel good enough.
+* Some players just want to chill out, no combat.
+* To be able to uninstall technologies (this one is a bit tricky, more detail later)
+* End of game is not so clear and/or not so epic.
+* Some reported bugs
 
-CONTENT
-* another ship (driller)
-* more technologies
-* chill out mode + custom mode
-* anomaly progression
+## Plan for Early Access
 
-## What about EA roadmap to 1.0?
+The main change is to remove the asteroid travel during runs and to play in one asteroid the full run. The main reason behind it is because I couldn't get more depth with the asteroid travel the way I want it and playing the run in one asteroid will help in the progress during the run by working in your bases and others.
 
-I am still defining what the roadmap to 1.0 is going to be, but I can imagine more content in the form of ships, technologies, enemies and game mode customizations. The idea is to be planning that too during the next month to present it as part of the EA release too.
+The game will start by selecting different game modes and different asteroid sizes, some of them unlocked by playing the game which will be part of the metagame progress.
 
-And Remember to try the Demo and Wishlist!
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/shipminer-different-modes.gif" width="100%" />
+</div>
+
+Since I am removing the asteroid travel, the run progression will be affected. To balance that, the idea is to move some of the asteroid travel progression to inside the asteroid and use the anomaly for that. My plan is that each time you defeat an anomaly (or it is alive for more than some time), it does a game changing effect (like a gravitaitonal wave) and the rules of the universe change, normally for bad xD. This changes could be for example less visibility (fog removal), the asteroid is now more resistant or the anomalies get more attacks. And related to this, one idea is that the player chooses among different options. 
+
+What about the Savegame? right now the game saves the progress each time the player travels to the next asteroid. To fix that, the idea is to add save and close option to keep the asteroid progress but it will not that easy so I might end up adding that feature during early access and not before.
+
+For the base building, I will try to add more stations, improve how the drones work (mainly the explorer), and add support for different spots not just around the main base. I am still undecided if it is going to be a free mode or there are different spots in the map and you can build around them.
+
+For the end of game I don't have an exact idea but want to change it to be more like a unique moment where the anomaly disappears and then reappears big in the center of the asteroid and starts growing and sucking everything and the player needs to do something special like throwing the artifact inside or just survive enough time to then escape the asteroid.
+
+About game modes, I will release with three modes, the base one which is Stop the anomaly, a Chill out one without enemies and a Custom mode where the player can adjust different things.
+
+<div class="post-image">
+  <img src="/assets/shipminer/nextfest/shipminer-custom-mode.gif" width="100%" />
+</div>
+
+About the content in general, I will add a new ship and new technologies, not too many but some newer ones to have something new for Demo and Playtest players. New modes are also part of the new content btw.
+
+For the combat, I still believe the game is not a combat game first, so I will keep working on having ways to make it more indirect through other elements but keeping it enjoyable.
+
+Finally, for the uninstall technologies request, I really like this idea, I feel it is related with the sci-fi/spaceship theme and I will probably work on that during EA, but before I will just adjust/modify the technologies that people want to uninstall since I believe the main issue could be these are not so enjoyable. Another reason that makes me delay a bit changing this too much is that the game is a roguelike, if you don't like some technology just don't pick it the next time you play. 
+
+### What about EA roadmap to 1.0?
+
+I am still defining what the roadmap to 1.0 is going to be, but I can imagine adding more content (ships, drones, bases, technologies, enemies and game mode customizations), and work on the ship uninstall feature (which I imagine more like having ship modules and you can only install/uninstall stuff in some of them, etc). The idea is to work on the roadmap during the next month too and to present it before the Early Access release so players can decide if they want to be part of the EA or wait for 1.0.
+
+### What about the Demo during EA? 
+
+My current plan is to remove it during the release to be focused only on the EA but in the future could be useful to have for different fests so I might adjust it and rework it but I don't have a clear plan for it yet. 
+
+Thanks for reading! 
+And remember to try the Demo and Wishlist!
 
 <div align="center">
 <iframe src="https://store.steampowered.com/widget/4028800/?utm_source=personalpage&utm_campaign=announcement" frameborder="0" width="646" height="190"></iframe>
