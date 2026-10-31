@@ -29,7 +29,7 @@ This Steam next fest started in a random mode where all games get similar visibi
   <img src="/assets/shipminer/nextfest/steam-next-fest-explorationmode.png" width="100%" />
 </div>
 
-For Ship Miner, the fest didn't start well, I was checking numbers after hours and had almost no wishlists and no players plying the demo. I suppose its visibility was bad considering how many games were in the fest this time and I thought for a moment that it was going to be a really really bad fest.
+For Ship Miner, the fest didn't start well, I was checking numbers after hours and had almost no wishlists and no players playing the demo. I suppose its visibility was bad considering how many games were in the fest this time and I thought for a moment that it was going to be a really really bad fest.
 
 During the first day I was lucky enough that [Indie Game Joe](https://indiegamejoe.com/) did [a post about Ship Miner](https://x.com/IndieGameJoe/status/2112327036060545216) on multiple social networks and that got a good visibility push which also generated wishlists. I'm not sure if that affected the steam next fest performance but it was good to see it to balance the bad start. 
 
